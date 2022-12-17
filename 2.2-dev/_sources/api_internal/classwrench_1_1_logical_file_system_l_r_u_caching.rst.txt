@@ -1,0 +1,8 @@
+.. _LogicalFileSystemLRUCaching:
+wrench::LogicalFileSystemLRUCaching
+***********************************
+
+.. doxygenclass:: wrench::LogicalFileSystemLRUCaching
+   :project: internal
+   :members:
+

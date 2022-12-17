@@ -1,0 +1,8 @@
+.. _LogicalFileSystemNoCaching:
+wrench::LogicalFileSystemNoCaching
+**********************************
+
+.. doxygenclass:: wrench::LogicalFileSystemNoCaching
+   :project: internal
+   :members:
+

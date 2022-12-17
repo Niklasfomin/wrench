@@ -1,0 +1,8 @@
+.. _LogicalFileSystem::FileOnDisk:
+wrench::LogicalFileSystem::FileOnDisk
+*************************************
+
+.. doxygenclass:: wrench::LogicalFileSystem::FileOnDisk
+   :project: internal
+   :members:
+
