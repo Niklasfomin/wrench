@@ -474,10 +474,53 @@
 </dd></dl>
 
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench27LogicalFileSystemLRUCaching24next_lru_sequence_numberE">
+<span id="_CPPv3N6wrench27LogicalFileSystemLRUCaching24next_lru_sequence_numberE"></span><span id="_CPPv2N6wrench27LogicalFileSystemLRUCaching24next_lru_sequence_numberE"></span><span id="wrench::LogicalFileSystemLRUCaching::next_lru_sequence_number__unsigned-i"></span><span class="target" id="classwrench_1_1_logical_file_system_l_r_u_caching_1a1ded9133df2919b5600ef7651d2af98d"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">next_lru_sequence_number</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench27LogicalFileSystemLRUCaching24next_lru_sequence_numberE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Next LRU sequence number. </p>
+</dd></dl>
+
+</div>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCachingE">
 <span id="_CPPv3N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCachingE"></span><span id="_CPPv2N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCachingE"></span><span id="wrench::LogicalFileSystemLRUCaching::FileOnDiskLRUCaching"></span><span class="target" id="structwrench_1_1_logical_file_system_l_r_u_caching_1_1_file_on_disk_l_r_u_caching"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileOnDiskLRUCaching</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_logical_file_system.html#_CPPv4N6wrench17LogicalFileSystemE" title="wrench::LogicalFileSystem"><span class="n"><span class="pre">LogicalFileSystem</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_logical_file_system.html#_CPPv4N6wrench17LogicalFileSystem10FileOnDiskE" title="wrench::LogicalFileSystem::FileOnDisk"><span class="n"><span class="pre">FileOnDisk</span></span></a><a class="headerlink" href="#_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCachingE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
+<dd><p>A helper struct to describe a file instance on disk. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching20FileOnDiskLRUCachingEdjt">
+<span id="_CPPv3N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching20FileOnDiskLRUCachingEdjt"></span><span id="_CPPv2N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching20FileOnDiskLRUCachingEdjt"></span><span id="wrench::LogicalFileSystemLRUCaching::FileOnDiskLRUCaching::FileOnDiskLRUCaching__double.unsigned-i.unsigned-short"></span><span class="target" id="structwrench_1_1_logical_file_system_l_r_u_caching_1_1_file_on_disk_l_r_u_caching_1a412d95fcafd3588edb42ef7e07c07f3c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileOnDiskLRUCaching</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">last_write_date</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">lru_sequence_number</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_current_transactions</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching20FileOnDiskLRUCachingEdjt" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>last_write_date</strong> – Last write date </p></li>
+<li><p><strong>lru_sequence_number</strong> – LRU sequence number </p></li>
+<li><p><strong>num_current_transactions</strong> – Number of current transactions using this file on disk </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching19lru_sequence_numberE">
+<span id="_CPPv3N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching19lru_sequence_numberE"></span><span id="_CPPv2N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching19lru_sequence_numberE"></span><span id="wrench::LogicalFileSystemLRUCaching::FileOnDiskLRUCaching::lru_sequence_number__unsigned-i"></span><span class="target" id="structwrench_1_1_logical_file_system_l_r_u_caching_1_1_file_on_disk_l_r_u_caching_1a988eac9173a1992747a63ad49bed1df3"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">lru_sequence_number</span></span></span><a class="headerlink" href="#_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching19lru_sequence_numberE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The LRU sequence number (lower means older) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching24num_current_transactionsE">
+<span id="_CPPv3N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching24num_current_transactionsE"></span><span id="_CPPv2N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching24num_current_transactionsE"></span><span id="wrench::LogicalFileSystemLRUCaching::FileOnDiskLRUCaching::num_current_transactions__unsigned-short"></span><span class="target" id="structwrench_1_1_logical_file_system_l_r_u_caching_1_1_file_on_disk_l_r_u_caching_1a3ec2e3590f0e50fdf6460446d7fea498"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">short</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_current_transactions</span></span></span><a class="headerlink" href="#_CPPv4N6wrench27LogicalFileSystemLRUCaching20FileOnDiskLRUCaching24num_current_transactionsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The number of transactions that involve this file, meaning that it’s not evictable is &gt; 0. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
 
 </dd></dl>
 
