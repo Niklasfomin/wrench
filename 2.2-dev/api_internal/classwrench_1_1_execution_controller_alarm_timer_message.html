@@ -133,6 +133,8 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_submit_compound_job_request_message.html">wrench::ComputeServiceSubmitCompoundJobRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_compound_job_answer_message.html">wrench::ComputeServiceTerminateCompoundJobAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_compound_job_request_message.html">wrench::ComputeServiceTerminateCompoundJobRequestMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_pilot_job_answer_message.html">wrench::ComputeServiceTerminatePilotJobAnswerMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_pilot_job_request_message.html">wrench::ComputeServiceTerminatePilotJobRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_conservative_backfilling_batch_scheduler.html">wrench::ConservativeBackfillingBatchScheduler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_conservative_backfilling_batch_scheduler_core_level.html">wrench::ConservativeBackfillingBatchSchedulerCoreLevel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_constant_efficiency_parallel_model.html">wrench::ConstantEfficiencyParallelModel</a></li>
@@ -208,10 +210,6 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_wakeup_message.html">wrench::JobManagerWakeupMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system.html">wrench::LogicalFileSystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_1_1_file_on_disk.html">wrench::LogicalFileSystem::FileOnDisk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -226,6 +224,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_transfer_message.html">wrench::NetworkProximityTransferMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_next_contact_daemon_answer_message.html">wrench::NextContactDaemonAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_next_contact_daemon_request_message.html">wrench::NextContactDaemonRequestMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_no_scratch_space.html">wrench::NoScratchSpace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_not_allowed.html">wrench::NotAllowed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_not_enough_resources.html">wrench::NotEnoughResources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_parallel_model.html">wrench::ParallelModel</a></li>
@@ -383,8 +382,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageERKNSt6stringEd">
-<span id="_CPPv3N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageERKNSt6stringEd"></span><span id="_CPPv2N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageERKNSt6stringEd"></span><span id="wrench::ExecutionControllerAlarmTimerMessage::ExecutionControllerAlarmTimerMessage__ssCR.double"></span><span class="target" id="classwrench_1_1_execution_controller_alarm_timer_message_1ad48da1aa46c0122a0a1a6da0c108ee87"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExecutionControllerAlarmTimerMessage</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">message</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageERKNSt6stringEd" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageENSt6stringEd">
+<span id="_CPPv3N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageENSt6stringEd"></span><span id="_CPPv2N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageENSt6stringEd"></span><span id="wrench::ExecutionControllerAlarmTimerMessage::ExecutionControllerAlarmTimerMessage__ss.double"></span><span class="target" id="classwrench_1_1_execution_controller_alarm_timer_message_1a78b50f05acaa861fcbf933ce071c1b4f"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExecutionControllerAlarmTimerMessage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">message</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench36ExecutionControllerAlarmTimerMessage36ExecutionControllerAlarmTimerMessageENSt6stringEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

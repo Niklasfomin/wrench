@@ -133,6 +133,8 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_submit_compound_job_request_message.html">wrench::ComputeServiceSubmitCompoundJobRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_compound_job_answer_message.html">wrench::ComputeServiceTerminateCompoundJobAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_compound_job_request_message.html">wrench::ComputeServiceTerminateCompoundJobRequestMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_pilot_job_answer_message.html">wrench::ComputeServiceTerminatePilotJobAnswerMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_terminate_pilot_job_request_message.html">wrench::ComputeServiceTerminatePilotJobRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_conservative_backfilling_batch_scheduler.html">wrench::ConservativeBackfillingBatchScheduler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_conservative_backfilling_batch_scheduler_core_level.html">wrench::ConservativeBackfillingBatchSchedulerCoreLevel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_constant_efficiency_parallel_model.html">wrench::ConstantEfficiencyParallelModel</a></li>
@@ -208,10 +210,6 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_wakeup_message.html">wrench::JobManagerWakeupMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system.html">wrench::LogicalFileSystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_1_1_file_on_disk.html">wrench::LogicalFileSystem::FileOnDisk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -226,6 +224,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_transfer_message.html">wrench::NetworkProximityTransferMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_next_contact_daemon_answer_message.html">wrench::NextContactDaemonAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_next_contact_daemon_request_message.html">wrench::NextContactDaemonRequestMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_no_scratch_space.html">wrench::NoScratchSpace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_not_allowed.html">wrench::NotAllowed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_not_enough_resources.html">wrench::NotEnoughResources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_parallel_model.html">wrench::ParallelModel</a></li>
@@ -393,17 +392,6 @@
 <li><p>any integral value in between: an actual buffer size (the smaller the buffer size, the slower the simulation)</p></li>
 <li><p>Default value: “0” (fluid)</p></li>
 <li><p>Example values: “0”, “infinity”, “42”, “10000000”, “42B”, “56MB”, “100KiB”, etc. </p></li>
-</ul>
-</p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench22StorageServiceProperty16CACHING_BEHAVIORE">
-<span id="_CPPv3N6wrench22StorageServiceProperty16CACHING_BEHAVIORE"></span><span id="_CPPv2N6wrench22StorageServiceProperty16CACHING_BEHAVIORE"></span><span id="wrench::StorageServiceProperty::CACHING_BEHAVIOR__ssC"></span><span class="target" id="classwrench_1_1_storage_service_property_1a900499688d57c565589345b001181fce"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CACHING_BEHAVIOR</span></span></span><br /></dt>
-<dd><p>The caching behavior. Possible values are: </p>
-<p><ul class="simple">
-<li><p>“NONE” (default): no caching, i.e., if not enough space is available for a new file, then the file write/creation fails.</p></li>
-<li><p>”LRU”: Least Recently Used policy, i.e., if not enough space is available for a new file, the Least Recently Used files are deleted until enough space is available. </p></li>
 </ul>
 </p>
 </dd></dl>
