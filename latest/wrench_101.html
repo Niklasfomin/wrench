@@ -289,8 +289,26 @@ constructor, which also specifies host(s) on which the service is to be
 started. Typical kinds of services include compute services, storage
 services, and file registry services (see
 <a class="reference internal" href="#wrench-101-simulator-services"><span class="std std-ref">below</span></a> for more details).</p>
-<p>The bare-metal-chain simulator instantiates four services. The first one
-is a compute service:</p>
+<dl class="simple">
+<dt>The multi-action-multi-job simulator instantiates four services. The first one</dt><dd><p>is a storage service:</p>
+</dd>
+</dl>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">storage_service_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageService</span><span class="p">(</span><span class="s">&quot;StorageHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;/&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceProperty</span><span class="o">::</span><span class="n">BUFFER_SIZE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;50MB&quot;</span><span class="p">}},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
+</pre></div>
+</div>
+<p>The <a class="reference internal" href="api_developer/classwrench_1_1_simple_storage_service.html#_CPPv4N6wrench20SimpleStorageServiceE" title="wrench::SimpleStorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::SimpleStorageService</span></code></a> class implements a simulation of a
+remotely-accessible storage service on which files can be stored,
+copied, deleted, read, and written. In this particular case, the storage
+service is started on host <code class="docutils literal notranslate"><span class="pre">StorageHost1</span></code>. It uses storage mounted at
+<code class="docutils literal notranslate"><span class="pre">/</span></code> on that host (which corresponds to the mount path of a disk, as
+seen in the XML platform description). The last two arguments, as for
+the compute services, are used to configure particular properties of the
+service. In this case, the service is configured to use a 50-MB buffer
+size to pipeline network and disk accesses (see details in <a class="reference internal" href="#wrench-101-customizing-services"><span class="std std-ref">this section
+below</span></a>).</p>
+<p>The second service is a another storage service that runs on host
+<code class="docutils literal notranslate"><span class="pre">StorageHost2</span></code>.</p>
+<p id="wrench-101-simulator-1000ft-step-4">The third service is a compute service:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">baremetal_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">BareMetalComputeService</span><span class="p">(</span><span class="s">&quot;ComputeHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;ComputeHost1&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;ComputeHost2&quot;</span><span class="p">}},</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
 </pre></div>
 </div>
@@ -309,7 +327,7 @@ In this case, the scratch storage specification is empty as host
 <code class="docutils literal notranslate"><span class="pre">std::map</span></code> objects (in this case both empty), that are used to
 configure properties of the service (see details in <a class="reference internal" href="#wrench-101-customizing-services"><span class="std std-ref">this section
 below</span></a>).</p>
-<p>The second service is a cloud compute service:</p>
+<p>The fourth service is a cloud compute service:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cloud_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="p">(</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;CloudHost&quot;</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;/scratch/&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
 </pre></div>
 </div>
@@ -317,29 +335,13 @@ below</span></a>).</p>
 platform on which virtual machine (VM) instances can be created,
 started, used, and shutdown. The service runs on host <code class="docutils literal notranslate"><span class="pre">CloudHeadHost</span></code>
 and has access to the compute resources on host <code class="docutils literal notranslate"><span class="pre">CloudHost</span></code>. Unlike
-the previous service, this service has scratch space, at path <code class="docutils literal notranslate"><span class="pre">/data</span></code>
+the previous service, this service has scratch space, at path <code class="docutils literal notranslate"><span class="pre">/scratch</span></code>
 on the disk attached to host <code class="docutils literal notranslate"><span class="pre">CloudHost</span></code> (as seen in the XML platform
 description). Here again, the last two arguments are used to configure
 properties of the service.</p>
-<p>The third service is a storage service:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">storage_service_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageService</span><span class="p">(</span><span class="s">&quot;StorageHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;/&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceProperty</span><span class="o">::</span><span class="n">BUFFER_SIZE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;50000000&quot;</span><span class="p">}},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
-</pre></div>
-</div>
-<p>The <a class="reference internal" href="api_developer/classwrench_1_1_simple_storage_service.html#_CPPv4N6wrench20SimpleStorageServiceE" title="wrench::SimpleStorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::SimpleStorageService</span></code></a> class implements a simulation of a
-remotely-accessible storage service on which files can be stored,
-copied, deleted, read, and written. In this particular case, the storage
-service is started on host <code class="docutils literal notranslate"><span class="pre">StorageHost1</span></code>. It uses storage mounted at
-<code class="docutils literal notranslate"><span class="pre">/</span></code> on that host (which corresponds to the mount path of a disk, as
-seen in the XML platform description). The last two arguments, as for
-the compute services, are used to configure particular properties of the
-service. In this case, the service is configured to use a 50-MB buffer
-size to pipeline network and disk accesses (see details in <a class="reference internal" href="#wrench-101-customizing-services"><span class="std std-ref">this section
-below</span></a>).</p>
-<p>The fourth service is a another storage service that runs on host
-<code class="docutils literal notranslate"><span class="pre">StorageHost2</span></code>.</p>
 </section>
 <section id="step-4-instantiate-at-least-one-execution-controller">
-<span id="wrench-101-simulator-1000ft-step-4"></span><h3>Step 4: Instantiate at least one Execution controller<a class="headerlink" href="#step-4-instantiate-at-least-one-execution-controller" title="Permalink to this heading"></a></h3>
+<h3>Step 4: Instantiate at least one Execution controller<a class="headerlink" href="#step-4-instantiate-at-least-one-execution-controller" title="Permalink to this heading"></a></h3>
 <p>At least one <em>execution controller</em> must be created and added to the
 simulation. This is a special service that is in charge of executing an
 application workload on the platform. It is implemented as a class that
@@ -347,24 +349,23 @@ derives from <a class="reference internal" href="api_developer/classwrench_1_1_e
 constructor as well as its <code class="docutils literal notranslate"><span class="pre">main()</span></code> method. This method is
 implementing using the <a class="reference internal" href="api_developer.html#developer-api"><span class="std std-ref">WRENCH Developer
 API</span></a>.</p>
-<p>The example in <code class="docutils literal notranslate"><span class="pre">examples/action_api/bare-metal-bag-of-actions</span></code> does
+<p>The example in <code class="docutils literal notranslate"><span class="pre">examples/action_api/multi-action-multi-job</span></code> does
 this as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">wms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">TwoTasksAtATimeExecutionController</span><span class="p">(</span><span class="n">num_tasks</span><span class="p">,</span><span class="w"> </span><span class="n">baremetal_service</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UserHost&quot;</span><span class="p">));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">wms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">MultiActionMultiJobController</span><span class="p">(</span><span class="n">baremetal_service</span><span class="p">,</span><span class="w"> </span><span class="n">cloud_service</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service_1</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service_2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UserHost&quot;</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
-<p>This creates an execution controller and passes to its constructor a
-number of tasks to execute, the compute service to use, the storage
-service to use, and the host on which it is supposed to execute. Class
-<code class="docutils literal notranslate"><span class="pre">wrench::TwoTasksAtATimeExecutionController</span></code> is of course provided
+<p>This creates an execution controller and passes to its constructor the
+services created before, and the host on which it is supposed to execute.
+Class <code class="docutils literal notranslate"><span class="pre">wrench::MultiActionMultiJobController</span></code> is of course provided
 with the example. See the <a class="reference internal" href="wrench_102.html#wrench-102-header"><span class="std std-ref">WRENCH 102</span></a> page for
 information on how to implement an execution controller.</p>
 <p>One important question is how to specify an <em>application workload</em> and
 tell the execution controller to execute it. This is completely up to
-the developer, and in this example the execution controller is simply
-given a number of tasks and then creates files, file read actions, file
-write actions, and compute actions to be executed as part of various
+the developer, and in this example the execution controller creates a
+different number of tasks to creates files, file read actions,
+file write actions, and compute actions to be executed as part of various
 jobs (see the implementation of
-<code class="docutils literal notranslate"><span class="pre">wrench::TwoTasksAtATimeExecutionController</span></code>). All the examples in the
+<code class="docutils literal notranslate"><span class="pre">wrench::MultiActionMultiJobController</span></code>). All the examples in the
 <code class="docutils literal notranslate"><span class="pre">examples/action_api</span></code> directory do this in different ways. <em>However</em>,
 many users are interested in <strong>workflow applications</strong>, for this reason,
 WRENCH provides a <a class="reference internal" href="api_developer/classwrench_1_1_workflow.html#_CPPv4N6wrench8WorkflowE" title="wrench::Workflow"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::Workflow</span></code></a> class that has member functions
