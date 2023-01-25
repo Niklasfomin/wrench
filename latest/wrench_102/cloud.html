@@ -102,15 +102,17 @@ shows the state transition diagram of a VM instance:</p>
 <p>Here is an example interaction with a <a class="reference internal" href="../api_developer/classwrench_1_1_cloud_compute_service.html#_CPPv4N6wrench19CloudComputeServiceE" title="wrench::CloudComputeService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::CloudComputeService</span></code></a>:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">std</span><span class="p">:</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="p">;</span><span class="w"></span>
 
-<span class="c1">// Create a VM with 2 cores and 1 GiB of RAM</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">));</span><span class="w"></span>
+<span class="c1">// Create a VM with 2 cores and 1 GiB of RAM, which could fail if</span>
+<span class="c1">// not enough resources are available</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vm1_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">));</span><span class="w"></span>
 
-<span class="c1">// Create a VM with 4 cores and 2 GiB of RAM</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">));</span><span class="w"></span>
+<span class="c1">// Create a VM with 4 cores and 2 GiB of RAM, which could fail if</span>
+<span class="c1">// not enough resources are available</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vm2_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">));</span><span class="w"></span>
 
 <span class="c1">// Start both VMs and keep track of their associated bare-metal compute services</span>
-<span class="n">vm1_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm1</span><span class="p">);</span><span class="w"></span>
-<span class="n">vm2_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm2</span><span class="p">);</span><span class="w"></span>
+<span class="n">vm1_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">vm2_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span><span class="w"></span>
 
 <span class="c1">// Create a job manager</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span><span class="w"></span>
@@ -137,12 +139,16 @@ shows the state transition diagram of a VM instance:</p>
 <span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span><span class="w"></span>
 
 <span class="c1">// Shutdown both VMs</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdown</span><span class="p">(</span><span class="n">vm1</span><span class="p">);</span><span class="w"></span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdown</span><span class="p">(</span><span class="n">vm2</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdownVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdownVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span><span class="w"></span>
+
+<span class="c1">// Destroy both VMs, which releases resources</span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">destroyVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">destroyVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Note that the cloud service will decide on which physical resources VM
-instances should be started. The underlying physical resources are
+instances should be created. The underlying physical resources are
 completely hidden by the cloud service abstraction. If you want more
 control over how the physical resources are used you likely need a
 <a class="reference internal" href="virtualizedcluster.html#guide-102-virtualizedcluster"><span class="std std-ref">virtualized cluster services</span></a>.</p>
