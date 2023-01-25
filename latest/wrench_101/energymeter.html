@@ -101,14 +101,14 @@ available as part of the simulation output.</p>
 the following parameters:</p>
 <ul class="simple">
 <li><p>The name of a host on which to start the service;</p></li>
-<li><p>A map (<code class="docutils literal notranslate"><span class="pre">std::map</span></code>) of key-value pairs, where the keys are hostnames and the values
+<li><p>A map of key-value pairs, where the keys are hostnames and the values
 are measurement periods in seconds.</p></li>
 </ul>
 <p>The example below creates an instance that runs on host
 <code class="docutils literal notranslate"><span class="pre">MeasurerHost</span></code>, and measures the energy consumed on host <code class="docutils literal notranslate"><span class="pre">Host1</span></code>
 every second and the energy consumed on host <code class="docutils literal notranslate"><span class="pre">Host2</span></code> every 10 seconds:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">em_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">EnergyMeterService</span><span class="p">(</span><span class="s">&quot;MeasurerHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="mf">1.0</span><span class="p">},{</span><span class="s">&quot;Host2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">}}));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">np_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="w"></span>
+<span class="w">          </span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">EnergyMeterService</span><span class="p">(</span><span class="s">&quot;MeasurerHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="mf">1.0</span><span class="p">},{</span><span class="s">&quot;Host2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">}});</span><span class="w"></span>
 </pre></div>
 </div>
 <p>One the simulation is completed, energy measurement time stamps can be
