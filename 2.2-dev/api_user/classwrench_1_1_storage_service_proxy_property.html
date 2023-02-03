@@ -188,6 +188,53 @@
 <dd><p>The overhead for handling just 1 message. </p>
 </dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench27StorageServiceProxyProperty20UNCACHED_READ_METHODE">
+<span id="_CPPv3N6wrench27StorageServiceProxyProperty20UNCACHED_READ_METHODE"></span><span id="_CPPv2N6wrench27StorageServiceProxyProperty20UNCACHED_READ_METHODE"></span><span id="wrench::StorageServiceProxyProperty::UNCACHED_READ_METHOD__ssC"></span><span class="target" id="classwrench_1_1_storage_service_proxy_property_1a096744254facb1bc43e50928bf74d9ea"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UNCACHED_READ_METHOD</span></span></span><br /></dt>
+<dd><p>The read behavior for an uncached message. Due to a limitation in Simgrid, it is not generally possible to say “Copy a file to this server, and at the same time read the file from that server as bytes become avaliable” As such, the copy to cache and the client read from cache have to be handled differently. There are currently 3 supported ways, specified by this property. </p>
+<p><ul class="simple">
+<li><p>CopyThenRead: The most basic thought of how to do this. Copy the file to the cache, and then read the file from the cache once it has finished. This method means the file will always arive in the cache when it should, and all internal network links are hit with the proper amount of congestion. However, the file will arive at the client who requested it later than it should</p></li>
+<li><p>MagicRead: This seeks to combat the problem with CopyThenRead by assuming the time to transfer the file from the cache to the client should be neglegable compared to the time to copy the file from remote to the cache. As such, when the file copy is finished, all clients waiting on the file instantly receive it. This means the file will always arive at the cache at the correct time, and should arrive at the client in roughly the correct time, but at the cost of network congestion accuracy</p></li>
+<li><p>ReadThrough: This takes a slighly different approach, the file is transfered directly to the client, and as soon as the client has finished receiving it, the file instantly appears on the cache. This offers the most accurate file-to-client time, however, the file-to-cache time is increased, and multiple client access happens later than otherwise expected as they have to wait for the cache to update. NOTE: There must be a network route between client and remote for ReadThrough to work, and for max accuracy, it should go through the Proxy host.</p></li>
+</ul>
+</p>
+<p><table class="colwidths-auto docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p></p></td>
+<td><p>CopyThenRead </p></td>
+<td><p>MagicRead </p></td>
+<td><p>ReadThrough  </p></td>
+</tr>
+<tr class="row-even"><td><p>File to cache time </p></td>
+<td><p>Accurate </p></td>
+<td><p>Accurate </p></td>
+<td><p>Overestimated  </p></td>
+</tr>
+<tr class="row-odd"><td><p>File to client time </p></td>
+<td><p>Overestimated </p></td>
+<td><p>Probiably good </p></td>
+<td><p>Accurate  </p></td>
+</tr>
+<tr class="row-even"><td><p>Network Congestion </p></td>
+<td><p>Accurate </p></td>
+<td><p>Underestimated </p></td>
+<td><p>Accurate  </p></td>
+</tr>
+<tr class="row-odd"><td><p>Parrallel behavior </p></td>
+<td><p>No change </p></td>
+<td><p>Amplifies weakness </p></td>
+<td><p>Decreased accuracy for secondary Host  </p></td>
+</tr>
+<tr class="row-even"><td><p>Required Network Links </p></td>
+<td><p>Proxy-Remote, Client-Proxy </p></td>
+<td><p>Proxy-Remote, Client-Proxy </p></td>
+<td><p>Client-Remote, Client-Proxy  </p></td>
+</tr>
+</tbody>
+</table>
+</p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
