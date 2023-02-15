@@ -184,6 +184,15 @@
 <span id="_CPPv3N6wrench13ProxyLocationE"></span><span id="_CPPv2N6wrench13ProxyLocationE"></span><span id="wrench::ProxyLocation"></span><span class="target" id="classwrench_1_1_proxy_location"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProxyLocation</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><br /></dt>
 <dd><p>A specialized FileLocation for use by the Proxy. </p>
 <div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench13ProxyLocation6targetE">
+<span id="_CPPv3N6wrench13ProxyLocation6targetE"></span><span id="_CPPv2N6wrench13ProxyLocation6targetE"></span><span id="wrench::ProxyLocation::target__std::shared_ptr:StorageService:C"></span><span class="target" id="classwrench_1_1_proxy_location_1a9bb974a00a8168523aff88da830b1a79"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><span class="n"><span class="pre">StorageService</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">target</span></span></span><br /></dt>
+<dd><p>The proxy location’s target. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench13ProxyLocation8LOCATIONERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI12FileLocationEE">
@@ -195,6 +204,9 @@
 <li><p><strong>target</strong> – a (remote) storage service to access, which overrides the default remote service (if any) of the proxy </p></li>
 <li><p><strong>other</strong> – a file location whose storage service should be the proxy </p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a proxy location </p>
 </dd>
 </dl>
 </dd></dl>
@@ -211,6 +223,9 @@
 <li><p><strong>file</strong> – The file </p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a proxy location </p>
+</dd>
 </dl>
 </dd></dl>
 
@@ -224,8 +239,11 @@
 <li><p><strong>target</strong> – a (remote) storage service to access, which overrides the default remote service (if any) of the proxy </p></li>
 <li><p><strong>ss</strong> – The proxy </p></li>
 <li><p><strong>absolute_path</strong> – The absolute path </p></li>
-<li><p><strong>file</strong> – The file </p></li>
+<li><p><strong>file</strong> – The file</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a proxy location </p>
 </dd>
 </dl>
 </dd></dl>
@@ -240,8 +258,11 @@
 <li><p><strong>target</strong> – a (remote) storage service to access, which overrides the default remote service (if any) of the proxy </p></li>
 <li><p><strong>ss</strong> – The proxy </p></li>
 <li><p><strong>server_ss</strong> – The linux page cache server </p></li>
-<li><p><strong>file</strong> – The file </p></li>
+<li><p><strong>file</strong> – The file</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a proxy location </p>
 </dd>
 </dl>
 </dd></dl>
