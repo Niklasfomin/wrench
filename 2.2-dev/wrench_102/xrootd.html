@@ -97,8 +97,9 @@ interacting with the nodes that are in the subtree of which it is the root):</p>
 <div><ul class="simple">
 <li><p>Synchronously reading a file (rarely used by an execution controller but
 included for completeness); and</p></li>
-<li><p>Semi-Synchronously deleting a file (execution waits for supervisor to acknowledge delete request, but does not wait for the full XRootD subtree to be purged)</p></li>
+<li><p>Semi-Synchronously deleting a file (execution waits for supervisor to acknowledge delete request,</p></li>
 </ul>
+<p>but does not wait for the full XRootD subtree to be purged)</p>
 </div></blockquote>
 <p>In addition, all storage nodes in an XRootD tree support all operations that an instance of <a class="reference internal" href="simplestorage.html#guide-102-simplestorage"><span class="std std-ref">Simple Storage Service</span></a> does (which must be invoked directory on that node).</p>
 <p>All interactions above are done by calling member functions of
