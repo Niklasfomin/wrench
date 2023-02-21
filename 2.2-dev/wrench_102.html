@@ -151,7 +151,7 @@ instance, a <a class="reference internal" href="api_developer/classwrench_1_1_co
 <a class="reference internal" href="api_developer/classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeService11getNumHostsEv" title="wrench::ComputeService::getNumHosts"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ComputeService::getNumHosts()</span></code></a> member function that returns
 how many compute hosts the service has access to in total. A
 <a class="reference internal" href="api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService</span></code></a> has a
-<a class="reference internal" href="api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageService12getFreeSpaceEv" title="wrench::StorageService::getFreeSpace"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService::getFreeSpace()</span></code></a> member function to find out
+<code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService::getFreeSpace()</span></code> member function to find out
 how many bytes of free space are available on it. And so on…</p>
 <p>To take a concrete example, consider the execution controller
 implementation in
@@ -237,6 +237,7 @@ of interactions with the currently available storage service type:</p>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="wrench_102/simplestorage.html#guide-102-simplestorage"><span class="std std-ref">Simple storage service</span></a></p></li>
 <li><p><a class="reference internal" href="wrench_102/xrootd.html#guide-102-xrootd"><span class="std std-ref">XRootD storage service</span></a></p></li>
+<li><p><a class="reference internal" href="wrench_102/storageserviceproxy.html#guide-102-storageserviceproxy"><span class="std std-ref">Storage service proxy</span></a></p></li>
 </ul>
 </div></blockquote>
 </section>
@@ -265,11 +266,11 @@ examples in these documents and in the <code class="docutils literal notranslate
 standard jobs (described below). But all these examples could be easily
 rewritten using the more generic compound job abstraction.</p>
 <p>A <strong>Standard Job</strong> is a specific kind of job designed for <strong>workflow</strong>
-applications. In its most complete form, a standard job specifies: - A
-set (in fact a vector) of <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;wrench::WorkflowTask&gt;</span></code> to
-execute, so that each task without all its predecessors in the set is
-ready;</p>
+applications. In its most complete form, a standard job specifies:</p>
 <ul class="simple">
+<li><p>A set (in fact a vector) of <code class="docutils literal notranslate"><span class="pre">std::shared_ptr&lt;wrench::WorkflowTask&gt;</span></code> to
+execute, so that each task without all its predecessors in the set is
+ready;</p></li>
 <li><p>A <code class="docutils literal notranslate"><span class="pre">std::map</span></code> of
 <code class="docutils literal notranslate"><span class="pre">&lt;std::shared_ptr&lt;wrench::DataFile&gt;&gt;,</span> <span class="pre">std::shared_ptr&lt;wrench::StorageService&gt;&gt;</span></code>
 pairs that specifies from which storage services particular input
@@ -333,7 +334,7 @@ std::shared_ptr&lt;wrench::StorageService&gt; some_storage_service<span class="p
 <span class="o">[</span>...<span class="o">]</span>
 
 file_registry-&gt;addEntry<span class="o">(</span>wrench::FileLocation::LOCATION<span class="o">(</span>some_storage_service, some_file<span class="o">))</span><span class="p">;</span>
-file_registry-&gt;removeEntry<span class="o">(</span>wrench::FileLocatio::LOCATION<span class="o">(</span>some_storage_service, some_file<span class="o">))</span><span class="p">;</span>
+file_registry-&gt;removeEntry<span class="o">(</span>wrench::FileLocation::LOCATION<span class="o">(</span>some_storage_service, some_file<span class="o">))</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::FileLocation</span></code></a> class is a convenient abstraction for a
@@ -373,16 +374,17 @@ to obtain a measure of the network distance between hosts “Host1” and
 “Host2”, one simply does:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">NetworkProximityService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">np_service</span><span class="p">;</span><span class="w"></span>
 
-<span class="kt">double</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">query</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="s">&quot;Host2&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getHostPairDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Host2&quot;</span><span class="p">));</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This distance corresponds to half the round-trip-time, in seconds,
-between the two hosts. If the service is configured to use the Vivaldi
-coordinate-based system, as in our example above, this distance is
-actually derived from network coordinates, as computed by the Vivaldi
-algorithm. In this case, one can actually ask for these coordinates for
-any given host:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getCoordinates</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">);</span><span class="w"></span>
+between the two hosts. The second value of the pair is the timestamp of
+the oldest measurement uses to compute the proximity value. If the service
+is configured to use the Vivaldi coordinate-based system, as in our example above,
+this distance is actually derived from network coordinates, as computed
+by the Vivaldi algorithm. In this case, one can actually ask for these
+coordinates for any given host:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getHostCoordinate</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>See the documentation of <a class="reference internal" href="api_developer/classwrench_1_1_network_proximity_service.html#_CPPv4N6wrench23NetworkProximityServiceE" title="wrench::NetworkProximityService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::NetworkProximityService</span></code></a>
@@ -440,7 +442,7 @@ functions as follows:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">TwoTasksAtATimeWMS::processEventStandardJobCompletion</span><span class="p">(</span><span class="w"></span>
 <span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StandardJobCompletedEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Retrieve the job that this event is for</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">job</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">standard_job</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Print some message for each task in the job</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">task</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified that a standard job has completed task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
@@ -450,7 +452,7 @@ functions as follows:</p>
 <span class="kt">void</span><span class="w"> </span><span class="nf">TwoTasksAtATimeWMS::processEventStandardJobFailure</span><span class="p">(</span><span class="w"></span>
 <span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StandardJobFailedEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Retrieve the job that this event is for</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">job</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">standard_job</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified that a standard job has failed (failure cause: &quot;</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">failure_cause</span><span class="o">-&gt;</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Print some message for each task in the job if it has failed</span>

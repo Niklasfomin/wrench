@@ -76,6 +76,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job.html">wrench::CompoundJob</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job_completed_event.html">wrench::CompoundJobCompletedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job_failed_event.html">wrench::CompoundJobFailedEvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service.html">wrench::CompoundStorageService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_message_payload.html">wrench::CompoundStorageServiceMessagePayload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_property.html">wrench::CompoundStorageServiceProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_computation_has_died.html">wrench::ComputationHasDied</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_action.html">wrench::ComputeAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service.html">wrench::ComputeService</a></li>
@@ -179,6 +182,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_message_payload.html">wrench::StorageServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_not_enough_space.html">wrench::StorageServiceNotEnoughSpace</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_property.html">wrench::StorageServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_proxy_property.html">wrench::StorageServiceProxyProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_terminal_output.html">wrench::TerminalOutput</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_timer_event.html">wrench::TimerEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_virtualized_cluster_compute_service.html">wrench::VirtualizedClusterComputeService</a></li>
@@ -253,18 +257,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench22FileCopyCompletedEvent4fileE">
 <span id="_CPPv3N6wrench22FileCopyCompletedEvent4fileE"></span><span id="_CPPv2N6wrench22FileCopyCompletedEvent4fileE"></span><span id="wrench::FileCopyCompletedEvent::file__std::shared_ptr:DataFile:"></span><span class="target" id="classwrench_1_1_file_copy_completed_event_1af6c41f10fa936203e7cbe2149771a46b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">file</span></span></span><a class="headerlink" href="#_CPPv4N6wrench22FileCopyCompletedEvent4fileE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The workflow file that has successfully been copied. </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench22FileCopyCompletedEvent21file_registry_serviceE">
-<span id="_CPPv3N6wrench22FileCopyCompletedEvent21file_registry_serviceE"></span><span id="_CPPv2N6wrench22FileCopyCompletedEvent21file_registry_serviceE"></span><span id="wrench::FileCopyCompletedEvent::file_registry_service__std::shared_ptr:FileRegistryService:"></span><span class="target" id="classwrench_1_1_file_copy_completed_event_1a2aa8fdb1783ea3c5531052dd8f825966"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_registry_service.html#_CPPv4N6wrench19FileRegistryServiceE" title="wrench::FileRegistryService"><span class="n"><span class="pre">FileRegistryService</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">file_registry_service</span></span></span><a class="headerlink" href="#_CPPv4N6wrench22FileCopyCompletedEvent21file_registry_serviceE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>The file registry service that was supposed to be updated (or nullptr if none) </p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench22FileCopyCompletedEvent29file_registry_service_updatedE">
-<span id="_CPPv3N6wrench22FileCopyCompletedEvent29file_registry_service_updatedE"></span><span id="_CPPv2N6wrench22FileCopyCompletedEvent29file_registry_service_updatedE"></span><span id="wrench::FileCopyCompletedEvent::file_registry_service_updated__b"></span><span class="target" id="classwrench_1_1_file_copy_completed_event_1a6f72ffd664cfd233ae769b2985d85360"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">file_registry_service_updated</span></span></span><a class="headerlink" href="#_CPPv4N6wrench22FileCopyCompletedEvent29file_registry_service_updatedE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Whether the file registry service (if any) has been successfully updated. </p>
 </dd></dl>
 
 <dl class="cpp var">
