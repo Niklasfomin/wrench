@@ -483,7 +483,7 @@
 <dd><p>Delete a file at the storage service (incurs simulated overheads) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file</strong> – a location </p>
+<dd class="field-odd"><p><strong>location</strong> – a location </p>
 </dd>
 </dl>
 </dd></dl>
@@ -497,7 +497,6 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>targetServer</strong> – </p></li>
 <li><p><strong>file</strong> – </p></li>
-<li><p><strong>file_registry_service</strong> – </p></li>
 </ul>
 </dd>
 </dl>
@@ -847,7 +846,10 @@
 <dd><p>Read a file. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file</strong> – the file </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>location</strong> – a location </p></li>
+<li><p><strong>num_bytes</strong> – a nuimber of bytes to read </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

@@ -499,7 +499,7 @@
 <dd><p>Delete a file at the storage service (incurs simulated overheads) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file</strong> – a location </p>
+<dd class="field-odd"><p><strong>location</strong> – a location </p>
 </dd>
 </dl>
 </dd></dl>
@@ -548,13 +548,10 @@
 <dd><p>Get a file’s last write date at a location (in zero simulated time) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>file</strong> – the file </p></li>
-<li><p><strong>path</strong> – the path</p></li>
-</ul>
+<dd class="field-odd"><p><strong>file</strong> – the location</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>-1 if the file is not found </p>
+<dd class="field-even"><p>a date in seconds, or -1 if the file is not found </p>
 </dd>
 </dl>
 </dd></dl>
@@ -575,14 +572,17 @@
 <span id="_CPPv3N6wrench22CompoundStorageService23getTotalFreeSpaceAtPathERKNSt6stringE"></span><span id="_CPPv2N6wrench22CompoundStorageService23getTotalFreeSpaceAtPathERKNSt6stringE"></span><span id="wrench::CompoundStorageService::getTotalFreeSpaceAtPath__ssCR"></span><span class="target" id="classwrench_1_1_compound_storage_service_1ab8309434a954831a8db2f2b242e9e8b6"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceAtPath</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>Synchronously asks the storage services inside the compound storage service for their free space at all of their mount points. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – a path</p>
+</dd>
+<dt class="field-even">Throws</dt>
+<dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>The free space in bytes of each mount point, as a map</p>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The free space in bytes at the path</p>
 </dd>
 </dl>
 </dd></dl>
