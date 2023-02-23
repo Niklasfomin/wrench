@@ -408,7 +408,6 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD4Node13getTotalSpaceEv">
 <span id="_CPPv3N6wrench6XRootD4Node13getTotalSpaceEv"></span><span id="_CPPv2N6wrench6XRootD4Node13getTotalSpaceEv"></span><span id="wrench::XRootD::Node::getTotalSpace"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a1a0d99d2e6c729373947a5ded54fd9a5"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node13getTotalSpaceEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the storage service’s total space (in zero simulated time) </p>
-<p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> total space method </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>a capacity in bytes </p>
@@ -592,6 +591,31 @@
 <li><p><strong>location</strong> – a location </p></li>
 <li><p><strong>num_bytes</strong> – a number of bytes to read </p></li>
 </ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD4Node12reserveSpaceERNSt10shared_ptrI12FileLocationEE">
+<span id="_CPPv3N6wrench6XRootD4Node12reserveSpaceERNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench6XRootD4Node12reserveSpaceERNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::XRootD::Node::reserveSpace__std::shared_ptr:FileLocation:R"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1ac574544bda5d87adc19111969d6b7c9b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reserveSpace</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node12reserveSpaceERNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reserve space at the storage service. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>location</strong> – a location </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if success, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD4Node14unreserveSpaceERNSt10shared_ptrI12FileLocationEE">
+<span id="_CPPv3N6wrench6XRootD4Node14unreserveSpaceERNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench6XRootD4Node14unreserveSpaceERNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::XRootD::Node::unreserveSpace__std::shared_ptr:FileLocation:R"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a1f1050380a8cb80d694b2b38e4d6e38e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unreserveSpace</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node14unreserveSpaceERNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Unreserve space at the storage service. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>location</strong> – a location </p>
 </dd>
 </dl>
 </dd></dl>
