@@ -394,6 +394,17 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD4Node7getLoadEv">
+<span id="_CPPv3N6wrench6XRootD4Node7getLoadEv"></span><span id="_CPPv2N6wrench6XRootD4Node7getLoadEv"></span><span id="wrench::XRootD::Node::getLoad"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a6b97d6f3d69a34e4b73a79d39120bba9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLoad</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node7getLoadEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the load of the underlying storage service. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the load on the service </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD4Node9getParentEv">
 <span id="_CPPv3N6wrench6XRootD4Node9getParentEv"></span><span id="_CPPv2N6wrench6XRootD4Node9getParentEv"></span><span id="wrench::XRootD::Node::getParent"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a7c7b88b17128a9ed475d866598ee5417"></span><a class="reference internal" href="#_CPPv4N6wrench6XRootD4NodeE" title="wrench::XRootD::Node"><span class="n"><span class="pre">Node</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getParent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node9getParentEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A Meta tree traversal to get the parent of this node. </p>
@@ -448,7 +459,21 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE">
-<span id="_CPPv3N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::XRootD::Node::hasFile__std::shared_ptr:FileLocation:CR"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a199751f9a50919997b190a29835b8a51"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::XRootD::Node::hasFile__std::shared_ptr:FileLocation:CR"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a2e5b055ecf4233936b5f55cc51f3069c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench6XRootD4Node7hasFileERKNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Determines whether the storage service has the file. This doesn’t simulate anything and is merely a zero-simulated-time data structure lookup. If you want to simulate the overhead of querying the <a class="reference internal" href="../api_user/classwrench_1_1_storage_service.html#classwrench_1_1_storage_service"><span class="std std-ref">StorageService</span></a>, instead use <a class="reference internal" href="../api_internal/classwrench_1_1_x_root_d_1_1_node.html#classwrench_1_1_x_root_d_1_1_node_1a5576294bc31c8eba03d097ada7e59e33"><span class="std std-ref">lookupFile()</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>location</strong> – a location </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if the file is present, false otherwise </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="classwrench_1_1_x_root_d_1_1_node_1a199751f9a50919997b190a29835b8a51"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
 <dd><p>Determines whether a file is present at the storage service (in zero simulated time) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
