@@ -527,6 +527,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService20getDiskForPathOrNullERKNSt6stringE">
+<span id="_CPPv3N6wrench20SimpleStorageService20getDiskForPathOrNullERKNSt6stringE"></span><span id="_CPPv2N6wrench20SimpleStorageService20getDiskForPathOrNullERKNSt6stringE"></span><span id="wrench::SimpleStorageService::getDiskForPathOrNull__ssCR"></span><span class="target" id="classwrench_1_1_simple_storage_service_1a451ce8f1b7a6f5bc6a52bcf17efdc60b"></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Disk</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getDiskForPathOrNull</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench20SimpleStorageService20getDiskForPathOrNullERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Gets the disk that stores a path. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – a path </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a disk, or nullptr if path is invalid </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI8DataFileEERKNSt6stringE">
 <span id="_CPPv3N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI8DataFileEERKNSt6stringE"></span><span id="_CPPv2N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI8DataFileEERKNSt6stringE"></span><span id="wrench::SimpleStorageService::getFileLastWriteDate__std::shared_ptr:DataFile:CR.ssCR"></span><span class="target" id="classwrench_1_1_simple_storage_service_1a051e9fef7eb6117a8c820fcecaff6b04"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFileLastWriteDate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;/&quot;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI8DataFileEERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get a file’s last write date at a location (in zero simulated time) </p>
@@ -546,13 +560,13 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI12FileLocationEE">
 <span id="_CPPv3N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::SimpleStorageService::getFileLastWriteDate__std::shared_ptr:FileLocation:CR"></span><span class="target" id="classwrench_1_1_simple_storage_service_1a8db22d69a6df5ea17c9cb29405149944"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFileLastWriteDate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench20SimpleStorageService20getFileLastWriteDateERKNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get a file’s last write date at the storage service (in zero simulated time) </p>
+<dd><p>Get a file’s last write date at a the storage service (in zero simulated time) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>location</strong> – a location </p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>a date in seconds </p>
+<dd class="field-even"><p>a date in seconds, or -1 if the file is not found </p>
 </dd>
 </dl>
 </dd></dl>
