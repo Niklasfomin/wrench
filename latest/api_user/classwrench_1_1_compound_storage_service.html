@@ -258,7 +258,7 @@
 <dd><p>Get a file’s last write date at a location (in zero simulated time) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>file</strong> – the location</p>
+<dd class="field-odd"><p><strong>location</strong> – the location</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>a date in seconds, or -1 if the file is not found </p>
@@ -286,10 +286,7 @@
 <dd class="field-odd"><p><strong>path</strong> – a path</p>
 </dd>
 <dt class="field-even">Throws</dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
-</ul>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p>
 </dd>
 <dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The free space in bytes at the path</p>
@@ -369,8 +366,11 @@
 <span id="_CPPv3N6wrench22CompoundStorageService12setIsScratchEb"></span><span id="_CPPv2N6wrench22CompoundStorageService12setIsScratchEb"></span><span id="wrench::CompoundStorageService::setIsScratch__b"></span><span class="target" id="classwrench_1_1_compound_storage_service_1a08e198b62cbd99eb89418c03996decb7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setIsScratch</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">is_scratch</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>setIsScratch can’t be used on a <a class="reference internal" href="#classwrench_1_1_compound_storage_service"><span class="std std-ref">CompoundStorageService</span></a> because it doesn’t have any actual storage resources. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
-<dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">logic_error</span></span></span> – </p>
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>is_scratch</strong> – true or false </p>
+</dd>
+<dt class="field-even">Throws</dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">logic_error</span></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>
