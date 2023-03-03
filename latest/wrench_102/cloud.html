@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interacting with a cloud compute service &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -29,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,7 +76,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Interacting with a cloud compute service</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wrench_102/cloud.rst.txt" rel="nofollow"> View page source</a>
@@ -100,49 +102,49 @@ shows the state transition diagram of a VM instance:</p>
 <a class="reference internal image-reference" href="../_images/wrench-guide-cloud-state-diagram.png"><img alt="../_images/wrench-guide-cloud-state-diagram.png" src="../_images/wrench-guide-cloud-state-diagram.png" style="width: 338.0px; height: 238.0px;" /></a>
 </figure>
 <p>Here is an example interaction with a <a class="reference internal" href="../api_developer/classwrench_1_1_cloud_compute_service.html#_CPPv4N6wrench19CloudComputeServiceE" title="wrench::CloudComputeService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::CloudComputeService</span></code></a>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">std</span><span class="p">:</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="nl">std</span><span class="p">:</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="p">;</span>
 
 <span class="c1">// Create a VM with 2 cores and 1 GiB of RAM, which could fail if</span>
 <span class="c1">// not enough resources are available</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm1_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">));</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vm1_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">30</span><span class="p">));</span>
 
 <span class="c1">// Create a VM with 4 cores and 2 GiB of RAM, which could fail if</span>
 <span class="c1">// not enough resources are available</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm2_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">));</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vm2_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">));</span>
 
 <span class="c1">// Start both VMs and keep track of their associated bare-metal compute services</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm1_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm2_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vm1_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">vm2_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span>
 
 <span class="c1">// Create a job manager</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span>
 
 <span class="c1">// Create a job</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createStandardJob</span><span class="p">({...</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">tasks</span><span class="w"> </span><span class="p">...});</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createStandardJob</span><span class="p">({...</span><span class="w"> </span><span class="n">some</span><span class="w"> </span><span class="n">tasks</span><span class="w"> </span><span class="p">...});</span>
 
 <span class="c1">// Submit the job to the 1st VM (i.e., to its bare-metal compute service)</span>
-<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="n">vm1_cs</span><span class="p">);</span><span class="w"></span>
+<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="n">vm1_cs</span><span class="p">);</span>
 
 <span class="c1">// Sleep for 10 seconds</span>
-<span class="n">Simulation</span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="n">Simulation</span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 
 <span class="c1">// Suspend the 1st VM</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">suspendVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">suspendVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
 <span class="c1">// Sleep for 10 seconds</span>
-<span class="n">Simulation</span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span><span class="w"></span>
+<span class="n">Simulation</span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 
 <span class="c1">// Resume the 1st VM</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">resumeVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">resumeVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
 <span class="c1">// Wait for and process the next event (should be a standard job completion or failure)</span>
-<span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span>
 
 <span class="c1">// Shutdown both VMs</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdownVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdownVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdownVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">shutdownVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span>
 
 <span class="c1">// Destroy both VMs, which releases resources</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">destroyVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span><span class="w"></span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">destroyVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span><span class="w"></span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">destroyVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">destroyVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Note that the cloud service will decide on which physical resources VM

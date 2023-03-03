@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::EnergyMeterService &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::EnergyMeterService</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-energymeterservice">
-<h1>wrench::EnergyMeterService<a class="headerlink" href="#wrench-energymeterservice" title="Permalink to this heading"></a></h1>
+<span id="energymeterservice"></span><h1>wrench::EnergyMeterService<a class="headerlink" href="#wrench-energymeterservice" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench18EnergyMeterServiceE">
 <span id="_CPPv3N6wrench18EnergyMeterServiceE"></span><span id="_CPPv2N6wrench18EnergyMeterServiceE"></span><span id="wrench::EnergyMeterService"></span><span class="target" id="classwrench_1_1_energy_meter_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EnergyMeterService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><a class="headerlink" href="#_CPPv4N6wrench18EnergyMeterServiceE" title="Permalink to this definition"></a><br /></dt>
@@ -239,7 +244,7 @@
 <span id="_CPPv3N6wrench18EnergyMeterService18EnergyMeterServiceENSt6stringERKNSt3mapINSt6stringEdEE"></span><span id="_CPPv2N6wrench18EnergyMeterService18EnergyMeterServiceENSt6stringERKNSt3mapINSt6stringEdEE"></span><span id="wrench::EnergyMeterService::EnergyMeterService__ss.std::map:ss.double:CR"></span><span class="target" id="classwrench_1_1_energy_meter_service_1af0ea09d43795f1fb4f8cf00bcd0e2763"></span><span class="sig-name descname"><span class="n"><span class="pre">EnergyMeterService</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">measurement_periods</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18EnergyMeterService18EnergyMeterServiceENSt6stringERKNSt3mapINSt6stringEdEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the hostname on which the service should start </p></li>
 <li><p><strong>measurement_periods</strong> – the measurement period for each metered host </p></li>
@@ -253,7 +258,7 @@
 <span id="_CPPv3N6wrench18EnergyMeterService18EnergyMeterServiceENSt6stringERKNSt6vectorINSt6stringEEEd"></span><span id="_CPPv2N6wrench18EnergyMeterService18EnergyMeterServiceENSt6stringERKNSt6vectorINSt6stringEEEd"></span><span id="wrench::EnergyMeterService::EnergyMeterService__ss.std::vector:ss:CR.double"></span><span class="target" id="classwrench_1_1_energy_meter_service_1a0f221ab858c7e7ec58796e464f6d090b"></span><span class="sig-name descname"><span class="n"><span class="pre">EnergyMeterService</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostnames</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">period</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18EnergyMeterService18EnergyMeterServiceENSt6stringERKNSt6vectorINSt6stringEEEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the name of the host on which this service is running </p></li>
 <li><p><strong>hostnames</strong> – the list of metered hosts, as hostnames </p></li>
@@ -274,7 +279,7 @@
 <span id="_CPPv3N6wrench18EnergyMeterService4stopEv"></span><span id="_CPPv2N6wrench18EnergyMeterService4stopEv"></span><span id="wrench::EnergyMeterService::stop"></span><span class="target" id="classwrench_1_1_energy_meter_service_1ae36e77f74463feecac5aa5c8b5131f87"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench18EnergyMeterService4stopEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Stop the energy meter. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::WorkflowTask &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -87,6 +89,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html">wrench::HTCondorComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html">wrench::HTCondorComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_property.html">wrench::HTCondorComputeServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -166,7 +171,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_user.html">WRENCH User API</a></li>
       <li class="breadcrumb-item active">wrench::WorkflowTask</li>
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +184,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-workflowtask">
-<h1>wrench::WorkflowTask<a class="headerlink" href="#wrench-workflowtask" title="Permalink to this heading"></a></h1>
+<span id="workflowtask"></span><h1>wrench::WorkflowTask<a class="headerlink" href="#wrench-workflowtask" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12WorkflowTaskE">
 <span id="_CPPv3N6wrench12WorkflowTaskE"></span><span id="_CPPv2N6wrench12WorkflowTaskE"></span><span id="wrench::WorkflowTask"></span><span class="target" id="classwrench_1_1_workflow_task"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WorkflowTask</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_shared_from_this</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_workflow_task.html#_CPPv4N6wrench12WorkflowTaskE" title="wrench::WorkflowTask"><span class="n"><span class="pre">WorkflowTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
@@ -191,10 +196,10 @@
 <span id="_CPPv3N6wrench12WorkflowTask12addInputFileERKNSt10shared_ptrI8DataFileEE"></span><span id="_CPPv2N6wrench12WorkflowTask12addInputFileERKNSt10shared_ptrI8DataFileEE"></span><span id="wrench::WorkflowTask::addInputFile__std::shared_ptr:DataFile:CR"></span><span class="target" id="classwrench_1_1_workflow_task_1aa230c3432949312b503c303c37d64c1d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addInputFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Add an input file to the task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>file</strong> – the file </p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>
@@ -205,7 +210,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask13addOutputFileERKNSt10shared_ptrI8DataFileEE"></span><span id="_CPPv2N6wrench12WorkflowTask13addOutputFileERKNSt10shared_ptrI8DataFileEE"></span><span id="wrench::WorkflowTask::addOutputFile__std::shared_ptr:DataFile:CR"></span><span class="target" id="classwrench_1_1_workflow_task_1a3f459dd774d6cbf950303ff76da66887"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addOutputFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Add an output file to the task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>file</strong> – the file </p>
 </dd>
 </dl>
@@ -216,7 +221,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask11getChildrenEv"></span><span id="_CPPv2N6wrench12WorkflowTask11getChildrenEv"></span><span id="wrench::WorkflowTask::getChildren"></span><span class="target" id="classwrench_1_1_workflow_task_1ac9a9d97c9b01445228d5c2f1a2900d6d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_workflow_task.html#_CPPv4N6wrench12WorkflowTaskE" title="wrench::WorkflowTask"><span class="n"><span class="pre">WorkflowTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChildren</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the children of a task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a list of workflow tasks </p>
 </dd>
 </dl>
@@ -227,7 +232,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask15getFailureCountEv"></span><span id="_CPPv2NK6wrench12WorkflowTask15getFailureCountEv"></span><span id="wrench::WorkflowTask::getFailureCountC"></span><span class="target" id="classwrench_1_1_workflow_task_1a2969f3aa181ceb76726e686c3ba8e54f"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFailureCount</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the number of times a task has failed. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a failure count </p>
 </dd>
 </dl>
@@ -238,7 +243,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask8getFlopsEv"></span><span id="_CPPv2NK6wrench12WorkflowTask8getFlopsEv"></span><span id="wrench::WorkflowTask::getFlopsC"></span><span class="target" id="classwrench_1_1_workflow_task_1aec0aab3ed552960729a60d1d3c4a3de2"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFlops</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the number of flops of the task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of flops </p>
 </dd>
 </dl>
@@ -249,7 +254,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask5getIDEv"></span><span id="_CPPv2NK6wrench12WorkflowTask5getIDEv"></span><span id="wrench::WorkflowTask::getIDC"></span><span class="target" id="classwrench_1_1_workflow_task_1a612c91e6334afddd5dc5525ed8d525ff"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getID</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the id of the task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>an id as a string </p>
 </dd>
 </dl>
@@ -260,7 +265,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask14getMaxNumCoresEv"></span><span id="_CPPv2NK6wrench12WorkflowTask14getMaxNumCoresEv"></span><span id="wrench::WorkflowTask::getMaxNumCoresC"></span><span class="target" id="classwrench_1_1_workflow_task_1aa470fe4c0a34211165989afabcba795f"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMaxNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the maximum number of cores that the task can use. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of cores </p>
 </dd>
 </dl>
@@ -271,7 +276,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask20getMemoryRequirementEv"></span><span id="_CPPv2NK6wrench12WorkflowTask20getMemoryRequirementEv"></span><span id="wrench::WorkflowTask::getMemoryRequirementC"></span><span class="target" id="classwrench_1_1_workflow_task_1aeafc6e6f0bce5853a3fd1e4818638908"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMemoryRequirement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the memory_manager_service requirement of the task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a memory_manager_service requirement (in bytes) </p>
 </dd>
 </dl>
@@ -282,7 +287,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask14getMinNumCoresEv"></span><span id="_CPPv2NK6wrench12WorkflowTask14getMinNumCoresEv"></span><span id="wrench::WorkflowTask::getMinNumCoresC"></span><span class="target" id="classwrench_1_1_workflow_task_1a05d06d1988745735016dcf19d38e2398"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the minimum number of cores required for running the task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of cores </p>
 </dd>
 </dl>
@@ -293,7 +298,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask19getNumberOfChildrenEv"></span><span id="_CPPv2N6wrench12WorkflowTask19getNumberOfChildrenEv"></span><span id="wrench::WorkflowTask::getNumberOfChildren"></span><span class="target" id="classwrench_1_1_workflow_task_1a52f15cc7714c8697b369243e52d5b372"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumberOfChildren</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the number of children of a task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of children </p>
 </dd>
 </dl>
@@ -304,7 +309,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask18getNumberOfParentsEv"></span><span id="_CPPv2N6wrench12WorkflowTask18getNumberOfParentsEv"></span><span id="wrench::WorkflowTask::getNumberOfParents"></span><span class="target" id="classwrench_1_1_workflow_task_1a3bd5bc525e878eb1b16142d9ffa08b1f"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumberOfParents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the number of parents of a task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of parents </p>
 </dd>
 </dl>
@@ -315,7 +320,7 @@
 <span id="_CPPv3NK6wrench12WorkflowTask16getParallelModelEv"></span><span id="_CPPv2NK6wrench12WorkflowTask16getParallelModelEv"></span><span id="wrench::WorkflowTask::getParallelModelC"></span><span class="target" id="classwrench_1_1_workflow_task_1abae833e97264899fc61bf8f18b46ef47"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_parallel_model.html#_CPPv4N6wrench13ParallelModelE" title="wrench::ParallelModel"><span class="n"><span class="pre">ParallelModel</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getParallelModel</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the task’s parallel model. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the parallel model </p>
 </dd>
 </dl>
@@ -326,7 +331,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask10getParentsEv"></span><span id="_CPPv2N6wrench12WorkflowTask10getParentsEv"></span><span id="wrench::WorkflowTask::getParents"></span><span class="target" id="classwrench_1_1_workflow_task_1a499318562dd2dc67234ee9281390b5e9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_workflow_task.html#_CPPv4N6wrench12WorkflowTaskE" title="wrench::WorkflowTask"><span class="n"><span class="pre">WorkflowTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getParents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the parents of a task. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a list of workflow tasks </p>
 </dd>
 </dl>
@@ -337,7 +342,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask12getSharedPtrEv"></span><span id="_CPPv2N6wrench12WorkflowTask12getSharedPtrEv"></span><span id="wrench::WorkflowTask::getSharedPtr"></span><span class="target" id="classwrench_1_1_workflow_task_1ac23bd3458b42962c743195551603e07b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_workflow_task.html#_CPPv4N6wrench12WorkflowTaskE" title="wrench::WorkflowTask"><span class="n"><span class="pre">WorkflowTask</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSharedPtr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Retrieved the official shared pointer for this object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a shared pointer </p>
 </dd>
 </dl>
@@ -348,7 +353,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask8setFlopsEd"></span><span id="_CPPv2N6wrench12WorkflowTask8setFlopsEd"></span><span id="wrench::WorkflowTask::setFlops__double"></span><span class="target" id="classwrench_1_1_workflow_task_1ac4af40bcc14f860419c3cbee6177c68b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFlops</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Set the number of f of the task (to be used only in very specific cases in which it is guaranteed that changing a task’s work after that task has been created is a valid thing to do) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>f</strong> – the number of f </p>
 </dd>
 </dl>
@@ -359,7 +364,7 @@
 <span id="_CPPv3N6wrench12WorkflowTask16setParallelModelENSt10shared_ptrI13ParallelModelEE"></span><span id="_CPPv2N6wrench12WorkflowTask16setParallelModelENSt10shared_ptrI13ParallelModelEE"></span><span id="wrench::WorkflowTask::setParallelModel__std::shared_ptr:ParallelModel:"></span><span class="target" id="classwrench_1_1_workflow_task_1a789d01615f762cca3d1da32ac6b3d725"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setParallelModel</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_parallel_model.html#_CPPv4N6wrench13ParallelModelE" title="wrench::ParallelModel"><span class="n"><span class="pre">ParallelModel</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">model</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Set the task’s parallel model. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>model</strong> – a parallel model </p>
 </dd>
 </dl>

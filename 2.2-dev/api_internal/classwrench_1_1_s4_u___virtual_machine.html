@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::S4U_VirtualMachine &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,16 +13,14 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="wrench::Service" href="classwrench_1_1_service.html" />
+    <link rel="next" title="wrench::SMPIExecutor" href="classwrench_1_1_s_m_p_i_executor.html" />
     <link rel="prev" title="wrench::S4U_Simulation" href="classwrench_1_1_s4_u___simulation.html" /> 
 </head>
 
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -216,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -245,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -369,7 +375,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::S4U_VirtualMachine</li>
       <li class="wy-breadcrumbs-aside">
@@ -382,7 +388,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-s4u-virtualmachine">
-<h1>wrench::S4U_VirtualMachine<a class="headerlink" href="#wrench-s4u-virtualmachine" title="Permalink to this heading"></a></h1>
+<span id="s4u-virtualmachine"></span><h1>wrench::S4U_VirtualMachine<a class="headerlink" href="#wrench-s4u-virtualmachine" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench18S4U_VirtualMachineE">
 <span id="_CPPv3N6wrench18S4U_VirtualMachineE"></span><span id="_CPPv2N6wrench18S4U_VirtualMachineE"></span><span id="wrench::S4U_VirtualMachine"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">S4U_VirtualMachine</span></span></span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachineE" title="Permalink to this definition"></a><br /></dt>
@@ -419,7 +425,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine18S4U_VirtualMachineERKNSt6stringEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine18S4U_VirtualMachineERKNSt6stringEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::S4U_VirtualMachine::S4U_VirtualMachine__ssCR.unsigned-l.double.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1a20c4eb58107356814d9af06405250e60"></span><span class="sig-name descname"><span class="n"><span class="pre">S4U_VirtualMachine</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_hostname</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram_memory</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine18S4U_VirtualMachineERKNSt6stringEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vm_name</strong> – the name of the VM </p></li>
 <li><p><strong>num_cores</strong> – the number of cores the VM can use </p></li>
@@ -436,7 +442,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine9getMemoryEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine9getMemoryEv"></span><span id="wrench::S4U_VirtualMachine::getMemory"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1afa61b23ae83d04cec12b022c5b3b38e0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMemory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine9getMemoryEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the memory_manager_service consumption. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the memory_manager_service consumption </p>
 </dd>
 </dl>
@@ -447,7 +453,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine21getMessagePayloadListEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine21getMessagePayloadListEv"></span><span id="wrench::S4U_VirtualMachine::getMessagePayloadList"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1a4bea396fd3eb6e8ee9887ace5322f127"></span><span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMessagePayloadList</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine21getMessagePayloadListEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the message payload list for the bare-metal compute service that will run on the VM ({} means “use all defaults”) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a message payload list </p>
 </dd>
 </dl>
@@ -458,7 +464,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine11getNumCoresEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine11getNumCoresEv"></span><span id="wrench::S4U_VirtualMachine::getNumCores"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1a01ad4f2e5e206faac2df0563ff3df9f0"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine11getNumCoresEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the number of cores. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the number of cores </p>
 </dd>
 </dl>
@@ -469,7 +475,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine19getPhysicalHostnameEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine19getPhysicalHostnameEv"></span><span id="wrench::S4U_VirtualMachine::getPhysicalHostname"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1ab33a5eb19c5c017307deda8259801bde"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPhysicalHostname</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine19getPhysicalHostnameEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the physical hostname. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the physical hostname </p>
 </dd>
 </dl>
@@ -480,7 +486,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine15getPropertyListEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine15getPropertyListEv"></span><span id="wrench::S4U_VirtualMachine::getPropertyList"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1a8f39247663ee02ebce6261af2d279a22"></span><span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyList</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine15getPropertyListEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the property list for the bare-metal compute service that is to run on the VM ({} means “use all defaults”) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a property list </p>
 </dd>
 </dl>
@@ -491,7 +497,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine8getStateEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine8getStateEv"></span><span id="wrench::S4U_VirtualMachine::getState"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1ae42eca74f2a94405f000a0726265ee22"></span><a class="reference internal" href="#_CPPv4N6wrench18S4U_VirtualMachine5StateE" title="wrench::S4U_VirtualMachine::State"><span class="n"><span class="pre">State</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine8getStateEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the VM’s state. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a state </p>
 </dd>
 </dl>
@@ -502,7 +508,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine16getStateAsStringEv"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine16getStateAsStringEv"></span><span id="wrench::S4U_VirtualMachine::getStateAsString"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1af635cd3255c68f9fd8e9d0eb3445160c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStateAsString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine16getStateAsStringEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the VM’s state as a string. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a state as a string </p>
 </dd>
 </dl>
@@ -513,7 +519,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine7migrateERKNSt6stringE"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine7migrateERKNSt6stringE"></span><span id="wrench::S4U_VirtualMachine::migrate__ssCR"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1a6e89b8062f1494b1118bdd6b8d273d31"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">migrate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dst_pm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine7migrateERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Migrate the VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>dest_pm_name</strong> – the name of the host to which to migrate the VM </p>
 </dd>
 </dl>
@@ -536,7 +542,7 @@
 <span id="_CPPv3N6wrench18S4U_VirtualMachine5startERNSt6stringE"></span><span id="_CPPv2N6wrench18S4U_VirtualMachine5startERNSt6stringE"></span><span id="wrench::S4U_VirtualMachine::start__ssR"></span><span class="target" id="classwrench_1_1_s4_u___virtual_machine_1a3c0463f594ee74739dc334963437a932"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench18S4U_VirtualMachine5startERNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Start the VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>pm_name</strong> – the physical host name </p>
 </dd>
 </dl>
@@ -567,7 +573,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="classwrench_1_1_s4_u___simulation.html" class="btn btn-neutral float-left" title="wrench::S4U_Simulation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classwrench_1_1_service.html" class="btn btn-neutral float-right" title="wrench::Service" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classwrench_1_1_s_m_p_i_executor.html" class="btn btn-neutral float-right" title="wrench::SMPIExecutor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

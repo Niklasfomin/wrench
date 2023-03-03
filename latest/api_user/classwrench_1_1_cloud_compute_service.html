@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CloudComputeService &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -87,6 +89,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html">wrench::HTCondorComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html">wrench::HTCondorComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_property.html">wrench::HTCondorComputeServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -166,7 +171,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_user.html">WRENCH User API</a></li>
       <li class="breadcrumb-item active">wrench::CloudComputeService</li>
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +184,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-cloudcomputeservice">
-<h1>wrench::CloudComputeService<a class="headerlink" href="#wrench-cloudcomputeservice" title="Permalink to this heading"></a></h1>
+<span id="cloudcomputeservice"></span><h1>wrench::CloudComputeService<a class="headerlink" href="#wrench-cloudcomputeservice" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeServiceE">
 <span id="_CPPv3N6wrench19CloudComputeServiceE"></span><span id="_CPPv2N6wrench19CloudComputeServiceE"></span><span id="wrench::CloudComputeService"></span><span class="target" id="classwrench_1_1_cloud_compute_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeServiceE" title="wrench::ComputeService"><span class="n"><span class="pre">ComputeService</span></span></a><br /></dt>
@@ -192,7 +197,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::CloudComputeService::CloudComputeService__ssCR.std::vector:ss:CR.ssCR.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1aa785149931ef653843367e46b8a92afa"></span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeService</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">execution_hosts</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">scratch_space_mount_point</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the hostname on which to start the service </p></li>
 <li><p><strong>execution_hosts</strong> – the list of the names of the hosts available for running virtual machines </p></li>
@@ -201,7 +206,7 @@
 <li><p><strong>messagepayload_list</strong> – a message payload list ({} means “use all defaults”)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p>
 </dd>
 </dl>
@@ -212,7 +217,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService20supportsCompoundJobsEv"></span><span id="_CPPv2N6wrench19CloudComputeService20supportsCompoundJobsEv"></span><span id="wrench::CloudComputeService::supportsCompoundJobs"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1abdd58db8fdae862168de7bdfd0af45f4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsCompoundJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>Returns true if the service supports compound jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -223,7 +228,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService17supportsPilotJobsEv"></span><span id="_CPPv2N6wrench19CloudComputeService17supportsPilotJobsEv"></span><span id="wrench::CloudComputeService::supportsPilotJobs"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ab9f8ea5ac47d7db2568c80cd2a649763"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsPilotJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>Returns true if the service supports pilot jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -234,7 +239,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService20supportsStandardJobsEv"></span><span id="_CPPv2N6wrench19CloudComputeService20supportsStandardJobsEv"></span><span id="wrench::CloudComputeService::supportsStandardJobs"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a87cbfce67b5e6a33f3ad90e08b57c21f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsStandardJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>Returns true if the service supports standard jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creating an XRootD storage service &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -29,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,7 +76,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Creating an XRootD storage service</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wrench_101/xrootd.rst.txt" rel="nofollow"> View page source</a>
@@ -132,20 +134,20 @@ the locations of files that it has previous found via searches. The storage node
 this example, it has mountpoint <code class="docutils literal notranslate"><span class="pre">/</span></code>, can support up to 8 concurrent data connections, and the size of the
 control message that is sent to it to request a file read is 2KiB.  Finally, in this example, a copy of file
 <code class="docutils literal notranslate"><span class="pre">someFile</span></code> is created ab initio on the storage node.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Deployment</span><span class="w"> </span><span class="n">xrootd_deployment</span><span class="p">(</span><span class="n">simulation</span><span class="p">,</span><span class="w"></span>
-<span class="w">                                                  </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Property</span><span class="o">::</span><span class="n">CACHE_MAX_LIFETIME</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3600&quot;</span><span class="p">},</span><span class="w"></span>
-<span class="w">                                                   </span><span class="p">{</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Property</span><span class="o">::</span><span class="n">REDUCED_SIMULATION</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;false&quot;</span><span class="p">}},</span><span class="w"></span>
-<span class="w">                                                  </span><span class="p">{});</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xrootd_deployment</span><span class="p">.</span><span class="n">createRootSupervisor</span><span class="p">(</span><span class="s">&quot;Root&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">super</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">addChildSupervisor</span><span class="p">(</span><span class="s">&quot;Super&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">storage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">super</span><span class="o">-&gt;</span><span class="n">addChildStorageServer</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;Storage&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="p">{},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceProperty</span><span class="o">::</span><span class="n">MAX_NUM_CONCURRENT_DATA_CONNECTIONS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;8&quot;</span><span class="p">}},</span><span class="w"></span>
-<span class="w">    </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceMessagePayload</span><span class="o">::</span><span class="n">FILE_READ_REQUEST_MESSAGE_PAYLOAD</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">}});</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Deployment</span><span class="w"> </span><span class="n">xrootd_deployment</span><span class="p">(</span><span class="n">simulation</span><span class="p">,</span>
+<span class="w">                                                  </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Property</span><span class="o">::</span><span class="n">CACHE_MAX_LIFETIME</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3600&quot;</span><span class="p">},</span>
+<span class="w">                                                   </span><span class="p">{</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Property</span><span class="o">::</span><span class="n">REDUCED_SIMULATION</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;false&quot;</span><span class="p">}},</span>
+<span class="w">                                                  </span><span class="p">{});</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xrootd_deployment</span><span class="p">.</span><span class="n">createRootSupervisor</span><span class="p">(</span><span class="s">&quot;Root&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">super</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">root</span><span class="o">-&gt;</span><span class="n">addChildSupervisor</span><span class="p">(</span><span class="s">&quot;Super&quot;</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">storage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">super</span><span class="o">-&gt;</span><span class="n">addChildStorageServer</span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;Storage&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">{},</span>
+<span class="w">    </span><span class="p">{},</span>
+<span class="w">    </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceProperty</span><span class="o">::</span><span class="n">MAX_NUM_CONCURRENT_DATA_CONNECTIONS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;8&quot;</span><span class="p">}},</span>
+<span class="w">    </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceMessagePayload</span><span class="o">::</span><span class="n">FILE_READ_REQUEST_MESSAGE_PAYLOAD</span><span class="p">,</span><span class="w"> </span><span class="mi">2048</span><span class="p">}});</span>
 
-<span class="n">storage</span><span class="o">-&gt;</span><span class="n">createFile</span><span class="p">(</span><span class="n">someFile</span><span class="p">);</span><span class="w"></span>
+<span class="n">storage</span><span class="o">-&gt;</span><span class="n">createFile</span><span class="p">(</span><span class="n">someFile</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>See the documentation of <a class="reference internal" href="../api_developer/classwrench_1_1_x_root_d_1_1_property.html#_CPPv4N6wrench6XRootD8PropertyE" title="wrench::XRootD::Property"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::XRootD::Property</span></code></a> and

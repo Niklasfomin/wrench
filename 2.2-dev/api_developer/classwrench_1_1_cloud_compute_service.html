@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CloudComputeService &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::CloudComputeService</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-cloudcomputeservice">
-<h1>wrench::CloudComputeService<a class="headerlink" href="#wrench-cloudcomputeservice" title="Permalink to this heading"></a></h1>
+<span id="cloudcomputeservice"></span><h1>wrench::CloudComputeService<a class="headerlink" href="#wrench-cloudcomputeservice" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeServiceE">
 <span id="_CPPv3N6wrench19CloudComputeServiceE"></span><span id="_CPPv2N6wrench19CloudComputeServiceE"></span><span id="wrench::CloudComputeService"></span><span class="target" id="classwrench_1_1_cloud_compute_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeServiceE" title="wrench::ComputeService"><span class="n"><span class="pre">ComputeService</span></span></a><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeServiceE" title="Permalink to this definition"></a><br /></dt>
@@ -240,7 +245,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::CloudComputeService::CloudComputeService__ssCR.std::vector:ss:CR.ssCR.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1aa785149931ef653843367e46b8a92afa"></span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeService</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">execution_hosts</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">scratch_space_mount_point</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the hostname on which to start the service </p></li>
 <li><p><strong>execution_hosts</strong> – the list of the names of the hosts available for running virtual machines </p></li>
@@ -249,7 +254,7 @@
 <li><p><strong>messagepayload_list</strong> – a message payload list ({} means “use all defaults”)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p>
 </dd>
 </dl>
@@ -260,7 +265,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService8createVMEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench19CloudComputeService8createVMEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::CloudComputeService::createVM__unsigned-l.double.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ab1c537fb8cc361afbbec1797f8eddaff"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createVM</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram_memory</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService8createVMEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> VM (balances load on execution hosts) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>num_cores</strong> – the number of cores for the VM </p></li>
 <li><p><strong>ram_memory</strong> – the VM’s RAM memory_manager_service capacity </p></li>
@@ -268,13 +273,13 @@
 <li><p><strong>messagepayload_list</strong> – a message payload list for the <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> that will run on the VM ({} means “use all defaults”)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A VM name</p>
 </dd>
 </dl>
@@ -285,10 +290,10 @@
 <span id="_CPPv3N6wrench19CloudComputeService9destroyVMERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService9destroyVMERKNSt6stringE"></span><span id="wrench::CloudComputeService::destroyVM__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a8778343de392ce6f1ec1f1d9b52183be"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">destroyVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService9destroyVMERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Destroy a VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
@@ -302,10 +307,10 @@
 <span id="_CPPv3N6wrench19CloudComputeService17getExecutionHostsEv"></span><span id="_CPPv2N6wrench19CloudComputeService17getExecutionHostsEv"></span><span id="wrench::CloudComputeService::getExecutionHosts"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1afc5971bf2b018b74dd1359421400193b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getExecutionHosts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService17getExecutionHostsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the list of execution hosts available to run VMs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a list of hostnames</p>
 </dd>
 </dl>
@@ -316,16 +321,16 @@
 <span id="_CPPv3N6wrench19CloudComputeService19getVMComputeServiceERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService19getVMComputeServiceERKNSt6stringE"></span><span id="wrench::CloudComputeService::getVMComputeService__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ad3f1a159adfc39649ca699265ad184df"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_bare_metal_compute_service.html#_CPPv4N6wrench23BareMetalComputeServiceE" title="wrench::BareMetalComputeService"><span class="n"><span class="pre">BareMetalComputeService</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVMComputeService</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService19getVMComputeServiceERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the compute service running on a VM, if any. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> that runs on the VM, or nullptr if none</p>
 </dd>
 </dl>
@@ -336,16 +341,16 @@
 <span id="_CPPv3N6wrench19CloudComputeService21getVMPhysicalHostnameERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService21getVMPhysicalHostnameERKNSt6stringE"></span><span id="wrench::CloudComputeService::getVMPhysicalHostname__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a5660a127c7e060da16292c9e18ac0320"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getVMPhysicalHostname</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService21getVMPhysicalHostnameERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the name of the physical host on which a VM is running. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>physical host name</p>
 </dd>
 </dl>
@@ -356,13 +361,13 @@
 <span id="_CPPv3N6wrench19CloudComputeService8isVMDownERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService8isVMDownERKNSt6stringE"></span><span id="wrench::CloudComputeService::isVMDown__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ab36d3e3e184acf4163cfdc52cea8fc1c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isVMDown</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService8isVMDownERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Method to check whether a VM is currently down. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM </p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -373,13 +378,13 @@
 <span id="_CPPv3N6wrench19CloudComputeService11isVMRunningERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService11isVMRunningERKNSt6stringE"></span><span id="wrench::CloudComputeService::isVMRunning__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ae25178ef905e8a39dc4480ffe575528e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isVMRunning</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService11isVMRunningERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Method to check whether a VM is currently running. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM </p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -390,13 +395,13 @@
 <span id="_CPPv3N6wrench19CloudComputeService13isVMSuspendedERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService13isVMSuspendedERKNSt6stringE"></span><span id="wrench::CloudComputeService::isVMSuspended__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a7138db40c2ac7fc11cd7cb2e4b85e7b1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isVMSuspended</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService13isVMSuspendedERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Method to check whether a VM is currently running. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM </p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -407,10 +412,10 @@
 <span id="_CPPv3N6wrench19CloudComputeService8resumeVMERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService8resumeVMERKNSt6stringE"></span><span id="wrench::CloudComputeService::resumeVM__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1acd71eac59e42f21d752776b05cf8b6cf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resumeVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService8resumeVMERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Resume a suspended VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
@@ -424,10 +429,10 @@
 <span id="_CPPv3N6wrench19CloudComputeService10shutdownVMERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService10shutdownVMERKNSt6stringE"></span><span id="wrench::CloudComputeService::shutdownVM__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1aa47508aeb8508b0890c5f75609603a60"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shutdownVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Shutdown an active VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
@@ -441,14 +446,14 @@
 <span id="_CPPv3N6wrench19CloudComputeService10shutdownVMERKNSt6stringEbN14ComputeService16TerminationCauseE"></span><span id="_CPPv2N6wrench19CloudComputeService10shutdownVMERKNSt6stringEbN14ComputeService16TerminationCauseE"></span><span id="wrench::CloudComputeService::shutdownVM__ssCR.b.ComputeService::TerminationCause"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a2bcd47958de50b7d97b62a715a27f280"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shutdownVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">send_failure_notifications</span></span>, <a class="reference internal" href="classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeServiceE" title="wrench::ComputeService"><span class="n"><span class="pre">ComputeService</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeService16TerminationCauseE" title="wrench::ComputeService::TerminationCause"><span class="n"><span class="pre">TerminationCause</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">termination_cause</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringEbN14ComputeService16TerminationCauseE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Shutdown an active VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vm_name</strong> – the name of the VM </p></li>
 <li><p><strong>send_failure_notifications</strong> – whether to send the failure notifications </p></li>
 <li><p><strong>termination_cause</strong> – the termination cause (if failure notifications are sent)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
@@ -462,16 +467,16 @@
 <span id="_CPPv3N6wrench19CloudComputeService7startVMERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService7startVMERKNSt6stringE"></span><span id="wrench::CloudComputeService::startVM__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ae7f1f62a32e2b6a7008c9e28da7ced31"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_bare_metal_compute_service.html#_CPPv4N6wrench23BareMetalComputeServiceE" title="wrench::BareMetalComputeService"><span class="n"><span class="pre">BareMetalComputeService</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService7startVMERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Start a VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> that runs on the VM</p>
 </dd>
 </dl>
@@ -482,7 +487,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService20supportsCompoundJobsEv"></span><span id="_CPPv2N6wrench19CloudComputeService20supportsCompoundJobsEv"></span><span id="wrench::CloudComputeService::supportsCompoundJobs"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1abdd58db8fdae862168de7bdfd0af45f4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsCompoundJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService20supportsCompoundJobsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the service supports compound jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -493,7 +498,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService17supportsPilotJobsEv"></span><span id="_CPPv2N6wrench19CloudComputeService17supportsPilotJobsEv"></span><span id="wrench::CloudComputeService::supportsPilotJobs"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ab9f8ea5ac47d7db2568c80cd2a649763"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsPilotJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService17supportsPilotJobsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the service supports pilot jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -504,7 +509,7 @@
 <span id="_CPPv3N6wrench19CloudComputeService20supportsStandardJobsEv"></span><span id="_CPPv2N6wrench19CloudComputeService20supportsStandardJobsEv"></span><span id="wrench::CloudComputeService::supportsStandardJobs"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a87cbfce67b5e6a33f3ad90e08b57c21f"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsStandardJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService20supportsStandardJobsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the service supports standard jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -515,10 +520,10 @@
 <span id="_CPPv3N6wrench19CloudComputeService9suspendVMERKNSt6stringE"></span><span id="_CPPv2N6wrench19CloudComputeService9suspendVMERKNSt6stringE"></span><span id="wrench::CloudComputeService::suspendVM__ssCR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a0012572651810e2d1c3f53ab248318fd"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">suspendVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService9suspendVMERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Suspend a running VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>vm_name</strong> – the name of the VM</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>

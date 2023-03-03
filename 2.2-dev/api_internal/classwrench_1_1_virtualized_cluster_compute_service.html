@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::VirtualizedClusterComputeService &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -216,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -245,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -369,7 +375,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::VirtualizedClusterComputeService</li>
       <li class="wy-breadcrumbs-aside">
@@ -382,7 +388,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-virtualizedclustercomputeservice">
-<h1>wrench::VirtualizedClusterComputeService<a class="headerlink" href="#wrench-virtualizedclustercomputeservice" title="Permalink to this heading"></a></h1>
+<span id="virtualizedclustercomputeservice"></span><h1>wrench::VirtualizedClusterComputeService<a class="headerlink" href="#wrench-virtualizedclustercomputeservice" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32VirtualizedClusterComputeServiceE">
 <span id="_CPPv3N6wrench32VirtualizedClusterComputeServiceE"></span><span id="_CPPv2N6wrench32VirtualizedClusterComputeServiceE"></span><span id="wrench::VirtualizedClusterComputeService"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VirtualizedClusterComputeService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_cloud_compute_service.html#_CPPv4N6wrench19CloudComputeServiceE" title="wrench::CloudComputeService"><span class="n"><span class="pre">CloudComputeService</span></span></a><br /></dt>
@@ -394,7 +400,7 @@
 <span id="_CPPv3N6wrench32VirtualizedClusterComputeService32VirtualizedClusterComputeServiceERKNSt6stringERNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench32VirtualizedClusterComputeService32VirtualizedClusterComputeServiceERKNSt6stringERNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::VirtualizedClusterComputeService::VirtualizedClusterComputeService__ssCR.std::vector:ss:R.ssCR.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service_1a721b0fa1a154c7c45e6d224e0cf409ec"></span><span class="sig-name descname"><span class="n"><span class="pre">VirtualizedClusterComputeService</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">execution_hosts</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">scratch_space_mount_point</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the name of the hostcreate on which to start the service </p></li>
 <li><p><strong>execution_hosts</strong> – the hosts available for running virtual machines </p></li>
@@ -411,16 +417,16 @@
 <span id="_CPPv3N6wrench32VirtualizedClusterComputeService8createVMEmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench32VirtualizedClusterComputeService8createVMEmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::VirtualizedClusterComputeService::createVM__unsigned-l.double.ssCR.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service_1a9650ea2aab232bdbf51030ff2681b370"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createVM</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram_memory</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pm_name</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Start a VM. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>num_cores</strong> – the desired number of cores in the VM </p></li>
 <li><p><strong>ram_memory</strong> – the desired memory size of the VM </p></li>
 <li><p><strong>physical_host</strong> – the physical host on which to create the VM </p></li>
-<li><p><strong>property_list</strong> – the property list for the underlying <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> </p></li>
+<li><p><strong>property_list</strong> – the property list for the underlying <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a></p></li>
 <li><p><strong>messagepayload_list</strong> – the message payload list for the underlying <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a></p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A VM name </p>
 </dd>
 </dl>
@@ -431,7 +437,7 @@
 <span id="_CPPv3N6wrench32VirtualizedClusterComputeService8createVMEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench32VirtualizedClusterComputeService8createVMEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::VirtualizedClusterComputeService::createVM__unsigned-l.double.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service_1ab1c537fb8cc361afbbec1797f8eddaff"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createVM</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram_memory</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Create a <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> VM (balances load on execution hosts) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>num_cores</strong> – the number of cores for the VM </p></li>
 <li><p><strong>ram_memory</strong> – the VM’s RAM memory_manager_service capacity </p></li>
@@ -439,13 +445,13 @@
 <li><p><strong>messagepayload_list</strong> – a message payload list for the <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> that will run on the VM ({} means “use all defaults”)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A VM name</p>
 </dd>
 </dl>
@@ -456,7 +462,7 @@
 <span id="_CPPv3N6wrench32VirtualizedClusterComputeService9migrateVMERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N6wrench32VirtualizedClusterComputeService9migrateVMERKNSt6stringERKNSt6stringE"></span><span id="wrench::VirtualizedClusterComputeService::migrateVM__ssCR.ssCR"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service_1a72e07f4185465a44f2e021fcd3a71c5a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">migrateVM</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dest_pm_hostname</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Synchronously migrate a VM to another physical host. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>vm_name</strong> – virtual machine name </p></li>
 <li><p><strong>dest_pm_hostname</strong> – the name of the destination physical machine host </p></li>

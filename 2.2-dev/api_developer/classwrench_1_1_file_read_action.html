@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::FileReadAction &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::FileReadAction</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-filereadaction">
-<h1>wrench::FileReadAction<a class="headerlink" href="#wrench-filereadaction" title="Permalink to this heading"></a></h1>
+<span id="filereadaction"></span><h1>wrench::FileReadAction<a class="headerlink" href="#wrench-filereadaction" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14FileReadActionE">
 <span id="_CPPv3N6wrench14FileReadActionE"></span><span id="_CPPv2N6wrench14FileReadActionE"></span><span id="wrench::FileReadAction"></span><span class="target" id="classwrench_1_1_file_read_action"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileReadAction</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><a class="headerlink" href="#_CPPv4N6wrench14FileReadActionE" title="Permalink to this definition"></a><br /></dt>
@@ -239,7 +244,7 @@
 <span id="_CPPv3NK6wrench14FileReadAction7getFileEv"></span><span id="_CPPv2NK6wrench14FileReadAction7getFileEv"></span><span id="wrench::FileReadAction::getFileC"></span><span class="target" id="classwrench_1_1_file_read_action_1a7422ecbab4e6f93d469061aeeb556784"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFile</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench14FileReadAction7getFileEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns the action’s file. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the file </p>
 </dd>
 </dl>
@@ -250,7 +255,7 @@
 <span id="_CPPv3NK6wrench14FileReadAction16getFileLocationsEv"></span><span id="_CPPv2NK6wrench14FileReadAction16getFileLocationsEv"></span><span id="wrench::FileReadAction::getFileLocationsC"></span><span class="target" id="classwrench_1_1_file_read_action_1ab45fa508df0a3acbdcbfd2ac3aea3b9a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFileLocations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench14FileReadAction16getFileLocationsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns the action’s file locations. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A vector of file locations </p>
 </dd>
 </dl>
@@ -261,7 +266,7 @@
 <span id="_CPPv3NK6wrench14FileReadAction19getUsedFileLocationEv"></span><span id="_CPPv2NK6wrench14FileReadAction19getUsedFileLocationEv"></span><span id="wrench::FileReadAction::getUsedFileLocationC"></span><span class="target" id="classwrench_1_1_file_read_action_1a533435e5294e86fdde81d79004d1affa"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUsedFileLocation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench14FileReadAction19getUsedFileLocationEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Return the file location used by the action (or nullptr if action has not started, failed, etc.) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A storage service </p>
 </dd>
 </dl>
@@ -272,7 +277,7 @@
 <span id="_CPPv3NK6wrench14FileReadAction11usesScratchEv"></span><span id="_CPPv2NK6wrench14FileReadAction11usesScratchEv"></span><span id="wrench::FileReadAction::usesScratchC"></span><span class="target" id="classwrench_1_1_file_read_action_1a12b5091c884e8c2f80059c3021d10ba2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">usesScratch</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK6wrench14FileReadAction11usesScratchEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Determine whether the action uses scratch. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true if the action uses scratch, false otherwise </p>
 </dd>
 </dl>

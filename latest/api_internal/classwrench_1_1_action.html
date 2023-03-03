@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::Action &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -216,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -245,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -369,7 +375,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::Action</li>
       <li class="wy-breadcrumbs-aside">
@@ -382,7 +388,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-action">
-<h1>wrench::Action<a class="headerlink" href="#wrench-action" title="Permalink to this heading"></a></h1>
+<span id="action"></span><h1>wrench::Action<a class="headerlink" href="#wrench-action" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench6ActionE">
 <span id="_CPPv3N6wrench6ActionE"></span><span id="_CPPv2N6wrench6ActionE"></span><span id="wrench::Action"></span><span class="target" id="classwrench_1_1_action"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Action</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_shared_from_this</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">&gt;</span></span><br /></dt>
@@ -441,7 +447,7 @@
 <span id="_CPPv3N6wrench6Action11getChildrenEv"></span><span id="_CPPv2N6wrench6Action11getChildrenEv"></span><span id="wrench::Action::getChildren"></span><span class="target" id="classwrench_1_1_action_1a7c3b0ef6893252aa00eb5267e7e3f7da"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getChildren</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the action’s children. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a set of children </p>
 </dd>
 </dl>
@@ -452,7 +458,7 @@
 <span id="_CPPv3NK6wrench6Action10getEndDateEv"></span><span id="_CPPv2NK6wrench6Action10getEndDateEv"></span><span id="wrench::Action::getEndDateC"></span><span class="target" id="classwrench_1_1_action_1ac6a3d78873d6a2f03994d7f0303f1a0a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEndDate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns this action’s end date (-1.0 if not ended) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a data </p>
 </dd>
 </dl>
@@ -463,7 +469,7 @@
 <span id="_CPPv3N6wrench6Action19getExecutionHistoryEv"></span><span id="_CPPv2N6wrench6Action19getExecutionHistoryEv"></span><span id="wrench::Action::getExecutionHistory"></span><span class="target" id="classwrench_1_1_action_1a31d386c0169109ce35f057a1c892d76a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">stack</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6Action15ActionExecutionE" title="wrench::Action::ActionExecution"><span class="n"><span class="pre">ActionExecution</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getExecutionHistory</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Retrieve the execution history. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the execution history </p>
 </dd>
 </dl>
@@ -474,7 +480,7 @@
 <span id="_CPPv3NK6wrench6Action15getFailureCauseEv"></span><span id="_CPPv2NK6wrench6Action15getFailureCauseEv"></span><span id="wrench::Action::getFailureCauseC"></span><span class="target" id="classwrench_1_1_action_1a05f6f6fd0c51e5b2a7586a925a65bc78"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFailureCause</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns the action’s failure cause. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>an internal state </p>
 </dd>
 </dl>
@@ -485,7 +491,7 @@
 <span id="_CPPv3NK6wrench6Action6getJobEv"></span><span id="_CPPv2NK6wrench6Action6getJobEv"></span><span id="wrench::Action::getJobC"></span><span class="target" id="classwrench_1_1_action_1af0338400a3964d99a1335873ca71d884"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJob</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns the job this action belongs to. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the job </p>
 </dd>
 </dl>
@@ -496,7 +502,7 @@
 <span id="_CPPv3NK6wrench6Action14getMaxNumCoresEv"></span><span id="_CPPv2NK6wrench6Action14getMaxNumCoresEv"></span><span id="wrench::Action::getMaxNumCoresC"></span><span class="target" id="classwrench_1_1_action_1a37eab3b318383f3698ee718f24bee162"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMaxNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the maximum number of cores that can be used to execute the action. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of cores </p>
 </dd>
 </dl>
@@ -507,7 +513,7 @@
 <span id="_CPPv3NK6wrench6Action14getMinNumCoresEv"></span><span id="_CPPv2NK6wrench6Action14getMinNumCoresEv"></span><span id="wrench::Action::getMinNumCoresC"></span><span class="target" id="classwrench_1_1_action_1aea7c6c8bc9a61f5c7be2a677edfc7698"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the minimum number of cores required to execute the action. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of cores </p>
 </dd>
 </dl>
@@ -518,7 +524,7 @@
 <span id="_CPPv3NK6wrench6Action18getMinRAMFootprintEv"></span><span id="_CPPv2NK6wrench6Action18getMinRAMFootprintEv"></span><span id="wrench::Action::getMinRAMFootprintC"></span><span class="target" id="classwrench_1_1_action_1a729173c1ac2b14a1aeae531b41f121b2"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMinRAMFootprint</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the minimum required amount of RAM to execute the action. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of bytes </p>
 </dd>
 </dl>
@@ -529,7 +535,7 @@
 <span id="_CPPv3NK6wrench6Action7getNameEv"></span><span id="_CPPv2NK6wrench6Action7getNameEv"></span><span id="wrench::Action::getNameC"></span><span class="target" id="classwrench_1_1_action_1ad37aa3b463fb6d42f99cb89106f10bba"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns the action’s name. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the name </p>
 </dd>
 </dl>
@@ -540,7 +546,7 @@
 <span id="_CPPv3N6wrench6Action10getParentsEv"></span><span id="_CPPv2N6wrench6Action10getParentsEv"></span><span id="wrench::Action::getParents"></span><span class="target" id="classwrench_1_1_action_1a6902e8fe5bebab0f6ba1ce9831fab539"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getParents</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the action’s parents. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a set of parents </p>
 </dd>
 </dl>
@@ -551,7 +557,7 @@
 <span id="_CPPv3NK6wrench6Action11getPriorityEv"></span><span id="_CPPv2NK6wrench6Action11getPriorityEv"></span><span id="wrench::Action::getPriorityC"></span><span class="target" id="classwrench_1_1_action_1ab7dfdc328f49d21c0954609ab76d373e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPriority</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Get the action’s priority. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a priority </p>
 </dd>
 </dl>
@@ -562,7 +568,7 @@
 <span id="_CPPv3N6wrench6Action12getSharedPtrEv"></span><span id="_CPPv2N6wrench6Action12getSharedPtrEv"></span><span id="wrench::Action::getSharedPtr"></span><span class="target" id="classwrench_1_1_action_1ae8927281ca7069a76b28e33926c867ed"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSharedPtr</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the shared pointer for this object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a shared pointer to the object </p>
 </dd>
 </dl>
@@ -573,7 +579,7 @@
 <span id="_CPPv3NK6wrench6Action12getStartDateEv"></span><span id="_CPPv2NK6wrench6Action12getStartDateEv"></span><span id="wrench::Action::getStartDateC"></span><span class="target" id="classwrench_1_1_action_1adf7c7557308c419865bfc74e38c186b0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStartDate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns ths action’s started date (-1.0 if not started) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a data </p>
 </dd>
 </dl>
@@ -584,7 +590,7 @@
 <span id="_CPPv3NK6wrench6Action8getStateEv"></span><span id="_CPPv2NK6wrench6Action8getStateEv"></span><span id="wrench::Action::getStateC"></span><span class="target" id="classwrench_1_1_action_1a278b13cb24a8e5e2fc1da47c66a1b0b8"></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6Action5StateE" title="wrench::Action::State"><span class="n"><span class="pre">State</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns the action’s state. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the state </p>
 </dd>
 </dl>
@@ -595,7 +601,7 @@
 <span id="_CPPv3NK6wrench6Action16getStateAsStringEv"></span><span id="_CPPv2NK6wrench6Action16getStateAsStringEv"></span><span id="wrench::Action::getStateAsStringC"></span><span class="target" id="classwrench_1_1_action_1ab3f989a19b5829eca37fdf641dcb805d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStateAsString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns the action’s state as a human-readable string. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a string </p>
 </dd>
 </dl>
@@ -606,7 +612,7 @@
 <span id="_CPPv3N6wrench6Action11setPriorityEd"></span><span id="_CPPv2N6wrench6Action11setPriorityEd"></span><span id="wrench::Action::setPriority__double"></span><span class="target" id="classwrench_1_1_action_1a4f0f1d5361fcafbb488e76f41715122e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setPriority</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">priority</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Set the action’s priority. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>p</strong> – a priority </p>
 </dd>
 </dl>
@@ -617,7 +623,7 @@
 <span id="_CPPv3NK6wrench6Action11usesScratchEv"></span><span id="_CPPv2NK6wrench6Action11usesScratchEv"></span><span id="wrench::Action::usesScratchC"></span><span class="target" id="classwrench_1_1_action_1ae0316297847e6a8bba2583ef464f7272"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">usesScratch</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Determine whether the action uses scratch. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true if the action uses scratch, false otherwise </p>
 </dd>
 </dl>
@@ -631,10 +637,10 @@
 <span id="_CPPv3N6wrench6Action21getActionTypeAsStringERKNSt10shared_ptrI6ActionEE"></span><span id="_CPPv2N6wrench6Action21getActionTypeAsStringERKNSt10shared_ptrI6ActionEE"></span><span id="wrench::Action::getActionTypeAsString__std::shared_ptr:Action:CR"></span><span class="target" id="classwrench_1_1_action_1ab1ea207e84d2f15f46fa162ba2716018"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getActionTypeAsString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">action</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Returns an action’s type as a human-readable string. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>action</strong> – the action </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the type as a string </p>
 </dd>
 </dl>
@@ -645,10 +651,10 @@
 <span id="_CPPv3N6wrench6Action13stateToStringEN6Action5StateE"></span><span id="_CPPv2N6wrench6Action13stateToStringEN6Action5StateE"></span><span id="wrench::Action::stateToString__Action::State"></span><span class="target" id="classwrench_1_1_action_1a9b074a1afcb3cbbe8ab49a901102b07c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stateToString</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_action.html#_CPPv4N6wrench6Action5StateE" title="wrench::Action::State"><span class="n"><span class="pre">State</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">state</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Convert an action state to a human-readable string. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>state</strong> – an action state </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a string </p>
 </dd>
 </dl>

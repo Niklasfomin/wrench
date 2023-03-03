@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::NetworkProximityService &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,17 +13,15 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="wrench::NetworkProximityServiceMessagePayload" href="classwrench_1_1_network_proximity_service_message_payload.html" />
-    <link rel="prev" title="wrench::HTCondorComputeServiceProperty" href="classwrench_1_1_h_t_condor_compute_service_property.html" /> 
+    <link rel="prev" title="wrench::MPI_Bcast_partipant" href="classwrench_1_1_m_p_i___bcast__partipant.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -87,6 +89,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html">wrench::HTCondorComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html">wrench::HTCondorComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_property.html">wrench::HTCondorComputeServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -166,7 +171,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_user.html">WRENCH User API</a></li>
       <li class="breadcrumb-item active">wrench::NetworkProximityService</li>
       <li class="wy-breadcrumbs-aside">
@@ -179,7 +184,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-networkproximityservice">
-<h1>wrench::NetworkProximityService<a class="headerlink" href="#wrench-networkproximityservice" title="Permalink to this heading"></a></h1>
+<span id="networkproximityservice"></span><h1>wrench::NetworkProximityService<a class="headerlink" href="#wrench-networkproximityservice" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23NetworkProximityServiceE">
 <span id="_CPPv3N6wrench23NetworkProximityServiceE"></span><span id="_CPPv2N6wrench23NetworkProximityServiceE"></span><span id="wrench::NetworkProximityService"></span><span class="target" id="classwrench_1_1_network_proximity_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NetworkProximityService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><br /></dt>
@@ -191,7 +196,7 @@
 <span id="_CPPv3N6wrench23NetworkProximityService23NetworkProximityServiceENSt6stringENSt6vectorINSt6stringEEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench23NetworkProximityService23NetworkProximityServiceENSt6stringENSt6vectorINSt6stringEEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::NetworkProximityService::NetworkProximityService__ss.std::vector:ss:.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_network_proximity_service_1a8a64fdcb285d41851d532ebba9b8f8de"></span><span class="sig-name descname"><span class="n"><span class="pre">NetworkProximityService</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">db_hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hosts_in_network</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the name of the host on which to start the service </p></li>
 <li><p><strong>hosts_in_network</strong> – the hosts participating in network measurements </p></li>
@@ -211,7 +216,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classwrench_1_1_h_t_condor_compute_service_property.html" class="btn btn-neutral float-left" title="wrench::HTCondorComputeServiceProperty" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classwrench_1_1_m_p_i___bcast__partipant.html" class="btn btn-neutral float-left" title="wrench::MPI_Bcast_partipant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="classwrench_1_1_network_proximity_service_message_payload.html" class="btn btn-neutral float-right" title="wrench::NetworkProximityServiceMessagePayload" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

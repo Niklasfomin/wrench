@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interacting with an XRootD deployment &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -29,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,7 +76,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Interacting with an XRootD deployment</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wrench_102/xrootd.rst.txt" rel="nofollow"> View page source</a>
@@ -118,17 +120,17 @@ subtree rooted at the supervisor should storage the newly created data.</p>
 <p>Several interactions with an XRootD Deployment are done simply by calling <strong>virtual</strong> methods of the <a class="reference internal" href="../api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService</span></code></a> class, but it is also
 possible to call directly methods of these <a class="reference internal" href="simplestorage.html#guide-102-simplestorage"><span class="std std-ref">Simple Storage Service</span></a> class for XRootD storage nodes. This is because, in the XRootD distributed
 file systems, some notions (such as the location of a file) are different than in a non-distributed file system. For instance:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Deployment</span><span class="o">&gt;</span><span class="w"> </span><span class="n">deployment</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Deployment</span><span class="o">&gt;</span><span class="w"> </span><span class="n">deployment</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span>
 
-<span class="p">[...]</span><span class="w"></span>
+<span class="p">[...]</span>
 
 <span class="c1">// Read a file from one specific storage node</span>
-<span class="n">deployment</span><span class="o">-&gt;</span><span class="n">getRootSupervisor</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getChild</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">readFile</span><span class="p">(</span><span class="n">some_file</span><span class="p">);</span><span class="w"></span>
+<span class="n">deployment</span><span class="o">-&gt;</span><span class="n">getRootSupervisor</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getChild</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">readFile</span><span class="p">(</span><span class="n">some_file</span><span class="p">);</span>
 
 <span class="c1">// Delete a file from the whole subtree, which may</span>
 <span class="c1">// delete the file at multiple storage nodes</span>
-<span class="n">deployment</span><span class="o">-&gt;</span><span class="n">getRootSupervisor</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">deleteFile</span><span class="p">(</span><span class="n">some_file</span><span class="p">);</span><span class="w"></span>
+<span class="n">deployment</span><span class="o">-&gt;</span><span class="n">getRootSupervisor</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">deleteFile</span><span class="p">(</span><span class="n">some_file</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Note that file deletion from an XRootD (sub)tree  will not return an error
@@ -142,9 +144,9 @@ actions/tasks that read and write files as
 they execute.  A XRootD supervisor node can then be passed to these tasks/actions
 exactly as one would pass a <a class="reference internal" href="simplestorage.html#guide-102-simplestorage"><span class="std std-ref">Simple Storage Service</span></a> instance. For instance:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a job</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createCompoundJob</span><span class="p">(</span><span class="s">&quot;some_job&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createCompoundJob</span><span class="p">(</span><span class="s">&quot;some_job&quot;</span><span class="p">);</span>
 <span class="c1">// Add a file read action that will read from an XRootD supervisor node</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">addFileReadAction</span><span class="p">(</span><span class="s">&quot;file_read&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">some_file</span><span class="p">,</span><span class="w"> </span><span class="n">deployment</span><span class="o">-&gt;</span><span class="n">getRootSupervisor</span><span class="p">());</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">action</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">addFileReadAction</span><span class="p">(</span><span class="s">&quot;file_read&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">some_file</span><span class="p">,</span><span class="w"> </span><span class="n">deployment</span><span class="o">-&gt;</span><span class="n">getRootSupervisor</span><span class="p">());</span>
 </pre></div>
 </div>
 <p>See the execution controller implementation in

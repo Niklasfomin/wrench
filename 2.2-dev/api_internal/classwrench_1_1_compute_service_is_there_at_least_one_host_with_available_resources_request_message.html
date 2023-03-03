@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -216,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -245,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -369,7 +375,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage</li>
       <li class="wy-breadcrumbs-aside">
@@ -382,7 +388,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-computeserviceisthereatleastonehostwithavailableresourcesrequestmessage">
-<h1>wrench::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage<a class="headerlink" href="#wrench-computeserviceisthereatleastonehostwithavailableresourcesrequestmessage" title="Permalink to this heading"></a></h1>
+<span id="computeserviceisthereatleastonehostwithavailableresourcesrequestmessage"></span><h1>wrench::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage<a class="headerlink" href="#wrench-computeserviceisthereatleastonehostwithavailableresourcesrequestmessage" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageE">
 <span id="_CPPv3N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageE"></span><span id="_CPPv2N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageE"></span><span id="wrench::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage"></span><span class="target" id="classwrench_1_1_compute_service_is_there_at_least_one_host_with_available_resources_request_message"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_compute_service_message.html#_CPPv4N6wrench21ComputeServiceMessageE" title="wrench::ComputeServiceMessage"><span class="n"><span class="pre">ComputeServiceMessage</span></span></a><a class="headerlink" href="#_CPPv4N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageE" title="Permalink to this definition"></a><br /></dt>
@@ -394,7 +400,7 @@
 <span id="_CPPv3N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageEPN7simgrid3s4u7MailboxEmdd"></span><span id="_CPPv2N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageEPN7simgrid3s4u7MailboxEmdd"></span><span id="wrench::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage::ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage__simgrid::s4u::MailboxP.unsigned-l.double.double"></span><span class="target" id="classwrench_1_1_compute_service_is_there_at_least_one_host_with_available_resources_request_message_1aa6172ffdcac5a446533507c606732fdd"></span><span class="sig-name descname"><span class="n"><span class="pre">ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_mailbox</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessage71ComputeServiceIsThereAtLeastOneHostWithAvailableResourcesRequestMessageEPN7simgrid3s4u7MailboxEmdd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>answer_mailbox</strong> – the mailbox to which to send the answer </p></li>
 <li><p><strong>num_cores</strong> – the desired number of cores </p></li>
@@ -402,7 +408,7 @@
 <li><p><strong>payload</strong> – the message size in bytes</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>

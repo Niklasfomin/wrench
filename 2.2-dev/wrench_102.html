@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WRENCH 102 &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html">
-            <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -95,7 +97,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">WRENCH 102</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/wrench_102.rst.txt" rel="nofollow"> View page source</a>
@@ -121,18 +123,18 @@ Reference</span></a>.</p>
 <span id="wrench-102-execution-controller-10000ft"></span><h2>Basic blueprint for an execution controller implementation<a class="headerlink" href="#basic-blueprint-for-an-execution-controller-implementation" title="Permalink to this heading"></a></h2>
 <p>An execution controller implementation needs to use many WRENCH classes,
 which are accessed by including a single header file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wrench-dev.h&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wrench-dev.h&gt;</span>
 </pre></div>
 </div>
 <p>An execution controller implementation must derive the
 <a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionControllerE" title="wrench::ExecutionController"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController</span></code></a> class, which means that it must override
 several the virtual <code class="docutils literal notranslate"><span class="pre">main()</span></code> member function. A typical such
 implementation of this function goes through a simple loop as follows:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>// A<span class="o">)</span> create/retrieve application workload to execute
-// B<span class="o">)</span> obtain information about running services
-<span class="k">while</span> <span class="o">(</span>application workload execution has not completed/failed<span class="o">)</span> <span class="o">{</span>
-  // C<span class="o">)</span> interact with services
-  // D<span class="o">)</span> <span class="nb">wait</span> <span class="k">for</span> an event and react to it
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>//<span class="w"> </span>A<span class="o">)</span><span class="w"> </span>create/retrieve<span class="w"> </span>application<span class="w"> </span>workload<span class="w"> </span>to<span class="w"> </span>execute
+//<span class="w"> </span>B<span class="o">)</span><span class="w"> </span>obtain<span class="w"> </span>information<span class="w"> </span>about<span class="w"> </span>running<span class="w"> </span>services
+<span class="k">while</span><span class="w"> </span><span class="o">(</span>application<span class="w"> </span>workload<span class="w"> </span>execution<span class="w"> </span>has<span class="w"> </span>not<span class="w"> </span>completed/failed<span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<span class="w">  </span>//<span class="w"> </span>C<span class="o">)</span><span class="w"> </span>interact<span class="w"> </span>with<span class="w"> </span>services
+<span class="w">  </span>//<span class="w"> </span>D<span class="o">)</span><span class="w"> </span><span class="nb">wait</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>an<span class="w"> </span>event<span class="w"> </span>and<span class="w"> </span>react<span class="w"> </span>to<span class="w"> </span>it
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -158,7 +160,7 @@ implementation in
 <code class="docutils literal notranslate"><span class="pre">examples/workflow_api/basic-examples/batch-bag-of-tasks/TwoTasksAtATimeBatchWMS.cpp</span></code>.
 This WMS finds out the compute speed of the cores of the compute nodes
 available to a <a class="reference internal" href="api_developer/classwrench_1_1_batch_compute_service.html#_CPPv4N6wrench19BatchComputeServiceE" title="wrench::BatchComputeService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::BatchComputeService</span></code></a> as:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">core_flop_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">batch_service</span><span class="o">-&gt;</span><span class="n">getCoreFlopRate</span><span class="p">().</span><span class="n">begin</span><span class="p">())).</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">core_flop_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">batch_service</span><span class="o">-&gt;</span><span class="n">getCoreFlopRate</span><span class="p">().</span><span class="n">begin</span><span class="p">())).</span><span class="n">second</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Member function <a class="reference internal" href="api_developer/classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeService15getCoreFlopRateEv" title="wrench::ComputeService::getCoreFlopRate"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ComputeService::getCoreFlopRate()</span></code></a> returns a
@@ -219,8 +221,8 @@ instantiating and starting these managers:
 execution controller does. For instance, the execution controller in
 <code class="docutils literal notranslate"><span class="pre">examples/workflow_api/basic-examples/bare-metal-data-movement/DataMovementWMS.cpp</span></code>
 starts by doing:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span><span class="w"></span>
-<span class="k">auto</span><span class="w"> </span><span class="n">data_movement_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createDataMovementManager</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">data_movement_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createDataMovementManager</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>Each manager has its own documented API, and is discussed further in
@@ -327,27 +329,27 @@ automatically, e.g., via calls to <a class="reference internal" href="api_develo
 <a class="reference internal" href="api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService</span></code></a> member functions. So often an execution
 controller does not need to interact with the file registry service.</p>
 <p>Adding/removing an entry to a file registry service is done as follows:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>std::shared_ptr&lt;wrench::FileRegistryService&gt; file_registry<span class="p">;</span>
-std::shared_ptr&lt;wrench::DataFile&gt; some_file<span class="p">;</span>
-std::shared_ptr&lt;wrench::StorageService&gt; some_storage_service<span class="p">;</span>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>std::shared_ptr&lt;wrench::FileRegistryService&gt;<span class="w"> </span>file_registry<span class="p">;</span>
+std::shared_ptr&lt;wrench::DataFile&gt;<span class="w"> </span>some_file<span class="p">;</span>
+std::shared_ptr&lt;wrench::StorageService&gt;<span class="w"> </span>some_storage_service<span class="p">;</span>
 
 <span class="o">[</span>...<span class="o">]</span>
 
-file_registry-&gt;addEntry<span class="o">(</span>wrench::FileLocation::LOCATION<span class="o">(</span>some_storage_service, some_file<span class="o">))</span><span class="p">;</span>
-file_registry-&gt;removeEntry<span class="o">(</span>wrench::FileLocation::LOCATION<span class="o">(</span>some_storage_service, some_file<span class="o">))</span><span class="p">;</span>
+file_registry-&gt;addEntry<span class="o">(</span>wrench::FileLocation::LOCATION<span class="o">(</span>some_storage_service,<span class="w"> </span>some_file<span class="o">))</span><span class="p">;</span>
+file_registry-&gt;removeEntry<span class="o">(</span>wrench::FileLocation::LOCATION<span class="o">(</span>some_storage_service,<span class="w"> </span>some_file<span class="o">))</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::FileLocation</span></code></a> class is a convenient abstraction for a
 file that is available at some storage service (with optionally a directory
 path at that service).</p>
 <p>Retrieving all entries for a given file is done as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileRegistryService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">file_registry</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileRegistryService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">file_registry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span>
 
-<span class="p">[...]</span><span class="w"></span>
+<span class="p">[...]</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileLocation</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">entries</span><span class="p">;</span><span class="w"></span>
-<span class="n">entries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file_registry</span><span class="o">-&gt;</span><span class="n">lookupEntry</span><span class="p">(</span><span class="n">some_file</span><span class="p">);</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileLocation</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">entries</span><span class="p">;</span>
+<span class="n">entries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">file_registry</span><span class="o">-&gt;</span><span class="n">lookupEntry</span><span class="p">(</span><span class="n">some_file</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>If a network proximity service is running, it is possible to retrieve
@@ -355,13 +357,13 @@ entries for a file sorted by non-decreasing proximity from some
 reference host. Returned entries are stored in a (sorted) <code class="docutils literal notranslate"><span class="pre">std::map</span></code>
 where the keys are network distances to the reference host. For
 instance:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileRegistryService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">file_registry</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span><span class="w"></span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">NetworkProximityService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">np_service</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileRegistryService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">file_registry</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">NetworkProximityService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">np_service</span><span class="p">;</span>
 
-<span class="p">[...]</span><span class="w"></span>
+<span class="p">[...]</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">entries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr_service</span><span class="o">-&gt;</span><span class="n">lookupEntry</span><span class="p">(</span><span class="n">some_file</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ReferenceHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">np_service</span><span class="p">);</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">entries</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fr_service</span><span class="o">-&gt;</span><span class="n">lookupEntry</span><span class="p">(</span><span class="n">some_file</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ReferenceHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">np_service</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>See the documentation of <a class="reference internal" href="api_developer/classwrench_1_1_file_registry_service.html#_CPPv4N6wrench19FileRegistryServiceE" title="wrench::FileRegistryService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::FileRegistryService</span></code></a>
@@ -372,9 +374,9 @@ for more API member functions.</p>
 <p>Querying a network proximity service is straightforward. For instance,
 to obtain a measure of the network distance between hosts “Host1” and
 “Host2”, one simply does:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">NetworkProximityService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">np_service</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">NetworkProximityService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">np_service</span><span class="p">;</span>
 
-<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getHostPairDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Host2&quot;</span><span class="p">));</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">distance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getHostPairDistance</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">make_pair</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Host2&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>This distance corresponds to half the round-trip-time, in seconds,
@@ -384,7 +386,7 @@ is configured to use the Vivaldi coordinate-based system, as in our example abov
 this distance is actually derived from network coordinates, as computed
 by the Vivaldi algorithm. In this case, one can actually ask for these
 coordinates for any given host:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getHostCoordinate</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">pair</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">np_service</span><span class="o">-&gt;</span><span class="n">getHostCoordinate</span><span class="p">(</span><span class="s">&quot;Host1&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>See the documentation of <a class="reference internal" href="api_developer/classwrench_1_1_network_proximity_service.html#_CPPv4N6wrench23NetworkProximityServiceE" title="wrench::NetworkProximityService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::NetworkProximityService</span></code></a>
@@ -429,40 +431,40 @@ failure.</p>
 <code class="docutils literal notranslate"><span class="pre">examples/workflow_api/basic-examples/bare-metal-bag-of-tasks/TwoTasksAtATimeWMS.cpp</span></code>.
 At each each iteration of its main loop it does:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Submit some standard job to some compute  service</span>
-<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(...);</span><span class="w"></span>
+<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(...);</span>
 
 <span class="c1">// Wait for and process next event</span>
-<span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>In this simple example, only one of two events could occur at this
 point: a standard job completion or a standard job failure. As a result,
 this execution controller overrides the two corresponding member
 functions as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">TwoTasksAtATimeWMS::processEventStandardJobCompletion</span><span class="p">(</span><span class="w"></span>
-<span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StandardJobCompletedEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">TwoTasksAtATimeWMS::processEventStandardJobCompletion</span><span class="p">(</span>
+<span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StandardJobCompletedEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Retrieve the job that this event is for</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">standard_job</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">standard_job</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// Print some message for each task in the job</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">task</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified that a standard job has completed task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">task</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified that a standard job has completed task &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">TwoTasksAtATimeWMS::processEventStandardJobFailure</span><span class="p">(</span><span class="w"></span>
-<span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StandardJobFailedEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">TwoTasksAtATimeWMS::processEventStandardJobFailure</span><span class="p">(</span>
+<span class="w">               </span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">StandardJobFailedEvent</span><span class="o">&gt;</span><span class="w"> </span><span class="n">event</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Retrieve the job that this event is for</span>
-<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">standard_job</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified that a standard job has failed (failure cause: &quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">failure_cause</span><span class="o">-&gt;</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">standard_job</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified that a standard job has failed (failure cause: &quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">failure_cause</span><span class="o">-&gt;</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 <span class="w">  </span><span class="c1">// Print some message for each task in the job if it has failed</span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;As a result, the following tasks have failed:&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">task</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getState</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WorkflowTask</span><span class="o">::</span><span class="n">COMPLETE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;As a result, the following tasks have failed:&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="o">&amp;</span><span class="n">task</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">job</span><span class="o">-&gt;</span><span class="n">getTasks</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getState</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">WorkflowTask</span><span class="o">::</span><span class="n">COMPLETE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w">  </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;  - &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">task</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>You may note some difference between the above code and that in
@@ -479,18 +481,18 @@ execution controller in
 <code class="docutils literal notranslate"><span class="pre">examples/workflow_api/basic-examples/bare-metal-data-movement/DataMovementWMS.cpp</span></code>
 does it as:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Initiate an asynchronous file copy</span>
-<span class="n">data_movement_manager</span><span class="o">-&gt;</span><span class="n">initiateAsynchronousFileCopy</span><span class="p">(...);</span><span class="w"></span>
+<span class="n">data_movement_manager</span><span class="o">-&gt;</span><span class="n">initiateAsynchronousFileCopy</span><span class="p">(...);</span>
 
 <span class="c1">// Wait for an event</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForNextEvent</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForNextEvent</span><span class="p">();</span>
 
 <span class="c1">//Process the event</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">file_copy_completion_event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileCopyCompletedEvent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">event</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified of a file copy completion for file &quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">file_copy_completion_event</span><span class="o">-&gt;</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;as expected&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Unexpected event (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="w"> </span><span class="n">file_copy_completion_event</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">dynamic_pointer_cast</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">FileCopyCompletedEvent</span><span class="o">&gt;</span><span class="p">(</span><span class="n">event</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Notified of a file copy completion for file &quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cerr</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">file_copy_completion_event</span><span class="o">-&gt;</span><span class="n">file</span><span class="o">-&gt;</span><span class="n">getID</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;as expected&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">runtime_error</span><span class="p">(</span><span class="s">&quot;Unexpected event (&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">event</span><span class="o">-&gt;</span><span class="n">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
@@ -521,10 +523,10 @@ Thus, the execution controller can call member functions on the
 how an execution controller can figure out the current simulated date
 and then check that a host exists (given a hostname) and, if so, set its
 <code class="docutils literal notranslate"><span class="pre">pstate</span></code> (power state) to the highest possible setting.</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">getCurrentSimulatedDate</span><span class="p">();</span><span class="w"></span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">doesHostExist</span><span class="p">(</span><span class="s">&quot;SomeHost&quot;</span><span class="p">))</span><span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">setPstate</span><span class="p">(</span><span class="s">&quot;SomeHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">getNumberofPstates</span><span class="p">(</span><span class="s">&quot;SomeHost&quot;</span><span class="p">)</span><span class="mi">-1</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">getCurrentSimulatedDate</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">doesHostExist</span><span class="p">(</span><span class="s">&quot;SomeHost&quot;</span><span class="p">))</span><span class="w">  </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">setPstate</span><span class="p">(</span><span class="s">&quot;SomeHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">getNumberofPstates</span><span class="p">(</span><span class="s">&quot;SomeHost&quot;</span><span class="p">)</span><span class="mi">-1</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>See the documentation of the <a class="reference internal" href="api_developer/classwrench_1_1_simulation.html#_CPPv4N6wrench10SimulationE" title="wrench::Simulation"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::Simulation</span></code></a> class for all
@@ -565,29 +567,29 @@ which corresponds to a declared logging category. For instance, in
 <code class="docutils literal notranslate"><span class="pre">examples/workflow_api/basic-examples/batch-bag-of-tasks/TwoTasksAtATimeBatchWMS.cpp</span></code>,
 you will find the typical pattern:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define a log category name for this file</span>
-<span class="n">WRENCH_LOG_CATEGORY</span><span class="p">(</span><span class="n">custom_wms</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Log category for TwoTasksAtATimeBatchWMS&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">WRENCH_LOG_CATEGORY</span><span class="p">(</span><span class="n">custom_wms</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Log category for TwoTasksAtATimeBatchWMS&quot;</span><span class="p">);</span>
 
-<span class="p">[...]</span><span class="w"></span>
+<span class="p">[...]</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="n">TwoTasksAtATimeBatchWMS</span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">TwoTasksAtATimeBatchWMS</span><span class="o">::</span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">  </span><span class="c1">// Set the logging color to green</span>
-<span class="w">  </span><span class="n">TerminalOutput</span><span class="o">::</span><span class="n">setThisProcessLoggingColor</span><span class="p">(</span><span class="n">TerminalOutput</span><span class="o">::</span><span class="n">COLOR_GREEN</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">TerminalOutput</span><span class="o">::</span><span class="n">setThisProcessLoggingColor</span><span class="p">(</span><span class="n">TerminalOutput</span><span class="o">::</span><span class="n">COLOR_GREEN</span><span class="p">);</span>
 
-<span class="w">  </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">  </span><span class="p">[...]</span>
 
 <span class="w">  </span><span class="c1">// Print an info-level message, using printf-like format</span>
-<span class="w">  </span><span class="n">WRENCH_INFO</span><span class="p">(</span><span class="s">&quot;Submitting the job, asking for %s %s-core nodes for %s minutes&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">              </span><span class="n">service_specific_arguments</span><span class="p">[</span><span class="s">&quot;-N&quot;</span><span class="p">].</span><span class="n">c_str</span><span class="p">(),</span><span class="w"></span>
-<span class="w">              </span><span class="n">service_specific_arguments</span><span class="p">[</span><span class="s">&quot;-c&quot;</span><span class="p">].</span><span class="n">c_str</span><span class="p">(),</span><span class="w"></span>
-<span class="w">              </span><span class="n">service_specific_arguments</span><span class="p">[</span><span class="s">&quot;-t&quot;</span><span class="p">].</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">WRENCH_INFO</span><span class="p">(</span><span class="s">&quot;Submitting the job, asking for %s %s-core nodes for %s minutes&quot;</span><span class="p">,</span>
+<span class="w">              </span><span class="n">service_specific_arguments</span><span class="p">[</span><span class="s">&quot;-N&quot;</span><span class="p">].</span><span class="n">c_str</span><span class="p">(),</span>
+<span class="w">              </span><span class="n">service_specific_arguments</span><span class="p">[</span><span class="s">&quot;-c&quot;</span><span class="p">].</span><span class="n">c_str</span><span class="p">(),</span>
+<span class="w">              </span><span class="n">service_specific_arguments</span><span class="p">[</span><span class="s">&quot;-t&quot;</span><span class="p">].</span><span class="n">c_str</span><span class="p">());</span>
 
-<span class="w">  </span><span class="p">[...]</span><span class="w"></span>
+<span class="w">  </span><span class="p">[...]</span>
 
 <span class="w">  </span><span class="c1">// Print a last info-level message</span>
-<span class="w">  </span><span class="n">WRENCH_INFO</span><span class="p">(</span><span class="s">&quot;Workflow execution complete&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="n">WRENCH_INFO</span><span class="p">(</span><span class="s">&quot;Workflow execution complete&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>The name of the logging category, in this case <code class="docutils literal notranslate"><span class="pre">custom_wms</span></code>, can then

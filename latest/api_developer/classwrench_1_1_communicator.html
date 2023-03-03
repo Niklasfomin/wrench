@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::Communicator &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::Communicator</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-communicator">
-<h1>wrench::Communicator<a class="headerlink" href="#wrench-communicator" title="Permalink to this heading"></a></h1>
+<span id="communicator"></span><h1>wrench::Communicator<a class="headerlink" href="#wrench-communicator" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12CommunicatorE">
 <span id="_CPPv3N6wrench12CommunicatorE"></span><span id="_CPPv2N6wrench12CommunicatorE"></span><span id="wrench::Communicator"></span><span class="target" id="classwrench_1_1_communicator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Communicator</span></span></span><a class="headerlink" href="#_CPPv4N6wrench12CommunicatorE" title="Permalink to this definition"></a><br /></dt>
@@ -240,17 +245,9 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator11communicateERKNSt3mapImdEEi">
-<span id="_CPPv3N6wrench12Communicator11communicateERKNSt3mapImdEEi"></span><span id="_CPPv2N6wrench12Communicator11communicateERKNSt3mapImdEEi"></span><span id="wrench::Communicator::communicate__std::map:unsigned-l.double:CR.i"></span><span class="target" id="classwrench_1_1_communicator_1a190a8e3c5a0f75e8bfea5e78237bfc7a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">communicate</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator11communicateERKNSt3mapImdEEi" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Perform a communication step. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>sends</strong> – the specification of all outgoing communications as &lt;rank, volume in bytes&gt; pairs </p></li>
-<li><p><strong>num_receives</strong> – the number of expected received (from any source) </p></li>
-</ul>
-</dd>
-</dl>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator7barrierEv">
+<span id="_CPPv3N6wrench12Communicator7barrierEv"></span><span id="_CPPv2N6wrench12Communicator7barrierEv"></span><span id="wrench::Communicator::barrier"></span><span class="target" id="classwrench_1_1_communicator_1a769bc43b680fe3abae2624a8cd3183bc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">barrier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator7barrierEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Barrier method (all participants wait for each other), using standard WRENCH/SimGrid mechanisms. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -258,7 +255,7 @@
 <span id="_CPPv3N6wrench12Communicator11getNumRanksEv"></span><span id="_CPPv2N6wrench12Communicator11getNumRanksEv"></span><span id="wrench::Communicator::getNumRanks"></span><span class="target" id="classwrench_1_1_communicator_1a72ab6fbf3b1b2c6049049399d9288be9"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumRanks</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator11getNumRanksEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the number of processes participating in the communicator. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of processes </p>
 </dd>
 </dl>
@@ -269,7 +266,7 @@
 <span id="_CPPv3N6wrench12Communicator4joinEv"></span><span id="_CPPv2N6wrench12Communicator4joinEv"></span><span id="wrench::Communicator::join"></span><span class="target" id="classwrench_1_1_communicator_1ad6f2402696f1267135e63a0271be3ac8"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">join</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator4joinEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Join the communicator and obtain a rank, which will block until all other communicator participants have joined (or just obtain the rank and return immediately if already joined). </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a rank </p>
 </dd>
 </dl>
@@ -280,11 +277,68 @@
 <span id="_CPPv3N6wrench12Communicator4joinEm"></span><span id="_CPPv2N6wrench12Communicator4joinEm"></span><span id="wrench::Communicator::join__unsigned-l"></span><span class="target" id="classwrench_1_1_communicator_1a90ec3bd6c103fe8e726cae0353ae64f5"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">join</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">desired_rank</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator4joinEm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Join the communicator with a particular rank, which will block until all other communicator participants have joined (or return immediately if already joined). </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>desired_rank</strong> – the desired rank </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the desired rank </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator12MPI_AlltoallEd">
+<span id="_CPPv3N6wrench12Communicator12MPI_AlltoallEd"></span><span id="_CPPv2N6wrench12Communicator12MPI_AlltoallEd"></span><span id="wrench::Communicator::MPI_Alltoall__double"></span><span class="target" id="classwrench_1_1_communicator_1ae941dbf0ef124056907d85aa90947560"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Alltoall</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator12MPI_AlltoallEd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform an MPI AllToAll collective, using SimGrid’s SMPI implementation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bytes</strong> – the number of bytes in each message sent/received </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator11MPI_BarrierEv">
+<span id="_CPPv3N6wrench12Communicator11MPI_BarrierEv"></span><span id="_CPPv2N6wrench12Communicator11MPI_BarrierEv"></span><span id="wrench::Communicator::MPI_Barrier"></span><span class="target" id="classwrench_1_1_communicator_1a7d7680b0663b73089ba148ac2cfb952f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Barrier</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator11MPI_BarrierEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform an MPI Barrier, using SimGrid’s SMPI implementation. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator9MPI_BcastEid">
+<span id="_CPPv3N6wrench12Communicator9MPI_BcastEid"></span><span id="_CPPv2N6wrench12Communicator9MPI_BcastEid"></span><span id="wrench::Communicator::MPI_Bcast__i.double"></span><span class="target" id="classwrench_1_1_communicator_1ad50d477d06ec39ae598f5cb65ff75cd3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Bcast</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">root_rank</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator9MPI_BcastEid" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform an MPI cast collective, using SimGrid’s SMPI implementation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bytes</strong> – the number of bytes in each message sent/received </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi">
+<span id="_CPPv3N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi"></span><span id="_CPPv2N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi"></span><span id="wrench::Communicator::sendAndReceive__std::map:unsigned-l.double:CR.i"></span><span class="target" id="classwrench_1_1_communicator_1a768d2e40f0506d11886a153a587c690b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendAndReceive</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform asynchronous sends and receives operations, using standard WRENCH/SimGrid point to point communications. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sends</strong> – the specification of all outgoing communications as &lt;rank, volume in bytes&gt; pairs </p></li>
+<li><p><strong>num_receives</strong> – the number of expected received (from any source) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid">
+<span id="_CPPv3N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid"></span><span id="_CPPv2N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid"></span><span id="wrench::Communicator::sendReceiveAndCompute__std::map:unsigned-l.double:CR.i.double"></span><span class="target" id="classwrench_1_1_communicator_1abc44052e5e2bc84efa01447d7a711c07"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendReceiveAndCompute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flops</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Perform concurrent asynchronous sends, receives, and a computation, using standard WRENCH/SimGrid point to point communications. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sends</strong> – the specification of all outgoing communications as &lt;rank, volume in bytes&gt; pairs </p></li>
+<li><p><strong>num_receives</strong> – the number of expected received (from any source) </p></li>
+<li><p><strong>flops</strong> – the number of floating point operations to compute </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -297,10 +351,10 @@
 <span id="_CPPv3N6wrench12Communicator18createCommunicatorEm"></span><span id="_CPPv2N6wrench12Communicator18createCommunicatorEm"></span><span id="wrench::Communicator::createCommunicator__unsigned-l"></span><span class="target" id="classwrench_1_1_communicator_1a12e8551f560094496c07c75ea9820aac"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench12CommunicatorE" title="wrench::Communicator"><span class="n"><span class="pre">Communicator</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createCommunicator</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator18createCommunicatorEm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Factory method to construct a communicator. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>size</strong> – the size of the communicator (# of processes) </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a shared pointer to a communicator </p>
 </dd>
 </dl>

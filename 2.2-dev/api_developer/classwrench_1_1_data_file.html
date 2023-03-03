@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::DataFile &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::DataFile</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-datafile">
-<h1>wrench::DataFile<a class="headerlink" href="#wrench-datafile" title="Permalink to this heading"></a></h1>
+<span id="datafile"></span><h1>wrench::DataFile<a class="headerlink" href="#wrench-datafile" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench8DataFileE">
 <span id="_CPPv3N6wrench8DataFileE"></span><span id="_CPPv2N6wrench8DataFileE"></span><span id="wrench::DataFile"></span><span class="target" id="classwrench_1_1_data_file"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataFile</span></span></span><a class="headerlink" href="#_CPPv4N6wrench8DataFileE" title="Permalink to this definition"></a><br /></dt>
@@ -239,7 +244,7 @@
 <span id="_CPPv3NK6wrench8DataFile5getIDEv"></span><span id="_CPPv2NK6wrench8DataFile5getIDEv"></span><span id="wrench::DataFile::getIDC"></span><span class="target" id="classwrench_1_1_data_file_1afec5f89514a3b516ceb9ee8ed795f1b2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getID</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8DataFile5getIDEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the file id. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the id </p>
 </dd>
 </dl>
@@ -250,7 +255,7 @@
 <span id="_CPPv3NK6wrench8DataFile7getSizeEv"></span><span id="_CPPv2NK6wrench8DataFile7getSizeEv"></span><span id="wrench::DataFile::getSizeC"></span><span class="target" id="classwrench_1_1_data_file_1a79e4e907e63582323d9bd2bbd22b540f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8DataFile7getSizeEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the file size. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a size in bytes </p>
 </dd>
 </dl>
@@ -261,7 +266,7 @@
 <span id="_CPPv3N6wrench8DataFile7setSizeEd"></span><span id="_CPPv2N6wrench8DataFile7setSizeEd"></span><span id="wrench::DataFile::setSize__double"></span><span class="target" id="classwrench_1_1_data_file_1a375ed2227dea62642346e19fa32d2f41"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSize</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8DataFile7setSizeEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the file size (to be used only in very specific cases in which it is guaranteed that changing a file’s size after that file has been created is a valid thing to do) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>s</strong> – a size in byte </p>
 </dd>
 </dl>

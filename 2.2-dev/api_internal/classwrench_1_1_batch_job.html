@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::BatchJob &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -216,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -245,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -369,7 +375,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::BatchJob</li>
       <li class="wy-breadcrumbs-aside">
@@ -382,7 +388,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-batchjob">
-<h1>wrench::BatchJob<a class="headerlink" href="#wrench-batchjob" title="Permalink to this heading"></a></h1>
+<span id="batchjob"></span><h1>wrench::BatchJob<a class="headerlink" href="#wrench-batchjob" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench8BatchJobE">
 <span id="_CPPv3N6wrench8BatchJobE"></span><span id="_CPPv2N6wrench8BatchJobE"></span><span id="wrench::BatchJob"></span><span class="target" id="classwrench_1_1_batch_job"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BatchJob</span></span></span><a class="headerlink" href="#_CPPv4N6wrench8BatchJobE" title="Permalink to this definition"></a><br /></dt>
@@ -394,7 +400,7 @@
 <span id="_CPPv3N6wrench8BatchJob8BatchJobERKNSt10shared_ptrI11CompoundJobEEmmmmRKNSt6stringEdd"></span><span id="_CPPv2N6wrench8BatchJob8BatchJobERKNSt10shared_ptrI11CompoundJobEEmmmmRKNSt6stringEdd"></span><span id="wrench::BatchJob::BatchJob__std::shared_ptr:CompoundJob:CR.unsigned-l.unsigned-l.unsigned-l.unsigned-l.ssCR.double.double"></span><span class="target" id="classwrench_1_1_batch_job_1a27b63c185263b957bffa9da9cebfeb32"></span><span class="sig-name descname"><span class="n"><span class="pre">BatchJob</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">job</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job_id</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time_in_minutes</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">number_nodes</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cores_per_node</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">username</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ending_time_stamp</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">arrival_time_stamp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob8BatchJobERKNSt10shared_ptrI11CompoundJobEEmmmmRKNSt6stringEdd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>job</strong> – the compound job corresponding to the <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job </p></li>
 <li><p><strong>job_id</strong> – the <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job id </p></li>
@@ -414,7 +420,7 @@
 <span id="_CPPv3N6wrench8BatchJob23getAllocatedNodeIndicesEv"></span><span id="_CPPv2N6wrench8BatchJob23getAllocatedNodeIndicesEv"></span><span id="wrench::BatchJob::getAllocatedNodeIndices"></span><span class="target" id="classwrench_1_1_batch_job_1af309cf782163dc32c9fb57e353d8fe12"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAllocatedNodeIndices</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob23getAllocatedNodeIndicesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the indices of allocated nodes. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a list of indices </p>
 </dd>
 </dl>
@@ -425,7 +431,7 @@
 <span id="_CPPv3NK6wrench8BatchJob19getArrivalTimestampEv"></span><span id="_CPPv2NK6wrench8BatchJob19getArrivalTimestampEv"></span><span id="wrench::BatchJob::getArrivalTimestampC"></span><span class="target" id="classwrench_1_1_batch_job_1a9ed2b8d4471412747916aa92f3d58ccf"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getArrivalTimestamp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob19getArrivalTimestampEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the arrival time stamp. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a date </p>
 </dd>
 </dl>
@@ -436,7 +442,7 @@
 <span id="_CPPv3NK6wrench8BatchJob17getBeginTimestampEv"></span><span id="_CPPv2NK6wrench8BatchJob17getBeginTimestampEv"></span><span id="wrench::BatchJob::getBeginTimestampC"></span><span class="target" id="classwrench_1_1_batch_job_1af94e64661771336aba58bb900d44b105"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBeginTimestamp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob17getBeginTimestampEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job’s begin timestamp. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a date </p>
 </dd>
 </dl>
@@ -447,7 +453,7 @@
 <span id="_CPPv3N6wrench8BatchJob14getCompoundJobEv"></span><span id="_CPPv2N6wrench8BatchJob14getCompoundJobEv"></span><span id="wrench::BatchJob::getCompoundJob"></span><span class="target" id="classwrench_1_1_batch_job_1af8c8b0809c56168da1b3933ce92594b0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCompoundJob</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob14getCompoundJobEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the compound job corresponding to this <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a compound job </p>
 </dd>
 </dl>
@@ -458,7 +464,7 @@
 <span id="_CPPv3NK6wrench8BatchJob18getEndingTimestampEv"></span><span id="_CPPv2NK6wrench8BatchJob18getEndingTimestampEv"></span><span id="wrench::BatchJob::getEndingTimestampC"></span><span class="target" id="classwrench_1_1_batch_job_1acbcc6a8c9793913a78b3e2642eb4dea7"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getEndingTimestamp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob18getEndingTimestampEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job’s end timestamp. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a date </p>
 </dd>
 </dl>
@@ -469,7 +475,7 @@
 <span id="_CPPv3NK6wrench8BatchJob8getJobIDEv"></span><span id="_CPPv2NK6wrench8BatchJob8getJobIDEv"></span><span id="wrench::BatchJob::getJobIDC"></span><span class="target" id="classwrench_1_1_batch_job_1ae3009f858a1edde3fc989dd03996da7e"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getJobID</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob8getJobIDEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the id of this <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a string id </p>
 </dd>
 </dl>
@@ -480,7 +486,7 @@
 <span id="_CPPv3N6wrench8BatchJob20getMemoryRequirementEv"></span><span id="_CPPv2N6wrench8BatchJob20getMemoryRequirementEv"></span><span id="wrench::BatchJob::getMemoryRequirement"></span><span class="target" id="classwrench_1_1_batch_job_1abb349b19cdc9975d98227dffbe146bfc"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMemoryRequirement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob20getMemoryRequirementEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the memory_manager_service requirement. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a size in bytes </p>
 </dd>
 </dl>
@@ -491,7 +497,7 @@
 <span id="_CPPv3NK6wrench8BatchJob24getRequestedCoresPerNodeEv"></span><span id="_CPPv2NK6wrench8BatchJob24getRequestedCoresPerNodeEv"></span><span id="wrench::BatchJob::getRequestedCoresPerNodeC"></span><span class="target" id="classwrench_1_1_batch_job_1af61657d1f34ca619b24515982a5b5422"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRequestedCoresPerNode</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob24getRequestedCoresPerNodeEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the requested number of cores per node. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of cores </p>
 </dd>
 </dl>
@@ -502,7 +508,7 @@
 <span id="_CPPv3NK6wrench8BatchJob20getRequestedNumNodesEv"></span><span id="_CPPv2NK6wrench8BatchJob20getRequestedNumNodesEv"></span><span id="wrench::BatchJob::getRequestedNumNodesC"></span><span class="target" id="classwrench_1_1_batch_job_1ac362cbe657b4ee1353b782eaae15d661"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRequestedNumNodes</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob20getRequestedNumNodesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the number of requested compute nodes (or hosts) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a number of nodes </p>
 </dd>
 </dl>
@@ -513,7 +519,7 @@
 <span id="_CPPv3NK6wrench8BatchJob16getRequestedTimeEv"></span><span id="_CPPv2NK6wrench8BatchJob16getRequestedTimeEv"></span><span id="wrench::BatchJob::getRequestedTimeC"></span><span class="target" id="classwrench_1_1_batch_job_1af4a1abf3b6bdb7b3a32a42476369f35e"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getRequestedTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench8BatchJob16getRequestedTimeEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the requested time. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a time in seconds </p>
 </dd>
 </dl>
@@ -524,7 +530,7 @@
 <span id="_CPPv3N6wrench8BatchJob21getResourcesAllocatedEv"></span><span id="_CPPv2N6wrench8BatchJob21getResourcesAllocatedEv"></span><span id="wrench::BatchJob::getResourcesAllocated"></span><span class="target" id="classwrench_1_1_batch_job_1a22557f2dea0008e1f985b4a373868490"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getResourcesAllocated</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob21getResourcesAllocatedEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the resources allocated to this <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a list of resource, each as a &lt;hostname, number of cores, bytes of RAM&gt; tuple </p>
 </dd>
 </dl>
@@ -535,7 +541,7 @@
 <span id="_CPPv3N6wrench8BatchJob11getUsernameEv"></span><span id="_CPPv2N6wrench8BatchJob11getUsernameEv"></span><span id="wrench::BatchJob::getUsername"></span><span class="target" id="classwrench_1_1_batch_job_1ae76704f19914ddb392243860fd2700fd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getUsername</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob11getUsernameEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the username. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a username </p>
 </dd>
 </dl>
@@ -546,7 +552,7 @@
 <span id="_CPPv3N6wrench8BatchJob23setAllocatedNodeIndicesENSt6vectorIiEE"></span><span id="_CPPv2N6wrench8BatchJob23setAllocatedNodeIndicesENSt6vectorIiEE"></span><span id="wrench::BatchJob::setAllocatedNodeIndices__std::vector:i:"></span><span class="target" id="classwrench_1_1_batch_job_1ab7bccaf60203ea3164bb80e6be7831b3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAllocatedNodeIndices</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">indices</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob23setAllocatedNodeIndicesENSt6vectorIiEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the indices of the allocated nodes. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>indices</strong> – a list of indices </p>
 </dd>
 </dl>
@@ -557,7 +563,7 @@
 <span id="_CPPv3N6wrench8BatchJob21setAllocatedResourcesERKNSt3mapINSt6stringENSt5tupleImdEEEE"></span><span id="_CPPv2N6wrench8BatchJob21setAllocatedResourcesERKNSt3mapINSt6stringENSt5tupleImdEEEE"></span><span id="wrench::BatchJob::setAllocatedResources__std::map:ss.std::tuple:unsigned-l.double::CR"></span><span class="target" id="classwrench_1_1_batch_job_1aa06b2982de8c6d2b13679503ad0fd94e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setAllocatedResources</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">resources</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob21setAllocatedResourcesERKNSt3mapINSt6stringENSt5tupleImdEEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the resources allocated to this <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>resources</strong> – a list of resource, each as a &lt;hostname, number of cores, bytes of RAM&gt; tuple </p>
 </dd>
 </dl>
@@ -568,7 +574,7 @@
 <span id="_CPPv3N6wrench8BatchJob17setBeginTimestampEd"></span><span id="_CPPv2N6wrench8BatchJob17setBeginTimestampEd"></span><span id="wrench::BatchJob::setBeginTimestamp__double"></span><span class="target" id="classwrench_1_1_batch_job_1aecfaeef4e7196ee7e2520c1cc425d5c2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setBeginTimestamp</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time_stamp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob17setBeginTimestampEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job’s begin timestamp. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>time_stamp</strong> – a date </p>
 </dd>
 </dl>
@@ -579,7 +585,7 @@
 <span id="_CPPv3N6wrench8BatchJob18setEndingTimestampEd"></span><span id="_CPPv2N6wrench8BatchJob18setEndingTimestampEd"></span><span id="wrench::BatchJob::setEndingTimestamp__double"></span><span class="target" id="classwrench_1_1_batch_job_1a204d7469306b45446901a4173257f02c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setEndingTimestamp</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time_stamp</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob18setEndingTimestampEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a> job’s end timestamp. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>time_stamp</strong> – a date </p>
 </dd>
 </dl>
@@ -590,7 +596,7 @@
 <span id="_CPPv3N6wrench8BatchJob16setRequestedTimeEm"></span><span id="_CPPv2N6wrench8BatchJob16setRequestedTimeEm"></span><span id="wrench::BatchJob::setRequestedTime__unsigned-l"></span><span class="target" id="classwrench_1_1_batch_job_1a34b4cdfa5e81f591711a1a05be904a54"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setRequestedTime</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench8BatchJob16setRequestedTimeEm" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the requested time. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>time</strong> – a time in seconds </p>
 </dd>
 </dl>

@@ -12,10 +12,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -28,15 +26,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html">
-            <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -73,7 +75,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Index</li>
       <li class="wy-breadcrumbs-aside">
       </li>
@@ -711,13 +713,23 @@
 </li>
       <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12CommunicatorE">wrench::Communicator (C++ class)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12CommunicatorE">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12CommunicatorE">[2]</a>
 </li>
-      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11communicateERKNSt3mapImdEEi">wrench::Communicator::communicate (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11communicateERKNSt3mapImdEEi">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11communicateERKNSt3mapImdEEi">[2]</a>
+      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator7barrierEv">wrench::Communicator::barrier (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator7barrierEv">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator7barrierEv">[2]</a>
 </li>
       <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator18createCommunicatorEm">wrench::Communicator::createCommunicator (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator18createCommunicatorEm">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator18createCommunicatorEm">[2]</a>
 </li>
       <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11getNumRanksEv">wrench::Communicator::getNumRanks (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11getNumRanksEv">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11getNumRanksEv">[2]</a>
 </li>
       <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator4joinEm">wrench::Communicator::join (C++ function)</a>, <a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator4joinEv">[1]</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator4joinEm">[2]</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator4joinEv">[3]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator4joinEm">[4]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator4joinEv">[5]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator12MPI_AlltoallEd">wrench::Communicator::MPI_Alltoall (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator12MPI_AlltoallEd">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator12MPI_AlltoallEd">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11MPI_BarrierEv">wrench::Communicator::MPI_Barrier (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11MPI_BarrierEv">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator11MPI_BarrierEv">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator9MPI_BcastEid">wrench::Communicator::MPI_Bcast (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator9MPI_BcastEid">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator9MPI_BcastEid">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi">wrench::Communicator::sendAndReceive (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid">wrench::Communicator::sendReceiveAndCompute (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid">[2]</a>
 </li>
       <li><a href="api_developer/classwrench_1_1_communicator.html#_CPPv4N6wrench12CommunicatorD0Ev">wrench::Communicator::~Communicator (C++ function)</a>, <a href="api_internal/classwrench_1_1_communicator.html#_CPPv4N6wrench12CommunicatorD0Ev">[1]</a>, <a href="api_user/classwrench_1_1_communicator.html#_CPPv4N6wrench12CommunicatorD0Ev">[2]</a>
 </li>
@@ -1903,6 +1915,18 @@
 </li>
       <li><a href="api_internal/classwrench_1_1_memory_manager.html#_CPPv4N6wrench13MemoryManagerE">wrench::MemoryManager (C++ class)</a>
 </li>
+      <li><a href="api_developer/classwrench_1_1_m_p_i___alltoall__partipant.html#_CPPv4N6wrench22MPI_Alltoall_partipantE">wrench::MPI_Alltoall_partipant (C++ class)</a>, <a href="api_internal/classwrench_1_1_m_p_i___alltoall__partipant.html#_CPPv4N6wrench22MPI_Alltoall_partipantE">[1]</a>, <a href="api_user/classwrench_1_1_m_p_i___alltoall__partipant.html#_CPPv4N6wrench22MPI_Alltoall_partipantE">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_m_p_i___alltoall__partipant.html#_CPPv4N6wrench22MPI_Alltoall_partipant22MPI_Alltoall_partipantEiPN7simgrid3s4u7MailboxE">wrench::MPI_Alltoall_partipant::MPI_Alltoall_partipant (C++ function)</a>, <a href="api_internal/classwrench_1_1_m_p_i___alltoall__partipant.html#_CPPv4N6wrench22MPI_Alltoall_partipant22MPI_Alltoall_partipantEiPN7simgrid3s4u7MailboxE">[1]</a>, <a href="api_user/classwrench_1_1_m_p_i___alltoall__partipant.html#_CPPv4N6wrench22MPI_Alltoall_partipant22MPI_Alltoall_partipantEiPN7simgrid3s4u7MailboxE">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_m_p_i___barrier__partipant.html#_CPPv4N6wrench21MPI_Barrier_partipantE">wrench::MPI_Barrier_partipant (C++ class)</a>, <a href="api_internal/classwrench_1_1_m_p_i___barrier__partipant.html#_CPPv4N6wrench21MPI_Barrier_partipantE">[1]</a>, <a href="api_user/classwrench_1_1_m_p_i___barrier__partipant.html#_CPPv4N6wrench21MPI_Barrier_partipantE">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_m_p_i___barrier__partipant.html#_CPPv4N6wrench21MPI_Barrier_partipant21MPI_Barrier_partipantEPN7simgrid3s4u7MailboxE">wrench::MPI_Barrier_partipant::MPI_Barrier_partipant (C++ function)</a>, <a href="api_internal/classwrench_1_1_m_p_i___barrier__partipant.html#_CPPv4N6wrench21MPI_Barrier_partipant21MPI_Barrier_partipantEPN7simgrid3s4u7MailboxE">[1]</a>, <a href="api_user/classwrench_1_1_m_p_i___barrier__partipant.html#_CPPv4N6wrench21MPI_Barrier_partipant21MPI_Barrier_partipantEPN7simgrid3s4u7MailboxE">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_m_p_i___bcast__partipant.html#_CPPv4N6wrench19MPI_Bcast_partipantE">wrench::MPI_Bcast_partipant (C++ class)</a>, <a href="api_internal/classwrench_1_1_m_p_i___bcast__partipant.html#_CPPv4N6wrench19MPI_Bcast_partipantE">[1]</a>, <a href="api_user/classwrench_1_1_m_p_i___bcast__partipant.html#_CPPv4N6wrench19MPI_Bcast_partipantE">[2]</a>
+</li>
+      <li><a href="api_developer/classwrench_1_1_m_p_i___bcast__partipant.html#_CPPv4N6wrench19MPI_Bcast_partipant19MPI_Bcast_partipantEiPN7simgrid3s4u7MailboxE">wrench::MPI_Bcast_partipant::MPI_Bcast_partipant (C++ function)</a>, <a href="api_internal/classwrench_1_1_m_p_i___bcast__partipant.html#_CPPv4N6wrench19MPI_Bcast_partipant19MPI_Bcast_partipantEiPN7simgrid3s4u7MailboxE">[1]</a>, <a href="api_user/classwrench_1_1_m_p_i___bcast__partipant.html#_CPPv4N6wrench19MPI_Bcast_partipant19MPI_Bcast_partipantEiPN7simgrid3s4u7MailboxE">[2]</a>
+</li>
       <li><a href="api_internal/classwrench_1_1_negotiator_completion_message.html#_CPPv4N6wrench27NegotiatorCompletionMessageE">wrench::NegotiatorCompletionMessage (C++ class)</a>
 </li>
       <li><a href="api_internal/classwrench_1_1_negotiator_completion_message.html#_CPPv4N6wrench27NegotiatorCompletionMessage27NegotiatorCompletionMessageENSt6vectorINSt10shared_ptrI3JobEEEEd">wrench::NegotiatorCompletionMessage::NegotiatorCompletionMessage (C++ function)</a>
@@ -1981,6 +2005,8 @@
 </li>
       <li><a href="api_internal/classwrench_1_1_network_proximity_service.html#_CPPv4N6wrench23NetworkProximityService13NOT_AVAILABLEE">wrench::NetworkProximityService::NOT_AVAILABLE (C++ member)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_internal/classwrench_1_1_network_proximity_service.html#_CPPv4N6wrench23NetworkProximityServiceD0Ev">wrench::NetworkProximityService::~NetworkProximityService (C++ function)</a>
 </li>
       <li><a href="api_developer/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayloadE">wrench::NetworkProximityServiceMessagePayload (C++ class)</a>, <a href="api_internal/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayloadE">[1]</a>, <a href="api_user/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayloadE">[2]</a>
@@ -1989,8 +2015,6 @@
 </li>
       <li><a href="api_developer/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload38NETWORK_DAEMON_CONTACT_REQUEST_PAYLOADE">wrench::NetworkProximityServiceMessagePayload::NETWORK_DAEMON_CONTACT_REQUEST_PAYLOAD (C++ member)</a>, <a href="api_internal/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload38NETWORK_DAEMON_CONTACT_REQUEST_PAYLOADE">[1]</a>, <a href="api_user/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload38NETWORK_DAEMON_CONTACT_REQUEST_PAYLOADE">[2]</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api_developer/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload44NETWORK_DAEMON_MEASUREMENT_REPORTING_PAYLOADE">wrench::NetworkProximityServiceMessagePayload::NETWORK_DAEMON_MEASUREMENT_REPORTING_PAYLOAD (C++ member)</a>, <a href="api_internal/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload44NETWORK_DAEMON_MEASUREMENT_REPORTING_PAYLOADE">[1]</a>, <a href="api_user/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload44NETWORK_DAEMON_MEASUREMENT_REPORTING_PAYLOADE">[2]</a>
 </li>
       <li><a href="api_developer/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload40NETWORK_DB_LOOKUP_ANSWER_MESSAGE_PAYLOADE">wrench::NetworkProximityServiceMessagePayload::NETWORK_DB_LOOKUP_ANSWER_MESSAGE_PAYLOAD (C++ member)</a>, <a href="api_internal/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload40NETWORK_DB_LOOKUP_ANSWER_MESSAGE_PAYLOADE">[1]</a>, <a href="api_user/classwrench_1_1_network_proximity_service_message_payload.html#_CPPv4N6wrench37NetworkProximityServiceMessagePayload40NETWORK_DB_LOOKUP_ANSWER_MESSAGE_PAYLOADE">[2]</a>
@@ -2947,6 +2971,14 @@
 </li>
       <li><a href="api_developer/classwrench_1_1_sleep_action.html#_CPPv4NK6wrench11SleepAction12getSleepTimeEv">wrench::SleepAction::getSleepTime (C++ function)</a>, <a href="api_internal/classwrench_1_1_sleep_action.html#_CPPv4NK6wrench11SleepAction12getSleepTimeEv">[1]</a>
 </li>
+      <li><a href="api_internal/classwrench_1_1_s_m_p_i_executor.html#_CPPv4N6wrench12SMPIExecutorE">wrench::SMPIExecutor (C++ class)</a>
+</li>
+      <li><a href="api_internal/classwrench_1_1_s_m_p_i_executor.html#_CPPv4N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi">wrench::SMPIExecutor::performAlltoall (C++ function)</a>
+</li>
+      <li><a href="api_internal/classwrench_1_1_s_m_p_i_executor.html#_CPPv4N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE">wrench::SMPIExecutor::performBarrier (C++ function)</a>
+</li>
+      <li><a href="api_internal/classwrench_1_1_s_m_p_i_executor.html#_CPPv4N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi">wrench::SMPIExecutor::performBcast (C++ function)</a>
+</li>
       <li><a href="api_developer/classwrench_1_1_some_actions_have_failed.html#_CPPv4N6wrench21SomeActionsHaveFailedE">wrench::SomeActionsHaveFailed (C++ class)</a>, <a href="api_internal/classwrench_1_1_some_actions_have_failed.html#_CPPv4N6wrench21SomeActionsHaveFailedE">[1]</a>
 </li>
       <li><a href="api_internal/classwrench_1_1_some_actions_have_failed.html#_CPPv4N6wrench21SomeActionsHaveFailed21SomeActionsHaveFailedEv">wrench::SomeActionsHaveFailed::SomeActionsHaveFailed (C++ function)</a>
@@ -3311,7 +3343,7 @@
 </li>
       <li><a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy18processNextMessageEv">wrench::StorageServiceProxy::processNextMessage (C++ function)</a>
 </li>
-      <li><a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEdb">wrench::StorageServiceProxy::readFile (C++ function)</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI12FileLocationEE">[1]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI12FileLocationEEd">[2]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI12FileLocationEEd">[3]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEE">[4]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEERKNSt6stringE">[5]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEERKNSt6stringEd">[6]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEEd">[7]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEE">[8]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE">[9]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringEd">[10]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEEd">[11]</a>
+      <li><a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEdb">wrench::StorageServiceProxy::readFile (C++ function)</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI12FileLocationEE">[1]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI12FileLocationEEd">[2]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEE">[3]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEERKNSt6stringE">[4]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEERKNSt6stringEd">[5]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI8DataFileEEd">[6]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEE">[7]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE">[8]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringEd">[9]</a>, <a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy8readFileERKNSt10shared_ptrI8DataFileEEd">[10]</a>
 </li>
       <li><a href="api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy19rejectDuplicateReadERKNSt10shared_ptrI8DataFileEE">wrench::StorageServiceProxy::rejectDuplicateRead (C++ function)</a>
 </li>

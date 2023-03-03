@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Getting started &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html">
-            <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -80,7 +82,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Getting started</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/getting_started.rst.txt" rel="nofollow"> View page source</a>
@@ -104,18 +106,18 @@ logistics of setting up a simulator project.</strong></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">wrench-init</span></code> tool is a project generator built with WRENCH, which
 creates a simple project structure as follows:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>project-folder/
-├── CMakeLists.txt
-├── CMakeModules
-│   └── FindSimGrid.cmake
-│   └── FindWRENCH.cmake
-├── src/
-│   ├── Simulator.cpp
-│   ├── Controller.cpp
-├── include/
-│   └── Controller.h
-├── build/
-└── data/
-    └── platform.xml
+├──<span class="w"> </span>CMakeLists.txt
+├──<span class="w"> </span>CMakeModules
+│<span class="w">   </span>└──<span class="w"> </span>FindSimGrid.cmake
+│<span class="w">   </span>└──<span class="w"> </span>FindWRENCH.cmake
+├──<span class="w"> </span>src/
+│<span class="w">   </span>├──<span class="w"> </span>Simulator.cpp
+│<span class="w">   </span>├──<span class="w"> </span>Controller.cpp
+├──<span class="w"> </span>include/
+│<span class="w">   </span>└──<span class="w"> </span>Controller.h
+├──<span class="w"> </span>build/
+└──<span class="w"> </span>data/
+<span class="w">    </span>└──<span class="w"> </span>platform.xml
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">Simulator.cpp</span></code> source file contains the <code class="docutils literal notranslate"><span class="pre">main()</span></code> function of
@@ -128,7 +130,7 @@ available in <code class="docutils literal notranslate"><span class="pre">data/p
 necessary implementation for a WRENCH-enabled simulator.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">wrench-init</span></code> tool only requires a single argument, the name of
 the folder where the project skeleton will be generated:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ wrench-init &lt;project_folder&gt;
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>wrench-init<span class="w"> </span>&lt;project_folder&gt;
 </pre></div>
 </div>
 <p>Additional options supported by the tool can be found by using the
@@ -151,7 +153,7 @@ typing <code class="docutils literal notranslate"><span class="pre">make</span> 
 <p>For instance, the
 <code class="docutils literal notranslate"><span class="pre">examples/action_api/bare-metal-bag-of-actions</span></code> example
 can be executed as:</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ wrench-example-bare-metal-bag-of-actions <span class="m">6</span> two_hosts.xml --log<span class="o">=</span>custom_wms.threshold<span class="o">=</span>info
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>wrench-example-bare-metal-bag-of-actions<span class="w"> </span><span class="m">6</span><span class="w"> </span>two_hosts.xml<span class="w"> </span>--log<span class="o">=</span>custom_wms.threshold<span class="o">=</span>info
 </pre></div>
 </div>
 <p>(File <code class="docutils literal notranslate"><span class="pre">two_hosts.xml</span></code> is in the

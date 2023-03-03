@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Creating an energy-meter service &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -29,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,7 +76,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Creating an energy-meter service</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wrench_101/energymeter.rst.txt" rel="nofollow"> View page source</a>
@@ -107,13 +109,13 @@ are measurement periods in seconds.</p></li>
 <p>The example below creates an instance that runs on host
 <code class="docutils literal notranslate"><span class="pre">MeasurerHost</span></code>, and measures the energy consumed on host <code class="docutils literal notranslate"><span class="pre">Host1</span></code>
 every second and the energy consumed on host <code class="docutils literal notranslate"><span class="pre">Host2</span></code> every 10 seconds:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">em_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="w"></span>
-<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">EnergyMeterService</span><span class="p">(</span><span class="s">&quot;MeasurerHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="mf">1.0</span><span class="p">},{</span><span class="s">&quot;Host2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">}}));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">em_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">EnergyMeterService</span><span class="p">(</span><span class="s">&quot;MeasurerHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;Host1&quot;</span><span class="p">,</span><span class="mf">1.0</span><span class="p">},{</span><span class="s">&quot;Host2&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10.0</span><span class="p">}}));</span>
 </pre></div>
 </div>
 <p>One the simulation is completed, energy measurement time stamps can be
 accessed as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">energy_consumption_timestamps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">getOutput</span><span class="p">().</span><span class="n">getTrace</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimulationTimestampEnergyConsumption</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">energy_consumption_timestamps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">getOutput</span><span class="p">().</span><span class="n">getTrace</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimulationTimestampEnergyConsumption</span><span class="o">&gt;</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>See the documentation of <a class="reference internal" href="../api_developer/classwrench_1_1_simulation_output.html#_CPPv4N6wrench16SimulationOutputE" title="wrench::SimulationOutput"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::SimulationOutput</span></code></a> for more details.</p>

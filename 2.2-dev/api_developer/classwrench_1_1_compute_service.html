@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::ComputeService &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::ComputeService</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-computeservice">
-<h1>wrench::ComputeService<a class="headerlink" href="#wrench-computeservice" title="Permalink to this heading"></a></h1>
+<span id="computeservice"></span><h1>wrench::ComputeService<a class="headerlink" href="#wrench-computeservice" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14ComputeServiceE">
 <span id="_CPPv3N6wrench14ComputeServiceE"></span><span id="_CPPv2N6wrench14ComputeServiceE"></span><span id="wrench::ComputeService"></span><span class="target" id="classwrench_1_1_compute_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><a class="headerlink" href="#_CPPv4N6wrench14ComputeServiceE" title="Permalink to this definition"></a><br /></dt>
@@ -270,10 +275,10 @@
 <span id="_CPPv3N6wrench14ComputeService15getCoreFlopRateEv"></span><span id="_CPPv2N6wrench14ComputeService15getCoreFlopRateEv"></span><span id="wrench::ComputeService::getCoreFlopRate"></span><span class="target" id="classwrench_1_1_compute_service_1a72c2608b82692ad73888d9b9f7c6bd0c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getCoreFlopRate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService15getCoreFlopRateEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the per-core flop rate of the compute service’s hosts. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a list of flop rates in flop/sec</p>
 </dd>
 </dl>
@@ -284,7 +289,7 @@
 <span id="_CPPv3N6wrench14ComputeService23getFreeScratchSpaceSizeEv"></span><span id="_CPPv2N6wrench14ComputeService23getFreeScratchSpaceSizeEv"></span><span id="wrench::ComputeService::getFreeScratchSpaceSize"></span><span class="target" id="classwrench_1_1_compute_service_1ac3662628f589ffe44e17921e60971fd6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFreeScratchSpaceSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService23getFreeScratchSpaceSizeEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the free space on the compute service’s scratch storage space. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a size (in bytes) </p>
 </dd>
 </dl>
@@ -295,13 +300,13 @@
 <span id="_CPPv3N6wrench14ComputeService8getHostsEv"></span><span id="_CPPv2N6wrench14ComputeService8getHostsEv"></span><span id="wrench::ComputeService::getHosts"></span><span class="target" id="classwrench_1_1_compute_service_1a63dfefb141fe35b6d4783af7d53c49a2"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHosts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService8getHostsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the list of the compute service’s compute host. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a vector of hostnames</p>
 </dd>
 </dl>
@@ -312,10 +317,10 @@
 <span id="_CPPv3N6wrench14ComputeService17getMemoryCapacityEv"></span><span id="_CPPv2N6wrench14ComputeService17getMemoryCapacityEv"></span><span id="wrench::ComputeService::getMemoryCapacity"></span><span class="target" id="classwrench_1_1_compute_service_1a113d9698fc83cefd78121e279b99b51e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMemoryCapacity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService17getMemoryCapacityEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the RAM capacities for each of the compute service’s hosts. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a map of RAM capacities, indexed by hostname</p>
 </dd>
 </dl>
@@ -326,13 +331,13 @@
 <span id="_CPPv3N6wrench14ComputeService11getNumHostsEv"></span><span id="_CPPv2N6wrench14ComputeService11getNumHostsEv"></span><span id="wrench::ComputeService::getNumHosts"></span><span class="target" id="classwrench_1_1_compute_service_1a1b576a22529bd638e6998f0513a44b36"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumHosts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService11getNumHostsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the number of hosts that the compute service manages. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the host count</p>
 </dd>
 </dl>
@@ -343,13 +348,13 @@
 <span id="_CPPv3N6wrench14ComputeService33getPerHostAvailableMemoryCapacityEv"></span><span id="_CPPv2N6wrench14ComputeService33getPerHostAvailableMemoryCapacityEv"></span><span id="wrench::ComputeService::getPerHostAvailableMemoryCapacity"></span><span class="target" id="classwrench_1_1_compute_service_1ac7ef9da968558b1206ed41cb3c9e2e5d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPerHostAvailableMemoryCapacity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService33getPerHostAvailableMemoryCapacityEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get ram availability for each of the compute service’s host. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the ram availability map (could be empty)</p>
 </dd>
 </dl>
@@ -360,13 +365,13 @@
 <span id="_CPPv3N6wrench14ComputeService18getPerHostNumCoresEv"></span><span id="_CPPv2N6wrench14ComputeService18getPerHostNumCoresEv"></span><span id="wrench::ComputeService::getPerHostNumCores"></span><span class="target" id="classwrench_1_1_compute_service_1ae9dd2352d89202092c33d6307bd3a767"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPerHostNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService18getPerHostNumCoresEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get core counts for each of the compute service’s host. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a map of core counts, indexed by hostnames</p>
 </dd>
 </dl>
@@ -377,13 +382,13 @@
 <span id="_CPPv3N6wrench14ComputeService22getPerHostNumIdleCoresEv"></span><span id="_CPPv2N6wrench14ComputeService22getPerHostNumIdleCoresEv"></span><span id="wrench::ComputeService::getPerHostNumIdleCores"></span><span class="target" id="classwrench_1_1_compute_service_1a9dcbf1b6c9d7c6c10ce31bf37331f0a7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPerHostNumIdleCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService22getPerHostNumIdleCoresEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get idle core counts for each of the compute service’s host. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>the idle core counts (could be empty). Note that this doesn’t mean that asking for these cores right will mean immediate execution (since jobs may be pending and “ahead” in the queue, e.g., because they depend on current actions that are not using all available resources).</p>
 </dd>
 </dl>
@@ -394,13 +399,13 @@
 <span id="_CPPv3N6wrench14ComputeService16getTotalNumCoresEv"></span><span id="_CPPv2N6wrench14ComputeService16getTotalNumCoresEv"></span><span id="wrench::ComputeService::getTotalNumCores"></span><span class="target" id="classwrench_1_1_compute_service_1a5d2e4bca8b531521561f167769186f56"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalNumCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService16getTotalNumCoresEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the total core counts for all hosts of the compute service. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>total core counts</p>
 </dd>
 </dl>
@@ -411,13 +416,13 @@
 <span id="_CPPv3N6wrench14ComputeService20getTotalNumIdleCoresEv"></span><span id="_CPPv2N6wrench14ComputeService20getTotalNumIdleCoresEv"></span><span id="wrench::ComputeService::getTotalNumIdleCores"></span><span class="target" id="classwrench_1_1_compute_service_1a225719efa4cb6c3b910c20e8828cb789"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalNumIdleCores</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService20getTotalNumIdleCoresEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the total idle core count for all hosts of the compute service. Note that this doesn’t mean that asking for these cores right will mean immediate execution (since jobs may be pending and “ahead” in the queue, e.g., because they depend on current actions that are not using all available resources). </p>
 <dl class="field-list simple">
-<dt class="field-odd">Throws</dt>
+<dt class="field-odd">Throws<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>total idle core count.</p>
 </dd>
 </dl>
@@ -428,7 +433,7 @@
 <span id="_CPPv3N6wrench14ComputeService24getTotalScratchSpaceSizeEv"></span><span id="_CPPv2N6wrench14ComputeService24getTotalScratchSpaceSizeEv"></span><span id="wrench::ComputeService::getTotalScratchSpaceSize"></span><span class="target" id="classwrench_1_1_compute_service_1ae0a8acd4a82063250799e313f1d520d1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalScratchSpaceSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService24getTotalScratchSpaceSizeEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the total capacity of the compute service’s scratch storage space. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a size (in bytes) </p>
 </dd>
 </dl>
@@ -439,7 +444,7 @@
 <span id="_CPPv3NK6wrench14ComputeService10hasScratchEv"></span><span id="_CPPv2NK6wrench14ComputeService10hasScratchEv"></span><span id="wrench::ComputeService::hasScratchC"></span><span class="target" id="classwrench_1_1_compute_service_1a9f5194000e25810b806d4c868fce05e8"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasScratch</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench14ComputeService10hasScratchEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Checks if the compute service has a scratch space. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true if the compute service has some scratch storage space, false otherwise </p>
 </dd>
 </dl>
@@ -450,13 +455,13 @@
 <span id="_CPPv3N6wrench14ComputeService38isThereAtLeastOneHostWithIdleResourcesEmd"></span><span id="_CPPv2N6wrench14ComputeService38isThereAtLeastOneHostWithIdleResourcesEmd"></span><span id="wrench::ComputeService::isThereAtLeastOneHostWithIdleResources__unsigned-l.double"></span><span class="target" id="classwrench_1_1_compute_service_1a91a8a4773ab090c72427cafb3d08b516"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isThereAtLeastOneHostWithIdleResources</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService38isThereAtLeastOneHostWithIdleResourcesEmd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Method to find out if, right now, the compute service has at least one host with some idle number of cores and some available RAM. Note that this doesn’t mean that asking for these resources right will mean immediate execution (since jobs may be pending and “ahead” in the queue, e.g., because they depend on current actions that are not using all available resources). </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>num_cores</strong> – the desired number of cores </p></li>
 <li><p><strong>ram</strong> – the desired RAM </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>true if idle resources are available, false otherwise </p>
 </dd>
 </dl>
@@ -473,7 +478,7 @@
 <span id="_CPPv3N6wrench14ComputeService4stopEbN14ComputeService16TerminationCauseE"></span><span id="_CPPv2N6wrench14ComputeService4stopEbN14ComputeService16TerminationCauseE"></span><span id="wrench::ComputeService::stop__b.ComputeService::TerminationCause"></span><span class="target" id="classwrench_1_1_compute_service_1a5d1449f747ac6326e3b8e5fa2176f10b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">send_failure_notifications</span></span>, <a class="reference internal" href="#_CPPv4N6wrench14ComputeServiceE" title="wrench::ComputeService"><span class="n"><span class="pre">ComputeService</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N6wrench14ComputeService16TerminationCauseE" title="wrench::ComputeService::TerminationCause"><span class="n"><span class="pre">TerminationCause</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">termination_cause</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService4stopEbN14ComputeService16TerminationCauseE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Stop the compute service. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>send_failure_notifications</strong> – whether to send job failure notifications or not </p></li>
 <li><p><strong>termination_cause</strong> – the cause (reason) of the service’s termination </p></li>
@@ -487,7 +492,7 @@
 <span id="_CPPv3N6wrench14ComputeService20supportsCompoundJobsEv"></span><span id="_CPPv2N6wrench14ComputeService20supportsCompoundJobsEv"></span><span id="wrench::ComputeService::supportsCompoundJobs"></span><span class="target" id="classwrench_1_1_compute_service_1aba9319a25dba045963f8664d28e1b76c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsCompoundJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService20supportsCompoundJobsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the service supports pilot jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -498,7 +503,7 @@
 <span id="_CPPv3N6wrench14ComputeService17supportsPilotJobsEv"></span><span id="_CPPv2N6wrench14ComputeService17supportsPilotJobsEv"></span><span id="wrench::ComputeService::supportsPilotJobs"></span><span class="target" id="classwrench_1_1_compute_service_1a4af600fc84a9744932617aa5d3b8c4db"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsPilotJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService17supportsPilotJobsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the service supports compound jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -509,7 +514,7 @@
 <span id="_CPPv3N6wrench14ComputeService20supportsStandardJobsEv"></span><span id="_CPPv2N6wrench14ComputeService20supportsStandardJobsEv"></span><span id="wrench::ComputeService::supportsStandardJobs"></span><span class="target" id="classwrench_1_1_compute_service_1a962fa9ee4fe18884cfd9ad309889484e"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">supportsStandardJobs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService20supportsStandardJobsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the service supports standard jobs. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -520,10 +525,10 @@
 <span id="_CPPv3N6wrench14ComputeService12terminateJobERKNSt10shared_ptrI11CompoundJobEE"></span><span id="_CPPv2N6wrench14ComputeService12terminateJobERKNSt10shared_ptrI11CompoundJobEE"></span><span id="wrench::ComputeService::terminateJob__std::shared_ptr:CompoundJob:CR"></span><span class="target" id="classwrench_1_1_compute_service_1ab09d1d92b6a773ccedf6018c2cd7c93e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">terminateJob</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">job</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ComputeService12terminateJobERKNSt10shared_ptrI11CompoundJobEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Terminate a previously-submitted job (which may or may not be running yet) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>job</strong> – the job to terminate</p>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>

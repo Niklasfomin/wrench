@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::NetworkError &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,17 +13,15 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="wrench::NetworkProximityService" href="classwrench_1_1_network_proximity_service.html" />
-    <link rel="prev" title="wrench::JobTimeout" href="classwrench_1_1_job_timeout.html" /> 
+    <link rel="prev" title="wrench::MPI_Bcast_partipant" href="classwrench_1_1_m_p_i___bcast__partipant.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -121,6 +123,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager.html">wrench::JobManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
@@ -214,7 +219,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_developer.html">WRENCH Developer API</a></li>
       <li class="breadcrumb-item active">wrench::NetworkError</li>
       <li class="wy-breadcrumbs-aside">
@@ -227,7 +232,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-networkerror">
-<h1>wrench::NetworkError<a class="headerlink" href="#wrench-networkerror" title="Permalink to this heading"></a></h1>
+<span id="networkerror"></span><h1>wrench::NetworkError<a class="headerlink" href="#wrench-networkerror" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12NetworkErrorE">
 <span id="_CPPv3N6wrench12NetworkErrorE"></span><span id="_CPPv2N6wrench12NetworkErrorE"></span><span id="wrench::NetworkError"></span><span class="target" id="classwrench_1_1_network_error"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NetworkError</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><a class="headerlink" href="#_CPPv4N6wrench12NetworkErrorE" title="Permalink to this definition"></a><br /></dt>
@@ -276,7 +281,7 @@
 <span id="_CPPv3N6wrench12NetworkError10getMailboxEv"></span><span id="_CPPv2N6wrench12NetworkError10getMailboxEv"></span><span id="wrench::NetworkError::getMailbox"></span><span class="target" id="classwrench_1_1_network_error_1a0760db02c40d2ba195aa87106951411f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMailbox</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12NetworkError10getMailboxEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns the mailbox name on which the error occurred. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the mailbox name </p>
 </dd>
 </dl>
@@ -287,7 +292,7 @@
 <span id="_CPPv3N6wrench12NetworkError9isTimeoutEv"></span><span id="_CPPv2N6wrench12NetworkError9isTimeoutEv"></span><span id="wrench::NetworkError::isTimeout"></span><span class="target" id="classwrench_1_1_network_error_1a4aed0a6b6496e19e70e16da31eae8b19"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isTimeout</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12NetworkError9isTimeoutEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns whether the network error was a timeout. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -298,7 +303,7 @@
 <span id="_CPPv3N6wrench12NetworkError8toStringEv"></span><span id="_CPPv2N6wrench12NetworkError8toStringEv"></span><span id="wrench::NetworkError::toString"></span><span class="target" id="classwrench_1_1_network_error_1ab02082d00cdbf427f917bed35681a871"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench12NetworkError8toStringEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the human-readable failure message. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the message </p>
 </dd>
 </dl>
@@ -309,7 +314,7 @@
 <span id="_CPPv3N6wrench12NetworkError14whileReceivingEv"></span><span id="_CPPv2N6wrench12NetworkError14whileReceivingEv"></span><span id="wrench::NetworkError::whileReceiving"></span><span class="target" id="classwrench_1_1_network_error_1a1fa6782fde91dab538f577d2608eb640"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">whileReceiving</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12NetworkError14whileReceivingEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns whether the network error occurred while receiving. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -320,7 +325,7 @@
 <span id="_CPPv3N6wrench12NetworkError12whileSendingEv"></span><span id="_CPPv2N6wrench12NetworkError12whileSendingEv"></span><span id="wrench::NetworkError::whileSending"></span><span class="target" id="classwrench_1_1_network_error_1a98a2da5f34bd18fc2c245b364e884b34"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">whileSending</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12NetworkError12whileSendingEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns whether the network error occurred while sending. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -335,7 +340,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classwrench_1_1_job_timeout.html" class="btn btn-neutral float-left" title="wrench::JobTimeout" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classwrench_1_1_m_p_i___bcast__partipant.html" class="btn btn-neutral float-left" title="wrench::MPI_Bcast_partipant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="classwrench_1_1_network_proximity_service.html" class="btn btn-neutral float-right" title="wrench::NetworkProximityService" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

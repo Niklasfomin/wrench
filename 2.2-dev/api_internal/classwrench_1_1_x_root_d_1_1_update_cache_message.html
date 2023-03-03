@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::XRootD::UpdateCacheMessage &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -30,15 +28,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -215,6 +217,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -244,6 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -368,7 +374,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::XRootD::UpdateCacheMessage</li>
       <li class="wy-breadcrumbs-aside">
@@ -381,7 +387,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-xrootd-updatecachemessage">
-<h1>wrench::XRootD::UpdateCacheMessage<a class="headerlink" href="#wrench-xrootd-updatecachemessage" title="Permalink to this heading"></a></h1>
+<span id="xrootd-updatecachemessage"></span><h1>wrench::XRootD::UpdateCacheMessage<a class="headerlink" href="#wrench-xrootd-updatecachemessage" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench6XRootD18UpdateCacheMessageE">
 <span id="_CPPv3N6wrench6XRootD18UpdateCacheMessageE"></span><span id="_CPPv2N6wrench6XRootD18UpdateCacheMessageE"></span><span id="wrench::XRootD::UpdateCacheMessage"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_update_cache_message"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">UpdateCacheMessage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">XRootD</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_x_root_d_1_1_message.html#_CPPv4N6wrench6XRootD7MessageE" title="wrench::XRootD::Message"><span class="n"><span class="pre">Message</span></span></a><a class="headerlink" href="#_CPPv4N6wrench6XRootD18UpdateCacheMessageE" title="Permalink to this definition"></a><br /></dt>
@@ -393,7 +399,7 @@
 <span id="_CPPv3N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEPN7simgrid3s4u7MailboxENSt10shared_ptrI36StorageServiceFileReadRequestMessageEEP4NodeNSt10shared_ptrI8DataFileEENSt3setINSt10shared_ptrI12FileLocationEEEEdNSt10shared_ptrIbEE"></span><span id="_CPPv2N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEPN7simgrid3s4u7MailboxENSt10shared_ptrI36StorageServiceFileReadRequestMessageEEP4NodeNSt10shared_ptrI8DataFileEENSt3setINSt10shared_ptrI12FileLocationEEEEdNSt10shared_ptrIbEE"></span><span id="wrench::XRootD::UpdateCacheMessage::UpdateCacheMessage__simgrid::s4u::MailboxP.std::shared_ptr:StorageServiceFileReadRequestMessage:.NodeP.std::shared_ptr:DataFile:.std::set:std::shared_ptr:FileLocation::.double.std::shared_ptr:b:"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_update_cache_message_1a07cec9b5bce0017fdf32b94f74b32ba1"></span><span class="sig-name descname"><span class="n"><span class="pre">UpdateCacheMessage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_mailbox</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_storage_service_file_read_request_message.html#_CPPv4N6wrench36StorageServiceFileReadRequestMessageE" title="wrench::StorageServiceFileReadRequestMessage"><span class="n"><span class="pre">StorageServiceFileReadRequestMessage</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">original</span></span>, <a class="reference internal" href="../api_developer/classwrench_1_1_x_root_d_1_1_node.html#_CPPv4N6wrench6XRootD4NodeE" title="wrench::XRootD::Node"><span class="n"><span class="pre">Node</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">node</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">file</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">locations</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">answered</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEPN7simgrid3s4u7MailboxENSt10shared_ptrI36StorageServiceFileReadRequestMessageEEP4NodeNSt10shared_ptrI8DataFileEENSt3setINSt10shared_ptrI12FileLocationEEEEdNSt10shared_ptrIbEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>answer_mailbox</strong> – The mailbox the final answer should be sent to </p></li>
 <li><p><strong>original</strong> – The original file read request being responded too. If this is a file locate search, this should be null </p></li>
@@ -412,7 +418,7 @@
 <span id="_CPPv3N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageER18UpdateCacheMessage"></span><span id="_CPPv2N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageER18UpdateCacheMessage"></span><span id="wrench::XRootD::UpdateCacheMessage::UpdateCacheMessage__UpdateCacheMessageR"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_update_cache_message_1aaec07ce92c9c42d0df92d91e356c69aa"></span><span class="sig-name descname"><span class="n"><span class="pre">UpdateCacheMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageER18UpdateCacheMessage" title="wrench::XRootD::UpdateCacheMessage::UpdateCacheMessage"><span class="n"><span class="pre">UpdateCacheMessage</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageER18UpdateCacheMessage" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Reference Copy Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> – The message to copy. </p>
 </dd>
 </dl>
@@ -423,7 +429,7 @@
 <span id="_CPPv3N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEP18UpdateCacheMessage"></span><span id="_CPPv2N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEP18UpdateCacheMessage"></span><span id="wrench::XRootD::UpdateCacheMessage::UpdateCacheMessage__UpdateCacheMessageP"></span><span class="target" id="classwrench_1_1_x_root_d_1_1_update_cache_message_1ac9fb2464ab728f55d331b175dcf9dc7a"></span><span class="sig-name descname"><span class="n"><span class="pre">UpdateCacheMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEP18UpdateCacheMessage" title="wrench::XRootD::UpdateCacheMessage::UpdateCacheMessage"><span class="n"><span class="pre">UpdateCacheMessage</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">other</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench6XRootD18UpdateCacheMessage18UpdateCacheMessageEP18UpdateCacheMessage" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Pointer Copy Constructor. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>other</strong> – The message to copy. </p>
 </dd>
 </dl>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::S4U_Daemon &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -216,6 +218,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
@@ -245,6 +250,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s_m_p_i_executor.html">wrench::SMPIExecutor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -369,7 +375,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
       <li class="breadcrumb-item active">wrench::S4U_Daemon</li>
       <li class="wy-breadcrumbs-aside">
@@ -382,7 +388,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-s4u-daemon">
-<h1>wrench::S4U_Daemon<a class="headerlink" href="#wrench-s4u-daemon" title="Permalink to this heading"></a></h1>
+<span id="s4u-daemon"></span><h1>wrench::S4U_Daemon<a class="headerlink" href="#wrench-s4u-daemon" title="Permalink to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench10S4U_DaemonE">
 <span id="_CPPv3N6wrench10S4U_DaemonE"></span><span id="_CPPv2N6wrench10S4U_DaemonE"></span><span id="wrench::S4U_Daemon"></span><span class="target" id="classwrench_1_1_s4_u___daemon"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">S4U_Daemon</span></span></span><a class="headerlink" href="#_CPPv4N6wrench10S4U_DaemonE" title="Permalink to this definition"></a><br /></dt>
@@ -429,7 +435,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon10S4U_DaemonERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N6wrench10S4U_Daemon10S4U_DaemonERKNSt6stringERKNSt6stringE"></span><span id="wrench::S4U_Daemon::S4U_Daemon__ssCR.ssCR"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a26bde93d71d1876397eb6911fba158a3"></span><span class="sig-name descname"><span class="n"><span class="pre">S4U_Daemon</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">process_name_prefix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon10S4U_DaemonERKNSt6stringERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor (daemon with a mailbox) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hostname</strong> – the name of the host on which the daemon will run </p></li>
 <li><p><strong>process_name_prefix</strong> – the prefix of the name of the simulated process/actor </p></li>
@@ -450,13 +456,13 @@
 <span id="_CPPv3N6wrench10S4U_Daemon7cleanupEbi"></span><span id="_CPPv2N6wrench10S4U_Daemon7cleanupEbi"></span><span id="wrench::S4U_Daemon::cleanup__b.i"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1ab6fe4db53ea5c0a934b507b146c504d1"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cleanup</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">has_returned_from_main</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">return_value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon7cleanupEbi" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Cleanup function called when the daemon terminates (for whatever reason). The default behavior is to throw an exception if the host is off. This method should be overriden in a daemons implements some fault-tolerant behavior, or is naturally tolerant. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>has_returned_from_main</strong> – whether the daemon returned from <a class="reference internal" href="#classwrench_1_1_s4_u___daemon_1a0073b1104849679756809330533400eb"><span class="std std-ref">main()</span></a> by itself </p></li>
 <li><p><strong>return_value</strong> – the return value from main (if has_terminated_cleanly is true)</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p>
 </dd>
 </dl>
@@ -467,7 +473,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon15createLifeSaverENSt10shared_ptrI10S4U_DaemonEE"></span><span id="_CPPv2N6wrench10S4U_Daemon15createLifeSaverENSt10shared_ptrI10S4U_DaemonEE"></span><span id="wrench::S4U_Daemon::createLifeSaver__std::shared_ptr:S4U_Daemon:"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a591abd15d6a27371cb04b7839862cc1b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createLifeSaver</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench10S4U_DaemonE" title="wrench::S4U_Daemon"><span class="n"><span class="pre">S4U_Daemon</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reference</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon15createLifeSaverENSt10shared_ptrI10S4U_DaemonEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a life saver for the daemon. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>reference</strong> – </p>
 </dd>
 </dl>
@@ -478,7 +484,7 @@
 <span id="_CPPv3NK6wrench10S4U_Daemon7getNameEv"></span><span id="_CPPv2NK6wrench10S4U_Daemon7getNameEv"></span><span id="wrench::S4U_Daemon::getNameC"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a4ff60b0013ae664599370a3a28ddac50"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getName</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench10S4U_Daemon7getNameEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Retrieve the process name. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the name </p>
 </dd>
 </dl>
@@ -489,7 +495,7 @@
 <span id="_CPPv3NK6wrench10S4U_Daemon14getReturnValueEv"></span><span id="_CPPv2NK6wrench10S4U_Daemon14getReturnValueEv"></span><span id="wrench::S4U_Daemon::getReturnValueC"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1aaf08a815c6ddd79b576d6f1bb096dfd7"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getReturnValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench10S4U_Daemon14getReturnValueEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns the value returned by <a class="reference internal" href="#classwrench_1_1_s4_u___daemon_1a0073b1104849679756809330533400eb"><span class="std std-ref">main()</span></a> (if the daemon has returned from main) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The return value </p>
 </dd>
 </dl>
@@ -500,7 +506,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon13getSimulationEv"></span><span id="_CPPv2N6wrench10S4U_Daemon13getSimulationEv"></span><span id="wrench::S4U_Daemon::getSimulation"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1aa3663a0f5083c93b45f294d8ea717e5a"></span><a class="reference internal" href="../api_developer/classwrench_1_1_simulation.html#_CPPv4N6wrench10SimulationE" title="wrench::Simulation"><span class="n"><span class="pre">Simulation</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getSimulation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon13getSimulationEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the service’s simulation. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a simulation </p>
 </dd>
 </dl>
@@ -511,7 +517,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon8getStateEv"></span><span id="_CPPv2N6wrench10S4U_Daemon8getStateEv"></span><span id="wrench::S4U_Daemon::getState"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a00f99d4aced9cf37daa7663605a6f6dd"></span><a class="reference internal" href="#_CPPv4N6wrench10S4U_DaemonE" title="wrench::S4U_Daemon"><span class="n"><span class="pre">S4U_Daemon</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N6wrench10S4U_Daemon5StateE" title="wrench::S4U_Daemon::State"><span class="n"><span class="pre">State</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getState</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon8getStateEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the daemon’s state. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a state </p>
 </dd>
 </dl>
@@ -522,7 +528,7 @@
 <span id="_CPPv3NK6wrench10S4U_Daemon19hasReturnedFromMainEv"></span><span id="_CPPv2NK6wrench10S4U_Daemon19hasReturnedFromMainEv"></span><span id="wrench::S4U_Daemon::hasReturnedFromMainC"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a4de97c8f7759c7d5c7c445502da9d1a2"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">hasReturnedFromMain</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench10S4U_Daemon19hasReturnedFromMainEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Returns true if the daemon has returned from <a class="reference internal" href="#classwrench_1_1_s4_u___daemon_1a0073b1104849679756809330533400eb"><span class="std std-ref">main()</span></a> (i.e., not brutally killed) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The true or false </p>
 </dd>
 </dl>
@@ -533,7 +539,7 @@
 <span id="_CPPv3NK6wrench10S4U_Daemon12isDaemonizedEv"></span><span id="_CPPv2NK6wrench10S4U_Daemon12isDaemonizedEv"></span><span id="wrench::S4U_Daemon::isDaemonizedC"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a1e1406727f70400d97a9fed8c4ba9797"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDaemonized</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench10S4U_Daemon12isDaemonizedEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Return the daemonized status of the daemon. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -544,7 +550,7 @@
 <span id="_CPPv3NK6wrench10S4U_Daemon18isSetToAutoRestartEv"></span><span id="_CPPv2NK6wrench10S4U_Daemon18isSetToAutoRestartEv"></span><span id="wrench::S4U_Daemon::isSetToAutoRestartC"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1abdac2b66e4448ae9943699ef2c1a5036"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isSetToAutoRestart</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench10S4U_Daemon18isSetToAutoRestartEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Return the auto-restart status of the daemon. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>true or false </p>
 </dd>
 </dl>
@@ -555,7 +561,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon4joinEv"></span><span id="_CPPv2N6wrench10S4U_Daemon4joinEv"></span><span id="wrench::S4U_Daemon::join"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a617d62af4eefc04b0a0c967c9cdcf56b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">join</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon4joinEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Join (i.e., wait for) the daemon. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a pair &lt;A,B&gt; where A is boolean (true if the daemon terminated cleanly (i.e., <a class="reference internal" href="#classwrench_1_1_s4_u___daemon_1a0073b1104849679756809330533400eb"><span class="std std-ref">main()</span></a> returned), or false otherwise) and B is the int returned from <a class="reference internal" href="#classwrench_1_1_s4_u___daemon_1a0073b1104849679756809330533400eb"><span class="std std-ref">main()</span></a> (if main returned). </p>
 </dd>
 </dl>
@@ -566,7 +572,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon4mainEv"></span><span id="_CPPv2N6wrench10S4U_Daemon4mainEv"></span><span id="wrench::S4U_Daemon::main"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a0073b1104849679756809330533400eb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">main</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon4mainEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The daemon’s main method, to be overridden. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>0 on success, non-0 on failure! </p>
 </dd>
 </dl>
@@ -590,7 +596,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon13setSimulationEP10Simulation"></span><span id="_CPPv2N6wrench10S4U_Daemon13setSimulationEP10Simulation"></span><span id="wrench::S4U_Daemon::setSimulation__SimulationP"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1abe4e56b16a88c011df10d571fdda079e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setSimulation</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="../api_developer/classwrench_1_1_simulation.html#_CPPv4N6wrench10SimulationE" title="wrench::Simulation"><span class="n"><span class="pre">Simulation</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">simulation</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon13setSimulationEP10Simulation" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the service’s simulation. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>simulation</strong> – a simulation </p>
 </dd>
 </dl>
@@ -607,13 +613,13 @@
 <span id="_CPPv3N6wrench10S4U_Daemon11startDaemonEbb"></span><span id="_CPPv2N6wrench10S4U_Daemon11startDaemonEbb"></span><span id="wrench::S4U_Daemon::startDaemon__b.b"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1abc4d20d7ec2c3f173d139176b569afef"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">startDaemon</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_daemonized</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_auto_restart</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon11startDaemonEbb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Start the daemon. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>daemonized</strong> – whether the S4U actor should be daemonized </p></li>
 <li><p><strong>auto_restart</strong> – whether the S4U actor should automatically restart after a host reboot</p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws</dt>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
 <li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">shared_ptr</span><span class="p">&lt;</span><a class="reference internal" href="../api_developer/classwrench_1_1_host_error.html#_CPPv4N6wrench9HostErrorE" title="wrench::HostError"><span class="n">HostError</span></a><span class="p">&gt;</span></span></span> – </p></li>
@@ -669,7 +675,7 @@
 <span id="_CPPv3N6wrench10S4U_Daemon26getRunningActorRecvMailboxEv"></span><span id="_CPPv2N6wrench10S4U_Daemon26getRunningActorRecvMailboxEv"></span><span id="wrench::S4U_Daemon::getRunningActorRecvMailbox"></span><span class="target" id="classwrench_1_1_s4_u___daemon_1a9b112f036d38bd9875fa9913f800e18e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getRunningActorRecvMailbox</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench10S4U_Daemon26getRunningActorRecvMailboxEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Return the running actor’s recv mailbox. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the mailbox </p>
 </dd>
 </dl>

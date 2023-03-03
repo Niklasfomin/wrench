@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WRENCH 101 &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -31,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html">
-            <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -92,7 +94,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">WRENCH 101</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/wrench_101.rst.txt" rel="nofollow"> View page source</a>
@@ -147,7 +149,7 @@ directory contain extensive comments.</p>
 <span id="wrench-101-simulator-1000ft-step-0"></span><h3>Step 0: Include wrench.h<a class="headerlink" href="#step-0-include-wrench-h" title="Permalink to this heading"></a></h3>
 <p>For ease of use, all WRENCH abstractions in the <a class="reference internal" href="api_user.html#user-api"><span class="std std-ref">WRENCH User
 API</span></a> are available through a single header file:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wrench.h&gt;</span><span class="cp"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;wrench.h&gt;</span>
 </pre></div>
 </div>
 </section>
@@ -158,8 +160,8 @@ API</span></a> are available through a single header file:</p>
 this class by calling <a class="reference internal" href="api_developer/classwrench_1_1_simulation.html#_CPPv4N6wrench10Simulation16createSimulationEv" title="wrench::Simulation::createSimulation"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::Simulation::createSimulation()</span></code></a> and
 initialize it with the <a class="reference internal" href="api_developer/classwrench_1_1_simulation.html#_CPPv4N6wrench10Simulation4initEPiPPc" title="wrench::Simulation::init"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::Simulation::init()</span></code></a> member function.
 The <code class="docutils literal notranslate"><span class="pre">multi-action-multi-job</span></code> simulator does this as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">simulation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">createSimulation</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">simulation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">Simulation</span><span class="o">::</span><span class="n">createSimulation</span><span class="p">();</span>
+<span class="w">    </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Note that this member function takes in the command-line arguments
@@ -186,68 +188,68 @@ bare-metal-chain simulator comes with a platform description file,
 include here:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&#39;1.0&#39;?&gt;</span>
 <span class="cp">&lt;!DOCTYPE platform SYSTEM &quot;https://simgrid.org/simgrid.dtd&quot;&gt;</span>
-<span class="nt">&lt;platform</span> <span class="na">version=</span><span class="s">&quot;4.1&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;zone</span> <span class="na">id=</span><span class="s">&quot;AS0&quot;</span> <span class="na">routing=</span><span class="s">&quot;Full&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;platform</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;4.1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;zone</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;AS0&quot;</span><span class="w"> </span><span class="na">routing=</span><span class="s">&quot;Full&quot;</span><span class="nt">&gt;</span>
 
-        <span class="cm">&lt;!-- The host on which the Controller will run --&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;UserHost&quot;</span> <span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The host on which the Controller will run --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;UserHost&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- The host on which the bare-metal compute service will run and also run jobs--&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;ComputeHost1&quot;</span> <span class="na">speed=</span><span class="s">&quot;35Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;ram&quot;</span> <span class="na">value=</span><span class="s">&quot;16GB&quot;</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The host on which the bare-metal compute service will run and also run jobs--&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ComputeHost1&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;35Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ram&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;16GB&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- Another host on which the bare-metal compute service will be able to run jobs --&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;ComputeHost2&quot;</span> <span class="na">speed=</span><span class="s">&quot;35Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;ram&quot;</span> <span class="na">value=</span><span class="s">&quot;16GB&quot;</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- Another host on which the bare-metal compute service will be able to run jobs --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ComputeHost2&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;35Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;10&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ram&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;16GB&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- The host on which the first storage service will run --&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;StorageHost1&quot;</span> <span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;disk</span> <span class="na">id=</span><span class="s">&quot;hard_drive&quot;</span> <span class="na">read_bw=</span><span class="s">&quot;100MBps&quot;</span> <span class="na">write_bw=</span><span class="s">&quot;100MBps&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;size&quot;</span> <span class="na">value=</span><span class="s">&quot;5000GiB&quot;</span><span class="nt">/&gt;</span>
-                <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;mount&quot;</span> <span class="na">value=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;/disk&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The host on which the first storage service will run --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;StorageHost1&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;disk</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;hard_drive&quot;</span><span class="w"> </span><span class="na">read_bw=</span><span class="s">&quot;100MBps&quot;</span><span class="w"> </span><span class="na">write_bw=</span><span class="s">&quot;100MBps&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;size&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;5000GiB&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;mount&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/disk&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- The host on which the second storage service will run --&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;StorageHost2&quot;</span> <span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;disk</span> <span class="na">id=</span><span class="s">&quot;hard_drive&quot;</span> <span class="na">read_bw=</span><span class="s">&quot;200MBps&quot;</span> <span class="na">write_bw=</span><span class="s">&quot;200MBps&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;size&quot;</span> <span class="na">value=</span><span class="s">&quot;5000GiB&quot;</span><span class="nt">/&gt;</span>
-                <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;mount&quot;</span> <span class="na">value=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;/disk&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The host on which the second storage service will run --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;StorageHost2&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;disk</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;hard_drive&quot;</span><span class="w"> </span><span class="na">read_bw=</span><span class="s">&quot;200MBps&quot;</span><span class="w"> </span><span class="na">write_bw=</span><span class="s">&quot;200MBps&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;size&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;5000GiB&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;mount&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;/&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/disk&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- The host on which the cloud compute service will run --&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;CloudHeadHost&quot;</span> <span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;disk</span> <span class="na">id=</span><span class="s">&quot;hard_drive&quot;</span> <span class="na">read_bw=</span><span class="s">&quot;100MBps&quot;</span> <span class="na">write_bw=</span><span class="s">&quot;100MBps&quot;</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;size&quot;</span> <span class="na">value=</span><span class="s">&quot;5000GiB&quot;</span><span class="nt">/&gt;</span>
-                <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;mount&quot;</span> <span class="na">value=</span><span class="s">&quot;/scratch/&quot;</span><span class="nt">/&gt;</span>
-            <span class="nt">&lt;/disk&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The host on which the cloud compute service will run --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;10Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;disk</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;hard_drive&quot;</span><span class="w"> </span><span class="na">read_bw=</span><span class="s">&quot;100MBps&quot;</span><span class="w"> </span><span class="na">write_bw=</span><span class="s">&quot;100MBps&quot;</span><span class="nt">&gt;</span>
+<span class="w">                </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;size&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;5000GiB&quot;</span><span class="nt">/&gt;</span>
+<span class="w">                </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;mount&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;/scratch/&quot;</span><span class="nt">/&gt;</span>
+<span class="w">            </span><span class="nt">&lt;/disk&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- The host on which the cloud compute service will start VMs --&gt;</span>
-        <span class="nt">&lt;host</span> <span class="na">id=</span><span class="s">&quot;CloudHost&quot;</span> <span class="na">speed=</span><span class="s">&quot;25Gf&quot;</span> <span class="na">core=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;prop</span> <span class="na">id=</span><span class="s">&quot;ram&quot;</span> <span class="na">value=</span><span class="s">&quot;16GB&quot;</span> <span class="nt">/&gt;</span>
-        <span class="nt">&lt;/host&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The host on which the cloud compute service will start VMs --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;host</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;CloudHost&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;25Gf&quot;</span><span class="w"> </span><span class="na">core=</span><span class="s">&quot;8&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span><span class="nt">&lt;prop</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;ram&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;16GB&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/host&gt;</span>
 
-        <span class="cm">&lt;!-- A network link shared by EVERY ONE--&gt;</span>
-        <span class="nt">&lt;link</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span> <span class="na">bandwidth=</span><span class="s">&quot;50MBps&quot;</span> <span class="na">latency=</span><span class="s">&quot;1ms&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- A network link shared by EVERY ONE--&gt;</span>
+<span class="w">        </span><span class="nt">&lt;link</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="w"> </span><span class="na">bandwidth=</span><span class="s">&quot;50MBps&quot;</span><span class="w"> </span><span class="na">latency=</span><span class="s">&quot;1ms&quot;</span><span class="nt">/&gt;</span>
 
-        <span class="cm">&lt;!-- The same network link connects all hosts together --&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;UserHost&quot;</span> <span class="na">dst=</span><span class="s">&quot;ComputeHost1&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;UserHost&quot;</span> <span class="na">dst=</span><span class="s">&quot;ComputeHost2&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;UserHost&quot;</span> <span class="na">dst=</span><span class="s">&quot;StorageHost1&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;UserHost&quot;</span> <span class="na">dst=</span><span class="s">&quot;StorageHost2&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;UserHost&quot;</span> <span class="na">dst=</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;ComputeHost1&quot;</span> <span class="na">dst=</span><span class="s">&quot;StorageHost1&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;ComputeHost2&quot;</span> <span class="na">dst=</span><span class="s">&quot;StorageHost2&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;CloudHeadHost&quot;</span> <span class="na">dst=</span><span class="s">&quot;CloudHost&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;StorageHost1&quot;</span> <span class="na">dst=</span><span class="s">&quot;CloudHost&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
-        <span class="nt">&lt;route</span> <span class="na">src=</span><span class="s">&quot;StorageHost2&quot;</span> <span class="na">dst=</span><span class="s">&quot;CloudHost&quot;</span><span class="nt">&gt;</span> <span class="nt">&lt;link_ctn</span> <span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span> <span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="cm">&lt;!-- The same network link connects all hosts together --&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;UserHost&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;ComputeHost1&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;UserHost&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;ComputeHost2&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;UserHost&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;StorageHost1&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;UserHost&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;StorageHost2&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;UserHost&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;ComputeHost1&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;StorageHost1&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;ComputeHost2&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;StorageHost2&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;CloudHost&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;StorageHost1&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;CloudHost&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
+<span class="w">        </span><span class="nt">&lt;route</span><span class="w"> </span><span class="na">src=</span><span class="s">&quot;StorageHost2&quot;</span><span class="w"> </span><span class="na">dst=</span><span class="s">&quot;CloudHost&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="nt">&lt;link_ctn</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;network_link&quot;</span><span class="nt">/&gt;</span><span class="w"> </span><span class="nt">&lt;/route&gt;</span>
 
-    <span class="nt">&lt;/zone&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/zone&gt;</span>
 <span class="nt">&lt;/platform&gt;</span>
 </pre></div>
 </div>
@@ -263,7 +265,7 @@ are many possibilities for defining complex platforms at will. The
 bare-metal-chain simulator takes the path to the platform description as
 its 1st (and only) command-line argument and thus instantiates the
 simulated platform as:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">simulation</span><span class="p">.</span><span class="n">instantiatePlatform</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">simulation</span><span class="p">.</span><span class="n">instantiatePlatform</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
 </pre></div>
 </div>
 <p>The <strong>second version</strong> of the
@@ -293,7 +295,7 @@ services, and file registry services (see
 <dt>The multi-action-multi-job simulator instantiates four services. The first one</dt><dd><p>is a storage service:</p>
 </dd>
 </dl>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">storage_service_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageService</span><span class="p">(</span><span class="s">&quot;StorageHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;/&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceProperty</span><span class="o">::</span><span class="n">BUFFER_SIZE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;50MB&quot;</span><span class="p">}},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">storage_service_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageService</span><span class="p">(</span><span class="s">&quot;StorageHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;/&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{{</span><span class="n">wrench</span><span class="o">::</span><span class="n">SimpleStorageServiceProperty</span><span class="o">::</span><span class="n">BUFFER_SIZE</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;50MB&quot;</span><span class="p">}},</span><span class="w"> </span><span class="p">{}));</span>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="api_developer/classwrench_1_1_simple_storage_service.html#_CPPv4N6wrench20SimpleStorageServiceE" title="wrench::SimpleStorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::SimpleStorageService</span></code></a> class implements a simulation of a
@@ -309,7 +311,7 @@ below</span></a>).</p>
 <p>The second service is a another storage service that runs on host
 <code class="docutils literal notranslate"><span class="pre">StorageHost2</span></code>.</p>
 <p id="wrench-101-simulator-1000ft-step-4">The third service is a compute service:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">baremetal_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">BareMetalComputeService</span><span class="p">(</span><span class="s">&quot;ComputeHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;ComputeHost1&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;ComputeHost2&quot;</span><span class="p">}},</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">baremetal_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">BareMetalComputeService</span><span class="p">(</span><span class="s">&quot;ComputeHost1&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{{</span><span class="s">&quot;ComputeHost1&quot;</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;ComputeHost2&quot;</span><span class="p">}},</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}));</span>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="api_developer/classwrench_1_1_bare_metal_compute_service.html#_CPPv4N6wrench23BareMetalComputeServiceE" title="wrench::BareMetalComputeService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::BareMetalComputeService</span></code></a> class implements a simulation of
@@ -328,7 +330,7 @@ In this case, the scratch storage specification is empty as host
 configure properties of the service (see details in <a class="reference internal" href="#wrench-101-customizing-services"><span class="std std-ref">this section
 below</span></a>).</p>
 <p>The fourth service is a cloud compute service:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cloud_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="p">(</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;CloudHost&quot;</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;/scratch/&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">cloud_service</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="p">(</span><span class="s">&quot;CloudHeadHost&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;CloudHost&quot;</span><span class="p">},</span><span class="w"> </span><span class="s">&quot;/scratch/&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="p">{}));</span>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="api_developer/classwrench_1_1_cloud_compute_service.html#_CPPv4N6wrench19CloudComputeServiceE" title="wrench::CloudComputeService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::CloudComputeService</span></code></a> implements a simulation of a cloud
@@ -351,7 +353,7 @@ implementing using the <a class="reference internal" href="api_developer.html#de
 API</span></a>.</p>
 <p>The example in <code class="docutils literal notranslate"><span class="pre">examples/action_api/multi-action-multi-job</span></code> does
 this as follows:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">wms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">MultiActionMultiJobController</span><span class="p">(</span><span class="n">baremetal_service</span><span class="p">,</span><span class="w"> </span><span class="n">cloud_service</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service_1</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service_2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UserHost&quot;</span><span class="p">));</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">wms</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">MultiActionMultiJobController</span><span class="p">(</span><span class="n">baremetal_service</span><span class="p">,</span><span class="w"> </span><span class="n">cloud_service</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service_1</span><span class="p">,</span><span class="w"> </span><span class="n">storage_service_2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;UserHost&quot;</span><span class="p">));</span>
 </pre></div>
 </div>
 <p>This creates an execution controller and passes to its constructor the
@@ -383,7 +385,7 @@ class names.</p>
 <span id="wrench-101-simulator-1000ft-step-5"></span><h3>Step 5: Launch the simulation<a class="headerlink" href="#step-5-launch-the-simulation" title="Permalink to this heading"></a></h3>
 <p>This is the easiest step, and is done by simply calling
 <a class="reference internal" href="api_developer/classwrench_1_1_simulation.html#_CPPv4N6wrench10Simulation6launchEv" title="wrench::Simulation::launch"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::Simulation::launch()</span></code></a>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">simulation</span><span class="p">.</span><span class="n">launch</span><span class="p">();</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">simulation</span><span class="p">.</span><span class="n">launch</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>This call checks the simulation setup and blocks until the execution
@@ -537,7 +539,7 @@ as such is controlled via command-line arguments.</p>
 the <code class="docutils literal notranslate"><span class="pre">examples/action_api/bare-metal-bag-of-actions</span></code> subdirectory of
 the build directory (after typing <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">examples</span></code> in the build
 directory):</p>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./wrench-example-bare-metal-bag-of-tasks <span class="m">10</span> ./four_hosts.xml
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>./wrench-example-bare-metal-bag-of-tasks<span class="w"> </span><span class="m">10</span><span class="w"> </span>./four_hosts.xml
 </pre></div>
 </div>
 <p>The above generates almost no output to the terminal whatsoever. It is
@@ -547,7 +549,7 @@ execution controller class in that example
 named <code class="docutils literal notranslate"><span class="pre">custom_controller</span></code> (see one of the first lines of
 <code class="docutils literal notranslate"><span class="pre">examples/action_api/bare-metal-bag-of-actions/TwoActionsAtATimeExecutionController.cpp</span></code>),
 which can be enabled as:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">wrench</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">metal</span><span class="o">-</span><span class="n">bag</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">tasks</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">four_hosts</span><span class="p">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">log</span><span class="o">=</span><span class="n">custom_controller</span><span class="p">.</span><span class="n">threshold</span><span class="o">=</span><span class="n">info</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">wrench</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">metal</span><span class="o">-</span><span class="n">bag</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">tasks</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">four_hosts</span><span class="p">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">log</span><span class="o">=</span><span class="n">custom_controller</span><span class="p">.</span><span class="n">threshold</span><span class="o">=</span><span class="n">info</span>
 </pre></div>
 </div>
 <p>You will now see some (green) logging output that is generated by the
@@ -556,13 +558,13 @@ messages as the controller is the brain of the application workload
 execution.</p>
 <p>One can disable the coloring of the logging output with the
 <code class="docutils literal notranslate"><span class="pre">--wrench-no-color</span></code> argument:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">wrench</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">metal</span><span class="o">-</span><span class="n">bag</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">tasks</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">four_hosts</span><span class="p">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">log</span><span class="o">=</span><span class="n">custom_controller</span><span class="p">.</span><span class="n">threshold</span><span class="o">=</span><span class="n">info</span><span class="w"> </span><span class="o">--</span><span class="n">wrench</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">color</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">wrench</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">metal</span><span class="o">-</span><span class="n">bag</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">tasks</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">four_hosts</span><span class="p">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">log</span><span class="o">=</span><span class="n">custom_controller</span><span class="p">.</span><span class="n">threshold</span><span class="o">=</span><span class="n">info</span><span class="w"> </span><span class="o">--</span><span class="n">wrench</span><span class="o">-</span><span class="n">no</span><span class="o">-</span><span class="n">color</span>
 </pre></div>
 </div>
 <p>Disabling color can be useful when redirecting the logging output to a
 file.</p>
 <p>Enabling all logging is done with the argument <code class="docutils literal notranslate"><span class="pre">--wrench-full-log</span></code>:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">wrench</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">metal</span><span class="o">-</span><span class="n">bag</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">tasks</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">four_hosts</span><span class="p">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">wrench</span><span class="o">-</span><span class="n">full</span><span class="o">-</span><span class="n">log</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">wrench</span><span class="o">-</span><span class="n">example</span><span class="o">-</span><span class="n">bare</span><span class="o">-</span><span class="n">metal</span><span class="o">-</span><span class="n">bag</span><span class="o">-</span><span class="n">of</span><span class="o">-</span><span class="n">tasks</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="n">four_hosts</span><span class="p">.</span><span class="n">xml</span><span class="w"> </span><span class="o">--</span><span class="n">wrench</span><span class="o">-</span><span class="n">full</span><span class="o">-</span><span class="n">log</span>
 </pre></div>
 </div>
 <p>The logging output now contains output produced by all the simulated

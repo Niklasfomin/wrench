@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interacting with a bare-metal compute service &mdash; WRENCH 2.2-dev documentation</title>
@@ -13,10 +13,8 @@
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -29,15 +27,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html">
-            <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 2.2-dev
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -74,7 +76,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home"></a></li>
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Interacting with a bare-metal compute service</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/wrench_102/baremetal.rst.txt" rel="nofollow"> View page source</a>
@@ -89,23 +91,23 @@
 <span id="guide-102-baremetal"></span><h1>Interacting with a bare-metal compute service<a class="headerlink" href="#interacting-with-a-bare-metal-compute-service" title="Permalink to this heading"></a></h1>
 <p>A <a class="reference internal" href="../api_developer/classwrench_1_1_standard_job.html#_CPPv4N6wrench11StandardJobE" title="wrench::StandardJob"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StandardJob</span></code></a> can be submitted to a bare-metal compute
 service via a job manager. For instance:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">BareMetalComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_bare_metal_service</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">BareMetalComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_bare_metal_service</span><span class="p">;</span>
 
 <span class="c1">// Create a job manager</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span>
 
 <span class="c1">// Create a standard job with 4 workflow tasks</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createStandardJob</span><span class="p">(</span><span class="w"></span>
-<span class="w">                 </span><span class="p">{</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">                  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task2&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">                  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task3&quot;</span><span class="p">),</span><span class="w"></span>
-<span class="w">                  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task4&quot;</span><span class="p">)});</span><span class="w"></span>
+<span class="k">auto</span><span class="w"> </span><span class="n">job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createStandardJob</span><span class="p">(</span>
+<span class="w">                 </span><span class="p">{</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task&quot;</span><span class="p">),</span>
+<span class="w">                  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task2&quot;</span><span class="p">),</span>
+<span class="w">                  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task3&quot;</span><span class="p">),</span>
+<span class="w">                  </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">getWorkflow</span><span class="p">()</span><span class="o">-&gt;</span><span class="n">getTaskByID</span><span class="p">(</span><span class="s">&quot;task4&quot;</span><span class="p">)});</span>
 
 <span class="c1">// Submit the job to the bare-metal service</span>
-<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="n">some_bare_metal_service</span><span class="p">);</span><span class="w"></span>
+<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="n">some_bare_metal_service</span><span class="p">);</span>
 
 <span class="c1">//  Wait for and process the next event (should be a standard job completion or failure)</span>
-<span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span><span class="w"></span>
+<span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span>
 </pre></div>
 </div>
 <p>In the above, the bare-metal service will make all decisions for
@@ -142,22 +144,22 @@ specified number of cores.</p></li>
 </ul>
 <p>In the above example, for instance, the job submission could be done as:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a service-specific argument</span>
-<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">service_specific_args</span><span class="p">;</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">service_specific_args</span><span class="p">;</span>
 
 <span class="c1">// task will run on host Node1 with as many cores as possible</span>
-<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Node1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Node1&quot;</span><span class="p">;</span>
 
 <span class="c1">// task2 will run on host Node2 with 16 cores</span>
-<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Node2:16&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task2&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Node2:16&quot;</span><span class="p">;</span>
 
 <span class="c1">// task3 will run on any host with as many cores as possible</span>
 <span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// could be omitted altogether</span>
 
 <span class="c1">// task4 will run on some host with 4 cores</span>
-<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task4&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;4&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;task4&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;4&quot;</span><span class="p">;</span>
 
 <span class="c1">// Submit the job</span>
-<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="n">some_bare_metal_service</span><span class="p">,</span><span class="w"> </span><span class="n">service_specific_args</span><span class="p">);</span><span class="w"></span>
+<span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">job</span><span class="p">,</span><span class="w"> </span><span class="n">some_bare_metal_service</span><span class="p">,</span><span class="w"> </span><span class="n">service_specific_args</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>If the service-specific arguments are invalid (e.g., invalid hostname,
