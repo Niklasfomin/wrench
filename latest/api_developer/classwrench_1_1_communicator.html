@@ -236,7 +236,8 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12CommunicatorE">
 <span id="_CPPv3N6wrench12CommunicatorE"></span><span id="_CPPv2N6wrench12CommunicatorE"></span><span id="wrench::Communicator"></span><span class="target" id="classwrench_1_1_communicator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Communicator</span></span></span><a class="headerlink" href="#_CPPv4N6wrench12CommunicatorE" title="Permalink to this definition"></a><br /></dt>
-<dd><div class="breathe-sectiondef docutils container">
+<dd><p>A class that implements a communicator (ala MPI) abstractions. </p>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12CommunicatorD0Ev">
@@ -292,7 +293,10 @@
 <dd><p>Perform an MPI AllToAll collective, using SimGrid’s SMPI implementation. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>bytes</strong> – the number of bytes in each message sent/received </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bytes</strong> – the number of bytes in each message sent/received </p></li>
+<li><p><strong>config</strong> – the SMPI config option </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -301,6 +305,11 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator11MPI_BarrierENSt6stringE">
 <span id="_CPPv3N6wrench12Communicator11MPI_BarrierENSt6stringE"></span><span id="_CPPv2N6wrench12Communicator11MPI_BarrierENSt6stringE"></span><span id="wrench::Communicator::MPI_Barrier__ss"></span><span class="target" id="classwrench_1_1_communicator_1a73da8d50b2e705a55bba1c5bdfafa064"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Barrier</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;ompi&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12Communicator11MPI_BarrierENSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Perform an MPI Barrier, using SimGrid’s SMPI implementation. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> – the SMPI config option </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -309,7 +318,11 @@
 <dd><p>Perform an MPI cast collective, using SimGrid’s SMPI implementation. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>bytes</strong> – the number of bytes in each message sent/received </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root_rank</strong> – the rank of the root of the broadcast </p></li>
+<li><p><strong>bytes</strong> – the number of bytes in each message sent/received </p></li>
+<li><p><strong>config</strong> – the SMPI config option </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
