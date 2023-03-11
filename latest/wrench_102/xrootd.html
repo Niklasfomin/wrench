@@ -97,11 +97,9 @@ The following operations are supported by a supervisor node
 interacting with the nodes that are in the subtree of which it is the root):</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Synchronously reading a file (rarely used by an execution controller but
-included for completeness); and</p></li>
-<li><p>Semi-Synchronously deleting a file (execution waits for supervisor to acknowledge delete request,</p></li>
+<li><p>Synchronously reading a file (rarely used by an execution controller but included for completeness); and</p></li>
+<li><p>Semi-Synchronously deleting a file (execution waits for supervisor to acknowledge delete request, but does not wait for the full XRootD subtree to be purged)</p></li>
 </ul>
-<p>but does not wait for the full XRootD subtree to be purged)</p>
 </div></blockquote>
 <p>In addition, all storage nodes in an XRootD tree support all operations that an instance of <a class="reference internal" href="simplestorage.html#guide-102-simplestorage"><span class="std std-ref">Simple Storage Service</span></a> does (which must be invoked directory on that node).</p>
 <p>All interactions above are done by calling member functions of
@@ -121,8 +119,8 @@ nodes (i.e., subtrees), due to the ambiguity of which storage node in the
 subtree rooted at the supervisor should storage the newly created data.</p>
 <p>Several interactions with an XRootD Deployment are done simply by calling <strong>virtual</strong> methods of the <a class="reference internal" href="../api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService</span></code></a> class, but it is also
 possible to call directly methods of these <a class="reference internal" href="simplestorage.html#guide-102-simplestorage"><span class="std std-ref">Simple Storage Service</span></a> class for XRootD storage nodes. This is because, in the XRootD distributed
-file systems, so notions (such as the location of a file) are different than in a non-distributed file system. For instance:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">xrootd</span><span class="o">::</span><span class="n">Deployment</span><span class="o">&gt;</span><span class="w"> </span><span class="n">deployment</span><span class="p">;</span>
+file systems, some notions (such as the location of a file) are different than in a non-distributed file system. For instance:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">XRootD</span><span class="o">::</span><span class="n">Deployment</span><span class="o">&gt;</span><span class="w"> </span><span class="n">deployment</span><span class="p">;</span>
 <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">DataFile</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_file</span><span class="p">;</span>
 
 <span class="p">[...]</span>

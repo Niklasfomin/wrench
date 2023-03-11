@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="wrench::NetworkProximityService" href="classwrench_1_1_network_proximity_service.html" />
+    <link rel="next" title="wrench::MPI_Alltoall_partipant" href="classwrench_1_1_m_p_i___alltoall__partipant.html" />
     <link rel="prev" title="wrench::HTCondorComputeServiceMessagePayload" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html" /> 
 </head>
 
@@ -72,6 +72,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service.html">wrench::CloudComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_message_payload.html">wrench::CloudComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_property.html">wrench::CloudComputeServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_communicator.html">wrench::Communicator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service.html">wrench::CompoundStorageService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_message_payload.html">wrench::CompoundStorageServiceMessagePayload</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_property.html">wrench::CompoundStorageServiceProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service.html">wrench::ComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_message_payload.html">wrench::ComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_property.html">wrench::ComputeServiceProperty</a></li>
@@ -85,10 +89,14 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html">wrench::HTCondorComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html">wrench::HTCondorComputeServiceMessagePayload</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::HTCondorComputeServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_parallel_model.html">wrench::ParallelModel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_message_payload.html">wrench::ServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_property.html">wrench::ServiceProperty</a></li>
@@ -133,6 +141,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service.html">wrench::StorageService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_message_payload.html">wrench::StorageServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_property.html">wrench::StorageServiceProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_storage_service_proxy_property.html">wrench::StorageServiceProxyProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_virtualized_cluster_compute_service.html">wrench::VirtualizedClusterComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_virtualized_cluster_compute_service_message_payload.html">wrench::VirtualizedClusterComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_virtualized_cluster_compute_service_property.html">wrench::VirtualizedClusterComputeServiceProperty</a></li>
@@ -195,6 +204,12 @@
 </dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench30HTCondorComputeServiceProperty31INSTANT_RESOURCE_AVAILABILITIESE">
+<span id="_CPPv3N6wrench30HTCondorComputeServiceProperty31INSTANT_RESOURCE_AVAILABILITIESE"></span><span id="_CPPv2N6wrench30HTCondorComputeServiceProperty31INSTANT_RESOURCE_AVAILABILITIESE"></span><span id="wrench::HTCondorComputeServiceProperty::INSTANT_RESOURCE_AVAILABILITIES__ssC"></span><span class="target" id="classwrench_1_1_h_t_condor_compute_service_property_1a69c52681ca7a29011185088129aae64a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INSTANT_RESOURCE_AVAILABILITIES</span></span></span><br /></dt>
+<dd><p>Whether the <a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html#classwrench_1_1_h_t_condor_compute_service"><span class="std std-ref">HTCondorComputeService</span></a> should contact its subordinate BareMetalComputeServices (i.e., when running non-grid jobs) to find out about their currently available resources (value “false”), or instead or instead uses the “out of simulation time” method to query these services about their currently available resources (value “true”); “true” is the default value since it reduces simulation time. The caveat that it no longer simulates the network load and overhead of all “tell me how many free resources you have right now?” and “this is what I got!” control messages. </p>
+</dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench30HTCondorComputeServiceProperty19NEGOTIATOR_OVERHEADE">
 <span id="_CPPv3N6wrench30HTCondorComputeServiceProperty19NEGOTIATOR_OVERHEADE"></span><span id="_CPPv2N6wrench30HTCondorComputeServiceProperty19NEGOTIATOR_OVERHEADE"></span><span id="wrench::HTCondorComputeServiceProperty::NEGOTIATOR_OVERHEAD__ssC"></span><span class="target" id="classwrench_1_1_h_t_condor_compute_service_property_1ac975505ed6b8ec76340148b91130db90"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NEGOTIATOR_OVERHEAD</span></span></span><br /></dt>
 <dd><p>Overhead of the HTCondor Negotiator, which is invoked each time a new job is submitted or a running job completes and there are still pending jobs. Default: “0”. Default unit: second. Examples: “1s”, “200ms”, “1.5s”, etc. </p>
@@ -222,7 +237,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="classwrench_1_1_h_t_condor_compute_service_message_payload.html" class="btn btn-neutral float-left" title="wrench::HTCondorComputeServiceMessagePayload" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classwrench_1_1_network_proximity_service.html" class="btn btn-neutral float-right" title="wrench::NetworkProximityService" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classwrench_1_1_m_p_i___alltoall__partipant.html" class="btn btn-neutral float-right" title="wrench::MPI_Alltoall_partipant" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
