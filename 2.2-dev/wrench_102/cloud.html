@@ -113,8 +113,8 @@ shows the state transition diagram of a VM instance:</p>
 <span class="k">auto</span><span class="w"> </span><span class="n">vm2_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">createVM</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">31</span><span class="p">));</span>
 
 <span class="c1">// Start both VMs and keep track of their associated bare-metal compute services</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm1_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">vm2_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span>
+<span class="n">vm1_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
+<span class="n">vm2_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">startVM</span><span class="p">(</span><span class="n">vm2_name</span><span class="p">);</span>
 
 <span class="c1">// Create a job manager</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">job_manager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="o">-&gt;</span><span class="n">createJobManager</span><span class="p">();</span>
@@ -129,12 +129,14 @@ shows the state transition diagram of a VM instance:</p>
 <span class="n">Simulation</span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 
 <span class="c1">// Suspend the 1st VM</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">suspendVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">suspend</span><span class="p">(</span><span class="n">vm1</span><span class="p">);</span>
+
 <span class="c1">// Sleep for 10 seconds</span>
 <span class="n">Simulation</span><span class="o">::</span><span class="n">sleep</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
 
 <span class="c1">// Resume the 1st VM</span>
-<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">resumeVM</span><span class="p">(</span><span class="n">vm1_name</span><span class="p">);</span>
+<span class="n">some_cloud_cs</span><span class="o">-&gt;</span><span class="n">resume</span><span class="p">(</span><span class="n">vm1</span><span class="p">);</span>
+
 <span class="c1">// Wait for and process the next event (should be a standard job completion or failure)</span>
 <span class="k">this</span><span class="o">-&gt;</span><span class="n">waitForAndProcessNextEvent</span><span class="p">();</span>
 
