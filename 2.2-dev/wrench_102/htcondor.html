@@ -102,7 +102,7 @@ by service-specific arguments passed or not passed to the
 controller. Let’s start with the creation (in main). Note that arguments
 to service constructors are omitted for brevity (see the execution
 controller implementation in
-<code class="docutils literal notranslate"><span class="pre">examples/workflow_api/condor-grid-example/CondorWMS.cp</span></code> for a complete and working
+<code class="docutils literal notranslate"><span class="pre">examples/workflow_api/condor-grid-example/CondorWMS.cpp</span></code> for a complete and working
 example).</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// One BareMetalComputeService instance</span>
 <span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">BareMetalComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_baremetal_cs</span><span class="p">;</span>
@@ -115,11 +115,10 @@ example).</p>
 <span class="c1">// three services as &quot;child&quot; services</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">htcondor_cs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">simulation</span><span class="o">-&gt;</span><span class="n">add</span><span class="p">(</span>
 <span class="w">     </span><span class="k">new</span><span class="w"> </span><span class="n">wrench</span><span class="o">::</span><span class="n">HTCondorComputeService</span><span class="p">(</span><span class="s">&quot;some_host&quot;</span><span class="p">,</span>
-<span class="w">                                        </span><span class="p">{</span><span class="n">some_baremetal_cs</span><span class="p">,</span><span class="w"> </span><span class="n">some_batch1_cs</span><span class="p">,</span><span class="w"> </span><span class="n">some_batch2_cs</span><span class="p">},</span>
-<span class="w">                                        </span><span class="s">&quot;/scratch&quot;</span><span class="p">);</span>
+<span class="w">                                        </span><span class="p">{</span><span class="n">some_baremetal_cs</span><span class="p">,</span><span class="w"> </span><span class="n">some_batch1_cs</span><span class="p">,</span><span class="w"> </span><span class="n">some_batch2_cs</span><span class="p">}));</span>
 
 <span class="c1">// One CloudComputeService instance</span>
-<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">somecloud_cs</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">wrench</span><span class="o">::</span><span class="n">CloudComputeService</span><span class="o">&gt;</span><span class="w"> </span><span class="n">some_cloud_cs</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Let’s now say that an execution controller was created that has access
@@ -174,7 +173,7 @@ optional if there is a single child batch compute service).</p></li>
 <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">service_specific_args</span><span class="p">;</span>
 <span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-N&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2 compute nodes</span>
 <span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-c&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;4&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 4 cores per compute nodes</span>
-<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-t&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;60&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// runs for one hour</span>
+<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-t&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;3600&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// runs for one hour</span>
 <span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;universe&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grid&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Grid universe</span>
 <span class="c1">// Set it to run on the first batch compute service</span>
 <span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-service&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">batch1_cs</span><span class="o">-&gt;</span><span class="n">getName</span><span class="p">();</span>

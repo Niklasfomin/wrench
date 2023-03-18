@@ -96,7 +96,7 @@ to pass to it a service-specific argument. This argument is a
 <code class="docutils literal notranslate"><span class="pre">std::map&lt;std::string,</span> <span class="pre">std::string&gt;</span></code> of key-value pairs, and must have
 the following three elements:</p>
 <ul class="simple">
-<li><p>key: <code class="docutils literal notranslate"><span class="pre">-t</span></code>; value: a requested runtime in minutes that, if exceeded,
+<li><p>key: <code class="docutils literal notranslate"><span class="pre">-t</span></code>; value: a requested runtime in seconds that, if exceeded,
 causes forceful job termination (e.g., “60”);</p></li>
 <li><p>key: <code class="docutils literal notranslate"><span class="pre">-N</span></code>; value: a requested number of compute nodes (e.g., “2”);
 and</p></li>
@@ -118,7 +118,7 @@ provided to the <span class="xref std std-ref">Slurm</span> batch scheduler.</p>
 <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">service_specific_args</span><span class="p">;</span>
 
 <span class="c1">//   The job will run no longer than 1 hour</span>
-<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-t&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;60&quot;</span><span class="p">;</span>
+<span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-t&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;3600&quot;</span><span class="p">;</span>
 
 <span class="c1">//   The job will run on 2 compute nodes</span>
 <span class="n">service_specific_args</span><span class="p">[</span><span class="s">&quot;-N&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p">;</span>
@@ -145,9 +145,9 @@ expires) bare-metal compute service. Here is a simple code excerpt:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// create a pilot job</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">pilot_job</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">createPilotJob</span><span class="p">();</span>
 
-<span class="c1">// submit it to the batch compute service, asking for 2 10-core nodes for 20 minutes</span>
+<span class="c1">// submit it to the batch compute service, asking for 2 10-core nodes for 1200 seconds</span>
 <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">service_specific_arguments</span><span class="w"> </span><span class="o">=</span>
-<span class="w">            </span><span class="p">{{</span><span class="s">&quot;-N&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">},{</span><span class="s">&quot;-c&quot;</span><span class="p">,</span><span class="s">&quot;10&quot;</span><span class="p">},{</span><span class="s">&quot;-t&quot;</span><span class="p">,</span><span class="s">&quot;20&quot;</span><span class="p">}};</span>
+<span class="w">            </span><span class="p">{{</span><span class="s">&quot;-N&quot;</span><span class="p">,</span><span class="s">&quot;2&quot;</span><span class="p">},{</span><span class="s">&quot;-c&quot;</span><span class="p">,</span><span class="s">&quot;10&quot;</span><span class="p">},{</span><span class="s">&quot;-t&quot;</span><span class="p">,</span><span class="s">&quot;1200&quot;</span><span class="p">}};</span>
 <span class="n">job_manager</span><span class="o">-&gt;</span><span class="n">submitJob</span><span class="p">(</span><span class="n">pilot_job</span><span class="p">,</span><span class="w"> </span><span class="n">some_batch_service</span><span class="p">,</span><span class="w"> </span><span class="n">service_specific_arguments</span><span class="p">);</span>
 
 <span class="c1">// Waiting for the next event (which will be a pilot job start event)</span>
