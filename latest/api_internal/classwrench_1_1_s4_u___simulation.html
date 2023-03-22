@@ -1222,9 +1222,9 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>num_bytes</strong> – number of bytes to write </p></li>
-<li><p><strong>hostname</strong> – name of host to which disk is attached </p></li>
-<li><p><strong>mount_point</strong> – mount point </p></li>
-<li><p><strong>disk</strong> – a disk to write to, if known </p></li>
+<li><p><strong>hostname</strong> – name of host to which disk is attached (or empty if disk is known) </p></li>
+<li><p><strong>mount_point</strong> – mount point (or empty if disk is known) </p></li>
+<li><p><strong>disk</strong> – a disk to write to, if known (if known, this method will run much faster) </p></li>
 </ul>
 </dd>
 </dl>
