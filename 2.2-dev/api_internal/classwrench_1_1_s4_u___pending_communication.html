@@ -506,6 +506,26 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench24S4U_PendingCommunication24waitForSomethingToHappenERKNSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd">
+<span id="_CPPv3N6wrench24S4U_PendingCommunication24waitForSomethingToHappenERKNSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd"></span><span id="_CPPv2N6wrench24S4U_PendingCommunication24waitForSomethingToHappenERKNSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd"></span><span id="wrench::S4U_PendingCommunication::waitForSomethingToHappen__std::vector:std::shared_ptr:S4U_PendingCommunication::CR.double"></span><span class="target" id="classwrench_1_1_s4_u___pending_communication_1a5ef71b426f7aca73294193abab9fa891"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForSomethingToHappen</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench24S4U_PendingCommunicationE" title="wrench::S4U_PendingCommunication"><span class="n"><span class="pre">S4U_PendingCommunication</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">pending_comms</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench24S4U_PendingCommunication24waitForSomethingToHappenERKNSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wait for any pending communication completion. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pending_comms</strong> – a list of pending communications </p></li>
+<li><p><strong>timeout</strong> – timeout value in seconds (-1 means no timeout)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the index of the comm to which something happened (success or failure)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorIP24S4U_PendingCommunicationEEd">
 <span id="_CPPv3N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorIP24S4U_PendingCommunicationEEd"></span><span id="_CPPv2N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorIP24S4U_PendingCommunicationEEd"></span><span id="wrench::S4U_PendingCommunication::waitForSomethingToHappen__std::vector:S4U_PendingCommunicationP:.double"></span><span class="target" id="classwrench_1_1_s4_u___pending_communication_1a838750ea7f996242d6f30bda27a7a26f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForSomethingToHappen</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench24S4U_PendingCommunicationE" title="wrench::S4U_PendingCommunication"><span class="n"><span class="pre">S4U_PendingCommunication</span></span></a><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pending_comms</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorIP24S4U_PendingCommunicationEEd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Wait for any pending communication completion. </p>
@@ -521,26 +541,6 @@
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>the index of the comm to which something happened (success or failure), or ULONG_MAX if nothing happened before the timeout expired</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd">
-<span id="_CPPv3N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd"></span><span id="_CPPv2N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd"></span><span id="wrench::S4U_PendingCommunication::waitForSomethingToHappen__std::vector:std::shared_ptr:S4U_PendingCommunication::.double"></span><span class="target" id="classwrench_1_1_s4_u___pending_communication_1a2c33fdb2c2a871b1d739f8919358bb01"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForSomethingToHappen</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench24S4U_PendingCommunicationE" title="wrench::S4U_PendingCommunication"><span class="n"><span class="pre">S4U_PendingCommunication</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pending_comms</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench24S4U_PendingCommunication24waitForSomethingToHappenENSt6vectorINSt10shared_ptrI24S4U_PendingCommunicationEEEEd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Wait for any pending communication completion. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>pending_comms</strong> – a list of pending communications </p></li>
-<li><p><strong>timeout</strong> – timeout value in seconds (-1 means no timeout)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>the index of the comm to which something happened (success or failure)</p>
 </dd>
 </dl>
 </dd></dl>
