@@ -118,7 +118,12 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job.html">wrench::CompoundJob</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job_completed_event.html">wrench::CompoundJobCompletedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job_failed_event.html">wrench::CompoundJobFailedEvent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_allocation_answer_message.html">wrench::CompoundStorageAllocationAnswerMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_allocation_request_message.html">wrench::CompoundStorageAllocationRequestMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_lookup_answer_message.html">wrench::CompoundStorageLookupAnswerMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_lookup_request_message.html">wrench::CompoundStorageLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service.html">wrench::CompoundStorageService</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_message.html">wrench::CompoundStorageServiceMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_message_payload.html">wrench::CompoundStorageServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_property.html">wrench::CompoundStorageServiceProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_computation_has_died.html">wrench::ComputationHasDied</a></li>
@@ -953,6 +958,18 @@
 <span id="_CPPv3N6wrench14StorageService4stopEv"></span><span id="_CPPv2N6wrench14StorageService4stopEv"></span><span id="wrench::StorageService::stop"></span><span class="target" id="classwrench_1_1_storage_service_1aa746406eb6e677a3a1d1ffbbc3955dc9"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>Stop the servier. </p>
 <p>Stop the service. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService19traceTotalFreeSpaceEv">
+<span id="_CPPv3N6wrench14StorageService19traceTotalFreeSpaceEv"></span><span id="_CPPv2N6wrench14StorageService19traceTotalFreeSpaceEv"></span><span id="wrench::StorageService::traceTotalFreeSpace"></span><span class="target" id="classwrench_1_1_storage_service_1a7cc34e27a4efb825d4ade7692007af28"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">traceTotalFreeSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get the storage service’s total free space (no simulated overhead) </p>
+<p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> free space tracing (doesn’t incur simulated overhead) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current free space in bytes </p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
