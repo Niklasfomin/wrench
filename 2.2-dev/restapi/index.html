@@ -763,14 +763,6 @@
     }
   }
 };
-            defs["file_id_size_body"] = {
-  "properties" : {
-    "name" : {
-      "type" : "string",
-      "description" : "The file's name"
-    }
-  }
-};
             defs["GenericResponse"] = {
   "type" : "object",
   "properties" : {
@@ -829,14 +821,6 @@
     }
   }
 };
-            defs["job_name_tasks_body"] = {
-  "properties" : {
-    "job_name" : {
-      "type" : "string",
-      "description" : "The job's name"
-    }
-  }
-};
             defs["ServiceResponse"] = {
   "type" : "object",
   "properties" : {
@@ -858,23 +842,7 @@
   "properties" : {
     "head_host" : {
       "type" : "string",
-      "description" : "name of the (simulated) host on which the compute service should run"
-    },
-    "resources" : {
-      "type" : "object",
-      "description" : "compute resources as a dict of hostnames where values are tuples of #cores and ram in bytes"
-    },
-    "scratch_space" : {
-      "type" : "string",
-      "description" : "the compute service’s scratch space’s mount point (”” means none)"
-    },
-    "property_list" : {
-      "type" : "object",
-      "description" : "a property list ({} means “use all defaults”)"
-    },
-    "message_payload_list" : {
-      "type" : "object",
-      "description" : "a message payload list ({} means “use all defaults”)"
+      "description" : "The service's head host"
     }
   }
 };
@@ -882,23 +850,7 @@
   "properties" : {
     "head_host" : {
       "type" : "string",
-      "description" : "name of the (simulated) host on which the compute service should run"
-    },
-    "resources" : {
-      "type" : "object",
-      "description" : "compute resources as a dict of hostnames where values are tuples of #cores and ram in bytes"
-    },
-    "scratch_space" : {
-      "type" : "string",
-      "description" : "the compute service’s scratch space’s mount point (”” means none)"
-    },
-    "property_list" : {
-      "type" : "object",
-      "description" : "a property list ({} means “use all defaults”)"
-    },
-    "message_payload_list" : {
-      "type" : "object",
-      "description" : "a message payload list ({} means “use all defaults”)"
+      "description" : "The service's head host"
     }
   }
 };
@@ -922,8 +874,7 @@
   "properties" : {
     "increment" : {
       "type" : "number",
-      "description" : "Increment in seconds.",
-      "format" : "integer"
+      "description" : "Increment in seconds."
     }
   }
 };
@@ -983,7 +934,7 @@
   "properties" : {
     "name" : {
       "type" : "string",
-      "description" : "Task's name"
+      "description" : "Port number to which all subsequent HTTP Post requests should be sent"
     },
     "flops" : {
       "type" : "number",
@@ -993,12 +944,12 @@
     "min_num_cores" : {
       "type" : "number",
       "description" : "The task's minimum number of cores",
-      "format" : "unsigned long"
+      "format" : "double"
     },
     "max_num_cores" : {
       "type" : "number",
       "description" : "The task's maximum number of cores",
-      "format" : "unsigned long"
+      "format" : "double"
     },
     "memory" : {
       "type" : "number",
@@ -1075,38 +1026,6 @@
     "failure_cause" : {
       "type" : "string",
       "description" : "human-readable error message (if failure)"
-    }
-  }
-};
-            defs["tid_addInputFile_body"] = {
-  "properties" : {
-    "task" : {
-      "type" : "string",
-      "description" : "The task's ID"
-    },
-    "file" : {
-      "type" : "string",
-      "description" : "The file's ID"
-    }
-  }
-};
-            defs["tid_addOutputFile_body"] = {
-  "properties" : {
-    "task" : {
-      "type" : "string",
-      "description" : "The task's ID"
-    },
-    "file" : {
-      "type" : "string",
-      "description" : "The file's ID"
-    }
-  }
-};
-            defs["tid_inputFiles_body"] = {
-  "properties" : {
-    "task" : {
-      "type" : "string",
-      "description" : "The task's ID"
     }
   }
 };
@@ -1198,6 +1117,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="submitStandardJob" class="">
                       <a href="#api-WRENCH-submitStandardJob">submitStandardJob</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="supportsCompoundJobs" class="">
+                      <a href="#api-WRENCH-supportsCompoundJobs">supportsCompoundJobs</a>
                     </li>
                     <li data-group="WRENCH" data-name="waitForNextSimulationEvent" class="">
                       <a href="#api-WRENCH-waitForNextSimulationEvent">waitForNextSimulationEvent</a>
@@ -2643,7 +2565,6 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-addInputFile-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
 -H "Accept: application/json"\
--H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/tasks/{tid}/addInputFile"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-addInputFile-0-java">
@@ -2660,11 +2581,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_addInputFile_body body = ; // Tid_addInputFile_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
-            GenericResponse result = apiInstance.addInputFile(body, simid, tid);
+            GenericResponse result = apiInstance.addInputFile(simid, tid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addInputFile");
@@ -2681,11 +2601,10 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_addInputFile_body body = ; // Tid_addInputFile_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
-            GenericResponse result = apiInstance.addInputFile(body, simid, tid);
+            GenericResponse result = apiInstance.addInputFile(simid, tid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addInputFile");
@@ -2699,15 +2618,13 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-addInputFile-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Tid_addInputFile_body *body = ; // Job characteristics.
-String *simid = simid_example; // ID of the simulation
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *tid = tid_example; // ID of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Add an input file to a task
-[apiInstance addInputFileWith:body
-    simid:simid
+[apiInstance addInputFileWith:simid
     tid:tid
               completionHandler: ^(GenericResponse output, NSError* error) {
                             if (output) {
@@ -2724,7 +2641,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Tid_addInputFile_body}} Job characteristics.
 var simid = simid_example; // {{String}} ID of the simulation
 var tid = tid_example; // {{String}} ID of the task
 
@@ -2735,7 +2651,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.addInputFile(bodysimidtid, callback);
+api.addInputFile(simid, tid, callback);
 </code></pre>
                             </div>
 
@@ -2757,14 +2673,13 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Tid_addInputFile_body(); // Tid_addInputFile_body | Job characteristics.
             var simid = simid_example;  // String | ID of the simulation
             var tid = tid_example;  // String | ID of the task
 
             try
             {
                 // Add an input file to a task
-                GenericResponse result = apiInstance.addInputFile(body, simid, tid);
+                GenericResponse result = apiInstance.addInputFile(simid, tid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2782,12 +2697,11 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Tid_addInputFile_body | Job characteristics.
 $simid = simid_example; // String | ID of the simulation
 $tid = tid_example; // String | ID of the task
 
 try {
-    $result = $api_instance->addInputFile($body, $simid, $tid);
+    $result = $api_instance->addInputFile($simid, $tid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->addInputFile: ', $e->getMessage(), PHP_EOL;
@@ -2801,12 +2715,11 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Tid_addInputFile_body->new(); # Tid_addInputFile_body | Job characteristics.
 my $simid = simid_example; # String | ID of the simulation
 my $tid = tid_example; # String | ID of the task
 
 eval { 
-    my $result = $api_instance->addInputFile(body => $body, simid => $simid, tid => $tid);
+    my $result = $api_instance->addInputFile(simid => $simid, tid => $tid);
     print Dumper($result);
 };
 if ($@) {
@@ -2823,13 +2736,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Tid_addInputFile_body | Job characteristics.
 simid = simid_example # String | ID of the simulation
 tid = tid_example # String | ID of the task
 
 try: 
     # Add an input file to a task
-    api_response = api_instance.add_input_file(body, simid, tid)
+    api_response = api_instance.add_input_file(simid, tid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->addInputFile: %s\n" % e)</code></pre>
@@ -2891,50 +2803,6 @@ except ApiException as e:
                             </table>
 
 
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-                                <td>
-                                
-                                
-                                <script>
-                                $(document).ready(function() {
-                                  var schemaWrapper = {
-  "description" : "Job characteristics.",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/tid_addInputFile_body"
-      }
-    }
-  },
-  "required" : true
-};
-                                  var schema = schemaWrapper.content["application/json"].schema;
-                                  if (schema.$ref != null) {
-                                    schema = defsParser.$refs.get(schema.$ref);
-                                  } else {
-                                    schemaWrapper.components = {};
-                                    schemaWrapper.components.schemas = Object.assign({}, defs);
-                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                      console.log(err);
-                                    });
-                                  }
-                                
-                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_addInputFile_body');
-                                  result.empty();
-                                  result.append(view.render());
-                                });
-                                </script>
-                                <div id="d2e199_addInputFile_body"></div>
-                                </td>
-                                </tr>
-                            </table>
 
 
 
@@ -3040,7 +2908,6 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-addOutputFile-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
 -H "Accept: application/json"\
--H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/tasks/{tid}/addOutputFile"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-addOutputFile-0-java">
@@ -3057,11 +2924,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_addOutputFile_body body = ; // Tid_addOutputFile_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
-            GenericResponse result = apiInstance.addOutputFile(body, simid, tid);
+            GenericResponse result = apiInstance.addOutputFile(simid, tid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addOutputFile");
@@ -3078,11 +2944,10 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_addOutputFile_body body = ; // Tid_addOutputFile_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
-            GenericResponse result = apiInstance.addOutputFile(body, simid, tid);
+            GenericResponse result = apiInstance.addOutputFile(simid, tid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addOutputFile");
@@ -3096,15 +2961,13 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-addOutputFile-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Tid_addOutputFile_body *body = ; // Job characteristics.
-String *simid = simid_example; // ID of the simulation
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *tid = tid_example; // ID of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Add an output file to a task
-[apiInstance addOutputFileWith:body
-    simid:simid
+[apiInstance addOutputFileWith:simid
     tid:tid
               completionHandler: ^(GenericResponse output, NSError* error) {
                             if (output) {
@@ -3121,7 +2984,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Tid_addOutputFile_body}} Job characteristics.
 var simid = simid_example; // {{String}} ID of the simulation
 var tid = tid_example; // {{String}} ID of the task
 
@@ -3132,7 +2994,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.addOutputFile(bodysimidtid, callback);
+api.addOutputFile(simid, tid, callback);
 </code></pre>
                             </div>
 
@@ -3154,14 +3016,13 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Tid_addOutputFile_body(); // Tid_addOutputFile_body | Job characteristics.
             var simid = simid_example;  // String | ID of the simulation
             var tid = tid_example;  // String | ID of the task
 
             try
             {
                 // Add an output file to a task
-                GenericResponse result = apiInstance.addOutputFile(body, simid, tid);
+                GenericResponse result = apiInstance.addOutputFile(simid, tid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3179,12 +3040,11 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Tid_addOutputFile_body | Job characteristics.
 $simid = simid_example; // String | ID of the simulation
 $tid = tid_example; // String | ID of the task
 
 try {
-    $result = $api_instance->addOutputFile($body, $simid, $tid);
+    $result = $api_instance->addOutputFile($simid, $tid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->addOutputFile: ', $e->getMessage(), PHP_EOL;
@@ -3198,12 +3058,11 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Tid_addOutputFile_body->new(); # Tid_addOutputFile_body | Job characteristics.
 my $simid = simid_example; # String | ID of the simulation
 my $tid = tid_example; # String | ID of the task
 
 eval { 
-    my $result = $api_instance->addOutputFile(body => $body, simid => $simid, tid => $tid);
+    my $result = $api_instance->addOutputFile(simid => $simid, tid => $tid);
     print Dumper($result);
 };
 if ($@) {
@@ -3220,13 +3079,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Tid_addOutputFile_body | Job characteristics.
 simid = simid_example # String | ID of the simulation
 tid = tid_example # String | ID of the task
 
 try: 
     # Add an output file to a task
-    api_response = api_instance.add_output_file(body, simid, tid)
+    api_response = api_instance.add_output_file(simid, tid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->addOutputFile: %s\n" % e)</code></pre>
@@ -3288,50 +3146,6 @@ except ApiException as e:
                             </table>
 
 
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-                                <td>
-                                
-                                
-                                <script>
-                                $(document).ready(function() {
-                                  var schemaWrapper = {
-  "description" : "Job characteristics.",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/tid_addOutputFile_body"
-      }
-    }
-  },
-  "required" : true
-};
-                                  var schema = schemaWrapper.content["application/json"].schema;
-                                  if (schema.$ref != null) {
-                                    schema = defsParser.$refs.get(schema.$ref);
-                                  } else {
-                                    schemaWrapper.components = {};
-                                    schemaWrapper.components.schemas = Object.assign({}, defs);
-                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                      console.log(err);
-                                    });
-                                  }
-                                
-                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_addOutputFile_body');
-                                  result.empty();
-                                  result.append(view.render());
-                                });
-                                </script>
-                                <div id="d2e199_addOutputFile_body"></div>
-                                </td>
-                                </tr>
-                            </table>
 
 
 
@@ -5548,7 +5362,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/files/{file_id}/size</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/files/{file_id}/size</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -5568,9 +5382,8 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-WRENCH-getFileSize-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
--H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/files/{file_id}/size"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getFileSize-0-java">
@@ -5587,11 +5400,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        File_id_size_body body = ; // File_id_size_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String fileId = fileId_example; // String | Name of the file
         try {
-            FileResponse result = apiInstance.getFileSize(body, simid, fileId);
+            FileResponse result = apiInstance.getFileSize(simid, fileId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getFileSize");
@@ -5608,11 +5420,10 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        File_id_size_body body = ; // File_id_size_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String fileId = fileId_example; // String | Name of the file
         try {
-            FileResponse result = apiInstance.getFileSize(body, simid, fileId);
+            FileResponse result = apiInstance.getFileSize(simid, fileId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getFileSize");
@@ -5626,15 +5437,13 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-getFileSize-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">File_id_size_body *body = ; // Job characteristics.
-String *simid = simid_example; // ID of the simulation
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *fileId = fileId_example; // Name of the file
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a file size.
-[apiInstance getFileSizeWith:body
-    simid:simid
+[apiInstance getFileSizeWith:simid
     fileId:fileId
               completionHandler: ^(FileResponse output, NSError* error) {
                             if (output) {
@@ -5651,7 +5460,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{File_id_size_body}} Job characteristics.
 var simid = simid_example; // {{String}} ID of the simulation
 var fileId = fileId_example; // {{String}} Name of the file
 
@@ -5662,7 +5470,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getFileSize(bodysimidfileId, callback);
+api.getFileSize(simid, fileId, callback);
 </code></pre>
                             </div>
 
@@ -5684,14 +5492,13 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new File_id_size_body(); // File_id_size_body | Job characteristics.
             var simid = simid_example;  // String | ID of the simulation
             var fileId = fileId_example;  // String | Name of the file
 
             try
             {
                 // Get a file size.
-                FileResponse result = apiInstance.getFileSize(body, simid, fileId);
+                FileResponse result = apiInstance.getFileSize(simid, fileId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5709,12 +5516,11 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // File_id_size_body | Job characteristics.
 $simid = simid_example; // String | ID of the simulation
 $fileId = fileId_example; // String | Name of the file
 
 try {
-    $result = $api_instance->getFileSize($body, $simid, $fileId);
+    $result = $api_instance->getFileSize($simid, $fileId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getFileSize: ', $e->getMessage(), PHP_EOL;
@@ -5728,12 +5534,11 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::File_id_size_body->new(); # File_id_size_body | Job characteristics.
 my $simid = simid_example; # String | ID of the simulation
 my $fileId = fileId_example; # String | Name of the file
 
 eval { 
-    my $result = $api_instance->getFileSize(body => $body, simid => $simid, fileId => $fileId);
+    my $result = $api_instance->getFileSize(simid => $simid, fileId => $fileId);
     print Dumper($result);
 };
 if ($@) {
@@ -5750,13 +5555,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # File_id_size_body | Job characteristics.
 simid = simid_example # String | ID of the simulation
 fileId = fileId_example # String | Name of the file
 
 try: 
     # Get a file size.
-    api_response = api_instance.get_file_size(body, simid, fileId)
+    api_response = api_instance.get_file_size(simid, fileId)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getFileSize: %s\n" % e)</code></pre>
@@ -5818,50 +5622,6 @@ except ApiException as e:
                             </table>
 
 
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-                                <td>
-                                
-                                
-                                <script>
-                                $(document).ready(function() {
-                                  var schemaWrapper = {
-  "description" : "Job characteristics.",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/file_id_size_body"
-      }
-    }
-  },
-  "required" : true
-};
-                                  var schema = schemaWrapper.content["application/json"].schema;
-                                  if (schema.$ref != null) {
-                                    schema = defsParser.$refs.get(schema.$ref);
-                                  } else {
-                                    schemaWrapper.components = {};
-                                    schemaWrapper.components.schemas = Object.assign({}, defs);
-                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                      console.log(err);
-                                    });
-                                  }
-                                
-                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_getFileSize_body');
-                                  result.empty();
-                                  result.append(view.render());
-                                });
-                                </script>
-                                <div id="d2e199_getFileSize_body"></div>
-                                </td>
-                                </tr>
-                            </table>
 
 
 
@@ -6865,7 +6625,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/jobs/{job_name}/tasks</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/jobs/{job_name}/tasks</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -6885,9 +6645,8 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-WRENCH-getStandardJobTasks-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
--H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/jobs/{job_name}/tasks"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getStandardJobTasks-0-java">
@@ -6904,11 +6663,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Job_name_tasks_body body = ; // Job_name_tasks_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String jobName = jobName_example; // String | ID of the job
         try {
-            TaskList result = apiInstance.getStandardJobTasks(body, simid, jobName);
+            TaskList result = apiInstance.getStandardJobTasks(simid, jobName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getStandardJobTasks");
@@ -6925,11 +6683,10 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Job_name_tasks_body body = ; // Job_name_tasks_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String jobName = jobName_example; // String | ID of the job
         try {
-            TaskList result = apiInstance.getStandardJobTasks(body, simid, jobName);
+            TaskList result = apiInstance.getStandardJobTasks(simid, jobName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getStandardJobTasks");
@@ -6943,15 +6700,13 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-getStandardJobTasks-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Job_name_tasks_body *body = ; // Job characteristics.
-String *simid = simid_example; // ID of the simulation
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *jobName = jobName_example; // ID of the job
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Retrieve job's tasks
-[apiInstance getStandardJobTasksWith:body
-    simid:simid
+[apiInstance getStandardJobTasksWith:simid
     jobName:jobName
               completionHandler: ^(TaskList output, NSError* error) {
                             if (output) {
@@ -6968,7 +6723,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Job_name_tasks_body}} Job characteristics.
 var simid = simid_example; // {{String}} ID of the simulation
 var jobName = jobName_example; // {{String}} ID of the job
 
@@ -6979,7 +6733,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getStandardJobTasks(bodysimidjobName, callback);
+api.getStandardJobTasks(simid, jobName, callback);
 </code></pre>
                             </div>
 
@@ -7001,14 +6755,13 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Job_name_tasks_body(); // Job_name_tasks_body | Job characteristics.
             var simid = simid_example;  // String | ID of the simulation
             var jobName = jobName_example;  // String | ID of the job
 
             try
             {
                 // Retrieve job's tasks
-                TaskList result = apiInstance.getStandardJobTasks(body, simid, jobName);
+                TaskList result = apiInstance.getStandardJobTasks(simid, jobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7026,12 +6779,11 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Job_name_tasks_body | Job characteristics.
 $simid = simid_example; // String | ID of the simulation
 $jobName = jobName_example; // String | ID of the job
 
 try {
-    $result = $api_instance->getStandardJobTasks($body, $simid, $jobName);
+    $result = $api_instance->getStandardJobTasks($simid, $jobName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getStandardJobTasks: ', $e->getMessage(), PHP_EOL;
@@ -7045,12 +6797,11 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Job_name_tasks_body->new(); # Job_name_tasks_body | Job characteristics.
 my $simid = simid_example; # String | ID of the simulation
 my $jobName = jobName_example; # String | ID of the job
 
 eval { 
-    my $result = $api_instance->getStandardJobTasks(body => $body, simid => $simid, jobName => $jobName);
+    my $result = $api_instance->getStandardJobTasks(simid => $simid, jobName => $jobName);
     print Dumper($result);
 };
 if ($@) {
@@ -7067,13 +6818,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Job_name_tasks_body | Job characteristics.
 simid = simid_example # String | ID of the simulation
 jobName = jobName_example # String | ID of the job
 
 try: 
     # Retrieve job's tasks
-    api_response = api_instance.get_standard_job_tasks(body, simid, jobName)
+    api_response = api_instance.get_standard_job_tasks(simid, jobName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getStandardJobTasks: %s\n" % e)</code></pre>
@@ -7135,50 +6885,6 @@ except ApiException as e:
                             </table>
 
 
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-                                <td>
-                                
-                                
-                                <script>
-                                $(document).ready(function() {
-                                  var schemaWrapper = {
-  "description" : "Job characteristics.",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/job_name_tasks_body"
-      }
-    }
-  },
-  "required" : true
-};
-                                  var schema = schemaWrapper.content["application/json"].schema;
-                                  if (schema.$ref != null) {
-                                    schema = defsParser.$refs.get(schema.$ref);
-                                  } else {
-                                    schemaWrapper.components = {};
-                                    schemaWrapper.components.schemas = Object.assign({}, defs);
-                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                      console.log(err);
-                                    });
-                                  }
-                                
-                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_getStandardJobTasks_body');
-                                  result.empty();
-                                  result.append(view.render());
-                                });
-                                </script>
-                                <div id="d2e199_getStandardJobTasks_body"></div>
-                                </td>
-                                </tr>
-                            </table>
 
 
 
@@ -7605,7 +7311,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/tasks/{tid}/inputFiles</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/tasks/{tid}/inputFiles</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -7625,9 +7331,8 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-WRENCH-getTaskInputFiles-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
--H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/tasks/{tid}/inputFiles"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskInputFiles-0-java">
@@ -7644,11 +7349,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_inputFiles_body body = ; // Tid_inputFiles_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
-            FileList result = apiInstance.getTaskInputFiles(body, simid, tid);
+            FileList result = apiInstance.getTaskInputFiles(simid, tid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskInputFiles");
@@ -7665,11 +7369,10 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_inputFiles_body body = ; // Tid_inputFiles_body | Job characteristics.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
-            FileList result = apiInstance.getTaskInputFiles(body, simid, tid);
+            FileList result = apiInstance.getTaskInputFiles(simid, tid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskInputFiles");
@@ -7683,15 +7386,13 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-getTaskInputFiles-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Tid_inputFiles_body *body = ; // Job characteristics.
-String *simid = simid_example; // ID of the simulation
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *tid = tid_example; // ID of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Retrieve task's input files
-[apiInstance getTaskInputFilesWith:body
-    simid:simid
+[apiInstance getTaskInputFilesWith:simid
     tid:tid
               completionHandler: ^(FileList output, NSError* error) {
                             if (output) {
@@ -7708,7 +7409,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Tid_inputFiles_body}} Job characteristics.
 var simid = simid_example; // {{String}} ID of the simulation
 var tid = tid_example; // {{String}} ID of the task
 
@@ -7719,7 +7419,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskInputFiles(bodysimidtid, callback);
+api.getTaskInputFiles(simid, tid, callback);
 </code></pre>
                             </div>
 
@@ -7741,14 +7441,13 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Tid_inputFiles_body(); // Tid_inputFiles_body | Job characteristics.
             var simid = simid_example;  // String | ID of the simulation
             var tid = tid_example;  // String | ID of the task
 
             try
             {
                 // Retrieve task's input files
-                FileList result = apiInstance.getTaskInputFiles(body, simid, tid);
+                FileList result = apiInstance.getTaskInputFiles(simid, tid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7766,12 +7465,11 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Tid_inputFiles_body | Job characteristics.
 $simid = simid_example; // String | ID of the simulation
 $tid = tid_example; // String | ID of the task
 
 try {
-    $result = $api_instance->getTaskInputFiles($body, $simid, $tid);
+    $result = $api_instance->getTaskInputFiles($simid, $tid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskInputFiles: ', $e->getMessage(), PHP_EOL;
@@ -7785,12 +7483,11 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Tid_inputFiles_body->new(); # Tid_inputFiles_body | Job characteristics.
 my $simid = simid_example; # String | ID of the simulation
 my $tid = tid_example; # String | ID of the task
 
 eval { 
-    my $result = $api_instance->getTaskInputFiles(body => $body, simid => $simid, tid => $tid);
+    my $result = $api_instance->getTaskInputFiles(simid => $simid, tid => $tid);
     print Dumper($result);
 };
 if ($@) {
@@ -7807,13 +7504,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Tid_inputFiles_body | Job characteristics.
 simid = simid_example # String | ID of the simulation
 tid = tid_example # String | ID of the task
 
 try: 
     # Retrieve task's input files
-    api_response = api_instance.get_task_input_files(body, simid, tid)
+    api_response = api_instance.get_task_input_files(simid, tid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskInputFiles: %s\n" % e)</code></pre>
@@ -7875,50 +7571,6 @@ except ApiException as e:
                             </table>
 
 
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-                                <td>
-                                
-                                
-                                <script>
-                                $(document).ready(function() {
-                                  var schemaWrapper = {
-  "description" : "Job characteristics.",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/tid_inputFiles_body"
-      }
-    }
-  },
-  "required" : true
-};
-                                  var schema = schemaWrapper.content["application/json"].schema;
-                                  if (schema.$ref != null) {
-                                    schema = defsParser.$refs.get(schema.$ref);
-                                  } else {
-                                    schemaWrapper.components = {};
-                                    schemaWrapper.components.schemas = Object.assign({}, defs);
-                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                      console.log(err);
-                                    });
-                                  }
-                                
-                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_getTaskInputFiles_body');
-                                  result.empty();
-                                  result.append(view.render());
-                                });
-                                </script>
-                                <div id="d2e199_getTaskInputFiles_body"></div>
-                                </td>
-                                </tr>
-                            </table>
 
 
 
@@ -9714,6 +9366,310 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-submitStandardJob-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-supportsCompoundJobs">
+                      <article id="api-WRENCH-supportsCompoundJobs-0" data-group="User" data-name="supportsCompoundJobs" data-version="0">
+                        <div class="pull-left">
+                          <h1>supportsCompoundJobs</h1>
+                          <p>Returns true if the service supports compound jobs.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/supportsCompoundJobs</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-supportsCompoundJobs-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-supportsCompoundJobs-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-supportsCompoundJobs-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/supportsCompoundJobs"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            GenericResponse result = apiInstance.supportsCompoundJobs(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#supportsCompoundJobs");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            GenericResponse result = apiInstance.supportsCompoundJobs(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#supportsCompoundJobs");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Returns true if the service supports compound jobs.
+[apiInstance supportsCompoundJobsWith:simid
+              completionHandler: ^(GenericResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.supportsCompoundJobs(simid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class supportsCompoundJobsExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Returns true if the service supports compound jobs.
+                GenericResponse result = apiInstance.supportsCompoundJobs(simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.supportsCompoundJobs: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->supportsCompoundJobs($simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->supportsCompoundJobs: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->supportsCompoundJobs(simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->supportsCompoundJobs: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-supportsCompoundJobs-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Returns true if the service supports compound jobs.
+    api_response = api_instance.supports_compound_jobs(simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->supportsCompoundJobs: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_supportsCompoundJobs_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-supportsCompoundJobs-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-supportsCompoundJobs-200-schema">
+                                  <div id='responses-supportsCompoundJobs-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/GenericResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-supportsCompoundJobs-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-supportsCompoundJobs-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-supportsCompoundJobs-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
