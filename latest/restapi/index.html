@@ -886,6 +886,22 @@
     }
   }
 };
+            defs["simid_destroyVM_body"] = {
+  "properties" : {
+    "head_host" : {
+      "type" : "string",
+      "description" : "The service's head host"
+    }
+  }
+};
+            defs["simid_shutdownVM_body"] = {
+  "properties" : {
+    "head_host" : {
+      "type" : "string",
+      "description" : "The service's head host"
+    }
+  }
+};
             defs["simid_startVM_body"] = {
   "properties" : {
     "head_host" : {
@@ -1098,6 +1114,9 @@
                     <li data-group="WRENCH" data-name="createVM" class="">
                       <a href="#api-WRENCH-createVM">createVM</a>
                     </li>
+                    <li data-group="WRENCH" data-name="destroyVM" class="">
+                      <a href="#api-WRENCH-destroyVM">destroyVM</a>
+                    </li>
                     <li data-group="WRENCH" data-name="getAllHostnames" class="">
                       <a href="#api-WRENCH-getAllHostnames">getAllHostnames</a>
                     </li>
@@ -1130,6 +1149,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="getTaskMinNumCores" class="">
                       <a href="#api-WRENCH-getTaskMinNumCores">getTaskMinNumCores</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="shutdownVM" class="">
+                      <a href="#api-WRENCH-shutdownVM">shutdownVM</a>
                     </li>
                     <li data-group="WRENCH" data-name="startSimulation" class="">
                       <a href="#api-WRENCH-startSimulation">startSimulation</a>
@@ -5125,7 +5147,7 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Simid_createVM_body body = ; // Simid_createVM_body | Input to start a new service.
+        Simid_createVM_body body = ; // Simid_createVM_body | Input to start create a VM.
         String simid = simid_example; // String | ID of the simulation
         try {
             ServiceResponse result = apiInstance.createVM(body, simid);
@@ -5145,7 +5167,7 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Simid_createVM_body body = ; // Simid_createVM_body | Input to start a new service.
+        Simid_createVM_body body = ; // Simid_createVM_body | Input to start create a VM.
         String simid = simid_example; // String | ID of the simulation
         try {
             ServiceResponse result = apiInstance.createVM(body, simid);
@@ -5162,7 +5184,7 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-createVM-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Simid_createVM_body *body = ; // Input to start a new service.
+                              <pre class="prettyprint"><code class="language-cpp">Simid_createVM_body *body = ; // Input to start create a VM.
 String *simid = simid_example; // ID of the simulation
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
@@ -5185,7 +5207,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Simid_createVM_body}} Input to start a new service.
+var body = ; // {{Simid_createVM_body}} Input to start create a VM.
 var simid = simid_example; // {{String}} ID of the simulation
 
 var callback = function(error, data, response) {
@@ -5217,7 +5239,7 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Simid_createVM_body(); // Simid_createVM_body | Input to start a new service.
+            var body = new Simid_createVM_body(); // Simid_createVM_body | Input to start create a VM.
             var simid = simid_example;  // String | ID of the simulation
 
             try
@@ -5241,7 +5263,7 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Simid_createVM_body | Input to start a new service.
+$body = ; // Simid_createVM_body | Input to start create a VM.
 $simid = simid_example; // String | ID of the simulation
 
 try {
@@ -5259,7 +5281,7 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Simid_createVM_body->new(); # Simid_createVM_body | Input to start a new service.
+my $body = WWW::SwaggerClient::Object::Simid_createVM_body->new(); # Simid_createVM_body | Input to start create a VM.
 my $simid = simid_example; # String | ID of the simulation
 
 eval { 
@@ -5280,7 +5302,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Simid_createVM_body | Input to start a new service.
+body =  # Simid_createVM_body | Input to start create a VM.
 simid = simid_example # String | ID of the simulation
 
 try: 
@@ -5338,7 +5360,7 @@ except ApiException as e:
                                 <script>
                                 $(document).ready(function() {
                                   var schemaWrapper = {
-  "description" : "Input to start a new service.",
+  "description" : "Input to start create a VM.",
   "content" : {
     "application/json" : {
       "schema" : {
@@ -5418,6 +5440,364 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-createVM-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-destroyVM">
+                      <article id="api-WRENCH-destroyVM-0" data-group="User" data-name="destroyVM" data-version="0">
+                        <div class="pull-left">
+                          <h1>destroyVM</h1>
+                          <p>Destroy a VM.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/destroyVM</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-destroyVM-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-destroyVM-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-destroyVM-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-destroyVM-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-destroyVM-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/destroyVM"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-destroyVM-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_destroyVM_body body = ; // Simid_destroyVM_body | Input to destroy a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.destroyVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#destroyVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-destroyVM-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_destroyVM_body body = ; // Simid_destroyVM_body | Input to destroy a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.destroyVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#destroyVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-destroyVM-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-destroyVM-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_destroyVM_body *body = ; // Input to destroy a VM.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Destroy a VM.
+[apiInstance destroyVMWith:body
+    simid:simid
+              completionHandler: ^(ServiceResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-destroyVM-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_destroyVM_body}} Input to destroy a VM.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.destroyVM(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-destroyVM-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-destroyVM-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class destroyVMExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_destroyVM_body(); // Simid_destroyVM_body | Input to destroy a VM.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Destroy a VM.
+                ServiceResponse result = apiInstance.destroyVM(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.destroyVM: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-destroyVM-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_destroyVM_body | Input to destroy a VM.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->destroyVM($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->destroyVM: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-destroyVM-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_destroyVM_body->new(); # Simid_destroyVM_body | Input to destroy a VM.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->destroyVM(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->destroyVM: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-destroyVM-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_destroyVM_body | Input to destroy a VM.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Destroy a VM.
+    api_response = api_instance.destroy_vm(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->destroyVM: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_destroyVM_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to destroy a VM.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_destroyVM_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_destroyVM_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_destroyVM_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-destroyVM-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-destroyVM-200-schema">
+                                  <div id='responses-destroyVM-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/ServiceResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-destroyVM-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-destroyVM-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-destroyVM-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -9057,6 +9437,364 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
+                    <div id="api-WRENCH-shutdownVM">
+                      <article id="api-WRENCH-shutdownVM-0" data-group="User" data-name="shutdownVM" data-version="0">
+                        <div class="pull-left">
+                          <h1>shutdownVM</h1>
+                          <p>Shutdown a VM.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/shutdownVM</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-shutdownVM-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-shutdownVM-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-shutdownVM-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-shutdownVM-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-shutdownVM-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/shutdownVM"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_shutdownVM_body body = ; // Simid_shutdownVM_body | Input to shutdown a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.shutdownVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#shutdownVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_shutdownVM_body body = ; // Simid_shutdownVM_body | Input to shutdown a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.shutdownVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#shutdownVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_shutdownVM_body *body = ; // Input to shutdown a VM.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Shutdown a VM.
+[apiInstance shutdownVMWith:body
+    simid:simid
+              completionHandler: ^(ServiceResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_shutdownVM_body}} Input to shutdown a VM.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.shutdownVM(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-shutdownVM-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class shutdownVMExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_shutdownVM_body(); // Simid_shutdownVM_body | Input to shutdown a VM.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Shutdown a VM.
+                ServiceResponse result = apiInstance.shutdownVM(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.shutdownVM: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_shutdownVM_body | Input to shutdown a VM.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->shutdownVM($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->shutdownVM: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_shutdownVM_body->new(); # Simid_shutdownVM_body | Input to shutdown a VM.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->shutdownVM(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->shutdownVM: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-shutdownVM-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_shutdownVM_body | Input to shutdown a VM.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Shutdown a VM.
+    api_response = api_instance.shutdown_vm(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->shutdownVM: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_shutdownVM_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to shutdown a VM.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_shutdownVM_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_shutdownVM_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_shutdownVM_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-shutdownVM-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-shutdownVM-200-schema">
+                                  <div id='responses-shutdownVM-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/ServiceResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-shutdownVM-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-shutdownVM-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-shutdownVM-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-WRENCH-startSimulation">
                       <article id="api-WRENCH-startSimulation-0" data-group="User" data-name="startSimulation" data-version="0">
                         <div class="pull-left">
@@ -9428,7 +10166,7 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Simid_startVM_body body = ; // Simid_startVM_body | Input to start a new service.
+        Simid_startVM_body body = ; // Simid_startVM_body | Input to start a VM.
         String simid = simid_example; // String | ID of the simulation
         try {
             ServiceResponse result = apiInstance.startVM(body, simid);
@@ -9448,7 +10186,7 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Simid_startVM_body body = ; // Simid_startVM_body | Input to start a new service.
+        Simid_startVM_body body = ; // Simid_startVM_body | Input to start a VM.
         String simid = simid_example; // String | ID of the simulation
         try {
             ServiceResponse result = apiInstance.startVM(body, simid);
@@ -9465,7 +10203,7 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-startVM-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Simid_startVM_body *body = ; // Input to start a new service.
+                              <pre class="prettyprint"><code class="language-cpp">Simid_startVM_body *body = ; // Input to start a VM.
 String *simid = simid_example; // ID of the simulation
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
@@ -9488,7 +10226,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Simid_startVM_body}} Input to start a new service.
+var body = ; // {{Simid_startVM_body}} Input to start a VM.
 var simid = simid_example; // {{String}} ID of the simulation
 
 var callback = function(error, data, response) {
@@ -9520,7 +10258,7 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Simid_startVM_body(); // Simid_startVM_body | Input to start a new service.
+            var body = new Simid_startVM_body(); // Simid_startVM_body | Input to start a VM.
             var simid = simid_example;  // String | ID of the simulation
 
             try
@@ -9544,7 +10282,7 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Simid_startVM_body | Input to start a new service.
+$body = ; // Simid_startVM_body | Input to start a VM.
 $simid = simid_example; // String | ID of the simulation
 
 try {
@@ -9562,7 +10300,7 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Simid_startVM_body->new(); # Simid_startVM_body | Input to start a new service.
+my $body = WWW::SwaggerClient::Object::Simid_startVM_body->new(); # Simid_startVM_body | Input to start a VM.
 my $simid = simid_example; # String | ID of the simulation
 
 eval { 
@@ -9583,7 +10321,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Simid_startVM_body | Input to start a new service.
+body =  # Simid_startVM_body | Input to start a VM.
 simid = simid_example # String | ID of the simulation
 
 try: 
@@ -9641,7 +10379,7 @@ except ApiException as e:
                                 <script>
                                 $(document).ready(function() {
                                   var schemaWrapper = {
-  "description" : "Input to start a new service.",
+  "description" : "Input to start a VM.",
   "content" : {
     "application/json" : {
       "schema" : {
