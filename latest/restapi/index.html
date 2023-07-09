@@ -840,13 +840,13 @@
             defs["ServiceResponse"] = {
   "type" : "object",
   "properties" : {
-    "service_name" : {
-      "type" : "string",
-      "description" : "The new service's name"
-    },
     "wrench_api_request_success" : {
       "type" : "boolean",
       "description" : "true if success, false if failure"
+    },
+    "service_name" : {
+      "type" : "string",
+      "description" : "The new service's name (if success)"
     },
     "failure_cause" : {
       "type" : "string",
@@ -907,6 +907,18 @@
     "head_host" : {
       "type" : "string",
       "description" : "The service's head host"
+    }
+  }
+};
+            defs["simid_addFile_body"] = {
+  "properties" : {
+    "name" : {
+      "type" : "string",
+      "description" : "name of the file"
+    },
+    "size" : {
+      "type" : "integer",
+      "description" : "size of the file in bytes"
     }
   }
 };
@@ -2026,6 +2038,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-addFile-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X PUT\
 -H "Accept: application/json"\
+-H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/addFile"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-addFile-0-java">
@@ -2042,9 +2055,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
+        Simid_addFile_body body = ; // Simid_addFile_body | Input to add a new file.
         String simid = simid_example; // String | ID of the simulation
         try {
-            GenericResponse result = apiInstance.addFile(simid);
+            GenericResponse result = apiInstance.addFile(body, simid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addFile");
@@ -2061,9 +2075,10 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
+        Simid_addFile_body body = ; // Simid_addFile_body | Input to add a new file.
         String simid = simid_example; // String | ID of the simulation
         try {
-            GenericResponse result = apiInstance.addFile(simid);
+            GenericResponse result = apiInstance.addFile(body, simid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addFile");
@@ -2077,12 +2092,14 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-addFile-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+                              <pre class="prettyprint"><code class="language-cpp">Simid_addFile_body *body = ; // Input to add a new file.
+String *simid = simid_example; // ID of the simulation
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Add a file to the workflow.
-[apiInstance addFileWith:simid
+[apiInstance addFileWith:body
+    simid:simid
               completionHandler: ^(GenericResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -2098,6 +2115,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_addFile_body}} Input to add a new file.
 var simid = simid_example; // {{String}} ID of the simulation
 
 var callback = function(error, data, response) {
@@ -2107,7 +2125,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.addFile(simid, callback);
+api.addFile(bodysimid, callback);
 </code></pre>
                             </div>
 
@@ -2129,12 +2147,13 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
+            var body = new Simid_addFile_body(); // Simid_addFile_body | Input to add a new file.
             var simid = simid_example;  // String | ID of the simulation
 
             try
             {
                 // Add a file to the workflow.
-                GenericResponse result = apiInstance.addFile(simid);
+                GenericResponse result = apiInstance.addFile(body, simid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2152,10 +2171,11 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_addFile_body | Input to add a new file.
 $simid = simid_example; // String | ID of the simulation
 
 try {
-    $result = $api_instance->addFile($simid);
+    $result = $api_instance->addFile($body, $simid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->addFile: ', $e->getMessage(), PHP_EOL;
@@ -2169,10 +2189,11 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_addFile_body->new(); # Simid_addFile_body | Input to add a new file.
 my $simid = simid_example; # String | ID of the simulation
 
 eval { 
-    my $result = $api_instance->addFile(simid => $simid);
+    my $result = $api_instance->addFile(body => $body, simid => $simid);
     print Dumper($result);
 };
 if ($@) {
@@ -2189,11 +2210,12 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
+body =  # Simid_addFile_body | Input to add a new file.
 simid = simid_example # String | ID of the simulation
 
 try: 
     # Add a file to the workflow.
-    api_response = api_instance.add_file(simid)
+    api_response = api_instance.add_file(body, simid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->addFile: %s\n" % e)</code></pre>
@@ -2233,6 +2255,50 @@ except ApiException as e:
                             </table>
 
 
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to add a new file.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_addFile_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_addFile_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_addFile_body"></div>
+                                </td>
+                                </tr>
+                            </table>
 
 
 
