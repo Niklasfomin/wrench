@@ -1124,10 +1124,6 @@
 };
             defs["tid_addInputFile_body"] = {
   "properties" : {
-    "task" : {
-      "type" : "string",
-      "description" : "The task's ID"
-    },
     "file" : {
       "type" : "string",
       "description" : "The file's ID"
@@ -2779,7 +2775,7 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_addInputFile_body body = ; // Tid_addInputFile_body | Job characteristics.
+        Tid_addInputFile_body body = ; // Tid_addInputFile_body | Input file.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
@@ -2800,7 +2796,7 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Tid_addInputFile_body body = ; // Tid_addInputFile_body | Job characteristics.
+        Tid_addInputFile_body body = ; // Tid_addInputFile_body | Input file.
         String simid = simid_example; // String | ID of the simulation
         String tid = tid_example; // String | ID of the task
         try {
@@ -2818,7 +2814,7 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-addInputFile-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Tid_addInputFile_body *body = ; // Job characteristics.
+                              <pre class="prettyprint"><code class="language-cpp">Tid_addInputFile_body *body = ; // Input file.
 String *simid = simid_example; // ID of the simulation
 String *tid = tid_example; // ID of the task
 
@@ -2843,7 +2839,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Tid_addInputFile_body}} Job characteristics.
+var body = ; // {{Tid_addInputFile_body}} Input file.
 var simid = simid_example; // {{String}} ID of the simulation
 var tid = tid_example; // {{String}} ID of the task
 
@@ -2876,7 +2872,7 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Tid_addInputFile_body(); // Tid_addInputFile_body | Job characteristics.
+            var body = new Tid_addInputFile_body(); // Tid_addInputFile_body | Input file.
             var simid = simid_example;  // String | ID of the simulation
             var tid = tid_example;  // String | ID of the task
 
@@ -2901,7 +2897,7 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Tid_addInputFile_body | Job characteristics.
+$body = ; // Tid_addInputFile_body | Input file.
 $simid = simid_example; // String | ID of the simulation
 $tid = tid_example; // String | ID of the task
 
@@ -2920,7 +2916,7 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Tid_addInputFile_body->new(); # Tid_addInputFile_body | Job characteristics.
+my $body = WWW::SwaggerClient::Object::Tid_addInputFile_body->new(); # Tid_addInputFile_body | Input file.
 my $simid = simid_example; # String | ID of the simulation
 my $tid = tid_example; # String | ID of the task
 
@@ -2942,7 +2938,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Tid_addInputFile_body | Job characteristics.
+body =  # Tid_addInputFile_body | Input file.
 simid = simid_example # String | ID of the simulation
 tid = tid_example # String | ID of the task
 
@@ -3023,7 +3019,7 @@ except ApiException as e:
                                 <script>
                                 $(document).ready(function() {
                                   var schemaWrapper = {
-  "description" : "Job characteristics.",
+  "description" : "Input file.",
   "content" : {
     "application/json" : {
       "schema" : {
