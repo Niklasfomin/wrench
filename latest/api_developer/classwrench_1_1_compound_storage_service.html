@@ -300,6 +300,14 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService17copyFileIamSourceERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE">
 <span id="_CPPv3N6wrench22CompoundStorageService17copyFileIamSourceERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench22CompoundStorageService17copyFileIamSourceERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::CompoundStorageService::copyFileIamSource__std::shared_ptr:FileLocation:CR.std::shared_ptr:FileLocation:CR"></span><span class="target" id="classwrench_1_1_compound_storage_service_1affa586be0d60118db95d578a98108863"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copyFileIamSource</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">src_location</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dst_location</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService17copyFileIamSourceERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Copy file from css to a simple storage service (file might be stripped within the CSS, but should be reassembled on the SSS) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src_location</strong> – the source location </p></li>
+<li><p><strong>dst_location</strong> – the destination location </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="cpp function">
@@ -619,7 +627,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file</strong> – the file of interest </p></li>
-<li><p><strong>answer_mailbox</strong> – the answer mailbox</p></li>
+<li><p><strong>answer_mailbox</strong> – the answer mailbox to which the reply from the server should be sent</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -728,7 +736,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>answer_mailbox</strong> – the mailbox on which to expect the answer </p></li>
+<li><p><strong>answer_mailbox</strong> – the answer mailbox to which the reply from the server should be sent </p></li>
 <li><p><strong>location</strong> – the location </p></li>
 <li><p><strong>num_bytes</strong> – the number of bytes to read </p></li>
 <li><p><strong>wait_for_answer</strong> – whether to wait for the answer </p></li>
@@ -841,7 +849,7 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>answer_mailbox</strong> – the mailbox on which to expect the answer </p></li>
+<li><p><strong>answer_mailbox</strong> – the answer mailbox to which the reply from the server should be sent </p></li>
 <li><p><strong>location</strong> – the location </p></li>
 <li><p><strong>wait_for_answer</strong> – whether to wait for the answer</p></li>
 </ul>
@@ -854,11 +862,53 @@
 
 </div>
 <div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService11copy_tracesE">
+<span id="_CPPv3N6wrench22CompoundStorageService11copy_tracesE"></span><span id="_CPPv2N6wrench22CompoundStorageService11copy_tracesE"></span><span id="wrench::CompoundStorageService::copy_traces__std::map:ss.AllocationTrace:"></span><span class="target" id="classwrench_1_1_compound_storage_service_1a054738105a2e96db67857f6be16c65d5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">AllocationTrace</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copy_traces</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService11copy_tracesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>File copy traces. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService13delete_tracesE">
+<span id="_CPPv3N6wrench22CompoundStorageService13delete_tracesE"></span><span id="_CPPv2N6wrench22CompoundStorageService13delete_tracesE"></span><span id="wrench::CompoundStorageService::delete_traces__std::map:ss.AllocationTrace:"></span><span class="target" id="classwrench_1_1_compound_storage_service_1adefd680da6763782a09e4c760b56b474"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">AllocationTrace</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">delete_traces</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService13delete_tracesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>File delete traces. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService20internal_storage_useE">
+<span id="_CPPv3N6wrench22CompoundStorageService20internal_storage_useE"></span><span id="_CPPv2N6wrench22CompoundStorageService20internal_storage_useE"></span><span id="wrench::CompoundStorageService::internal_storage_use__std::vector:std::pair:double.AllocationTrace::"></span><span class="target" id="classwrench_1_1_compound_storage_service_1a4384851bec3742076b2c1a4b5f6b799c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">AllocationTrace</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">internal_storage_use</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService20internal_storage_useE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Internal storage use. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService11read_tracesE">
+<span id="_CPPv3N6wrench22CompoundStorageService11read_tracesE"></span><span id="_CPPv2N6wrench22CompoundStorageService11read_tracesE"></span><span id="wrench::CompoundStorageService::read_traces__std::map:ss.AllocationTrace:"></span><span class="target" id="classwrench_1_1_compound_storage_service_1a1857e53994edd240f326d103984800bb"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">AllocationTrace</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">read_traces</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService11read_tracesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>File read traces. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService12write_tracesE">
+<span id="_CPPv3N6wrench22CompoundStorageService12write_tracesE"></span><span id="_CPPv2N6wrench22CompoundStorageService12write_tracesE"></span><span id="wrench::CompoundStorageService::write_traces__std::map:ss.AllocationTrace:"></span><span class="target" id="classwrench_1_1_compound_storage_service_1ac0db1ab53babe5a287009f29c8dd0860"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">AllocationTrace</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">write_traces</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService12write_tracesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>File write traces. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench22CompoundStorageService8copyFileERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE">
 <span id="_CPPv3N6wrench22CompoundStorageService8copyFileERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench22CompoundStorageService8copyFileERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::CompoundStorageService::copyFile__std::shared_ptr:FileLocation:CR.std::shared_ptr:FileLocation:CR"></span><span class="target" id="classwrench_1_1_compound_storage_service_1a14f9823f7cffabb006560da0634b0783"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">copyFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">src_location</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">dst_location</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench22CompoundStorageService8copyFileERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Intended to be called by <a class="reference internal" href="../api_internal/classwrench_1_1_storage_service.html#classwrench_1_1_storage_service_1aa2c4ff83ee46ef1fa1408cf177f5767b"><span class="std std-ref">StorageService::copyFile()</span></a> when the use of a CSS is detected in a file copy. </p>
+<p>Synchronously copy a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>src_location</strong> – the source location </p></li>
+<li><p><strong>dst_location</strong> – the destination location </p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
