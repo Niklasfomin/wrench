@@ -977,9 +977,45 @@
     }
   }
 };
+            defs["simid_isVMDown_body"] = {
+  "properties" : {
+    "service_name" : {
+      "type" : "string",
+      "description" : "The cloud service's name"
+    },
+    "vm_name" : {
+      "type" : "string",
+      "description" : "The name of the VM"
+    }
+  }
+};
             defs["simid_isVMRunning_body"] = {
   "properties" : {
     "service_name" : {
+      "type" : "string",
+      "description" : "The cloud service's name"
+    },
+    "vm_name" : {
+      "type" : "string",
+      "description" : "The name of the VM"
+    }
+  }
+};
+            defs["simid_isVMSuspended_body"] = {
+  "properties" : {
+    "service_name" : {
+      "type" : "string",
+      "description" : "The cloud service's name"
+    },
+    "vm_name" : {
+      "type" : "string",
+      "description" : "The name of the VM"
+    }
+  }
+};
+            defs["simid_resumeVM_body"] = {
+  "properties" : {
+    "compute_service_name" : {
       "type" : "string",
       "description" : "The cloud service's name"
     },
@@ -1010,6 +1046,18 @@
     "vm_name" : {
       "type" : "string",
       "description" : "The name of the VM to start"
+    }
+  }
+};
+            defs["simid_suspendVM_body"] = {
+  "properties" : {
+    "compute_service_name" : {
+      "type" : "string",
+      "description" : "The cloud service's name"
+    },
+    "vm_name" : {
+      "type" : "string",
+      "description" : "The name of the VM"
     }
   }
 };
@@ -1359,11 +1407,20 @@
                     <li data-group="WRENCH" data-name="getTaskStartDate" class="">
                       <a href="#api-WRENCH-getTaskStartDate">getTaskStartDate</a>
                     </li>
+                    <li data-group="WRENCH" data-name="isVMDown" class="">
+                      <a href="#api-WRENCH-isVMDown">isVMDown</a>
+                    </li>
                     <li data-group="WRENCH" data-name="isVMRunning" class="">
                       <a href="#api-WRENCH-isVMRunning">isVMRunning</a>
                     </li>
+                    <li data-group="WRENCH" data-name="isVMSuspended" class="">
+                      <a href="#api-WRENCH-isVMSuspended">isVMSuspended</a>
+                    </li>
                     <li data-group="WRENCH" data-name="lookupFileAtStorageService" class="">
                       <a href="#api-WRENCH-lookupFileAtStorageService">lookupFileAtStorageService</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="resumeVM" class="">
+                      <a href="#api-WRENCH-resumeVM">resumeVM</a>
                     </li>
                     <li data-group="WRENCH" data-name="shutdownVM" class="">
                       <a href="#api-WRENCH-shutdownVM">shutdownVM</a>
@@ -1385,6 +1442,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="supportsStandardJobs" class="">
                       <a href="#api-WRENCH-supportsStandardJobs">supportsStandardJobs</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="suspendVM" class="">
+                      <a href="#api-WRENCH-suspendVM">suspendVM</a>
                     </li>
                     <li data-group="WRENCH" data-name="waitForNextSimulationEvent" class="">
                       <a href="#api-WRENCH-waitForNextSimulationEvent">waitForNextSimulationEvent</a>
@@ -10843,6 +10903,364 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
+                    <div id="api-WRENCH-isVMDown">
+                      <article id="api-WRENCH-isVMDown-0" data-group="User" data-name="isVMDown" data-version="0">
+                        <div class="pull-left">
+                          <h1>isVMDown</h1>
+                          <p>Method to check whether a VM is currently down.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/isVMDown</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-isVMDown-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-isVMDown-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-isVMDown-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMDown-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-isVMDown-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/isVMDown"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-isVMDown-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_isVMDown_body body = ; // Simid_isVMDown_body | Input to check if VM is down.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.isVMDown(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#isVMDown");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-isVMDown-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_isVMDown_body body = ; // Simid_isVMDown_body | Input to check if VM is down.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.isVMDown(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#isVMDown");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-isVMDown-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-isVMDown-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_isVMDown_body *body = ; // Input to check if VM is down.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Method to check whether a VM is currently down.
+[apiInstance isVMDownWith:body
+    simid:simid
+              completionHandler: ^(ServiceResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMDown-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_isVMDown_body}} Input to check if VM is down.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.isVMDown(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-isVMDown-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-isVMDown-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class isVMDownExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_isVMDown_body(); // Simid_isVMDown_body | Input to check if VM is down.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Method to check whether a VM is currently down.
+                ServiceResponse result = apiInstance.isVMDown(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.isVMDown: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMDown-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_isVMDown_body | Input to check if VM is down.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->isVMDown($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->isVMDown: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMDown-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_isVMDown_body->new(); # Simid_isVMDown_body | Input to check if VM is down.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->isVMDown(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->isVMDown: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMDown-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_isVMDown_body | Input to check if VM is down.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Method to check whether a VM is currently down.
+    api_response = api_instance.is_vm_down(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->isVMDown: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_isVMDown_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to check if VM is down.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_isVMDown_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_isVMDown_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_isVMDown_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-isVMDown-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-isVMDown-200-schema">
+                                  <div id='responses-isVMDown-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/ServiceResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-isVMDown-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-isVMDown-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-isVMDown-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-WRENCH-isVMRunning">
                       <article id="api-WRENCH-isVMRunning-0" data-group="User" data-name="isVMRunning" data-version="0">
                         <div class="pull-left">
@@ -10855,7 +11273,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/isVMRunning</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/isVMRunning</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -10875,7 +11293,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-WRENCH-isVMRunning-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 -H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/isVMRunning"</code></pre>
@@ -11187,6 +11605,364 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-isVMRunning-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-isVMSuspended">
+                      <article id="api-WRENCH-isVMSuspended-0" data-group="User" data-name="isVMSuspended" data-version="0">
+                        <div class="pull-left">
+                          <h1>isVMSuspended</h1>
+                          <p>Method to check whether a VM is currently suspended.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/isVMSuspended</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-isVMSuspended-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-isVMSuspended-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-isVMSuspended-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-isVMSuspended-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-isVMSuspended-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/isVMSuspended"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_isVMSuspended_body body = ; // Simid_isVMSuspended_body | Input to check if VM is suspended.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.isVMSuspended(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#isVMSuspended");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_isVMSuspended_body body = ; // Simid_isVMSuspended_body | Input to check if VM is suspended.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.isVMSuspended(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#isVMSuspended");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_isVMSuspended_body *body = ; // Input to check if VM is suspended.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Method to check whether a VM is currently suspended.
+[apiInstance isVMSuspendedWith:body
+    simid:simid
+              completionHandler: ^(ServiceResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_isVMSuspended_body}} Input to check if VM is suspended.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.isVMSuspended(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class isVMSuspendedExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_isVMSuspended_body(); // Simid_isVMSuspended_body | Input to check if VM is suspended.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Method to check whether a VM is currently suspended.
+                ServiceResponse result = apiInstance.isVMSuspended(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.isVMSuspended: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_isVMSuspended_body | Input to check if VM is suspended.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->isVMSuspended($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->isVMSuspended: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_isVMSuspended_body->new(); # Simid_isVMSuspended_body | Input to check if VM is suspended.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->isVMSuspended(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->isVMSuspended: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-isVMSuspended-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_isVMSuspended_body | Input to check if VM is suspended.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Method to check whether a VM is currently suspended.
+    api_response = api_instance.is_vm_suspended(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->isVMSuspended: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_isVMSuspended_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to check if VM is suspended.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_isVMSuspended_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_isVMSuspended_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_isVMSuspended_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-isVMSuspended-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-isVMSuspended-200-schema">
+                                  <div id='responses-isVMSuspended-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/ServiceResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-isVMSuspended-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-isVMSuspended-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-isVMSuspended-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -11585,6 +12361,364 @@ except ApiException as e:
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-resumeVM">
+                      <article id="api-WRENCH-resumeVM-0" data-group="User" data-name="resumeVM" data-version="0">
+                        <div class="pull-left">
+                          <h1>resumeVM</h1>
+                          <p>Resume a suspended VM.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/resumeVM</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-resumeVM-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-resumeVM-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-resumeVM-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-resumeVM-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-resumeVM-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/resumeVM"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-resumeVM-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_resumeVM_body body = ; // Simid_resumeVM_body | Input to resume a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            GenericResponse result = apiInstance.resumeVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#resumeVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-resumeVM-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_resumeVM_body body = ; // Simid_resumeVM_body | Input to resume a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            GenericResponse result = apiInstance.resumeVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#resumeVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-resumeVM-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-resumeVM-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_resumeVM_body *body = ; // Input to resume a VM.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Resume a suspended VM.
+[apiInstance resumeVMWith:body
+    simid:simid
+              completionHandler: ^(GenericResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-resumeVM-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_resumeVM_body}} Input to resume a VM.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.resumeVM(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-resumeVM-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-resumeVM-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class resumeVMExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_resumeVM_body(); // Simid_resumeVM_body | Input to resume a VM.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Resume a suspended VM.
+                GenericResponse result = apiInstance.resumeVM(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.resumeVM: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-resumeVM-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_resumeVM_body | Input to resume a VM.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->resumeVM($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->resumeVM: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-resumeVM-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_resumeVM_body->new(); # Simid_resumeVM_body | Input to resume a VM.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->resumeVM(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->resumeVM: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-resumeVM-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_resumeVM_body | Input to resume a VM.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Resume a suspended VM.
+    api_response = api_instance.resume_vm(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->resumeVM: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_resumeVM_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to resume a VM.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_resumeVM_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_resumeVM_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_resumeVM_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-resumeVM-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-resumeVM-200-schema">
+                                  <div id='responses-resumeVM-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/GenericResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-resumeVM-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-resumeVM-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-resumeVM-200-schema-data' type='hidden' value=''></input>
+                                </div>
                             </div>
 
                             <h3> Status: 405 - Invalid input </h3>
@@ -13921,6 +15055,364 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-supportsStandardJobs-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-suspendVM">
+                      <article id="api-WRENCH-suspendVM-0" data-group="User" data-name="suspendVM" data-version="0">
+                        <div class="pull-left">
+                          <h1>suspendVM</h1>
+                          <p>Suspends a running VM.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/suspendVM</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-suspendVM-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-suspendVM-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-suspendVM-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-suspendVM-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-suspendVM-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/suspendVM"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-suspendVM-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_suspendVM_body body = ; // Simid_suspendVM_body | Input to suspend a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            GenericResponse result = apiInstance.suspendVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#suspendVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-suspendVM-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_suspendVM_body body = ; // Simid_suspendVM_body | Input to suspend a VM.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            GenericResponse result = apiInstance.suspendVM(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#suspendVM");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-suspendVM-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-suspendVM-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_suspendVM_body *body = ; // Input to suspend a VM.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Suspends a running VM.
+[apiInstance suspendVMWith:body
+    simid:simid
+              completionHandler: ^(GenericResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-suspendVM-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_suspendVM_body}} Input to suspend a VM.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.suspendVM(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-suspendVM-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-suspendVM-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class suspendVMExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_suspendVM_body(); // Simid_suspendVM_body | Input to suspend a VM.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Suspends a running VM.
+                GenericResponse result = apiInstance.suspendVM(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.suspendVM: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-suspendVM-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_suspendVM_body | Input to suspend a VM.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->suspendVM($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->suspendVM: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-suspendVM-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_suspendVM_body->new(); # Simid_suspendVM_body | Input to suspend a VM.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->suspendVM(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->suspendVM: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-suspendVM-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_suspendVM_body | Input to suspend a VM.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Suspends a running VM.
+    api_response = api_instance.suspend_vm(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->suspendVM: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_suspendVM_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to suspend a VM.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_suspendVM_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_suspendVM_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_suspendVM_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-suspendVM-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-suspendVM-200-schema">
+                                  <div id='responses-suspendVM-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/GenericResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-suspendVM-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-suspendVM-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-suspendVM-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
