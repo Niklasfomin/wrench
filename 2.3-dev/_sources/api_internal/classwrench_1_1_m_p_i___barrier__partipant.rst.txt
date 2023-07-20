@@ -1,0 +1,8 @@
+.. _MPI_Barrier_partipant:
+wrench::MPI_Barrier_partipant
+*****************************
+
+.. doxygenclass:: wrench::MPI_Barrier_partipant
+   :project: internal
+   :members:
+
