@@ -251,23 +251,6 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench19ExecutionController19ExecutionControllerERKNSt6stringERKNSt6stringE">
-<span id="_CPPv3N6wrench19ExecutionController19ExecutionControllerERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N6wrench19ExecutionController19ExecutionControllerERKNSt6stringERKNSt6stringE"></span><span id="wrench::ExecutionController::ExecutionController__ssCR.ssCR"></span><span class="target" id="classwrench_1_1_execution_controller_1a2b44d01a225a0352dfdf29556185dcaf"></span><span class="sig-name descname"><span class="n"><span class="pre">ExecutionController</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">suffix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19ExecutionController19ExecutionControllerERKNSt6stringERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Constructor. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>hostname</strong> – the name of the host on which to run the controller </p></li>
-<li><p><strong>suffix</strong> – a string to append to the controller process name (which will show up in logs)</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19ExecutionController20createBandwidthMeterERKNSt3mapINSt6stringEdEE">
 <span id="_CPPv3N6wrench19ExecutionController20createBandwidthMeterERKNSt3mapINSt6stringEdEE"></span><span id="_CPPv2N6wrench19ExecutionController20createBandwidthMeterERKNSt3mapINSt6stringEdEE"></span><span id="wrench::ExecutionController::createBandwidthMeter__std::map:ss.double:CR"></span><span class="target" id="classwrench_1_1_execution_controller_1a7a4ab9f44f9c34bdffc821d0374cf11f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_bandwidth_meter_service.html#_CPPv4N6wrench21BandwidthMeterServiceE" title="wrench::BandwidthMeterService"><span class="n"><span class="pre">BandwidthMeterService</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createBandwidthMeter</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">measurement_periods</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19ExecutionController20createBandwidthMeterERKNSt3mapINSt6stringEdEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Instantiate and start a bandwidth meter. </p>
@@ -462,20 +445,6 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench19ExecutionController8setTimerEdNSt6stringE">
-<span id="_CPPv3N6wrench19ExecutionController8setTimerEdNSt6stringE"></span><span id="_CPPv2N6wrench19ExecutionController8setTimerEdNSt6stringE"></span><span id="wrench::ExecutionController::setTimer__double.ss"></span><span class="target" id="classwrench_1_1_execution_controller_1ae5fcde15632a2f41782eab109c58a902"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setTimer</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">message</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19ExecutionController8setTimerEdNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Sets a timer (which, when it goes off, will generate a <a class="reference internal" href="../api_internal/classwrench_1_1_timer_event.html#classwrench_1_1_timer_event"><span class="std std-ref">TimerEvent</span></a>) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>date</strong> – the date at which the timer should go off </p></li>
-<li><p><strong>message</strong> – a string message that will be in the generated <a class="reference internal" href="../api_internal/classwrench_1_1_timer_event.html#classwrench_1_1_timer_event"><span class="std std-ref">TimerEvent</span></a></p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19ExecutionController26waitForAndProcessNextEventEv">
 <span id="_CPPv3N6wrench19ExecutionController26waitForAndProcessNextEventEv"></span><span id="_CPPv2N6wrench19ExecutionController26waitForAndProcessNextEventEv"></span><span id="wrench::ExecutionController::waitForAndProcessNextEvent"></span><span class="target" id="classwrench_1_1_execution_controller_1aa51f50b665722b3da33e26221ba31624"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForAndProcessNextEvent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19ExecutionController26waitForAndProcessNextEventEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Wait for an execution event and then call the associated function to process that event. </p>
@@ -512,7 +481,7 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19ExecutionController16waitForNextEventEd">
 <span id="_CPPv3N6wrench19ExecutionController16waitForNextEventEd"></span><span id="_CPPv2N6wrench19ExecutionController16waitForNextEventEd"></span><span id="wrench::ExecutionController::waitForNextEvent__double"></span><span class="target" id="classwrench_1_1_execution_controller_1a3f21c51a382c839e7cb54889da469914"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_execution_event.html#_CPPv4N6wrench14ExecutionEventE" title="wrench::ExecutionEvent"><span class="n"><span class="pre">ExecutionEvent</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForNextEvent</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19ExecutionController16waitForNextEventEd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Wait for an execution event with a timeout. </p>
+<dd><p>Wait for an execution event. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>timeout</strong> – a timeout value in seconds </p>
