@@ -835,6 +835,9 @@
     "compute_service_name" : {
       "type" : "string",
       "description" : "The compute service's name"
+    },
+    "service_specific_args" : {
+      "$ref" : "#/components/schemas/simulationsimidjobsjob_namesubmit_service_specific_args"
     }
   }
 };
@@ -856,6 +859,28 @@
   }
 };
             defs["simid_addBareMetalComputeService_body"] = {
+  "properties" : {
+    "head_host" : {
+      "type" : "string",
+      "description" : "name of the (simulated) host on which the compute service should run"
+    },
+    "resources" : {
+      "type" : "object",
+      "description" : "compute resources as a dict of hostnames where values are tuples of #cores and ram in bytes"
+    },
+    "scratch_space" : {
+      "type" : "string",
+      "description" : "the compute service’s scratch space’s mount point (”” means none)"
+    },
+    "property_list" : {
+      "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_property_list"
+    },
+    "message_payload_list" : {
+      "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_message_payload_list"
+    }
+  }
+};
+            defs["simid_addBatchComputeService_body"] = {
   "properties" : {
     "head_host" : {
       "type" : "string",
@@ -1095,10 +1120,10 @@
             defs["simulationsimidaddBareMetalComputeService_message_payload_list"] = {
   "type" : "object",
   "properties" : {
-    "code" : {
+    "name" : {
       "type" : "string"
     },
-    "text" : {
+    "value" : {
       "type" : "number"
     }
   },
@@ -1107,14 +1132,26 @@
             defs["simulationsimidaddBareMetalComputeService_property_list"] = {
   "type" : "object",
   "properties" : {
-    "code" : {
+    "name" : {
       "type" : "string"
     },
-    "text" : {
+    "value" : {
       "type" : "string"
     }
   },
   "description" : "a property list ({} means “use all defaults”)"
+};
+            defs["simulationsimidjobsjob_namesubmit_service_specific_args"] = {
+  "type" : "object",
+  "properties" : {
+    "name" : {
+      "type" : "string"
+    },
+    "value" : {
+      "type" : "string"
+    }
+  },
+  "description" : "service-specific job arguments ({} means “use all defaults” )"
 };
             defs["StandardJob"] = {
   "type" : "object",
@@ -1134,10 +1171,10 @@
             defs["StandardJob_file_locations"] = {
   "type" : "object",
   "properties" : {
-    "code" : {
+    "file" : {
       "type" : "string"
     },
-    "text" : {
+    "storage_service" : {
       "type" : "string"
     }
   },
@@ -1328,6 +1365,9 @@
                   <li class="nav-header" data-group="WRENCH"><a href="#api-WRENCH">API Methods - WRENCH</a></li>
                     <li data-group="WRENCH" data-name="addBareMetalComputeService" class="">
                       <a href="#api-WRENCH-addBareMetalComputeService">addBareMetalComputeService</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="addBatchComputeService" class="">
+                      <a href="#api-WRENCH-addBatchComputeService">addBatchComputeService</a>
                     </li>
                     <li data-group="WRENCH" data-name="addCloudComputeService" class="">
                       <a href="#api-WRENCH-addCloudComputeService">addCloudComputeService</a>
@@ -1814,6 +1854,364 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-addBareMetalComputeService-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-addBatchComputeService">
+                      <article id="api-WRENCH-addBatchComputeService-0" data-group="User" data-name="addBatchComputeService" data-version="0">
+                        <div class="pull-left">
+                          <h1>addBatchComputeService</h1>
+                          <p>Create and start a batch compute service.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/addBatchComputeService</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-addBatchComputeService-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-addBatchComputeService-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-addBatchComputeService-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-addBatchComputeService-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-addBatchComputeService-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/addBatchComputeService"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_addBatchComputeService_body body = ; // Simid_addBatchComputeService_body | Input to start a new service.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.addBatchComputeService(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#addBatchComputeService");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Simid_addBatchComputeService_body body = ; // Simid_addBatchComputeService_body | Input to start a new service.
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            ServiceResponse result = apiInstance.addBatchComputeService(body, simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#addBatchComputeService");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Simid_addBatchComputeService_body *body = ; // Input to start a new service.
+String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Create and start a batch compute service.
+[apiInstance addBatchComputeServiceWith:body
+    simid:simid
+              completionHandler: ^(ServiceResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Simid_addBatchComputeService_body}} Input to start a new service.
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.addBatchComputeService(bodysimid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class addBatchComputeServiceExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Simid_addBatchComputeService_body(); // Simid_addBatchComputeService_body | Input to start a new service.
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Create and start a batch compute service.
+                ServiceResponse result = apiInstance.addBatchComputeService(body, simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.addBatchComputeService: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Simid_addBatchComputeService_body | Input to start a new service.
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->addBatchComputeService($body, $simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->addBatchComputeService: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Simid_addBatchComputeService_body->new(); # Simid_addBatchComputeService_body | Input to start a new service.
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->addBatchComputeService(body => $body, simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->addBatchComputeService: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addBatchComputeService-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Simid_addBatchComputeService_body | Input to start a new service.
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Create and start a batch compute service.
+    api_response = api_instance.add_batch_compute_service(body, simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->addBatchComputeService: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_addBatchComputeService_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to start a new service.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/simid_addBatchComputeService_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_addBatchComputeService_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_addBatchComputeService_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-addBatchComputeService-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-addBatchComputeService-200-schema">
+                                  <div id='responses-addBatchComputeService-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/ServiceResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-addBatchComputeService-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-addBatchComputeService-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-addBatchComputeService-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
