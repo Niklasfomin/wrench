@@ -626,6 +626,29 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService21getTotalFilesZeroTimeEv">
+<span id="_CPPv3N6wrench20SimpleStorageService21getTotalFilesZeroTimeEv"></span><span id="_CPPv2N6wrench20SimpleStorageService21getTotalFilesZeroTimeEv"></span><span id="wrench::SimpleStorageService::getTotalFilesZeroTime"></span><span class="target" id="classwrench_1_1_simple_storage_service_1af48ced37b91c9ad189af8a119eefccdb"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFilesZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
+<dd><p>Get the number of files registered to the filesystem(s) associated with this service (no simulated overhead) </p>
+<p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> number of allocated files tracing (doesn’t incur simulated overhead) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current number of registered Datafile for all filesystem(s) from this service </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService25getTotalFreeSpaceZeroTimeEv">
+<span id="_CPPv3N6wrench20SimpleStorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="_CPPv2N6wrench20SimpleStorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="wrench::SimpleStorageService::getTotalFreeSpaceZeroTime"></span><span class="target" id="classwrench_1_1_simple_storage_service_1af4aa69663c09a924b25fd14a2f48282b"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
+<dd><p>Return current total free space from all mount point (in zero simulation time) for IO tracing purpose. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>total free space in bytes </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService13getTotalSpaceEv">
 <span id="_CPPv3N6wrench20SimpleStorageService13getTotalSpaceEv"></span><span id="_CPPv2N6wrench20SimpleStorageService13getTotalSpaceEv"></span><span id="wrench::SimpleStorageService::getTotalSpace"></span><span class="target" id="classwrench_1_1_simple_storage_service_1a11918cad4fdb352138e42f255100a695"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
 <dd><p>Get the total static capacity of the storage service (in zero simulation time) </p>
@@ -931,17 +954,6 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>true if success, false otherwise </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench20SimpleStorageService19traceTotalFreeSpaceEv">
-<span id="_CPPv3N6wrench20SimpleStorageService19traceTotalFreeSpaceEv"></span><span id="_CPPv2N6wrench20SimpleStorageService19traceTotalFreeSpaceEv"></span><span id="wrench::SimpleStorageService::traceTotalFreeSpace"></span><span class="target" id="classwrench_1_1_simple_storage_service_1a2b9759509aad5bae3f4cf72306516d6c"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">traceTotalFreeSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><br /></dt>
-<dd><p>Return current total free space from all mount point (in zero simulation time) for IO tracing purpose. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>total free space in bytes </p>
 </dd>
 </dl>
 </dd></dl>
