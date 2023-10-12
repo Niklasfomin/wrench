@@ -611,6 +611,18 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService21getTotalFilesZeroTimeEv">
+<span id="_CPPv3N6wrench14StorageService21getTotalFilesZeroTimeEv"></span><span id="_CPPv2N6wrench14StorageService21getTotalFilesZeroTimeEv"></span><span id="wrench::StorageService::getTotalFilesZeroTime"></span><span class="target" id="classwrench_1_1_storage_service_1a9857a987a3d31ff6f0e9b9f1ed11faed"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFilesZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get the number of files registered to the filesystem(s) associated with this service (no simulated overhead) </p>
+<p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> number of allocated files tracing (doesn’t incur simulated overhead) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current number of registered Datafile for all filesystem(s) from this service </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService17getTotalFreeSpaceEv">
 <span id="_CPPv3N6wrench14StorageService17getTotalFreeSpaceEv"></span><span id="_CPPv2N6wrench14StorageService17getTotalFreeSpaceEv"></span><span id="wrench::StorageService::getTotalFreeSpace"></span><span class="target" id="classwrench_1_1_storage_service_1aa8a96034a9d8e9c20599334acede2bea"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the storage service’s total free space (incurs simulated overhead) </p>
@@ -642,6 +654,18 @@
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>A number of bytes </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv">
+<span id="_CPPv3N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="_CPPv2N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="wrench::StorageService::getTotalFreeSpaceZeroTime"></span><span class="target" id="classwrench_1_1_storage_service_1a73f49610a5788f7dbe283127960b0261"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Get the storage service’s total free space (no simulated overhead) </p>
+<p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> free space tracing (doesn’t incur simulated overhead) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Current free space in bytes </p>
 </dd>
 </dl>
 </dd></dl>
@@ -962,18 +986,6 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService19traceTotalFreeSpaceEv">
-<span id="_CPPv3N6wrench14StorageService19traceTotalFreeSpaceEv"></span><span id="_CPPv2N6wrench14StorageService19traceTotalFreeSpaceEv"></span><span id="wrench::StorageService::traceTotalFreeSpace"></span><span class="target" id="classwrench_1_1_storage_service_1a7cc34e27a4efb825d4ade7692007af28"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">traceTotalFreeSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Get the storage service’s total free space (no simulated overhead) </p>
-<p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> free space tracing (doesn’t incur simulated overhead) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Current free space in bytes </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService14unreserveSpaceERNSt10shared_ptrI12FileLocationEE">
 <span id="_CPPv3N6wrench14StorageService14unreserveSpaceERNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench14StorageService14unreserveSpaceERNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::StorageService::unreserveSpace__std::shared_ptr:FileLocation:R"></span><span class="target" id="classwrench_1_1_storage_service_1a049281ec9a062495107dc91ec22ee8d4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">unreserveSpace</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N6wrench14StorageService14unreserveSpaceERNSt10shared_ptrI12FileLocationEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Unreserve space at the storage service. </p>
@@ -1021,14 +1033,15 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEb">
-<span id="_CPPv3N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEb"></span><span id="_CPPv2N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEb"></span><span id="wrench::StorageService::writeFile__simgrid::s4u::MailboxP.std::shared_ptr:FileLocation:CR.b"></span><span class="target" id="classwrench_1_1_storage_service_1aabb5841a6c277ef0542f2e2aa52779a7"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_mailbox</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wait_for_answer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEb" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEdb">
+<span id="_CPPv3N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEdb"></span><span id="_CPPv2N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEdb"></span><span id="wrench::StorageService::writeFile__simgrid::s4u::MailboxP.std::shared_ptr:FileLocation:CR.double.b"></span><span class="target" id="classwrench_1_1_storage_service_1a11235de3e90d5d3eaf50e57fba4b50ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_mailbox</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes_to_write</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wait_for_answer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService9writeFileEPN7simgrid3s4u7MailboxERKNSt10shared_ptrI12FileLocationEEdb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Synchronously write a file to the storage service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>answer_mailbox</strong> – the mailbox on which to expect the answer </p></li>
 <li><p><strong>location</strong> – the location </p></li>
+<li><p><strong>num_bytes_to_write</strong> – the number of bytes to write to the file </p></li>
 <li><p><strong>wait_for_answer</strong> – whether to wait for the answer</p></li>
 </ul>
 </dd>
