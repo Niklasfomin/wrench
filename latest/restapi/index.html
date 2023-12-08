@@ -992,10 +992,6 @@
 };
             defs["simid_createWorkflowFromJSONString_body"] = {
   "properties" : {
-    "compute_service_name" : {
-      "type" : "string",
-      "description" : "The cloud service's name"
-    },
     "json_string" : {
       "type" : "string",
       "description" : "Workflow file"
@@ -1418,6 +1414,23 @@
     }
   }
 };
+            defs["WorkflowResponse"] = {
+  "type" : "object",
+  "properties" : {
+    "wrench_api_request_success" : {
+      "type" : "boolean",
+      "description" : "true if success, false if failure"
+    },
+    "workflow_name" : {
+      "type" : "string",
+      "description" : "The new workflow's name (if success)"
+    },
+    "failure_cause" : {
+      "type" : "string",
+      "description" : "human-readable error message (if failure)"
+    }
+  }
+};
   </script>
 
   <div class="container-fluid">
@@ -1473,6 +1486,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="createVM" class="">
                       <a href="#api-WRENCH-createVM">createVM</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="createWorkflow" class="">
+                      <a href="#api-WRENCH-createWorkflow">createWorkflow</a>
                     </li>
                     <li data-group="WRENCH" data-name="createWorkflowFromJSON" class="">
                       <a href="#api-WRENCH-createWorkflowFromJSON">createWorkflowFromJSON</a>
@@ -6373,11 +6389,315 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
+                    <div id="api-WRENCH-createWorkflow">
+                      <article id="api-WRENCH-createWorkflow-0" data-group="User" data-name="createWorkflow" data-version="0">
+                        <div class="pull-left">
+                          <h1>createWorkflow</h1>
+                          <p>Create a blank workflow.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/createWorkflow</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-createWorkflow-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-createWorkflow-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-createWorkflow-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-createWorkflow-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-createWorkflow-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/createWorkflow"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            WorkflowResponse result = apiInstance.createWorkflow(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#createWorkflow");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            WorkflowResponse result = apiInstance.createWorkflow(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#createWorkflow");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Create a blank workflow.
+[apiInstance createWorkflowWith:simid
+              completionHandler: ^(WorkflowResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.createWorkflow(simid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-createWorkflow-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class createWorkflowExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Create a blank workflow.
+                WorkflowResponse result = apiInstance.createWorkflow(simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.createWorkflow: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->createWorkflow($simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->createWorkflow: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->createWorkflow(simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->createWorkflow: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-createWorkflow-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Create a blank workflow.
+    api_response = api_instance.create_workflow(simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->createWorkflow: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_createWorkflow_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-createWorkflow-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-createWorkflow-200-schema">
+                                  <div id='responses-createWorkflow-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/WorkflowResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-createWorkflow-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-createWorkflow-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-createWorkflow-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-WRENCH-createWorkflowFromJSON">
                       <article id="api-WRENCH-createWorkflowFromJSON-0" data-group="User" data-name="createWorkflowFromJSON" data-version="0">
                         <div class="pull-left">
                           <h1>createWorkflowFromJSON</h1>
-                          <p>Simulate workflow from JSON file.</p>
+                          <p>Create a workflow from JSON file.</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -6466,7 +6786,7 @@ String *simid = simid_example; // ID of the simulation
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
-// Simulate workflow from JSON file.
+// Create a workflow from JSON file.
 [apiInstance createWorkflowFromJSONWith:body
     simid:simid
               completionHandler: ^(ServiceResponse output, NSError* error) {
@@ -6521,7 +6841,7 @@ namespace Example
 
             try
             {
-                // Simulate workflow from JSON file.
+                // Create a workflow from JSON file.
                 ServiceResponse result = apiInstance.createWorkflowFromJSON(body, simid);
                 Debug.WriteLine(result);
             }
@@ -6583,7 +6903,7 @@ body =  # Simid_createWorkflowFromJSONString_body | Input to create workflow fro
 simid = simid_example # String | ID of the simulation
 
 try: 
-    # Simulate workflow from JSON file.
+    # Create a workflow from JSON file.
     api_response = api_instance.create_workflow_from_json(body, simid)
     pprint(api_response)
 except ApiException as e:
