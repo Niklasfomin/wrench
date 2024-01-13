@@ -10002,7 +10002,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/tasks/{name}/taskGetFlops</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{workflow_name}/tasks/{name}/taskGetFlops</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -10024,7 +10024,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/tasks/{name}/taskGetFlops"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/{workflow_name}/tasks/{name}/taskGetFlops"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -10041,9 +10041,10 @@ public class WRENCHApiExample {
         
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | Name of the workflow
         String name = name_example; // String | ID of the task
         try {
-            TaskFlops result = apiInstance.getTaskFlops(simid, name);
+            TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, name);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskFlops");
@@ -10061,9 +10062,10 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | Name of the workflow
         String name = name_example; // String | ID of the task
         try {
-            TaskFlops result = apiInstance.getTaskFlops(simid, name);
+            TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, name);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskFlops");
@@ -10078,12 +10080,14 @@ public class WRENCHApiExample {
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-getTaskFlops-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *workflowName = workflowName_example; // Name of the workflow
 String *name = name_example; // ID of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's flops
 [apiInstance getTaskFlopsWith:simid
+    workflowName:workflowName
     name:name
               completionHandler: ^(TaskFlops output, NSError* error) {
                             if (output) {
@@ -10101,6 +10105,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
+var workflowName = workflowName_example; // {{String}} Name of the workflow
 var name = name_example; // {{String}} ID of the task
 
 var callback = function(error, data, response) {
@@ -10110,7 +10115,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops(simid, name, callback);
+api.getTaskFlops(simid, workflowName, name, callback);
 </code></pre>
                             </div>
 
@@ -10133,12 +10138,13 @@ namespace Example
 
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
+            var workflowName = workflowName_example;  // String | Name of the workflow
             var name = name_example;  // String | ID of the task
 
             try
             {
                 // Get a task's flops
-                TaskFlops result = apiInstance.getTaskFlops(simid, name);
+                TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10157,10 +10163,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
+$workflowName = workflowName_example; // String | Name of the workflow
 $name = name_example; // String | ID of the task
 
 try {
-    $result = $api_instance->getTaskFlops($simid, $name);
+    $result = $api_instance->getTaskFlops($simid, $workflowName, $name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskFlops: ', $e->getMessage(), PHP_EOL;
@@ -10175,10 +10182,11 @@ use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
+my $workflowName = workflowName_example; # String | Name of the workflow
 my $name = name_example; # String | ID of the task
 
 eval { 
-    my $result = $api_instance->getTaskFlops(simid => $simid, name => $name);
+    my $result = $api_instance->getTaskFlops(simid => $simid, workflowName => $workflowName, name => $name);
     print Dumper($result);
 };
 if ($@) {
@@ -10196,11 +10204,12 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
+workflowName = workflowName_example # String | Name of the workflow
 name = name_example # String | ID of the task
 
 try: 
     # Get a task's flops
-    api_response = api_instance.get_task_flops(simid, name)
+    api_response = api_instance.get_task_flops(simid, workflowName, name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskFlops: %s\n" % e)</code></pre>
@@ -10228,6 +10237,28 @@ except ApiException as e:
                                   
                                                       <div class="inner description">
                                                           ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">workflow_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskFlops_workflowName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the workflow
                                                       </div>
                                               </div>
                                                   <div class="inner required">
