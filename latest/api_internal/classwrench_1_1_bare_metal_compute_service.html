@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::BareMetalComputeService &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -80,7 +82,21 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_alarm_job_time_out_message.html">wrench::AlarmJobTimeOutMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_amdahl_parallel_model.html">wrench::AmdahlParallelModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_bandwidth_meter_service.html">wrench::BandwidthMeterService</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::BareMetalComputeService</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::BareMetalComputeService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeServiceE"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService23BareMetalComputeServiceERKNSt6stringERKNSt3mapINSt6stringENSt5tupleImdEEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::BareMetalComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService23BareMetalComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::BareMetalComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeServiceD0Ev"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::~BareMetalComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::isThereAtLeastOneHostWithIdleResourcesInstant()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::submitCompoundJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService20supportsCompoundJobsEv"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::supportsCompoundJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService17supportsPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::supportsPilotJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService20supportsStandardJobsEv"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::supportsStandardJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">BareMetalComputeService::terminateCompoundJob()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_bare_metal_compute_service_message_payload.html">wrench::BareMetalComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_bare_metal_compute_service_one_shot.html">wrench::BareMetalComputeServiceOneShot</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_bare_metal_compute_service_property.html">wrench::BareMetalComputeServiceProperty</a></li>
@@ -241,15 +257,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +282,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,7 +428,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-baremetalcomputeservice">
-<span id="baremetalcomputeservice"></span><h1>wrench::BareMetalComputeService<a class="headerlink" href="#wrench-baremetalcomputeservice" title="Permalink to this heading"></a></h1>
+<span id="baremetalcomputeservice"></span><h1>wrench::BareMetalComputeService<a class="headerlink" href="#wrench-baremetalcomputeservice" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23BareMetalComputeServiceE">
 <span id="_CPPv3N6wrench23BareMetalComputeServiceE"></span><span id="_CPPv2N6wrench23BareMetalComputeServiceE"></span><span id="wrench::BareMetalComputeService"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BareMetalComputeService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeServiceE" title="wrench::ComputeService"><span class="n"><span class="pre">ComputeService</span></span></a><br /></dt>
@@ -459,13 +477,13 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23BareMetalComputeServiceD0Ev">
-<span id="_CPPv3N6wrench23BareMetalComputeServiceD0Ev"></span><span id="_CPPv2N6wrench23BareMetalComputeServiceD0Ev"></span><span id="wrench::BareMetalComputeService::~BareMetalComputeService"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1a592d086b7b6b212be161dfd7700a1f02"></span><span class="sig-name descname"><span class="n"><span class="pre">~BareMetalComputeService</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeServiceD0Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench23BareMetalComputeServiceD0Ev"></span><span id="_CPPv2N6wrench23BareMetalComputeServiceD0Ev"></span><span id="wrench::BareMetalComputeService::~BareMetalComputeService"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1a592d086b7b6b212be161dfd7700a1f02"></span><span class="sig-name descname"><span class="n"><span class="pre">~BareMetalComputeService</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeServiceD0Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd">
-<span id="_CPPv3N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd"></span><span id="_CPPv2N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd"></span><span id="wrench::BareMetalComputeService::isThereAtLeastOneHostWithIdleResourcesInstant__unsigned-l.double"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1a523e24f6f3e5c8eba06a661a45cf58c7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isThereAtLeastOneHostWithIdleResourcesInstant</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd"></span><span id="_CPPv2N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd"></span><span id="wrench::BareMetalComputeService::isThereAtLeastOneHostWithIdleResourcesInstant__unsigned-l.double"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1a523e24f6f3e5c8eba06a661a45cf58c7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isThereAtLeastOneHostWithIdleResourcesInstant</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeService45isThereAtLeastOneHostWithIdleResourcesInstantEmd" title="Link to this definition"></a><br /></dt>
 <dd><p>An “out of simulation time” (instant) method to check on resource availability. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -482,7 +500,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="wrench::BareMetalComputeService::submitCompoundJob__std::shared_ptr:CompoundJob:.std::map:ss.ss:CR"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1ad47e348630e187e7a3e6935c41592234"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submitCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">service_specific_args</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="wrench::BareMetalComputeService::submitCompoundJob__std::shared_ptr:CompoundJob:.std::map:ss.ss:CR"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1ad47e348630e187e7a3e6935c41592234"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submitCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">service_specific_args</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Submit a compound job to the compute service. </p>
 <p>
 These arguments are provided as a map of strings, indexed by action names. These strings are formatted as “[hostname:][num_cores]” (e.g., “somehost:12”, “somehost”,”6”, “”).</p>
@@ -546,7 +564,7 @@ These arguments are provided as a map of strings, indexed by action names. These
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE">
-<span id="_CPPv3N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="_CPPv2N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="wrench::BareMetalComputeService::terminateCompoundJob__std::shared_ptr:CompoundJob:"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1a848a1034241eb395dc5a086ac2f50238"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">terminateCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="_CPPv2N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="wrench::BareMetalComputeService::terminateCompoundJob__std::shared_ptr:CompoundJob:"></span><span class="target" id="classwrench_1_1_bare_metal_compute_service_1a848a1034241eb395dc5a086ac2f50238"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">terminateCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench23BareMetalComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Synchronously terminate a compound job previously submitted to the compute service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

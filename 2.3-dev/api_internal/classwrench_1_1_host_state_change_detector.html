@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::HostStateChangeDetector &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -218,7 +220,14 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_host_has_changed_speed_message.html">wrench::HostHasChangedSpeedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_host_has_turned_off_message.html">wrench::HostHasTurnedOffMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_host_has_turned_on_message.html">wrench::HostHasTurnedOnMessage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::HostStateChangeDetector</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::HostStateChangeDetector</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench23HostStateChangeDetectorE"><code class="docutils literal notranslate"><span class="pre">HostStateChangeDetector</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEP12S4U_CommPort31WRENCH_PROPERTY_COLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">HostStateChangeDetector::HostStateChangeDetector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23HostStateChangeDetector4killEv"><code class="docutils literal notranslate"><span class="pre">HostStateChangeDetector::kill()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_host_state_change_detector_message.html">wrench::HostStateChangeDetectorMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_host_state_change_detector_property.html">wrench::HostStateChangeDetectorProperty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_invalid_directory_path.html">wrench::InvalidDirectoryPath</a></li>
@@ -241,15 +250,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +275,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,16 +421,16 @@
            <div itemprop="articleBody">
              
   <section id="wrench-hoststatechangedetector">
-<span id="hoststatechangedetector"></span><h1>wrench::HostStateChangeDetector<a class="headerlink" href="#wrench-hoststatechangedetector" title="Permalink to this heading"></a></h1>
+<span id="hoststatechangedetector"></span><h1>wrench::HostStateChangeDetector<a class="headerlink" href="#wrench-hoststatechangedetector" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23HostStateChangeDetectorE">
-<span id="_CPPv3N6wrench23HostStateChangeDetectorE"></span><span id="_CPPv2N6wrench23HostStateChangeDetectorE"></span><span id="wrench::HostStateChangeDetector"></span><span class="target" id="classwrench_1_1_host_state_change_detector"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HostStateChangeDetector</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><a class="headerlink" href="#_CPPv4N6wrench23HostStateChangeDetectorE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench23HostStateChangeDetectorE"></span><span id="_CPPv2N6wrench23HostStateChangeDetectorE"></span><span id="wrench::HostStateChangeDetector"></span><span class="target" id="classwrench_1_1_host_state_change_detector"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HostStateChangeDetector</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><a class="headerlink" href="#_CPPv4N6wrench23HostStateChangeDetectorE" title="Link to this definition"></a><br /></dt>
 <dd><p>A service that detects and reports on host state changes (turned on, turned off) </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEPN7simgrid3s4u7MailboxE31WRENCH_PROPERTY_COLLECTION_TYPE">
-<span id="_CPPv3N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEPN7simgrid3s4u7MailboxE31WRENCH_PROPERTY_COLLECTION_TYPE"></span><span id="_CPPv2N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEPN7simgrid3s4u7MailboxE31WRENCH_PROPERTY_COLLECTION_TYPE"></span><span id="wrench::HostStateChangeDetector::HostStateChangeDetector__ss.std::vector:simgrid::s4u::HostP:.b.b.b.std::shared_ptr:S4U_Daemon:.simgrid::s4u::MailboxP.WRENCH_PROPERTY_COLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_host_state_change_detector_1a6a9cb9a10b6b4db324f2a5fd4befd434"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HostStateChangeDetector</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">host_on_which_to_run</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hosts_to_monitor</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_when_turned_on</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_when_turned_off</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_when_speed_change</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html#_CPPv4N6wrench10S4U_DaemonE" title="wrench::S4U_Daemon"><span class="n"><span class="pre">S4U_Daemon</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">creator</span></span>, <span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mailbox_to_notify</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEPN7simgrid3s4u7MailboxE31WRENCH_PROPERTY_COLLECTION_TYPE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEP12S4U_CommPort31WRENCH_PROPERTY_COLLECTION_TYPE">
+<span id="_CPPv3N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEP12S4U_CommPort31WRENCH_PROPERTY_COLLECTION_TYPE"></span><span id="_CPPv2N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEP12S4U_CommPort31WRENCH_PROPERTY_COLLECTION_TYPE"></span><span id="wrench::HostStateChangeDetector::HostStateChangeDetector__ss.std::vector:simgrid::s4u::HostP:.b.b.b.std::shared_ptr:S4U_Daemon:.S4U_CommPortP.WRENCH_PROPERTY_COLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_host_state_change_detector_1a199aa12dcce81a30f23cc6173dea6460"></span><span class="k"><span class="pre">explicit</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">HostStateChangeDetector</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">host_on_which_to_run</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hosts_to_monitor</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_when_turned_on</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_when_turned_off</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">notify_when_speed_change</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html#_CPPv4N6wrench10S4U_DaemonE" title="wrench::S4U_Daemon"><span class="n"><span class="pre">S4U_Daemon</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">creator</span></span>, <a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">commport_to_notify</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench23HostStateChangeDetector23HostStateChangeDetectorENSt6stringENSt6vectorIPN7simgrid3s4u4HostEEEbbbNSt10shared_ptrI10S4U_DaemonEEP12S4U_CommPort31WRENCH_PROPERTY_COLLECTION_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -430,7 +441,7 @@
 <li><p><strong>notify_when_turned_off</strong> – whether to send a notifications when hosts turn off </p></li>
 <li><p><strong>notify_when_speed_change</strong> – whether to send a notification when hosts change speed </p></li>
 <li><p><strong>creator</strong> – the service that created this service (when its creator dies, so does this service) </p></li>
-<li><p><strong>mailbox_to_notify</strong> – the mailbox to notify </p></li>
+<li><p><strong>commport_to_notify</strong> – the commport to notify </p></li>
 <li><p><strong>property_list</strong> – a property list </p></li>
 </ul>
 </dd>
@@ -439,7 +450,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench23HostStateChangeDetector4killEv">
-<span id="_CPPv3N6wrench23HostStateChangeDetector4killEv"></span><span id="_CPPv2N6wrench23HostStateChangeDetector4killEv"></span><span id="wrench::HostStateChangeDetector::kill"></span><span class="target" id="classwrench_1_1_host_state_change_detector_1af56044a394b6bab99f2450dd0f4a6f38"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kill</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench23HostStateChangeDetector4killEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench23HostStateChangeDetector4killEv"></span><span id="_CPPv2N6wrench23HostStateChangeDetector4killEv"></span><span id="wrench::HostStateChangeDetector::kill"></span><span class="target" id="classwrench_1_1_host_state_change_detector_1af56044a394b6bab99f2450dd0f4a6f38"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">kill</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench23HostStateChangeDetector4killEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Kill the service. </p>
 </dd></dl>
 

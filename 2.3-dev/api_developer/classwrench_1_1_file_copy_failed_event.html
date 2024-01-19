@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::FileCopyFailedEvent &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -104,7 +106,16 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_file_already_being_written.html">wrench::FileAlreadyBeingWritten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_file_copy_action.html">wrench::FileCopyAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_file_copy_completed_event.html">wrench::FileCopyCompletedEvent</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::FileCopyFailedEvent</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::FileCopyFailedEvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench19FileCopyFailedEventE"><code class="docutils literal notranslate"><span class="pre">FileCopyFailedEvent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19FileCopyFailedEvent8toStringEv"><code class="docutils literal notranslate"><span class="pre">FileCopyFailedEvent::toString()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19FileCopyFailedEvent3dstE"><code class="docutils literal notranslate"><span class="pre">FileCopyFailedEvent::dst</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19FileCopyFailedEvent13failure_causeE"><code class="docutils literal notranslate"><span class="pre">FileCopyFailedEvent::failure_cause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19FileCopyFailedEvent3srcE"><code class="docutils literal notranslate"><span class="pre">FileCopyFailedEvent::src</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_file_delete_action.html">wrench::FileDeleteAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_file_location.html">wrench::FileLocation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_file_not_found.html">wrench::FileNotFound</a></li>
@@ -134,6 +145,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
@@ -242,16 +254,16 @@
            <div itemprop="articleBody">
              
   <section id="wrench-filecopyfailedevent">
-<span id="filecopyfailedevent"></span><h1>wrench::FileCopyFailedEvent<a class="headerlink" href="#wrench-filecopyfailedevent" title="Permalink to this heading"></a></h1>
+<span id="filecopyfailedevent"></span><h1>wrench::FileCopyFailedEvent<a class="headerlink" href="#wrench-filecopyfailedevent" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19FileCopyFailedEventE">
-<span id="_CPPv3N6wrench19FileCopyFailedEventE"></span><span id="_CPPv2N6wrench19FileCopyFailedEventE"></span><span id="wrench::FileCopyFailedEvent"></span><span class="target" id="classwrench_1_1_file_copy_failed_event"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileCopyFailedEvent</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_execution_event.html#_CPPv4N6wrench14ExecutionEventE" title="wrench::ExecutionEvent"><span class="n"><span class="pre">ExecutionEvent</span></span></a><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEventE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19FileCopyFailedEventE"></span><span id="_CPPv2N6wrench19FileCopyFailedEventE"></span><span id="wrench::FileCopyFailedEvent"></span><span class="target" id="classwrench_1_1_file_copy_failed_event"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FileCopyFailedEvent</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_execution_event.html#_CPPv4N6wrench14ExecutionEventE" title="wrench::ExecutionEvent"><span class="n"><span class="pre">ExecutionEvent</span></span></a><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEventE" title="Link to this definition"></a><br /></dt>
 <dd><p>A “file copy has failed” <a class="reference internal" href="../api_internal/classwrench_1_1_execution_event.html#classwrench_1_1_execution_event"><span class="std std-ref">ExecutionEvent</span></a>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19FileCopyFailedEvent8toStringEv">
-<span id="_CPPv3N6wrench19FileCopyFailedEvent8toStringEv"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent8toStringEv"></span><span id="wrench::FileCopyFailedEvent::toString"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1a369e048f4ce04909da2d8c3708f754ab"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent8toStringEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19FileCopyFailedEvent8toStringEv"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent8toStringEv"></span><span id="wrench::FileCopyFailedEvent::toString"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1a369e048f4ce04909da2d8c3708f754ab"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent8toStringEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a textual description of the event. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -265,19 +277,19 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19FileCopyFailedEvent3dstE">
-<span id="_CPPv3N6wrench19FileCopyFailedEvent3dstE"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent3dstE"></span><span id="wrench::FileCopyFailedEvent::dst__std::shared_ptr:FileLocation:"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1a7a7def002fd387156d510b55192b6e6f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dst</span></span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent3dstE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19FileCopyFailedEvent3dstE"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent3dstE"></span><span id="wrench::FileCopyFailedEvent::dst__std::shared_ptr:FileLocation:"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1a7a7def002fd387156d510b55192b6e6f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dst</span></span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent3dstE" title="Link to this definition"></a><br /></dt>
 <dd><p>The destination location. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19FileCopyFailedEvent13failure_causeE">
-<span id="_CPPv3N6wrench19FileCopyFailedEvent13failure_causeE"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent13failure_causeE"></span><span id="wrench::FileCopyFailedEvent::failure_cause__std::shared_ptr:FailureCause:"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1a8d3e5e8ce73f3ac145eb5046e0e79833"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failure_cause</span></span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent13failure_causeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19FileCopyFailedEvent13failure_causeE"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent13failure_causeE"></span><span id="wrench::FileCopyFailedEvent::failure_cause__std::shared_ptr:FailureCause:"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1a8d3e5e8ce73f3ac145eb5046e0e79833"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failure_cause</span></span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent13failure_causeE" title="Link to this definition"></a><br /></dt>
 <dd><p>The cause of the failure. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19FileCopyFailedEvent3srcE">
-<span id="_CPPv3N6wrench19FileCopyFailedEvent3srcE"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent3srcE"></span><span id="wrench::FileCopyFailedEvent::src__std::shared_ptr:FileLocation:"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1ac3b32d4277e00f17e7913e66960b9328"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">src</span></span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent3srcE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19FileCopyFailedEvent3srcE"></span><span id="_CPPv2N6wrench19FileCopyFailedEvent3srcE"></span><span id="wrench::FileCopyFailedEvent::src__std::shared_ptr:FileLocation:"></span><span class="target" id="classwrench_1_1_file_copy_failed_event_1ac3b32d4277e00f17e7913e66960b9328"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">src</span></span></span><a class="headerlink" href="#_CPPv4N6wrench19FileCopyFailedEvent3srcE" title="Link to this definition"></a><br /></dt>
 <dd><p>The source location. </p>
 </dd></dl>
 

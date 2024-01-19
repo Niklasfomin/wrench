@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::SMPIExecutor &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -241,15 +243,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,14 +268,22 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::SMPIExecutor</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::SMPIExecutor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench12SMPIExecutorE"><code class="docutils literal notranslate"><span class="pre">SMPIExecutor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi"><code class="docutils literal notranslate"><span class="pre">SMPIExecutor::performAlltoall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE"><code class="docutils literal notranslate"><span class="pre">SMPIExecutor::performBarrier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi"><code class="docutils literal notranslate"><span class="pre">SMPIExecutor::performBcast()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service.html">wrench::Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_daemon_stopped_message.html">wrench::ServiceDaemonStoppedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_has_crashed_message.html">wrench::ServiceHasCrashedMessage</a></li>
@@ -410,16 +422,16 @@
            <div itemprop="articleBody">
              
   <section id="wrench-smpiexecutor">
-<span id="smpiexecutor"></span><h1>wrench::SMPIExecutor<a class="headerlink" href="#wrench-smpiexecutor" title="Permalink to this heading"></a></h1>
+<span id="smpiexecutor"></span><h1>wrench::SMPIExecutor<a class="headerlink" href="#wrench-smpiexecutor" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12SMPIExecutorE">
-<span id="_CPPv3N6wrench12SMPIExecutorE"></span><span id="_CPPv2N6wrench12SMPIExecutorE"></span><span id="wrench::SMPIExecutor"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMPIExecutor</span></span></span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutorE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench12SMPIExecutorE"></span><span id="_CPPv2N6wrench12SMPIExecutorE"></span><span id="wrench::SMPIExecutor"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SMPIExecutor</span></span></span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutorE" title="Link to this definition"></a><br /></dt>
 <dd><p>A wrapper class for all SMPI operations. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi">
-<span id="_CPPv3N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi"></span><span id="_CPPv2N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi"></span><span id="wrench::SMPIExecutor::performAlltoall__std::vector:simgrid::s4u::HostP:R.i"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor_1a1fd3bc56dc56195431f302e70d5d643c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performAlltoall</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hosts</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi"></span><span id="_CPPv2N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi"></span><span id="wrench::SMPIExecutor::performAlltoall__std::vector:simgrid::s4u::HostP:R.i"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor_1a1fd3bc56dc56195431f302e70d5d643c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performAlltoall</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hosts</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutor15performAlltoallERNSt6vectorIPN7simgrid3s4u4HostEEEi" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to perform an SMPI Alltoall. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -433,7 +445,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE">
-<span id="_CPPv3N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE"></span><span id="_CPPv2N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE"></span><span id="wrench::SMPIExecutor::performBarrier__std::vector:simgrid::s4u::HostP:R"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor_1ab704afad1525356233c9ea51bb45f7b7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performBarrier</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hosts</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE"></span><span id="_CPPv2N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE"></span><span id="wrench::SMPIExecutor::performBarrier__std::vector:simgrid::s4u::HostP:R"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor_1ab704afad1525356233c9ea51bb45f7b7"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performBarrier</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hosts</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutor14performBarrierERNSt6vectorIPN7simgrid3s4u4HostEEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to perform an SMPI Barrier. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -444,7 +456,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi">
-<span id="_CPPv3N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi"></span><span id="_CPPv2N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi"></span><span id="wrench::SMPIExecutor::performBcast__std::vector:simgrid::s4u::HostP:R.simgrid::s4u::HostP.i"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor_1a6cf2eb5949539db16dd484e55ffa8184"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performBcast</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hosts</span></span>, <span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">root_host</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi"></span><span id="_CPPv2N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi"></span><span id="wrench::SMPIExecutor::performBcast__std::vector:simgrid::s4u::HostP:R.simgrid::s4u::HostP.i"></span><span class="target" id="classwrench_1_1_s_m_p_i_executor_1a6cf2eb5949539db16dd484e55ffa8184"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">performBcast</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hosts</span></span>, <span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Host</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">root_host</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">data_size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12SMPIExecutor12performBcastERNSt6vectorIPN7simgrid3s4u4HostEEEPN7simgrid3s4u4HostEi" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to perform an SMPI Bcast. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

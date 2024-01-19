@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::ExecutionEvent &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -165,7 +167,15 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_controller.html">wrench::ExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_controller_alarm_timer_message.html">wrench::ExecutionControllerAlarmTimerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_controller_message.html">wrench::ExecutionControllerMessage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ExecutionEvent</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ExecutionEvent</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench14ExecutionEventE"><code class="docutils literal notranslate"><span class="pre">ExecutionEvent</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ExecutionEventD0Ev"><code class="docutils literal notranslate"><span class="pre">ExecutionEvent::~ExecutionEvent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ExecutionEvent8toStringEv"><code class="docutils literal notranslate"><span class="pre">ExecutionEvent::toString()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ExecutionEvent25waitForNextExecutionEventEP12S4U_CommPortd"><code class="docutils literal notranslate"><span class="pre">ExecutionEvent::waitForNextExecutionEvent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_exception.html">wrench::ExecutionException</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_f_c_f_s_batch_scheduler.html">wrench::FCFSBatchScheduler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_failure_cause.html">wrench::FailureCause</a></li>
@@ -241,15 +251,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +276,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,7 +422,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-executionevent">
-<span id="executionevent"></span><h1>wrench::ExecutionEvent<a class="headerlink" href="#wrench-executionevent" title="Permalink to this heading"></a></h1>
+<span id="executionevent"></span><h1>wrench::ExecutionEvent<a class="headerlink" href="#wrench-executionevent" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14ExecutionEventE">
 <span id="_CPPv3N6wrench14ExecutionEventE"></span><span id="_CPPv2N6wrench14ExecutionEventE"></span><span id="wrench::ExecutionEvent"></span><span class="target" id="classwrench_1_1_execution_event"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExecutionEvent</span></span></span><br /></dt>
@@ -420,13 +432,13 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14ExecutionEventD0Ev">
-<span id="_CPPv3N6wrench14ExecutionEventD0Ev"></span><span id="_CPPv2N6wrench14ExecutionEventD0Ev"></span><span id="wrench::ExecutionEvent::~ExecutionEvent"></span><span class="target" id="classwrench_1_1_execution_event_1a807f45db288ff3365a5a4c4071c8f601"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ExecutionEvent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N6wrench14ExecutionEventD0Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench14ExecutionEventD0Ev"></span><span id="_CPPv2N6wrench14ExecutionEventD0Ev"></span><span id="wrench::ExecutionEvent::~ExecutionEvent"></span><span class="target" id="classwrench_1_1_execution_event_1a807f45db288ff3365a5a4c4071c8f601"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~ExecutionEvent</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">default</span></span><a class="headerlink" href="#_CPPv4N6wrench14ExecutionEventD0Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14ExecutionEvent8toStringEv">
-<span id="_CPPv3N6wrench14ExecutionEvent8toStringEv"></span><span id="_CPPv2N6wrench14ExecutionEvent8toStringEv"></span><span id="wrench::ExecutionEvent::toString"></span><span class="target" id="classwrench_1_1_execution_event_1ad5d158631611fab82de32e30b236fe63"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ExecutionEvent8toStringEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench14ExecutionEvent8toStringEv"></span><span id="_CPPv2N6wrench14ExecutionEvent8toStringEv"></span><span id="wrench::ExecutionEvent::toString"></span><span class="target" id="classwrench_1_1_execution_event_1ad5d158631611fab82de32e30b236fe63"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">toString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ExecutionEvent8toStringEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a textual description of the event. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -439,13 +451,13 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14ExecutionEvent25waitForNextExecutionEventEPN7simgrid3s4u7MailboxEd">
-<span id="_CPPv3N6wrench14ExecutionEvent25waitForNextExecutionEventEPN7simgrid3s4u7MailboxEd"></span><span id="_CPPv2N6wrench14ExecutionEvent25waitForNextExecutionEventEPN7simgrid3s4u7MailboxEd"></span><span id="wrench::ExecutionEvent::waitForNextExecutionEvent__simgrid::s4u::MailboxP.double"></span><span class="target" id="classwrench_1_1_execution_event_1a59e47976e722d73bed16ee709728132a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_execution_event.html#_CPPv4N6wrench14ExecutionEventE" title="wrench::ExecutionEvent"><span class="n"><span class="pre">ExecutionEvent</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForNextExecutionEvent</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">mailbox</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ExecutionEvent25waitForNextExecutionEventEPN7simgrid3s4u7MailboxEd" title="Permalink to this definition"></a><br /></dt>
-<dd><p><a class="reference internal" href="classwrench_1_1_block.html#classwrench_1_1_block"><span class="std std-ref">Block</span></a> the calling process until a <a class="reference internal" href="#classwrench_1_1_execution_event"><span class="std std-ref">ExecutionEvent</span></a> is generated based on messages received on a mailbox, or until a timeout ooccurs. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14ExecutionEvent25waitForNextExecutionEventEP12S4U_CommPortd">
+<span id="_CPPv3N6wrench14ExecutionEvent25waitForNextExecutionEventEP12S4U_CommPortd"></span><span id="_CPPv2N6wrench14ExecutionEvent25waitForNextExecutionEventEP12S4U_CommPortd"></span><span id="wrench::ExecutionEvent::waitForNextExecutionEvent__S4U_CommPortP.double"></span><span class="target" id="classwrench_1_1_execution_event_1a66c28d3be4a797b3271984399a4646a2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_execution_event.html#_CPPv4N6wrench14ExecutionEventE" title="wrench::ExecutionEvent"><span class="n"><span class="pre">ExecutionEvent</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">waitForNextExecutionEvent</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">commport</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">timeout</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14ExecutionEvent25waitForNextExecutionEventEP12S4U_CommPortd" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="classwrench_1_1_block.html#classwrench_1_1_block"><span class="std std-ref">Block</span></a> the calling process until a <a class="reference internal" href="#classwrench_1_1_execution_event"><span class="std std-ref">ExecutionEvent</span></a> is generated based on messages received on a commport, or until a timeout ooccurs. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>mailbox</strong> – the name of the receiving mailbox </p></li>
+<li><p><strong>commport</strong> – the name of the receiving commport </p></li>
 <li><p><strong>timeout</strong> – a timeout value in seconds (-1 means: no timeout) </p></li>
 </ul>
 </dd>

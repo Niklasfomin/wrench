@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::DataManagerFileReadAnswerMessage &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -155,7 +157,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_dag_of_tasks_1_1custom__bfs__visitor.html">wrench::DagOfTasks::custom_bfs_visitor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_file.html">wrench::DataFile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_manager_file_copy_answer_message.html">wrench::DataManagerFileCopyAnswerMessage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::DataManagerFileReadAnswerMessage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::DataManagerFileReadAnswerMessage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessageE"><code class="docutils literal notranslate"><span class="pre">DataManagerFileReadAnswerMessage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE"><code class="docutils literal notranslate"><span class="pre">DataManagerFileReadAnswerMessage::DataManagerFileReadAnswerMessage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage13failure_causeE"><code class="docutils literal notranslate"><span class="pre">DataManagerFileReadAnswerMessage::failure_cause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage8locationE"><code class="docutils literal notranslate"><span class="pre">DataManagerFileReadAnswerMessage::location</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage9num_bytesE"><code class="docutils literal notranslate"><span class="pre">DataManagerFileReadAnswerMessage::num_bytes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage7successE"><code class="docutils literal notranslate"><span class="pre">DataManagerFileReadAnswerMessage::success</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_manager_file_write_answer_message.html">wrench::DataManagerFileWriteAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_movement_manager.html">wrench::DataMovementManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_movement_manager_file_reader_thread_message.html">wrench::DataMovementManagerFileReaderThreadMessage</a></li>
@@ -241,15 +253,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +278,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,16 +424,16 @@
            <div itemprop="articleBody">
              
   <section id="wrench-datamanagerfilereadanswermessage">
-<span id="datamanagerfilereadanswermessage"></span><h1>wrench::DataManagerFileReadAnswerMessage<a class="headerlink" href="#wrench-datamanagerfilereadanswermessage" title="Permalink to this heading"></a></h1>
+<span id="datamanagerfilereadanswermessage"></span><h1>wrench::DataManagerFileReadAnswerMessage<a class="headerlink" href="#wrench-datamanagerfilereadanswermessage" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32DataManagerFileReadAnswerMessageE">
-<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessageE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessageE"></span><span id="wrench::DataManagerFileReadAnswerMessage"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataManagerFileReadAnswerMessage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_data_movement_manager_message.html#_CPPv4N6wrench26DataMovementManagerMessageE" title="wrench::DataMovementManagerMessage"><span class="n"><span class="pre">DataMovementManagerMessage</span></span></a><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessageE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessageE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessageE"></span><span id="wrench::DataManagerFileReadAnswerMessage"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">DataManagerFileReadAnswerMessage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_data_movement_manager_message.html#_CPPv4N6wrench26DataMovementManagerMessageE" title="wrench::DataMovementManagerMessage"><span class="n"><span class="pre">DataMovementManagerMessage</span></span></a><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessageE" title="Link to this definition"></a><br /></dt>
 <dd><p>A message sent by a <a class="reference internal" href="classwrench_1_1_data_movement_manager.html#classwrench_1_1_data_movement_manager"><span class="std std-ref">DataMovementManager</span></a> upon file read completion. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE">
-<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE"></span><span id="wrench::DataManagerFileReadAnswerMessage::DataManagerFileReadAnswerMessage__std::shared_ptr:FileLocation:.double.b.std::shared_ptr:FailureCause:"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a6cf165fcf6db067b10a4baf671cd3eef"></span><span class="sig-name descname"><span class="n"><span class="pre">DataManagerFileReadAnswerMessage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">success</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">failure_cause</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE"></span><span id="wrench::DataManagerFileReadAnswerMessage::DataManagerFileReadAnswerMessage__std::shared_ptr:FileLocation:.double.b.std::shared_ptr:FailureCause:"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a6cf165fcf6db067b10a4baf671cd3eef"></span><span class="sig-name descname"><span class="n"><span class="pre">DataManagerFileReadAnswerMessage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">success</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">failure_cause</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage32DataManagerFileReadAnswerMessageENSt10shared_ptrI12FileLocationEEdbNSt10shared_ptrI12FailureCauseEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -438,25 +452,25 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32DataManagerFileReadAnswerMessage13failure_causeE">
-<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage13failure_causeE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage13failure_causeE"></span><span id="wrench::DataManagerFileReadAnswerMessage::failure_cause__std::shared_ptr:FailureCause:"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1ab6ca3de0fa5614edd1ebb4f9358ff9a5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failure_cause</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage13failure_causeE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage13failure_causeE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage13failure_causeE"></span><span id="wrench::DataManagerFileReadAnswerMessage::failure_cause__std::shared_ptr:FailureCause:"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1ab6ca3de0fa5614edd1ebb4f9358ff9a5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">failure_cause</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage13failure_causeE" title="Link to this definition"></a><br /></dt>
 <dd><p>The failure cause, if any. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32DataManagerFileReadAnswerMessage8locationE">
-<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage8locationE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage8locationE"></span><span id="wrench::DataManagerFileReadAnswerMessage::location__std::shared_ptr:FileLocation:"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a9853e74b6db7f970b6afc06732f1c4d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">location</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage8locationE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage8locationE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage8locationE"></span><span id="wrench::DataManagerFileReadAnswerMessage::location__std::shared_ptr:FileLocation:"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a9853e74b6db7f970b6afc06732f1c4d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">location</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage8locationE" title="Link to this definition"></a><br /></dt>
 <dd><p>The read location. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32DataManagerFileReadAnswerMessage9num_bytesE">
-<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage9num_bytesE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage9num_bytesE"></span><span id="wrench::DataManagerFileReadAnswerMessage::num_bytes__double"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a2d6a3e6672bba0a6bee06c73394efc1a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_bytes</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage9num_bytesE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage9num_bytesE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage9num_bytesE"></span><span id="wrench::DataManagerFileReadAnswerMessage::num_bytes__double"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a2d6a3e6672bba0a6bee06c73394efc1a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_bytes</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage9num_bytesE" title="Link to this definition"></a><br /></dt>
 <dd><p>The number of bytes to read. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench32DataManagerFileReadAnswerMessage7successE">
-<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage7successE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage7successE"></span><span id="wrench::DataManagerFileReadAnswerMessage::success__b"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a85d6f3832245b5eb2b02d890bc40e94c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">success</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage7successE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench32DataManagerFileReadAnswerMessage7successE"></span><span id="_CPPv2N6wrench32DataManagerFileReadAnswerMessage7successE"></span><span id="wrench::DataManagerFileReadAnswerMessage::success__b"></span><span class="target" id="classwrench_1_1_data_manager_file_read_answer_message_1a85d6f3832245b5eb2b02d890bc40e94c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">success</span></span></span><a class="headerlink" href="#_CPPv4N6wrench32DataManagerFileReadAnswerMessage7successE" title="Link to this definition"></a><br /></dt>
 <dd><p>Whether the operation succeeded. </p>
 </dd></dl>
 

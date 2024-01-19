@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CloudComputeServiceDestroyVMRequestMessage &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -100,7 +102,15 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_create_v_m_answer_message.html">wrench::CloudComputeServiceCreateVMAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_create_v_m_request_message.html">wrench::CloudComputeServiceCreateVMRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_destroy_v_m_answer_message.html">wrench::CloudComputeServiceDestroyVMAnswerMessage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CloudComputeServiceDestroyVMRequestMessage</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CloudComputeServiceDestroyVMRequestMessage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessageE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceDestroyVMRequestMessage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEP12S4U_CommPortRKNSt6stringEd"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceDestroyVMRequestMessage::CloudComputeServiceDestroyVMRequestMessage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage15answer_commportE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceDestroyVMRequestMessage::answer_commport</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceDestroyVMRequestMessage::vm_name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_get_execution_hosts_answer_message.html">wrench::CloudComputeServiceGetExecutionHostsAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_get_execution_hosts_request_message.html">wrench::CloudComputeServiceGetExecutionHostsRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_message.html">wrench::CloudComputeServiceMessage</a></li>
@@ -241,15 +251,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +276,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,21 +422,21 @@
            <div itemprop="articleBody">
              
   <section id="wrench-cloudcomputeservicedestroyvmrequestmessage">
-<span id="cloudcomputeservicedestroyvmrequestmessage"></span><h1>wrench::CloudComputeServiceDestroyVMRequestMessage<a class="headerlink" href="#wrench-cloudcomputeservicedestroyvmrequestmessage" title="Permalink to this heading"></a></h1>
+<span id="cloudcomputeservicedestroyvmrequestmessage"></span><h1>wrench::CloudComputeServiceDestroyVMRequestMessage<a class="headerlink" href="#wrench-cloudcomputeservicedestroyvmrequestmessage" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessageE">
-<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessageE"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessageE"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeServiceDestroyVMRequestMessage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_cloud_compute_service_message.html#_CPPv4N6wrench26CloudComputeServiceMessageE" title="wrench::CloudComputeServiceMessage"><span class="n"><span class="pre">CloudComputeServiceMessage</span></span></a><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessageE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessageE"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessageE"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeServiceDestroyVMRequestMessage</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_cloud_compute_service_message.html#_CPPv4N6wrench26CloudComputeServiceMessageE" title="wrench::CloudComputeServiceMessage"><span class="n"><span class="pre">CloudComputeServiceMessage</span></span></a><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessageE" title="Link to this definition"></a><br /></dt>
 <dd><p>A message sent to a <a class="reference internal" href="../api_user/classwrench_1_1_cloud_compute_service.html#classwrench_1_1_cloud_compute_service"><span class="std std-ref">CloudComputeService</span></a> to request a VM destruction. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEPN7simgrid3s4u7MailboxERKNSt6stringEd">
-<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEPN7simgrid3s4u7MailboxERKNSt6stringEd"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEPN7simgrid3s4u7MailboxERKNSt6stringEd"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage::CloudComputeServiceDestroyVMRequestMessage__simgrid::s4u::MailboxP.ssCR.double"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message_1af1af9d5e51391c0c849ea76540f68d3f"></span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeServiceDestroyVMRequestMessage</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_mailbox</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEPN7simgrid3s4u7MailboxERKNSt6stringEd" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEP12S4U_CommPortRKNSt6stringEd">
+<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEP12S4U_CommPortRKNSt6stringEd"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEP12S4U_CommPortRKNSt6stringEd"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage::CloudComputeServiceDestroyVMRequestMessage__S4U_CommPortP.ssCR.double"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message_1aa64c69b812c5692331161197bf9f66d8"></span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeServiceDestroyVMRequestMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vm_name</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage42CloudComputeServiceDestroyVMRequestMessageEP12S4U_CommPortRKNSt6stringEd" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>answer_mailbox</strong> – the mailbox to which to send the answer </p></li>
+<li><p><strong>answer_commport</strong> – the commport to which to send the answer </p></li>
 <li><p><strong>vm_name</strong> – the name of the VM host </p></li>
 <li><p><strong>payload</strong> – the message size in bytes</p></li>
 </ul>
@@ -439,14 +451,14 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage14answer_mailboxE">
-<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessage14answer_mailboxE"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessage14answer_mailboxE"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage::answer_mailbox__simgrid::s4u::MailboxP"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message_1a9b8ba81dae0ff595be7847c56d3fb996"></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">answer_mailbox</span></span></span><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage14answer_mailboxE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>The mailbox to which the answer message should be sent. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage15answer_commportE">
+<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessage15answer_commportE"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessage15answer_commportE"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage::answer_commport__S4U_CommPortP"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message_1a497c2ddefd29428fe06ea9b75f64ea9f"></span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">answer_commport</span></span></span><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage15answer_commportE" title="Link to this definition"></a><br /></dt>
+<dd><p>The commport_name to which the answer message should be sent. </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE">
-<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage::vm_name__ss"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message_1a7bf075917aef27e6dc7a2b47db5976d1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vm_name</span></span></span><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE"></span><span id="_CPPv2N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE"></span><span id="wrench::CloudComputeServiceDestroyVMRequestMessage::vm_name__ss"></span><span class="target" id="classwrench_1_1_cloud_compute_service_destroy_v_m_request_message_1a7bf075917aef27e6dc7a2b47db5976d1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vm_name</span></span></span><a class="headerlink" href="#_CPPv4N6wrench42CloudComputeServiceDestroyVMRequestMessage7vm_nameE" title="Link to this definition"></a><br /></dt>
 <dd><p>The name of the VM host. </p>
 </dd></dl>
 

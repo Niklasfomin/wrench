@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::ExecutionController &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -162,7 +164,34 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_movement_manager_file_writer_thread_message.html">wrench::DataMovementManagerFileWriterThreadMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_data_movement_manager_message.html">wrench::DataMovementManagerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_energy_meter_service.html">wrench::EnergyMeterService</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ExecutionController</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ExecutionController</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionControllerE"><code class="docutils literal notranslate"><span class="pre">ExecutionController</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController19ExecutionControllerERKNSt6stringERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::ExecutionController()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController20createBandwidthMeterERKNSt3mapINSt6stringEdEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::createBandwidthMeter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController20createBandwidthMeterERKNSt6vectorINSt6stringEEEd"><code class="docutils literal notranslate"><span class="pre">ExecutionController::createBandwidthMeter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController25createDataMovementManagerEv"><code class="docutils literal notranslate"><span class="pre">ExecutionController::createDataMovementManager()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController17createEnergyMeterERKNSt3mapINSt6stringEdEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::createEnergyMeter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController17createEnergyMeterERKNSt6vectorINSt6stringEEEd"><code class="docutils literal notranslate"><span class="pre">ExecutionController::createEnergyMeter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController16createJobManagerEv"><code class="docutils literal notranslate"><span class="pre">ExecutionController::createJobManager()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController33processEventCompoundJobCompletionENSt10shared_ptrI25CompoundJobCompletedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventCompoundJobCompletion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController30processEventCompoundJobFailureENSt10shared_ptrI22CompoundJobFailedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventCompoundJobFailure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController30processEventFileCopyCompletionENSt10shared_ptrI22FileCopyCompletedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventFileCopyCompletion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController27processEventFileCopyFailureENSt10shared_ptrI19FileCopyFailedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventFileCopyFailure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController30processEventPilotJobExpirationENSt10shared_ptrI20PilotJobExpiredEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventPilotJobExpiration()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController25processEventPilotJobStartENSt10shared_ptrI20PilotJobStartedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventPilotJobStart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController33processEventStandardJobCompletionENSt10shared_ptrI25StandardJobCompletedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventStandardJobCompletion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController30processEventStandardJobFailureENSt10shared_ptrI22StandardJobFailedEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventStandardJobFailure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController17processEventTimerENSt10shared_ptrI10TimerEventEE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::processEventTimer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController13setDaemonizedEb"><code class="docutils literal notranslate"><span class="pre">ExecutionController::setDaemonized()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController8setTimerEdNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ExecutionController::setTimer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController26waitForAndProcessNextEventEv"><code class="docutils literal notranslate"><span class="pre">ExecutionController::waitForAndProcessNextEvent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController26waitForAndProcessNextEventEd"><code class="docutils literal notranslate"><span class="pre">ExecutionController::waitForAndProcessNextEvent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController16waitForNextEventEv"><code class="docutils literal notranslate"><span class="pre">ExecutionController::waitForNextEvent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19ExecutionController16waitForNextEventEd"><code class="docutils literal notranslate"><span class="pre">ExecutionController::waitForNextEvent()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_controller_alarm_timer_message.html">wrench::ExecutionControllerAlarmTimerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_controller_message.html">wrench::ExecutionControllerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_execution_event.html">wrench::ExecutionEvent</a></li>
@@ -241,15 +270,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +295,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,7 +441,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-executioncontroller">
-<span id="executioncontroller"></span><h1>wrench::ExecutionController<a class="headerlink" href="#wrench-executioncontroller" title="Permalink to this heading"></a></h1>
+<span id="executioncontroller"></span><h1>wrench::ExecutionController<a class="headerlink" href="#wrench-executioncontroller" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19ExecutionControllerE">
 <span id="_CPPv3N6wrench19ExecutionControllerE"></span><span id="_CPPv2N6wrench19ExecutionControllerE"></span><span id="wrench::ExecutionController"></span><span class="target" id="classwrench_1_1_execution_controller"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExecutionController</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><br /></dt>

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::JobManager &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -224,7 +226,33 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_invalid_directory_path.html">wrench::InvalidDirectoryPath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job.html">wrench::Job</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_killed.html">wrench::JobKilled</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::JobManager</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::JobManager</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench10JobManagerE"><code class="docutils literal notranslate"><span class="pre">JobManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManagerD0Ev"><code class="docutils literal notranslate"><span class="pre">JobManager::~JobManager()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createCompoundJobENSt6stringE"><code class="docutils literal notranslate"><span class="pre">JobManager::createCompoundJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager14createPilotJobEv"><code class="docutils literal notranslate"><span class="pre">JobManager::createPilotJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt10shared_ptrI12WorkflowTaskEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt10shared_ptrI12WorkflowTaskEERKNSt3mapINSt10shared_ptrI8DataFileEENSt10shared_ptrI12FileLocationEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt10shared_ptrI12WorkflowTaskEENSt3mapINSt10shared_ptrI8DataFileEENSt6vectorINSt10shared_ptrI12FileLocationEEEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt6vectorINSt10shared_ptrI12WorkflowTaskEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt6vectorINSt10shared_ptrI12WorkflowTaskEEEERKNSt3mapINSt10shared_ptrI8DataFileEENSt10shared_ptrI12FileLocationEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt6vectorINSt10shared_ptrI12WorkflowTaskEEEERKNSt3mapINSt10shared_ptrI8DataFileEENSt10shared_ptrI12FileLocationEEEENSt6vectorINSt5tupleINSt10shared_ptrI12FileLocationEENSt10shared_ptrI12FileLocationEEEEEENSt6vectorINSt5tupleINSt10shared_ptrI12FileLocationEENSt10shared_ptrI12FileLocationEEEEEENSt6vectorINSt10shared_ptrI12FileLocationEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt6vectorINSt10shared_ptrI12WorkflowTaskEEEENSt3mapINSt10shared_ptrI8DataFileEENSt6vectorINSt10shared_ptrI12FileLocationEEEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager17createStandardJobERKNSt6vectorINSt10shared_ptrI12WorkflowTaskEEEENSt3mapINSt10shared_ptrI8DataFileEENSt6vectorINSt10shared_ptrI12FileLocationEEEEEENSt6vectorINSt5tupleINSt10shared_ptrI12FileLocationEENSt10shared_ptrI12FileLocationEEEEEENSt6vectorINSt5tupleINSt10shared_ptrI12FileLocationEENSt10shared_ptrI12FileLocationEEEEEENSt6vectorINSt10shared_ptrI12FileLocationEEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::createStandardJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager18getCreatorCommPortEv"><code class="docutils literal notranslate"><span class="pre">JobManager::getCreatorCommPort()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench10JobManager22getNumRunningPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">JobManager::getNumRunningPilotJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager4killEv"><code class="docutils literal notranslate"><span class="pre">JobManager::kill()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager4stopEv"><code class="docutils literal notranslate"><span class="pre">JobManager::stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager9submitJobERKNSt10shared_ptrI11CompoundJobEERKNSt10shared_ptrI14ComputeServiceEENSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::submitJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager9submitJobERKNSt10shared_ptrI8PilotJobEERKNSt10shared_ptrI14ComputeServiceEENSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::submitJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager9submitJobERKNSt10shared_ptrI11StandardJobEERKNSt10shared_ptrI14ComputeServiceEENSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">JobManager::submitJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager12terminateJobERKNSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">JobManager::terminateJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager12terminateJobERKNSt10shared_ptrI8PilotJobEE"><code class="docutils literal notranslate"><span class="pre">JobManager::terminateJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench10JobManager12terminateJobERKNSt10shared_ptrI11StandardJobEE"><code class="docutils literal notranslate"><span class="pre">JobManager::terminateJob()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_compound_job_completed_message.html">wrench::JobManagerCompoundJobCompletedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_compound_job_failed_message.html">wrench::JobManagerCompoundJobFailedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_message.html">wrench::JobManagerMessage</a></li>
@@ -241,15 +269,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +294,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,7 +440,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-jobmanager">
-<span id="jobmanager"></span><h1>wrench::JobManager<a class="headerlink" href="#wrench-jobmanager" title="Permalink to this heading"></a></h1>
+<span id="jobmanager"></span><h1>wrench::JobManager<a class="headerlink" href="#wrench-jobmanager" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench10JobManagerE">
 <span id="_CPPv3N6wrench10JobManagerE"></span><span id="_CPPv2N6wrench10JobManagerE"></span><span id="wrench::JobManager"></span><span class="target" id="classwrench_1_1_job_manager"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">JobManager</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_service.html#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><br /></dt>
@@ -419,7 +449,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench10JobManagerD0Ev">
-<span id="_CPPv3N6wrench10JobManagerD0Ev"></span><span id="_CPPv2N6wrench10JobManagerD0Ev"></span><span id="wrench::JobManager::~JobManager"></span><span class="target" id="classwrench_1_1_job_manager_1a59921ec2a0e4fff2054dc4c03434e938"></span><span class="sig-name descname"><span class="n"><span class="pre">~JobManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench10JobManagerD0Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench10JobManagerD0Ev"></span><span id="_CPPv2N6wrench10JobManagerD0Ev"></span><span id="wrench::JobManager::~JobManager"></span><span class="target" id="classwrench_1_1_job_manager_1a59921ec2a0e4fff2054dc4c03434e938"></span><span class="sig-name descname"><span class="n"><span class="pre">~JobManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench10JobManagerD0Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>Destructor, which kills the daemon (and clears all the jobs) </p>
 </dd></dl>
 
@@ -612,12 +642,12 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench10JobManager17getCreatorMailboxEv">
-<span id="_CPPv3N6wrench10JobManager17getCreatorMailboxEv"></span><span id="_CPPv2N6wrench10JobManager17getCreatorMailboxEv"></span><span id="wrench::JobManager::getCreatorMailbox"></span><span class="target" id="classwrench_1_1_job_manager_1af6cda54e4d0bda3df5bb6a2c2eac64da"></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">s4u</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Mailbox</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getCreatorMailbox</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Return the mailbox of the job manager’s creator. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench10JobManager18getCreatorCommPortEv">
+<span id="_CPPv3N6wrench10JobManager18getCreatorCommPortEv"></span><span id="_CPPv2N6wrench10JobManager18getCreatorCommPortEv"></span><span id="wrench::JobManager::getCreatorCommPort"></span><span class="target" id="classwrench_1_1_job_manager_1abbe7db17b4762271cb56891b98d3fecc"></span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">getCreatorCommPort</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return the commport of the job manager’s creator. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>a mailbox </p>
+<dd class="field-odd"><p>a CommPort </p>
 </dd>
 </dl>
 </dd></dl>

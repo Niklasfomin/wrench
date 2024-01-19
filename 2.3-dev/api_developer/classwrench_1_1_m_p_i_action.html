@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::MPIAction &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="wrench::MPIAction::MPIProcess" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html" />
+    <link rel="next" title="wrench::MPIAction::MPIPrivateExecutionController" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html" />
     <link rel="prev" title="wrench::MPI_Bcast_partipant" href="classwrench_1_1_m_p_i___bcast__partipant.html" /> 
 </head>
 
@@ -133,7 +135,15 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::MPIAction</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::MPIAction</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench9MPIActionE"><code class="docutils literal notranslate"><span class="pre">MPIAction</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench9MPIAction21getNumCoresPerProcessEv"><code class="docutils literal notranslate"><span class="pre">MPIAction::getNumCoresPerProcess()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench9MPIAction15getNumProcessesEv"><code class="docutils literal notranslate"><span class="pre">MPIAction::getNumProcesses()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
@@ -242,16 +252,16 @@
            <div itemprop="articleBody">
              
   <section id="wrench-mpiaction">
-<span id="mpiaction"></span><h1>wrench::MPIAction<a class="headerlink" href="#wrench-mpiaction" title="Permalink to this heading"></a></h1>
+<span id="mpiaction"></span><h1>wrench::MPIAction<a class="headerlink" href="#wrench-mpiaction" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench9MPIActionE">
-<span id="_CPPv3N6wrench9MPIActionE"></span><span id="_CPPv2N6wrench9MPIActionE"></span><span id="wrench::MPIAction"></span><span class="target" id="classwrench_1_1_m_p_i_action"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPIAction</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><a class="headerlink" href="#_CPPv4N6wrench9MPIActionE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench9MPIActionE"></span><span id="_CPPv2N6wrench9MPIActionE"></span><span id="wrench::MPIAction"></span><span class="target" id="classwrench_1_1_m_p_i_action"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPIAction</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_action.html#_CPPv4N6wrench6ActionE" title="wrench::Action"><span class="n"><span class="pre">Action</span></span></a><a class="headerlink" href="#_CPPv4N6wrench9MPIActionE" title="Link to this definition"></a><br /></dt>
 <dd><p>A class that implements a custom action. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK6wrench9MPIAction21getNumCoresPerProcessEv">
-<span id="_CPPv3NK6wrench9MPIAction21getNumCoresPerProcessEv"></span><span id="_CPPv2NK6wrench9MPIAction21getNumCoresPerProcessEv"></span><span id="wrench::MPIAction::getNumCoresPerProcessC"></span><span class="target" id="classwrench_1_1_m_p_i_action_1a2de3d4e5a1c0d0151c9a8acfe2bd3472"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumCoresPerProcess</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench9MPIAction21getNumCoresPerProcessEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK6wrench9MPIAction21getNumCoresPerProcessEv"></span><span id="_CPPv2NK6wrench9MPIAction21getNumCoresPerProcessEv"></span><span id="wrench::MPIAction::getNumCoresPerProcessC"></span><span class="target" id="classwrench_1_1_m_p_i_action_1a2de3d4e5a1c0d0151c9a8acfe2bd3472"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumCoresPerProcess</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench9MPIAction21getNumCoresPerProcessEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Returns the number of cores required by each (MPI) process. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -262,7 +272,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK6wrench9MPIAction15getNumProcessesEv">
-<span id="_CPPv3NK6wrench9MPIAction15getNumProcessesEv"></span><span id="_CPPv2NK6wrench9MPIAction15getNumProcessesEv"></span><span id="wrench::MPIAction::getNumProcessesC"></span><span class="target" id="classwrench_1_1_m_p_i_action_1afa1e85d6c2857bf16ee85be0a6cb3dd4"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumProcesses</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench9MPIAction15getNumProcessesEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK6wrench9MPIAction15getNumProcessesEv"></span><span id="_CPPv2NK6wrench9MPIAction15getNumProcessesEv"></span><span id="wrench::MPIAction::getNumProcessesC"></span><span class="target" id="classwrench_1_1_m_p_i_action_1afa1e85d6c2857bf16ee85be0a6cb3dd4"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNumProcesses</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench9MPIAction15getNumProcessesEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Returns the number of (MPI) processes to be executed. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -281,7 +291,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="classwrench_1_1_m_p_i___bcast__partipant.html" class="btn btn-neutral float-left" title="wrench::MPI_Bcast_partipant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html" class="btn btn-neutral float-right" title="wrench::MPIAction::MPIProcess" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html" class="btn btn-neutral float-right" title="wrench::MPIAction::MPIPrivateExecutionController" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

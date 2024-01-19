@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CompoundStorageServiceProperty &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -82,7 +84,14 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_job_failed_event.html">wrench::CompoundJobFailedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service.html">wrench::CompoundStorageService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compound_storage_service_message_payload.html">wrench::CompoundStorageServiceMessagePayload</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CompoundStorageServiceProperty</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CompoundStorageServiceProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench30CompoundStorageServicePropertyE"><code class="docutils literal notranslate"><span class="pre">CompoundStorageServiceProperty</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE"><code class="docutils literal notranslate"><span class="pre">CompoundStorageServiceProperty::INTERNAL_STRIPING</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE"><code class="docutils literal notranslate"><span class="pre">CompoundStorageServiceProperty::MAX_ALLOCATION_CHUNK_SIZE</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_computation_has_died.html">wrench::ComputationHasDied</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_action.html">wrench::ComputeAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service.html">wrench::ComputeService</a></li>
@@ -134,6 +143,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
@@ -242,22 +252,22 @@
            <div itemprop="articleBody">
              
   <section id="wrench-compoundstorageserviceproperty">
-<span id="compoundstorageserviceproperty"></span><h1>wrench::CompoundStorageServiceProperty<a class="headerlink" href="#wrench-compoundstorageserviceproperty" title="Permalink to this heading"></a></h1>
+<span id="compoundstorageserviceproperty"></span><h1>wrench::CompoundStorageServiceProperty<a class="headerlink" href="#wrench-compoundstorageserviceproperty" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench30CompoundStorageServicePropertyE">
-<span id="_CPPv3N6wrench30CompoundStorageServicePropertyE"></span><span id="_CPPv2N6wrench30CompoundStorageServicePropertyE"></span><span id="wrench::CompoundStorageServiceProperty"></span><span class="target" id="classwrench_1_1_compound_storage_service_property"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CompoundStorageServiceProperty</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_storage_service_property.html#_CPPv4N6wrench22StorageServicePropertyE" title="wrench::StorageServiceProperty"><span class="n"><span class="pre">StorageServiceProperty</span></span></a><a class="headerlink" href="#_CPPv4N6wrench30CompoundStorageServicePropertyE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench30CompoundStorageServicePropertyE"></span><span id="_CPPv2N6wrench30CompoundStorageServicePropertyE"></span><span id="wrench::CompoundStorageServiceProperty"></span><span class="target" id="classwrench_1_1_compound_storage_service_property"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CompoundStorageServiceProperty</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_storage_service_property.html#_CPPv4N6wrench22StorageServicePropertyE" title="wrench::StorageServiceProperty"><span class="n"><span class="pre">StorageServiceProperty</span></span></a><a class="headerlink" href="#_CPPv4N6wrench30CompoundStorageServicePropertyE" title="Link to this definition"></a><br /></dt>
 <dd><p>Configurable properties for a <a class="reference internal" href="../api_user/classwrench_1_1_compound_storage_service.html#classwrench_1_1_compound_storage_service"><span class="std std-ref">CompoundStorageService</span></a>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE">
-<span id="_CPPv3N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE"></span><span id="_CPPv2N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE"></span><span id="wrench::CompoundStorageServiceProperty::INTERNAL_STRIPING__ssC"></span><span class="target" id="classwrench_1_1_compound_storage_service_property_1a7151c6fa0284d899ffaab3a759d82374"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERNAL_STRIPING</span></span></span><a class="headerlink" href="#_CPPv4N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE"></span><span id="_CPPv2N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE"></span><span id="wrench::CompoundStorageServiceProperty::INTERNAL_STRIPING__ssC"></span><span class="target" id="classwrench_1_1_compound_storage_service_property_1a7151c6fa0284d899ffaab3a759d82374"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">INTERNAL_STRIPING</span></span></span><a class="headerlink" href="#_CPPv4N6wrench30CompoundStorageServiceProperty17INTERNAL_STRIPINGE" title="Link to this definition"></a><br /></dt>
 <dd><p>Property that defines whether the striping of a file should occur inside the CSS (when allocating a new file) or inside the external allocation function (pass it an entire file and it may or may not stripe it) </p>
 </dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE">
-<span id="_CPPv3N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE"></span><span id="_CPPv2N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE"></span><span id="wrench::CompoundStorageServiceProperty::MAX_ALLOCATION_CHUNK_SIZE__ssC"></span><span class="target" id="classwrench_1_1_compound_storage_service_property_1a45721c38caae626425c9197d45a436a3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_ALLOCATION_CHUNK_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE"></span><span id="_CPPv2N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE"></span><span id="wrench::CompoundStorageServiceProperty::MAX_ALLOCATION_CHUNK_SIZE__ssC"></span><span class="target" id="classwrench_1_1_compound_storage_service_property_1a45721c38caae626425c9197d45a436a3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_ALLOCATION_CHUNK_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N6wrench30CompoundStorageServiceProperty25MAX_ALLOCATION_CHUNK_SIZEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Property that defines how the underlying storage is selected: So far the only option is to have an external process that update actions in job (property value: “external”), with the <a class="reference internal" href="../api_user/classwrench_1_1_compound_storage_service.html#classwrench_1_1_compound_storage_service"><span class="std std-ref">CompoundStorageService</span></a> being passive. A future option would be to have the CSS take the decision upon receiving an IO request. </p>
 </dd></dl>
 

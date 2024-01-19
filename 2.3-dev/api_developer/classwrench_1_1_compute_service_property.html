@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::ComputeServiceProperty &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -87,7 +89,13 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_action.html">wrench::ComputeAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service.html">wrench::ComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_service_message_payload.html">wrench::ComputeServiceMessagePayload</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ComputeServiceProperty</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ComputeServiceProperty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench22ComputeServicePropertyE"><code class="docutils literal notranslate"><span class="pre">ComputeServiceProperty</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE"><code class="docutils literal notranslate"><span class="pre">ComputeServiceProperty::SCRATCH_SPACE_BUFFER_SIZE</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_constant_efficiency_parallel_model.html">wrench::ConstantEfficiencyParallelModel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_custom_action.html">wrench::CustomAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_custom_parallel_model.html">wrench::CustomParallelModel</a></li>
@@ -134,6 +142,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
@@ -242,17 +251,17 @@
            <div itemprop="articleBody">
              
   <section id="wrench-computeserviceproperty">
-<span id="computeserviceproperty"></span><h1>wrench::ComputeServiceProperty<a class="headerlink" href="#wrench-computeserviceproperty" title="Permalink to this heading"></a></h1>
+<span id="computeserviceproperty"></span><h1>wrench::ComputeServiceProperty<a class="headerlink" href="#wrench-computeserviceproperty" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench22ComputeServicePropertyE">
-<span id="_CPPv3N6wrench22ComputeServicePropertyE"></span><span id="_CPPv2N6wrench22ComputeServicePropertyE"></span><span id="wrench::ComputeServiceProperty"></span><span class="target" id="classwrench_1_1_compute_service_property"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeServiceProperty</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_service_property.html#_CPPv4N6wrench15ServicePropertyE" title="wrench::ServiceProperty"><span class="n"><span class="pre">ServiceProperty</span></span></a><a class="headerlink" href="#_CPPv4N6wrench22ComputeServicePropertyE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench22ComputeServicePropertyE"></span><span id="_CPPv2N6wrench22ComputeServicePropertyE"></span><span id="wrench::ComputeServiceProperty"></span><span class="target" id="classwrench_1_1_compute_service_property"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ComputeServiceProperty</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classwrench_1_1_service_property.html#_CPPv4N6wrench15ServicePropertyE" title="wrench::ServiceProperty"><span class="n"><span class="pre">ServiceProperty</span></span></a><a class="headerlink" href="#_CPPv4N6wrench22ComputeServicePropertyE" title="Link to this definition"></a><br /></dt>
 <dd><p>Configurable properties for a <a class="reference internal" href="../api_user/classwrench_1_1_compute_service.html#classwrench_1_1_compute_service"><span class="std std-ref">ComputeService</span></a>. </p>
 <p>Subclassed by <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service_property.html#classwrench_1_1_bare_metal_compute_service_property"><span class="std std-ref">wrench::BareMetalComputeServiceProperty</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service_property.html#classwrench_1_1_batch_compute_service_property"><span class="std std-ref">wrench::BatchComputeServiceProperty</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_cloud_compute_service_property.html#classwrench_1_1_cloud_compute_service_property"><span class="std std-ref">wrench::CloudComputeServiceProperty</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_h_t_condor_compute_service_property.html#classwrench_1_1_h_t_condor_compute_service_property"><span class="std std-ref">wrench::HTCondorComputeServiceProperty</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE">
-<span id="_CPPv3N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE"></span><span id="_CPPv2N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE"></span><span id="wrench::ComputeServiceProperty::SCRATCH_SPACE_BUFFER_SIZE__ssC"></span><span class="target" id="classwrench_1_1_compute_service_property_1a8dab8c766f0c47655c5e2ddf2a8c8fd3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SCRATCH_SPACE_BUFFER_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE"></span><span id="_CPPv2N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE"></span><span id="wrench::ComputeServiceProperty::SCRATCH_SPACE_BUFFER_SIZE__ssC"></span><span class="target" id="classwrench_1_1_compute_service_property_1a8dab8c766f0c47655c5e2ddf2a8c8fd3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SCRATCH_SPACE_BUFFER_SIZE</span></span></span><a class="headerlink" href="#_CPPv4N6wrench22ComputeServiceProperty25SCRATCH_SPACE_BUFFER_SIZEE" title="Link to this definition"></a><br /></dt>
 <dd><p>The buffer size of the compute service’s scratch space (see documentation of <a class="reference internal" href="../api_user/classwrench_1_1_storage_service_property.html#classwrench_1_1_storage_service_property_1a4a15fb8290bd904973c923a6e7d7ca39"><span class="std std-ref">StorageServiceProperty::BUFFER_SIZE</span></a>) default: 0. </p>
 </dd></dl>
 

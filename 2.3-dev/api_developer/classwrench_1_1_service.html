@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::Service &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -134,6 +136,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
@@ -145,7 +148,30 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job.html">wrench::PilotJob</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_expired_event.html">wrench::PilotJobExpiredEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::Service</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::Service</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench7ServiceE"><code class="docutils literal notranslate"><span class="pre">Service</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service17assertServiceIsUpEv"><code class="docutils literal notranslate"><span class="pre">Service::assertServiceIsUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service11getHostnameEv"><code class="docutils literal notranslate"><span class="pre">Service::getHostname()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service22getNetworkTimeoutValueEv"><code class="docutils literal notranslate"><span class="pre">Service::getNetworkTimeoutValue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service19getPhysicalHostnameEv"><code class="docutils literal notranslate"><span class="pre">Service::getPhysicalHostname()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench7Service15getPropertyListEv"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyList()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsBandwidthInBytePerSecond()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsBoolean()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsDouble()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsSizeInByte()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsString()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsTimeInSecond()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsUnsignedLong()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service4isUpEv"><code class="docutils literal notranslate"><span class="pre">Service::isUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service6resumeEv"><code class="docutils literal notranslate"><span class="pre">Service::resume()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service22setNetworkTimeoutValueEd"><code class="docutils literal notranslate"><span class="pre">Service::setNetworkTimeoutValue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb"><code class="docutils literal notranslate"><span class="pre">Service::start()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service4stopEv"><code class="docutils literal notranslate"><span class="pre">Service::stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service7suspendEv"><code class="docutils literal notranslate"><span class="pre">Service::suspend()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_is_down.html">wrench::ServiceIsDown</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_is_suspended.html">wrench::ServiceIsSuspended</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_service_message_payload.html">wrench::ServiceMessagePayload</a></li>
@@ -242,17 +268,17 @@
            <div itemprop="articleBody">
              
   <section id="wrench-service">
-<span id="service"></span><h1>wrench::Service<a class="headerlink" href="#wrench-service" title="Permalink to this heading"></a></h1>
+<span id="service"></span><h1>wrench::Service<a class="headerlink" href="#wrench-service" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7ServiceE">
-<span id="_CPPv3N6wrench7ServiceE"></span><span id="_CPPv2N6wrench7ServiceE"></span><span id="wrench::Service"></span><span class="target" id="classwrench_1_1_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Service</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../api_internal/classwrench_1_1_s4_u___daemon.html#_CPPv4N6wrench10S4U_DaemonE" title="wrench::S4U_Daemon"><span class="n"><span class="pre">S4U_Daemon</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_shared_from_this</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N6wrench7ServiceE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7ServiceE"></span><span id="_CPPv2N6wrench7ServiceE"></span><span id="wrench::Service"></span><span class="target" id="classwrench_1_1_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Service</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="../api_internal/classwrench_1_1_s4_u___daemon.html#_CPPv4N6wrench10S4U_DaemonE" title="wrench::S4U_Daemon"><span class="n"><span class="pre">S4U_Daemon</span></span></a><a class="headerlink" href="#_CPPv4N6wrench7ServiceE" title="Link to this definition"></a><br /></dt>
 <dd><p>A service that can be added to the simulation and that can be used by a WMS when executing a workflow. </p>
 <p>Subclassed by <a class="reference internal" href="../api_user/classwrench_1_1_bandwidth_meter_service.html#classwrench_1_1_bandwidth_meter_service"><span class="std std-ref">wrench::BandwidthMeterService</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_compute_service.html#classwrench_1_1_compute_service"><span class="std std-ref">wrench::ComputeService</span></a>, <a class="reference internal" href="../api_internal/classwrench_1_1_data_movement_manager.html#classwrench_1_1_data_movement_manager"><span class="std std-ref">wrench::DataMovementManager</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_energy_meter_service.html#classwrench_1_1_energy_meter_service"><span class="std std-ref">wrench::EnergyMeterService</span></a>, <a class="reference internal" href="../api_internal/classwrench_1_1_execution_controller.html#classwrench_1_1_execution_controller"><span class="std std-ref">wrench::ExecutionController</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_file_registry_service.html#classwrench_1_1_file_registry_service"><span class="std std-ref">wrench::FileRegistryService</span></a>, <a class="reference internal" href="../api_internal/classwrench_1_1_job_manager.html#classwrench_1_1_job_manager"><span class="std std-ref">wrench::JobManager</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_network_proximity_service.html#classwrench_1_1_network_proximity_service"><span class="std std-ref">wrench::NetworkProximityService</span></a>, <a class="reference internal" href="../api_user/classwrench_1_1_storage_service.html#classwrench_1_1_storage_service"><span class="std std-ref">wrench::StorageService</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service17assertServiceIsUpEv">
-<span id="_CPPv3N6wrench7Service17assertServiceIsUpEv"></span><span id="_CPPv2N6wrench7Service17assertServiceIsUpEv"></span><span id="wrench::Service::assertServiceIsUp"></span><span class="target" id="classwrench_1_1_service_1a7d7280ca209668863c3f82bd40a94439"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertServiceIsUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service17assertServiceIsUpEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service17assertServiceIsUpEv"></span><span id="_CPPv2N6wrench7Service17assertServiceIsUpEv"></span><span id="wrench::Service::assertServiceIsUp"></span><span class="target" id="classwrench_1_1_service_1a7d7280ca209668863c3f82bd40a94439"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">assertServiceIsUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service17assertServiceIsUpEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Throws an exception if the service is not up. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Throws<span class="colon">:</span></dt>
@@ -263,7 +289,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service11getHostnameEv">
-<span id="_CPPv3N6wrench7Service11getHostnameEv"></span><span id="_CPPv2N6wrench7Service11getHostnameEv"></span><span id="wrench::Service::getHostname"></span><span class="target" id="classwrench_1_1_service_1a0b129fca804f421faba9445832a9cb48"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHostname</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service11getHostnameEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service11getHostnameEv"></span><span id="_CPPv2N6wrench7Service11getHostnameEv"></span><span id="wrench::Service::getHostname"></span><span class="target" id="classwrench_1_1_service_1a0b129fca804f421faba9445832a9cb48"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getHostname</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service11getHostnameEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the name of the host on which the service is / will be running. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -274,7 +300,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service22getNetworkTimeoutValueEv">
-<span id="_CPPv3N6wrench7Service22getNetworkTimeoutValueEv"></span><span id="_CPPv2N6wrench7Service22getNetworkTimeoutValueEv"></span><span id="wrench::Service::getNetworkTimeoutValue"></span><span class="target" id="classwrench_1_1_service_1a113a90bcf686c79df677bb6dab61fc4e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNetworkTimeoutValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service22getNetworkTimeoutValueEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service22getNetworkTimeoutValueEv"></span><span id="_CPPv2N6wrench7Service22getNetworkTimeoutValueEv"></span><span id="wrench::Service::getNetworkTimeoutValue"></span><span class="target" id="classwrench_1_1_service_1a113a90bcf686c79df677bb6dab61fc4e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNetworkTimeoutValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service22getNetworkTimeoutValueEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Returns the service’s network timeout value. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -285,7 +311,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service19getPhysicalHostnameEv">
-<span id="_CPPv3N6wrench7Service19getPhysicalHostnameEv"></span><span id="_CPPv2N6wrench7Service19getPhysicalHostnameEv"></span><span id="wrench::Service::getPhysicalHostname"></span><span class="target" id="classwrench_1_1_service_1a4f69d7d244b3662bf67866f78673799f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPhysicalHostname</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service19getPhysicalHostnameEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service19getPhysicalHostnameEv"></span><span id="_CPPv2N6wrench7Service19getPhysicalHostnameEv"></span><span id="wrench::Service::getPhysicalHostname"></span><span class="target" id="classwrench_1_1_service_1a4f69d7d244b3662bf67866f78673799f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPhysicalHostname</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service19getPhysicalHostnameEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get the physical name of the host on which the service is / will be running. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -296,7 +322,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK6wrench7Service15getPropertyListEv">
-<span id="_CPPv3NK6wrench7Service15getPropertyListEv"></span><span id="_CPPv2NK6wrench7Service15getPropertyListEv"></span><span id="wrench::Service::getPropertyListC"></span><span class="target" id="classwrench_1_1_service_1a6d86c01016f0b8010a9046701604a2a7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyList</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench7Service15getPropertyListEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK6wrench7Service15getPropertyListEv"></span><span id="_CPPv2NK6wrench7Service15getPropertyListEv"></span><span id="wrench::Service::getPropertyListC"></span><span class="target" id="classwrench_1_1_service_1a6d86c01016f0b8010a9046701604a2a7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyList</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench7Service15getPropertyListEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Get all properties attached to this service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -307,7 +333,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsBandwidthInBytePerSecond__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1a22687fa1fafca2b9431398d04255bc28"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsBandwidthInBytePerSecond</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsBandwidthInBytePerSecond__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1a22687fa1fafca2b9431398d04255bc28"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsBandwidthInBytePerSecond</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to parse a property value that is a bandwidth with (optional) units. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -321,7 +347,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsBoolean__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1a36ba97418f788522484c0909674eb7c0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsBoolean</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsBoolean__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1a36ba97418f788522484c0909674eb7c0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsBoolean</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service25getPropertyValueAsBooleanE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a property of the <a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> as a boolean. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -338,7 +364,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsDouble__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1af18638d4222d036ed84347412616b8c0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsDouble</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsDouble__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1af18638d4222d036ed84347412616b8c0"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsDouble</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service24getPropertyValueAsDoubleE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a property of the <a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> as a double. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -355,7 +381,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsSizeInByte__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1a23d69c45869d7682afcdd14506d4c3a6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsSizeInByte</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsSizeInByte__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1a23d69c45869d7682afcdd14506d4c3a6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsSizeInByte</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service28getPropertyValueAsSizeInByteE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to parse a property value that is a date size with (optional) units. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -369,7 +395,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsString__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1afa9e6582b11ada0a1c118922143a3990"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsString__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1afa9e6582b11ada0a1c118922143a3990"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsString</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service24getPropertyValueAsStringE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a property of the <a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> as a string. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -386,7 +412,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsTimeInSecond__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1abe29df374cdd83b09c68dfe14e5684db"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsTimeInSecond</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsTimeInSecond__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1abe29df374cdd83b09c68dfe14e5684db"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsTimeInSecond</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service30getPropertyValueAsTimeInSecondE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to parse a property value that is a time with (optional) units. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -400,7 +426,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE">
-<span id="_CPPv3N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsUnsignedLong__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1ac00d55c518314c0b66776ef486356e04"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsUnsignedLong</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE"></span><span id="_CPPv2N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE"></span><span id="wrench::Service::getPropertyValueAsUnsignedLong__WRENCH_PROPERTY_TYPE"></span><span class="target" id="classwrench_1_1_service_1ac00d55c518314c0b66776ef486356e04"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getPropertyValueAsUnsignedLong</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">WRENCH_PROPERTY_TYPE</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service30getPropertyValueAsUnsignedLongE20WRENCH_PROPERTY_TYPE" title="Link to this definition"></a><br /></dt>
 <dd><p>Get a property of the <a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> as an unsigned long. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -417,7 +443,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service4isUpEv">
-<span id="_CPPv3N6wrench7Service4isUpEv"></span><span id="_CPPv2N6wrench7Service4isUpEv"></span><span id="wrench::Service::isUp"></span><span class="target" id="classwrench_1_1_service_1a2549b97c1454e075ebadbb38563763e0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service4isUpEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service4isUpEv"></span><span id="_CPPv2N6wrench7Service4isUpEv"></span><span id="wrench::Service::isUp"></span><span class="target" id="classwrench_1_1_service_1a2549b97c1454e075ebadbb38563763e0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isUp</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service4isUpEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Returns true if the service is UP, false otherwise. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -428,7 +454,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service6resumeEv">
-<span id="_CPPv3N6wrench7Service6resumeEv"></span><span id="_CPPv2N6wrench7Service6resumeEv"></span><span id="wrench::Service::resume"></span><span class="target" id="classwrench_1_1_service_1ae88d4368c4b08ae2142d03cdea3694fb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service6resumeEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service6resumeEv"></span><span id="_CPPv2N6wrench7Service6resumeEv"></span><span id="wrench::Service::resume"></span><span class="target" id="classwrench_1_1_service_1ae88d4368c4b08ae2142d03cdea3694fb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service6resumeEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Resume the service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Throws<span class="colon">:</span></dt>
@@ -439,7 +465,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service22setNetworkTimeoutValueEd">
-<span id="_CPPv3N6wrench7Service22setNetworkTimeoutValueEd"></span><span id="_CPPv2N6wrench7Service22setNetworkTimeoutValueEd"></span><span id="wrench::Service::setNetworkTimeoutValue__double"></span><span class="target" id="classwrench_1_1_service_1a2bdf99201280d83b44a03c0b78ebdf90"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNetworkTimeoutValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service22setNetworkTimeoutValueEd" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service22setNetworkTimeoutValueEd"></span><span id="_CPPv2N6wrench7Service22setNetworkTimeoutValueEd"></span><span id="wrench::Service::setNetworkTimeoutValue__double"></span><span class="target" id="classwrench_1_1_service_1a2bdf99201280d83b44a03c0b78ebdf90"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setNetworkTimeoutValue</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service22setNetworkTimeoutValueEd" title="Link to this definition"></a><br /></dt>
 <dd><p>Sets the service’s network timeout value. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -450,7 +476,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb">
-<span id="_CPPv3N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb"></span><span id="_CPPv2N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb"></span><span id="wrench::Service::start__std::shared_ptr:Service:CR.b.b"></span><span class="target" id="classwrench_1_1_service_1aa9bae28814cf33eb48d2251ee5430ddd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">this_service</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">daemonize</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">auto_restart</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb"></span><span id="_CPPv2N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb"></span><span id="wrench::Service::start__std::shared_ptr:Service:CR.b.b"></span><span class="target" id="classwrench_1_1_service_1aa9bae28814cf33eb48d2251ee5430ddd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N6wrench7ServiceE" title="wrench::Service"><span class="n"><span class="pre">Service</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">this_service</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">daemonize</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">auto_restart</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service5startERKNSt10shared_ptrI7ServiceEEbb" title="Link to this definition"></a><br /></dt>
 <dd><p>Start the service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -471,7 +497,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service4stopEv">
-<span id="_CPPv3N6wrench7Service4stopEv"></span><span id="_CPPv2N6wrench7Service4stopEv"></span><span id="wrench::Service::stop"></span><span class="target" id="classwrench_1_1_service_1ac33a32f4758c6f51b27d2cfb9b46efda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service4stopEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service4stopEv"></span><span id="_CPPv2N6wrench7Service4stopEv"></span><span id="wrench::Service::stop"></span><span class="target" id="classwrench_1_1_service_1ac33a32f4758c6f51b27d2cfb9b46efda"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service4stopEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Synchronously stop the service (does nothing if the service is already stopped) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Throws<span class="colon">:</span></dt>
@@ -485,7 +511,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service7suspendEv">
-<span id="_CPPv3N6wrench7Service7suspendEv"></span><span id="_CPPv2N6wrench7Service7suspendEv"></span><span id="wrench::Service::suspend"></span><span class="target" id="classwrench_1_1_service_1a109d72a3528bae253804ef12a7ffa202"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">suspend</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service7suspendEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench7Service7suspendEv"></span><span id="_CPPv2N6wrench7Service7suspendEv"></span><span id="wrench::Service::suspend"></span><span class="target" id="classwrench_1_1_service_1a109d72a3528bae253804ef12a7ffa202"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">suspend</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench7Service7suspendEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Suspend the service. </p>
 </dd></dl>
 

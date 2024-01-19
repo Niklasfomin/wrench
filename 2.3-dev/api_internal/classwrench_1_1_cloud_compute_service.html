@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CloudComputeService &mdash; WRENCH 2.3-dev documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
+
+  
     <link rel="shortcut icon" href="../_static/favicon.png"/>
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4e4c84c2"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -96,7 +98,32 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_batsched_network_listener.html">wrench::BatschedNetworkListener</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_block.html">wrench::Block</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_central_manager_wake_up_message.html">wrench::CentralManagerWakeUpMessage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CloudComputeService</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CloudComputeService</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeServiceE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::CloudComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeServiceD0Ev"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::~CloudComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8createVMEmd31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::createVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService9destroyVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::destroyVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService19getVMComputeServiceERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::getVMComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService21getVMPhysicalHostnameERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::getVMPhysicalHostname()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8isVMDownERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::isVMDown()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService11isVMRunningERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::isVMRunning()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService13isVMSuspendedERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::isVMSuspended()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8resumeVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::resumeVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::shutdownVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringEbN14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::shutdownVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService7startVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::startVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::submitCompoundJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20supportsCompoundJobsEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::supportsCompoundJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService17supportsPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::supportsPilotJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20supportsStandardJobsEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::supportsStandardJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService9suspendVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::suspendVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::terminateCompoundJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService18validatePropertiesEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::validateProperties()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_create_v_m_answer_message.html">wrench::CloudComputeServiceCreateVMAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_create_v_m_request_message.html">wrench::CloudComputeServiceCreateVMRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_destroy_v_m_answer_message.html">wrench::CloudComputeServiceDestroyVMAnswerMessage</a></li>
@@ -241,15 +268,17 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_memory_manager.html">wrench::MemoryManager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_negotiator_completion_message.html">wrench::NegotiatorCompletionMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_error.html">wrench::NetworkError</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_compute_answer_message.html">wrench::NetworkProximityComputeAnswerMessage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_daemon.html">wrench::NetworkProximityDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_answer_message.html">wrench::NetworkProximityLookupAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_lookup_request_message.html">wrench::NetworkProximityLookupRequestMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_message.html">wrench::NetworkProximityMessage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_receiver_daemon.html">wrench::NetworkProximityReceiverDaemon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_sender_daemon.html">wrench::NetworkProximitySenderDaemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -264,10 +293,10 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pilot_job_started_event.html">wrench::PilotJobStartedEvent</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_pointer_util.html">wrench::PointerUtil</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_proxy_location.html">wrench::ProxyLocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html">wrench::S4U_CommPort</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon.html">wrench::S4U_Daemon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_1_1_life_saver.html">wrench::S4U_Daemon::LifeSaver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___daemon_actor.html">wrench::S4U_DaemonActor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___mailbox.html">wrench::S4U_Mailbox</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___pending_communication.html">wrench::S4U_PendingCommunication</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___simulation.html">wrench::S4U_Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_s4_u___virtual_machine.html">wrench::S4U_VirtualMachine</a></li>
@@ -410,7 +439,7 @@
            <div itemprop="articleBody">
              
   <section id="wrench-cloudcomputeservice">
-<span id="cloudcomputeservice"></span><h1>wrench::CloudComputeService<a class="headerlink" href="#wrench-cloudcomputeservice" title="Permalink to this heading"></a></h1>
+<span id="cloudcomputeservice"></span><h1>wrench::CloudComputeService<a class="headerlink" href="#wrench-cloudcomputeservice" title="Link to this heading"></a></h1>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeServiceE">
 <span id="_CPPv3N6wrench19CloudComputeServiceE"></span><span id="_CPPv2N6wrench19CloudComputeServiceE"></span><span id="wrench::CloudComputeService"></span><span class="target" id="classwrench_1_1_cloud_compute_service"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeService</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">wrench</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compute_service.html#_CPPv4N6wrench14ComputeServiceE" title="wrench::ComputeService"><span class="n"><span class="pre">ComputeService</span></span></a><br /></dt>
@@ -440,7 +469,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeServiceD0Ev">
-<span id="_CPPv3N6wrench19CloudComputeServiceD0Ev"></span><span id="_CPPv2N6wrench19CloudComputeServiceD0Ev"></span><span id="wrench::CloudComputeService::~CloudComputeService"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ac3f15161c14bf34c971e9df3aab01be2"></span><span class="sig-name descname"><span class="n"><span class="pre">~CloudComputeService</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeServiceD0Ev" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19CloudComputeServiceD0Ev"></span><span id="_CPPv2N6wrench19CloudComputeServiceD0Ev"></span><span id="wrench::CloudComputeService::~CloudComputeService"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1ac3f15161c14bf34c971e9df3aab01be2"></span><span class="sig-name descname"><span class="n"><span class="pre">~CloudComputeService</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeServiceD0Ev" title="Link to this definition"></a><br /></dt>
 <dd><p>Destructor. </p>
 </dd></dl>
 
@@ -654,7 +683,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE">
-<span id="_CPPv3N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="wrench::CloudComputeService::submitCompoundJob__std::shared_ptr:CompoundJob:.std::map:ss.ss:CR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a546ea5d2f7decf9223a04d6971433fdc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submitCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">service_specific_args</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="_CPPv2N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"></span><span id="wrench::CloudComputeService::submitCompoundJob__std::shared_ptr:CompoundJob:.std::map:ss.ss:CR"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a546ea5d2f7decf9223a04d6971433fdc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submitCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">service_specific_args</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to submit a compound job to the service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -718,7 +747,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE">
-<span id="_CPPv3N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="_CPPv2N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="wrench::CloudComputeService::terminateCompoundJob__std::shared_ptr:CompoundJob:"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1aacd00d64fea1c14769d3589290eb835b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">terminateCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="_CPPv2N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"></span><span id="wrench::CloudComputeService::terminateCompoundJob__std::shared_ptr:CompoundJob:"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1aacd00d64fea1c14769d3589290eb835b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">terminateCompoundJob</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_compound_job.html#_CPPv4N6wrench11CompoundJobE" title="wrench::CompoundJob"><span class="n"><span class="pre">CompoundJob</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">job</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE" title="Link to this definition"></a><br /></dt>
 <dd><p>Method to terminate a compound job. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -729,7 +758,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench19CloudComputeService18validatePropertiesEv">
-<span id="_CPPv3N6wrench19CloudComputeService18validatePropertiesEv"></span><span id="_CPPv2N6wrench19CloudComputeService18validatePropertiesEv"></span><span id="wrench::CloudComputeService::validateProperties"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a63fc712f096052e4cd7971e83bb3ca70"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validateProperties</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService18validatePropertiesEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench19CloudComputeService18validatePropertiesEv"></span><span id="_CPPv2N6wrench19CloudComputeService18validatePropertiesEv"></span><span id="wrench::CloudComputeService::validateProperties"></span><span class="target" id="classwrench_1_1_cloud_compute_service_1a63fc712f096052e4cd7971e83bb3ca70"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validateProperties</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench19CloudComputeService18validatePropertiesEv" title="Link to this definition"></a><br /></dt>
 <dd><p>Validate the service’s properties. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Throws<span class="colon">:</span></dt>
