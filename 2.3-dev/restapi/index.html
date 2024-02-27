@@ -7622,9 +7622,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         FileRegistryServiceEntry body = ; // FileRegistryServiceEntry | Entry to add.
         String simid = simid_example; // String | ID of the simulation
-        String p = p_example; // String | name of the file registry service
+        String fileRegistryServiceName = fileRegistryServiceName_example; // String | name of the file registry service
         try {
-            GenericResponse result = apiInstance.fileRegistryServiceAddEntry(body, simid, p);
+            GenericResponse result = apiInstance.fileRegistryServiceAddEntry(body, simid, fileRegistryServiceName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#fileRegistryServiceAddEntry");
@@ -7643,9 +7643,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         FileRegistryServiceEntry body = ; // FileRegistryServiceEntry | Entry to add.
         String simid = simid_example; // String | ID of the simulation
-        String p = p_example; // String | name of the file registry service
+        String fileRegistryServiceName = fileRegistryServiceName_example; // String | name of the file registry service
         try {
-            GenericResponse result = apiInstance.fileRegistryServiceAddEntry(body, simid, p);
+            GenericResponse result = apiInstance.fileRegistryServiceAddEntry(body, simid, fileRegistryServiceName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#fileRegistryServiceAddEntry");
@@ -7661,14 +7661,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-fileRegistryServiceAddEntry-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">FileRegistryServiceEntry *body = ; // Entry to add.
 String *simid = simid_example; // ID of the simulation
-String *p = p_example; // name of the file registry service
+String *fileRegistryServiceName = fileRegistryServiceName_example; // name of the file registry service
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Add an entry to a file registry service.
 [apiInstance fileRegistryServiceAddEntryWith:body
     simid:simid
-    p:p
+    fileRegistryServiceName:fileRegistryServiceName
               completionHandler: ^(GenericResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -7686,7 +7686,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var body = ; // {{FileRegistryServiceEntry}} Entry to add.
 var simid = simid_example; // {{String}} ID of the simulation
-var p = p_example; // {{String}} name of the file registry service
+var fileRegistryServiceName = fileRegistryServiceName_example; // {{String}} name of the file registry service
 
 var callback = function(error, data, response) {
   if (error) {
@@ -7695,7 +7695,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.fileRegistryServiceAddEntry(bodysimidp, callback);
+api.fileRegistryServiceAddEntry(bodysimidfileRegistryServiceName, callback);
 </code></pre>
                             </div>
 
@@ -7719,12 +7719,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var body = new FileRegistryServiceEntry(); // FileRegistryServiceEntry | Entry to add.
             var simid = simid_example;  // String | ID of the simulation
-            var p = p_example;  // String | name of the file registry service
+            var fileRegistryServiceName = fileRegistryServiceName_example;  // String | name of the file registry service
 
             try
             {
                 // Add an entry to a file registry service.
-                GenericResponse result = apiInstance.fileRegistryServiceAddEntry(body, simid, p);
+                GenericResponse result = apiInstance.fileRegistryServiceAddEntry(body, simid, fileRegistryServiceName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7744,10 +7744,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $body = ; // FileRegistryServiceEntry | Entry to add.
 $simid = simid_example; // String | ID of the simulation
-$p = p_example; // String | name of the file registry service
+$fileRegistryServiceName = fileRegistryServiceName_example; // String | name of the file registry service
 
 try {
-    $result = $api_instance->fileRegistryServiceAddEntry($body, $simid, $p);
+    $result = $api_instance->fileRegistryServiceAddEntry($body, $simid, $fileRegistryServiceName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->fileRegistryServiceAddEntry: ', $e->getMessage(), PHP_EOL;
@@ -7763,10 +7763,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $body = WWW::SwaggerClient::Object::FileRegistryServiceEntry->new(); # FileRegistryServiceEntry | Entry to add.
 my $simid = simid_example; # String | ID of the simulation
-my $p = p_example; # String | name of the file registry service
+my $fileRegistryServiceName = fileRegistryServiceName_example; # String | name of the file registry service
 
 eval { 
-    my $result = $api_instance->fileRegistryServiceAddEntry(body => $body, simid => $simid, p => $p);
+    my $result = $api_instance->fileRegistryServiceAddEntry(body => $body, simid => $simid, fileRegistryServiceName => $fileRegistryServiceName);
     print Dumper($result);
 };
 if ($@) {
@@ -7785,11 +7785,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 body =  # FileRegistryServiceEntry | Entry to add.
 simid = simid_example # String | ID of the simulation
-p = p_example # String | name of the file registry service
+fileRegistryServiceName = fileRegistryServiceName_example # String | name of the file registry service
 
 try: 
     # Add an entry to a file registry service.
-    api_response = api_instance.file_registry_service_add_entry(body, simid, p)
+    api_response = api_instance.file_registry_service_add_entry(body, simid, fileRegistryServiceName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->fileRegistryServiceAddEntry: %s\n" % e)</code></pre>
@@ -7826,11 +7826,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">p*</td>
+                                  <tr><td style="width:150px;">file_registry_service_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_fileRegistryServiceAddEntry_p">
+                                      <div id="d2e199_fileRegistryServiceAddEntry_fileRegistryServiceName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
