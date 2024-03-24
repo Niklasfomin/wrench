@@ -813,6 +813,42 @@
     }
   }
 };
+            defs["inline_response_200"] = {
+  "properties" : {
+    "hostnames" : {
+      "type" : "array",
+      "description" : "The service's compute hosts",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "flop_rates" : {
+      "type" : "array",
+      "description" : "The service's compute hosts' flop rates",
+      "items" : {
+        "type" : "number"
+      }
+    }
+  }
+};
+            defs["inline_response_200_1"] = {
+  "properties" : {
+    "hostnames" : {
+      "type" : "array",
+      "description" : "The service's compute hosts",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "flop_rates" : {
+      "type" : "array",
+      "description" : "The service's compute hosts' core counts",
+      "items" : {
+        "type" : "integer"
+      }
+    }
+  }
+};
             defs["JobResponse"] = {
   "type" : "object",
   "properties" : {
@@ -1439,7 +1475,7 @@
     }
   }
 };
-            defs["WorkflowResponseWithTaskList"] = {
+            defs["WorkflowResponseWithTaskAndFileList"] = {
   "type" : "object",
   "properties" : {
     "wrench_api_request_success" : {
@@ -1453,6 +1489,13 @@
     "tasks" : {
       "type" : "array",
       "description" : "The names of the workflow's tasks",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "files" : {
+      "type" : "array",
+      "description" : "The names of the workflow's files",
       "items" : {
         "type" : "string"
       }
@@ -1531,6 +1574,12 @@
                     <li data-group="WRENCH" data-name="getAllHostnames" class="">
                       <a href="#api-WRENCH-getAllHostnames">getAllHostnames</a>
                     </li>
+                    <li data-group="WRENCH" data-name="getCoreCounts" class="">
+                      <a href="#api-WRENCH-getCoreCounts">getCoreCounts</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="getCoreFlopRates" class="">
+                      <a href="#api-WRENCH-getCoreFlopRates">getCoreFlopRates</a>
+                    </li>
                     <li data-group="WRENCH" data-name="getExecutionHosts" class="">
                       <a href="#api-WRENCH-getExecutionHosts">getExecutionHosts</a>
                     </li>
@@ -1539,6 +1588,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="getInputFiles" class="">
                       <a href="#api-WRENCH-getInputFiles">getInputFiles</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="getReadyTasks" class="">
+                      <a href="#api-WRENCH-getReadyTasks">getReadyTasks</a>
                     </li>
                     <li data-group="WRENCH" data-name="getSimulationEvents" class="">
                       <a href="#api-WRENCH-getSimulationEvents">getSimulationEvents</a>
@@ -1620,6 +1672,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="waitForNextSimulationEvent" class="">
                       <a href="#api-WRENCH-waitForNextSimulationEvent">waitForNextSimulationEvent</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="workflowIsDone" class="">
+                      <a href="#api-WRENCH-workflowIsDone">workflowIsDone</a>
                     </li>
           </ul>
         </nav>
@@ -6891,7 +6946,7 @@ public class WRENCHApiExample {
         Simid_createWorkflowFromJSON_body body = ; // Simid_createWorkflowFromJSON_body | Input to create workflow from JSON.
         String simid = simid_example; // String | ID of the simulation
         try {
-            WorkflowResponseWithTaskList result = apiInstance.createWorkflowFromJSON(body, simid);
+            WorkflowResponseWithTaskAndFileList result = apiInstance.createWorkflowFromJSON(body, simid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#createWorkflowFromJSON");
@@ -6911,7 +6966,7 @@ public class WRENCHApiExample {
         Simid_createWorkflowFromJSON_body body = ; // Simid_createWorkflowFromJSON_body | Input to create workflow from JSON.
         String simid = simid_example; // String | ID of the simulation
         try {
-            WorkflowResponseWithTaskList result = apiInstance.createWorkflowFromJSON(body, simid);
+            WorkflowResponseWithTaskAndFileList result = apiInstance.createWorkflowFromJSON(body, simid);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#createWorkflowFromJSON");
@@ -6933,7 +6988,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 // Create a workflow from a WfCommons JSON object.
 [apiInstance createWorkflowFromJSONWith:body
     simid:simid
-              completionHandler: ^(WorkflowResponseWithTaskList output, NSError* error) {
+              completionHandler: ^(WorkflowResponseWithTaskAndFileList output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -6986,7 +7041,7 @@ namespace Example
             try
             {
                 // Create a workflow from a WfCommons JSON object.
-                WorkflowResponseWithTaskList result = apiInstance.createWorkflowFromJSON(body, simid);
+                WorkflowResponseWithTaskAndFileList result = apiInstance.createWorkflowFromJSON(body, simid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7155,7 +7210,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/WorkflowResponseWithTaskList"
+        "$ref" : "#/components/schemas/WorkflowResponseWithTaskAndFileList"
       }
     }
   }
@@ -7843,6 +7898,614 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-getAllHostnames-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-getCoreCounts">
+                      <article id="api-WRENCH-getCoreCounts-0" data-group="User" data-name="getCoreCounts" data-version="0">
+                        <div class="pull-left">
+                          <h1>getCoreCounts</h1>
+                          <p>Returns the core counts for each host managed by the compute service.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/coreCounts</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getCoreCounts-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getCoreCounts-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getCoreCounts-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreCounts-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getCoreCounts-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/coreCounts"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            inline_response_200_1 result = apiInstance.getCoreCounts(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getCoreCounts");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            inline_response_200_1 result = apiInstance.getCoreCounts(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getCoreCounts");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Returns the core counts for each host managed by the compute service.
+[apiInstance getCoreCountsWith:simid
+              completionHandler: ^(inline_response_200_1 output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getCoreCounts(simid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getCoreCountsExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Returns the core counts for each host managed by the compute service.
+                inline_response_200_1 result = apiInstance.getCoreCounts(simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getCoreCounts: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->getCoreCounts($simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getCoreCounts: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->getCoreCounts(simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getCoreCounts: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreCounts-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Returns the core counts for each host managed by the compute service.
+    api_response = api_instance.get_core_counts(simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getCoreCounts: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getCoreCounts_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getCoreCounts-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getCoreCounts-200-schema">
+                                  <div id='responses-getCoreCounts-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/inline_response_200_1"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getCoreCounts-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getCoreCounts-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getCoreCounts-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-getCoreFlopRates">
+                      <article id="api-WRENCH-getCoreFlopRates-0" data-group="User" data-name="getCoreFlopRates" data-version="0">
+                        <div class="pull-left">
+                          <h1>getCoreFlopRates</h1>
+                          <p>Returns the core flop rate for each host managed by the compute service.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/coreFlopRates</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getCoreFlopRates-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getCoreFlopRates-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getCoreFlopRates-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/coreFlopRates"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            inline_response_200 result = apiInstance.getCoreFlopRates(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getCoreFlopRates");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        try {
+            inline_response_200 result = apiInstance.getCoreFlopRates(simid);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getCoreFlopRates");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Returns the core flop rate for each host managed by the compute service.
+[apiInstance getCoreFlopRatesWith:simid
+              completionHandler: ^(inline_response_200 output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getCoreFlopRates(simid, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getCoreFlopRatesExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+
+            try
+            {
+                // Returns the core flop rate for each host managed by the compute service.
+                inline_response_200 result = apiInstance.getCoreFlopRates(simid);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getCoreFlopRates: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+
+try {
+    $result = $api_instance->getCoreFlopRates($simid);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getCoreFlopRates: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+
+eval { 
+    my $result = $api_instance->getCoreFlopRates(simid => $simid);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getCoreFlopRates: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getCoreFlopRates-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+
+try: 
+    # Returns the core flop rate for each host managed by the compute service.
+    api_response = api_instance.get_core_flop_rates(simid)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getCoreFlopRates: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getCoreFlopRates_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getCoreFlopRates-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getCoreFlopRates-200-schema">
+                                  <div id='responses-getCoreFlopRates-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/inline_response_200"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getCoreFlopRates-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getCoreFlopRates-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getCoreFlopRates-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -8822,6 +9485,346 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-getInputFiles-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Task not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-getReadyTasks">
+                      <article id="api-WRENCH-getReadyTasks-0" data-group="User" data-name="getReadyTasks" data-version="0">
+                        <div class="pull-left">
+                          <h1>getReadyTasks</h1>
+                          <p>Return the list of ready tasks in the workflow.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{workflow_name}/readyTasks</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getReadyTasks-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getReadyTasks-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getReadyTasks-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getReadyTasks-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getReadyTasks-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/{workflow_name}/readyTasks"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | 
+        try {
+            TaskList result = apiInstance.getReadyTasks(simid, workflowName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getReadyTasks");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | 
+        try {
+            TaskList result = apiInstance.getReadyTasks(simid, workflowName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getReadyTasks");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *workflowName = workflowName_example; // 
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Return the list of ready tasks in the workflow.
+[apiInstance getReadyTasksWith:simid
+    workflowName:workflowName
+              completionHandler: ^(TaskList output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var workflowName = workflowName_example; // {{String}} 
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getReadyTasks(simid, workflowName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getReadyTasksExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var workflowName = workflowName_example;  // String | 
+
+            try
+            {
+                // Return the list of ready tasks in the workflow.
+                TaskList result = apiInstance.getReadyTasks(simid, workflowName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getReadyTasks: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$workflowName = workflowName_example; // String | 
+
+try {
+    $result = $api_instance->getReadyTasks($simid, $workflowName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getReadyTasks: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $workflowName = workflowName_example; # String | 
+
+eval { 
+    my $result = $api_instance->getReadyTasks(simid => $simid, workflowName => $workflowName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getReadyTasks: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getReadyTasks-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+workflowName = workflowName_example # String | 
+
+try: 
+    # Return the list of ready tasks in the workflow.
+    api_response = api_instance.get_ready_tasks(simid, workflowName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getReadyTasks: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getReadyTasks_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">workflow_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getReadyTasks_workflowName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getReadyTasks-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getReadyTasks-200-schema">
+                                  <div id='responses-getReadyTasks-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/TaskList"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getReadyTasks-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getReadyTasks-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getReadyTasks-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -18297,6 +19300,346 @@ except ApiException as e:
                                   </div>
                                   <input id='responses-waitForNextSimulationEvent-200-schema-data' type='hidden' value=''></input>
                                 </div>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-workflowIsDone">
+                      <article id="api-WRENCH-workflowIsDone-0" data-group="User" data-name="workflowIsDone" data-version="0">
+                        <div class="pull-left">
+                          <h1>workflowIsDone</h1>
+                          <p>Return whether the workflow has finished executing or not.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{workflow_name}/isDone</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-workflowIsDone-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-workflowIsDone-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-workflowIsDone-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-workflowIsDone-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-workflowIsDone-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/{workflow_name}/isDone"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | 
+        try {
+            BooleanResponse result = apiInstance.workflowIsDone(simid, workflowName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#workflowIsDone");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | 
+        try {
+            BooleanResponse result = apiInstance.workflowIsDone(simid, workflowName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#workflowIsDone");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *workflowName = workflowName_example; // 
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Return whether the workflow has finished executing or not.
+[apiInstance workflowIsDoneWith:simid
+    workflowName:workflowName
+              completionHandler: ^(BooleanResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var workflowName = workflowName_example; // {{String}} 
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.workflowIsDone(simid, workflowName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class workflowIsDoneExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var workflowName = workflowName_example;  // String | 
+
+            try
+            {
+                // Return whether the workflow has finished executing or not.
+                BooleanResponse result = apiInstance.workflowIsDone(simid, workflowName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.workflowIsDone: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$workflowName = workflowName_example; // String | 
+
+try {
+    $result = $api_instance->workflowIsDone($simid, $workflowName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->workflowIsDone: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $workflowName = workflowName_example; # String | 
+
+eval { 
+    my $result = $api_instance->workflowIsDone(simid => $simid, workflowName => $workflowName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->workflowIsDone: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-workflowIsDone-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+workflowName = workflowName_example # String | 
+
+try: 
+    # Return whether the workflow has finished executing or not.
+    api_response = api_instance.workflow_is_done(simid, workflowName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->workflowIsDone: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_workflowIsDone_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">workflow_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_workflowIsDone_workflowName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-workflowIsDone-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-workflowIsDone-200-schema">
+                                  <div id='responses-workflowIsDone-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/BooleanResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-workflowIsDone-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-workflowIsDone-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-workflowIsDone-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Task not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
                             </div>
 
                             <h3> Status: 405 - Invalid input </h3>
