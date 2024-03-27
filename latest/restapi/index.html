@@ -689,6 +689,23 @@
   <script>
     // Script section to load models into a JS Var
     var defs = {}
+            defs["AddActionResponse"] = {
+  "type" : "object",
+  "properties" : {
+    "action_name" : {
+      "type" : "string",
+      "description" : "The new action's name."
+    },
+    "wrench_api_request_success" : {
+      "type" : "boolean",
+      "description" : "true if success, false if failure"
+    },
+    "failure_cause" : {
+      "type" : "string",
+      "description" : "human-readable error message (if failure)"
+    }
+  }
+};
             defs["BooleanResponse"] = {
   "type" : "object",
   "properties" : {
@@ -767,26 +784,6 @@
     "storage_service_name" : {
       "type" : "StorageService",
       "description" : "Storage Service the file is deleted from."
-    }
-  }
-};
-            defs["compound_job_name_addFileReadAction_body"] = {
-  "properties" : {
-    "name" : {
-      "type" : "string",
-      "description" : "Name of file read action."
-    },
-    "file_name" : {
-      "type" : "File",
-      "description" : "File object to be deleted."
-    },
-    "storage_service_name" : {
-      "type" : "StorageService",
-      "description" : "Storage Service the file is deleted from."
-    },
-    "num_bytes_to_read" : {
-      "type" : "float",
-      "description" : "Number of bytes to read from file"
     }
   }
 };
@@ -880,6 +877,27 @@
     "failure_cause" : {
       "type" : "string",
       "description" : "human-readable error message (if failure)"
+    }
+  }
+};
+            defs["FileReadAction"] = {
+  "type" : "object",
+  "properties" : {
+    "name" : {
+      "type" : "string",
+      "description" : "Name of the action"
+    },
+    "file_name" : {
+      "type" : "string",
+      "description" : "Name of the file to read"
+    },
+    "storage_service_name" : {
+      "type" : "string",
+      "description" : "Name of the storage service the file is stored in"
+    },
+    "num_bytes_to_read" : {
+      "type" : "number",
+      "description" : "Number of bytes to read from the file"
     }
   }
 };
@@ -4974,7 +4992,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addFileReadAction</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addFileReadAction</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -4994,7 +5012,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-WRENCH-addFileReadAction-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
 -H "Accept: application/json"\
 -H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/addFileReadAction"</code></pre>
@@ -5013,11 +5031,11 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Compound_job_name_addFileReadAction_body body = ; // Compound_job_name_addFileReadAction_body | Input to add a file read action.
+        FileReadAction body = ; // FileReadAction | Input to add a file read action.
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            GenericResponse result = apiInstance.addFileReadAction(body, simid, compoundJobName);
+            AddActionResponse result = apiInstance.addFileReadAction(body, simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addFileReadAction");
@@ -5034,11 +5052,11 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Compound_job_name_addFileReadAction_body body = ; // Compound_job_name_addFileReadAction_body | Input to add a file read action.
+        FileReadAction body = ; // FileReadAction | Input to add a file read action.
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            GenericResponse result = apiInstance.addFileReadAction(body, simid, compoundJobName);
+            AddActionResponse result = apiInstance.addFileReadAction(body, simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addFileReadAction");
@@ -5052,7 +5070,7 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-addFileReadAction-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Compound_job_name_addFileReadAction_body *body = ; // Input to add a file read action.
+                              <pre class="prettyprint"><code class="language-cpp">FileReadAction *body = ; // Input to add a file read action.
 String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 
@@ -5062,7 +5080,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 [apiInstance addFileReadActionWith:body
     simid:simid
     compoundJobName:compoundJobName
-              completionHandler: ^(GenericResponse output, NSError* error) {
+              completionHandler: ^(AddActionResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
                             }
@@ -5077,7 +5095,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Compound_job_name_addFileReadAction_body}} Input to add a file read action.
+var body = ; // {{FileReadAction}} Input to add a file read action.
 var simid = simid_example; // {{String}} ID of the simulation
 var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
 
@@ -5110,14 +5128,14 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Compound_job_name_addFileReadAction_body(); // Compound_job_name_addFileReadAction_body | Input to add a file read action.
+            var body = new FileReadAction(); // FileReadAction | Input to add a file read action.
             var simid = simid_example;  // String | ID of the simulation
             var compoundJobName = compoundJobName_example;  // String | Name of the compound job
 
             try
             {
                 // Add a file read action to compound job
-                GenericResponse result = apiInstance.addFileReadAction(body, simid, compoundJobName);
+                AddActionResponse result = apiInstance.addFileReadAction(body, simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5135,7 +5153,7 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Compound_job_name_addFileReadAction_body | Input to add a file read action.
+$body = ; // FileReadAction | Input to add a file read action.
 $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
 
@@ -5154,7 +5172,7 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Compound_job_name_addFileReadAction_body->new(); # Compound_job_name_addFileReadAction_body | Input to add a file read action.
+my $body = WWW::SwaggerClient::Object::FileReadAction->new(); # FileReadAction | Input to add a file read action.
 my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
 
@@ -5176,7 +5194,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Compound_job_name_addFileReadAction_body | Input to add a file read action.
+body =  # FileReadAction | Input to add a file read action.
 simid = simid_example # String | ID of the simulation
 compoundJobName = compoundJobName_example # String | Name of the compound job
 
@@ -5261,7 +5279,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/compound_job_name_addFileReadAction_body"
+        "$ref" : "#/components/schemas/FileReadAction"
       }
     }
   },
@@ -5311,7 +5329,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/GenericResponse"
+        "$ref" : "#/components/schemas/AddActionResponse"
       }
     }
   }
@@ -5340,7 +5358,7 @@ except ApiException as e:
                                 </div>
                             </div>
 
-                            <h3> Status: 404 - Job not found </h3>
+                            <h3> Status: 404 - Compound job not found </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                             </ul>
@@ -7731,7 +7749,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addSleepAction</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addSleepAction</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -7751,7 +7769,7 @@ except ApiException as e:
 
                         <div class="tab-content">
                           <div class="tab-pane active" id="examples-WRENCH-addSleepAction-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
 -H "Accept: application/json"\
 -H "Content-Type: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/addSleepAction"</code></pre>
