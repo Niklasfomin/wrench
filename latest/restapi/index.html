@@ -894,6 +894,14 @@
     }
   }
 };
+            defs["service_name_createFileCopy_body"] = {
+  "properties" : {
+    "filename" : {
+      "type" : "string",
+      "description" : "The file name"
+    }
+  }
+};
             defs["service_name_createVM_body"] = {
   "properties" : {
     "num_cores" : {
@@ -909,6 +917,14 @@
     },
     "message_payload_list" : {
       "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_message_payload_list"
+    }
+  }
+};
+            defs["service_name_lookupFile_body"] = {
+  "properties" : {
+    "filename" : {
+      "type" : "string",
+      "description" : "The file name"
     }
   }
 };
@@ -1163,22 +1179,6 @@
     }
   },
   "description" : "Map of file IDs to storage service names (aka the list of file locations)."
-};
-            defs["storage_service_name_createFileCopy_body"] = {
-  "properties" : {
-    "filename" : {
-      "type" : "string",
-      "description" : "The file name"
-    }
-  }
-};
-            defs["storage_service_name_lookupFile_body"] = {
-  "properties" : {
-    "filename" : {
-      "type" : "string",
-      "description" : "The file name"
-    }
-  }
 };
             defs["Task"] = {
   "type" : "object",
@@ -4949,7 +4949,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/{storage_service_name}/createFileCopy</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/storage_services/{service_name}/createFileCopy</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -4972,7 +4972,7 @@ except ApiException as e:
                            <pre class="prettyprint"><code class="language-bsh">curl -X POST\
 -H "Accept: application/json"\
 -H "Content-Type: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{storage_service_name}/createFileCopy"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/storage_services/{service_name}/createFileCopy"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-createFileCopyAtStorageService-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -4988,11 +4988,11 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Storage_service_name_createFileCopy_body body = ; // Storage_service_name_createFileCopy_body | Input to start a new service.
+        Service_name_createFileCopy_body body = ; // Service_name_createFileCopy_body | Input to start a new service.
         String simid = simid_example; // String | ID of the simulation
-        String storageServiceName = storageServiceName_example; // String | The storage service's head host
+        String serviceName = serviceName_example; // String | The storage service name
         try {
-            GenericResponse result = apiInstance.createFileCopyAtStorageService(body, simid, storageServiceName);
+            GenericResponse result = apiInstance.createFileCopyAtStorageService(body, simid, serviceName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#createFileCopyAtStorageService");
@@ -5009,11 +5009,11 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Storage_service_name_createFileCopy_body body = ; // Storage_service_name_createFileCopy_body | Input to start a new service.
+        Service_name_createFileCopy_body body = ; // Service_name_createFileCopy_body | Input to start a new service.
         String simid = simid_example; // String | ID of the simulation
-        String storageServiceName = storageServiceName_example; // String | The storage service's head host
+        String serviceName = serviceName_example; // String | The storage service name
         try {
-            GenericResponse result = apiInstance.createFileCopyAtStorageService(body, simid, storageServiceName);
+            GenericResponse result = apiInstance.createFileCopyAtStorageService(body, simid, serviceName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#createFileCopyAtStorageService");
@@ -5027,16 +5027,16 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-createFileCopyAtStorageService-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Storage_service_name_createFileCopy_body *body = ; // Input to start a new service.
+                              <pre class="prettyprint"><code class="language-cpp">Service_name_createFileCopy_body *body = ; // Input to start a new service.
 String *simid = simid_example; // ID of the simulation
-String *storageServiceName = storageServiceName_example; // The storage service's head host
+String *serviceName = serviceName_example; // The storage service name
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Create, ex nihilo, a copy of a file copy at a storage service.
 [apiInstance createFileCopyAtStorageServiceWith:body
     simid:simid
-    storageServiceName:storageServiceName
+    serviceName:serviceName
               completionHandler: ^(GenericResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -5052,9 +5052,9 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Storage_service_name_createFileCopy_body}} Input to start a new service.
+var body = ; // {{Service_name_createFileCopy_body}} Input to start a new service.
 var simid = simid_example; // {{String}} ID of the simulation
-var storageServiceName = storageServiceName_example; // {{String}} The storage service's head host
+var serviceName = serviceName_example; // {{String}} The storage service name
 
 var callback = function(error, data, response) {
   if (error) {
@@ -5063,7 +5063,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.createFileCopyAtStorageService(bodysimidstorageServiceName, callback);
+api.createFileCopyAtStorageService(bodysimidserviceName, callback);
 </code></pre>
                             </div>
 
@@ -5085,14 +5085,14 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Storage_service_name_createFileCopy_body(); // Storage_service_name_createFileCopy_body | Input to start a new service.
+            var body = new Service_name_createFileCopy_body(); // Service_name_createFileCopy_body | Input to start a new service.
             var simid = simid_example;  // String | ID of the simulation
-            var storageServiceName = storageServiceName_example;  // String | The storage service's head host
+            var serviceName = serviceName_example;  // String | The storage service name
 
             try
             {
                 // Create, ex nihilo, a copy of a file copy at a storage service.
-                GenericResponse result = apiInstance.createFileCopyAtStorageService(body, simid, storageServiceName);
+                GenericResponse result = apiInstance.createFileCopyAtStorageService(body, simid, serviceName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5110,12 +5110,12 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Storage_service_name_createFileCopy_body | Input to start a new service.
+$body = ; // Service_name_createFileCopy_body | Input to start a new service.
 $simid = simid_example; // String | ID of the simulation
-$storageServiceName = storageServiceName_example; // String | The storage service's head host
+$serviceName = serviceName_example; // String | The storage service name
 
 try {
-    $result = $api_instance->createFileCopyAtStorageService($body, $simid, $storageServiceName);
+    $result = $api_instance->createFileCopyAtStorageService($body, $simid, $serviceName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->createFileCopyAtStorageService: ', $e->getMessage(), PHP_EOL;
@@ -5129,12 +5129,12 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Storage_service_name_createFileCopy_body->new(); # Storage_service_name_createFileCopy_body | Input to start a new service.
+my $body = WWW::SwaggerClient::Object::Service_name_createFileCopy_body->new(); # Service_name_createFileCopy_body | Input to start a new service.
 my $simid = simid_example; # String | ID of the simulation
-my $storageServiceName = storageServiceName_example; # String | The storage service's head host
+my $serviceName = serviceName_example; # String | The storage service name
 
 eval { 
-    my $result = $api_instance->createFileCopyAtStorageService(body => $body, simid => $simid, storageServiceName => $storageServiceName);
+    my $result = $api_instance->createFileCopyAtStorageService(body => $body, simid => $simid, serviceName => $serviceName);
     print Dumper($result);
 };
 if ($@) {
@@ -5151,13 +5151,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Storage_service_name_createFileCopy_body | Input to start a new service.
+body =  # Service_name_createFileCopy_body | Input to start a new service.
 simid = simid_example # String | ID of the simulation
-storageServiceName = storageServiceName_example # String | The storage service's head host
+serviceName = serviceName_example # String | The storage service name
 
 try: 
     # Create, ex nihilo, a copy of a file copy at a storage service.
-    api_response = api_instance.create_file_copy_at_storage_service(body, simid, storageServiceName)
+    api_response = api_instance.create_file_copy_at_storage_service(body, simid, serviceName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->createFileCopyAtStorageService: %s\n" % e)</code></pre>
@@ -5194,11 +5194,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">storage_service_name*</td>
+                                  <tr><td style="width:150px;">service_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_createFileCopyAtStorageService_storageServiceName">
+                                      <div id="d2e199_createFileCopyAtStorageService_serviceName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -5206,7 +5206,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          The storage service&#x27;s head host
+                                                          The storage service name
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -5236,7 +5236,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/storage_service_name_createFileCopy_body"
+        "$ref" : "#/components/schemas/service_name_createFileCopy_body"
       }
     }
   },
@@ -10787,7 +10787,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetEndDate</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetEndDate</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -10809,7 +10809,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskEndDate-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetEndDate"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetEndDate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskEndDate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -10827,9 +10827,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TimeResponse result = apiInstance.getTaskEndDate(simid, workflowName, name);
+            TimeResponse result = apiInstance.getTaskEndDate(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskEndDate");
@@ -10848,9 +10848,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TimeResponse result = apiInstance.getTaskEndDate(simid, workflowName, name);
+            TimeResponse result = apiInstance.getTaskEndDate(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskEndDate");
@@ -10866,14 +10866,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskEndDate-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *workflowName = workflowName_example; // 
-String *name = name_example; // ID of the task
+String *taskName = taskName_example; // Name of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's end date.
 [apiInstance getTaskEndDateWith:simid
     workflowName:workflowName
-    name:name
+    taskName:taskName
               completionHandler: ^(TimeResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -10891,7 +10891,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var workflowName = workflowName_example; // {{String}} 
-var name = name_example; // {{String}} ID of the task
+var taskName = taskName_example; // {{String}} Name of the task
 
 var callback = function(error, data, response) {
   if (error) {
@@ -10900,7 +10900,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskEndDate(simid, workflowName, name, callback);
+api.getTaskEndDate(simid, workflowName, taskName, callback);
 </code></pre>
                             </div>
 
@@ -10924,12 +10924,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var workflowName = workflowName_example;  // String | 
-            var name = name_example;  // String | ID of the task
+            var taskName = taskName_example;  // String | Name of the task
 
             try
             {
                 // Get a task's end date.
-                TimeResponse result = apiInstance.getTaskEndDate(simid, workflowName, name);
+                TimeResponse result = apiInstance.getTaskEndDate(simid, workflowName, taskName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -10949,10 +10949,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $workflowName = workflowName_example; // String | 
-$name = name_example; // String | ID of the task
+$taskName = taskName_example; // String | Name of the task
 
 try {
-    $result = $api_instance->getTaskEndDate($simid, $workflowName, $name);
+    $result = $api_instance->getTaskEndDate($simid, $workflowName, $taskName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskEndDate: ', $e->getMessage(), PHP_EOL;
@@ -10968,10 +10968,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $workflowName = workflowName_example; # String | 
-my $name = name_example; # String | ID of the task
+my $taskName = taskName_example; # String | Name of the task
 
 eval { 
-    my $result = $api_instance->getTaskEndDate(simid => $simid, workflowName => $workflowName, name => $name);
+    my $result = $api_instance->getTaskEndDate(simid => $simid, workflowName => $workflowName, taskName => $taskName);
     print Dumper($result);
 };
 if ($@) {
@@ -10990,11 +10990,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 workflowName = workflowName_example # String | 
-name = name_example # String | ID of the task
+taskName = taskName_example # String | Name of the task
 
 try: 
     # Get a task's end date.
-    api_response = api_instance.get_task_end_date(simid, workflowName, name)
+    api_response = api_instance.get_task_end_date(simid, workflowName, taskName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskEndDate: %s\n" % e)</code></pre>
@@ -11050,11 +11050,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">name*</td>
+                                  <tr><td style="width:150px;">task_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskEndDate_name">
+                                      <div id="d2e199_getTaskEndDate_taskName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -11062,7 +11062,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          ID of the task
+                                                          Name of the task
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -11158,7 +11158,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetFlops</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetFlops</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -11180,7 +11180,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetFlops"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetFlops"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -11198,9 +11198,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | Name of the workflow
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, name);
+            TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskFlops");
@@ -11219,9 +11219,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | Name of the workflow
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, name);
+            TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskFlops");
@@ -11237,14 +11237,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskFlops-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *workflowName = workflowName_example; // Name of the workflow
-String *name = name_example; // ID of the task
+String *taskName = taskName_example; // Name of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's flops
 [apiInstance getTaskFlopsWith:simid
     workflowName:workflowName
-    name:name
+    taskName:taskName
               completionHandler: ^(TaskFlops output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -11262,7 +11262,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var workflowName = workflowName_example; // {{String}} Name of the workflow
-var name = name_example; // {{String}} ID of the task
+var taskName = taskName_example; // {{String}} Name of the task
 
 var callback = function(error, data, response) {
   if (error) {
@@ -11271,7 +11271,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops(simid, workflowName, name, callback);
+api.getTaskFlops(simid, workflowName, taskName, callback);
 </code></pre>
                             </div>
 
@@ -11295,12 +11295,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var workflowName = workflowName_example;  // String | Name of the workflow
-            var name = name_example;  // String | ID of the task
+            var taskName = taskName_example;  // String | Name of the task
 
             try
             {
                 // Get a task's flops
-                TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, name);
+                TaskFlops result = apiInstance.getTaskFlops(simid, workflowName, taskName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -11320,10 +11320,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $workflowName = workflowName_example; // String | Name of the workflow
-$name = name_example; // String | ID of the task
+$taskName = taskName_example; // String | Name of the task
 
 try {
-    $result = $api_instance->getTaskFlops($simid, $workflowName, $name);
+    $result = $api_instance->getTaskFlops($simid, $workflowName, $taskName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskFlops: ', $e->getMessage(), PHP_EOL;
@@ -11339,10 +11339,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $workflowName = workflowName_example; # String | Name of the workflow
-my $name = name_example; # String | ID of the task
+my $taskName = taskName_example; # String | Name of the task
 
 eval { 
-    my $result = $api_instance->getTaskFlops(simid => $simid, workflowName => $workflowName, name => $name);
+    my $result = $api_instance->getTaskFlops(simid => $simid, workflowName => $workflowName, taskName => $taskName);
     print Dumper($result);
 };
 if ($@) {
@@ -11361,11 +11361,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 workflowName = workflowName_example # String | Name of the workflow
-name = name_example # String | ID of the task
+taskName = taskName_example # String | Name of the task
 
 try: 
     # Get a task's flops
-    api_response = api_instance.get_task_flops(simid, workflowName, name)
+    api_response = api_instance.get_task_flops(simid, workflowName, taskName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskFlops: %s\n" % e)</code></pre>
@@ -11424,11 +11424,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">name*</td>
+                                  <tr><td style="width:150px;">task_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskFlops_name">
+                                      <div id="d2e199_getTaskFlops_taskName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -11436,7 +11436,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          ID of the task
+                                                          Name of the task
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -11903,7 +11903,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetMaxNumCores</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMaxNumCores</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -11925,7 +11925,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskMaxNumCores-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetMaxNumCores"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMaxNumCores"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -11943,9 +11943,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskCores result = apiInstance.getTaskMaxNumCores(simid, workflowName, name);
+            TaskCores result = apiInstance.getTaskMaxNumCores(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskMaxNumCores");
@@ -11964,9 +11964,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskCores result = apiInstance.getTaskMaxNumCores(simid, workflowName, name);
+            TaskCores result = apiInstance.getTaskMaxNumCores(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskMaxNumCores");
@@ -11982,14 +11982,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *workflowName = workflowName_example; // 
-String *name = name_example; // ID of the task
+String *taskName = taskName_example; // Name of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's maximum number of cores.
 [apiInstance getTaskMaxNumCoresWith:simid
     workflowName:workflowName
-    name:name
+    taskName:taskName
               completionHandler: ^(TaskCores output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -12007,7 +12007,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var workflowName = workflowName_example; // {{String}} 
-var name = name_example; // {{String}} ID of the task
+var taskName = taskName_example; // {{String}} Name of the task
 
 var callback = function(error, data, response) {
   if (error) {
@@ -12016,7 +12016,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskMaxNumCores(simid, workflowName, name, callback);
+api.getTaskMaxNumCores(simid, workflowName, taskName, callback);
 </code></pre>
                             </div>
 
@@ -12040,12 +12040,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var workflowName = workflowName_example;  // String | 
-            var name = name_example;  // String | ID of the task
+            var taskName = taskName_example;  // String | Name of the task
 
             try
             {
                 // Get a task's maximum number of cores.
-                TaskCores result = apiInstance.getTaskMaxNumCores(simid, workflowName, name);
+                TaskCores result = apiInstance.getTaskMaxNumCores(simid, workflowName, taskName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -12065,10 +12065,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $workflowName = workflowName_example; // String | 
-$name = name_example; // String | ID of the task
+$taskName = taskName_example; // String | Name of the task
 
 try {
-    $result = $api_instance->getTaskMaxNumCores($simid, $workflowName, $name);
+    $result = $api_instance->getTaskMaxNumCores($simid, $workflowName, $taskName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskMaxNumCores: ', $e->getMessage(), PHP_EOL;
@@ -12084,10 +12084,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $workflowName = workflowName_example; # String | 
-my $name = name_example; # String | ID of the task
+my $taskName = taskName_example; # String | Name of the task
 
 eval { 
-    my $result = $api_instance->getTaskMaxNumCores(simid => $simid, workflowName => $workflowName, name => $name);
+    my $result = $api_instance->getTaskMaxNumCores(simid => $simid, workflowName => $workflowName, taskName => $taskName);
     print Dumper($result);
 };
 if ($@) {
@@ -12106,11 +12106,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 workflowName = workflowName_example # String | 
-name = name_example # String | ID of the task
+taskName = taskName_example # String | Name of the task
 
 try: 
     # Get a task's maximum number of cores.
-    api_response = api_instance.get_task_max_num_cores(simid, workflowName, name)
+    api_response = api_instance.get_task_max_num_cores(simid, workflowName, taskName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskMaxNumCores: %s\n" % e)</code></pre>
@@ -12166,11 +12166,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">name*</td>
+                                  <tr><td style="width:150px;">task_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMaxNumCores_name">
+                                      <div id="d2e199_getTaskMaxNumCores_taskName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -12178,7 +12178,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          ID of the task
+                                                          Name of the task
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -12274,7 +12274,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetMemory</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMemory</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -12296,7 +12296,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskMemory-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetMemory"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMemory"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskMemory-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -12314,9 +12314,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskMem result = apiInstance.getTaskMemory(simid, workflowName, name);
+            TaskMem result = apiInstance.getTaskMemory(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskMemory");
@@ -12335,9 +12335,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskMem result = apiInstance.getTaskMemory(simid, workflowName, name);
+            TaskMem result = apiInstance.getTaskMemory(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskMemory");
@@ -12353,14 +12353,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskMemory-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *workflowName = workflowName_example; // 
-String *name = name_example; // ID of the task
+String *taskName = taskName_example; // Name of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's memory requirement.
 [apiInstance getTaskMemoryWith:simid
     workflowName:workflowName
-    name:name
+    taskName:taskName
               completionHandler: ^(TaskMem output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -12378,7 +12378,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var workflowName = workflowName_example; // {{String}} 
-var name = name_example; // {{String}} ID of the task
+var taskName = taskName_example; // {{String}} Name of the task
 
 var callback = function(error, data, response) {
   if (error) {
@@ -12387,7 +12387,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskMemory(simid, workflowName, name, callback);
+api.getTaskMemory(simid, workflowName, taskName, callback);
 </code></pre>
                             </div>
 
@@ -12411,12 +12411,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var workflowName = workflowName_example;  // String | 
-            var name = name_example;  // String | ID of the task
+            var taskName = taskName_example;  // String | Name of the task
 
             try
             {
                 // Get a task's memory requirement.
-                TaskMem result = apiInstance.getTaskMemory(simid, workflowName, name);
+                TaskMem result = apiInstance.getTaskMemory(simid, workflowName, taskName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -12436,10 +12436,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $workflowName = workflowName_example; // String | 
-$name = name_example; // String | ID of the task
+$taskName = taskName_example; // String | Name of the task
 
 try {
-    $result = $api_instance->getTaskMemory($simid, $workflowName, $name);
+    $result = $api_instance->getTaskMemory($simid, $workflowName, $taskName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskMemory: ', $e->getMessage(), PHP_EOL;
@@ -12455,10 +12455,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $workflowName = workflowName_example; # String | 
-my $name = name_example; # String | ID of the task
+my $taskName = taskName_example; # String | Name of the task
 
 eval { 
-    my $result = $api_instance->getTaskMemory(simid => $simid, workflowName => $workflowName, name => $name);
+    my $result = $api_instance->getTaskMemory(simid => $simid, workflowName => $workflowName, taskName => $taskName);
     print Dumper($result);
 };
 if ($@) {
@@ -12477,11 +12477,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 workflowName = workflowName_example # String | 
-name = name_example # String | ID of the task
+taskName = taskName_example # String | Name of the task
 
 try: 
     # Get a task's memory requirement.
-    api_response = api_instance.get_task_memory(simid, workflowName, name)
+    api_response = api_instance.get_task_memory(simid, workflowName, taskName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskMemory: %s\n" % e)</code></pre>
@@ -12537,11 +12537,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">name*</td>
+                                  <tr><td style="width:150px;">task_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_name">
+                                      <div id="d2e199_getTaskMemory_taskName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -12549,7 +12549,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          ID of the task
+                                                          Name of the task
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -12645,7 +12645,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetMinNumCores</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMinNumCores</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -12667,7 +12667,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskMinNumCores-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetMinNumCores"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMinNumCores"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -12685,9 +12685,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskCores result = apiInstance.getTaskMinNumCores(simid, workflowName, name);
+            TaskCores result = apiInstance.getTaskMinNumCores(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskMinNumCores");
@@ -12706,9 +12706,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TaskCores result = apiInstance.getTaskMinNumCores(simid, workflowName, name);
+            TaskCores result = apiInstance.getTaskMinNumCores(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskMinNumCores");
@@ -12724,14 +12724,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *workflowName = workflowName_example; // 
-String *name = name_example; // ID of the task
+String *taskName = taskName_example; // Name of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's minimum number of cores.
 [apiInstance getTaskMinNumCoresWith:simid
     workflowName:workflowName
-    name:name
+    taskName:taskName
               completionHandler: ^(TaskCores output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -12749,7 +12749,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var workflowName = workflowName_example; // {{String}} 
-var name = name_example; // {{String}} ID of the task
+var taskName = taskName_example; // {{String}} Name of the task
 
 var callback = function(error, data, response) {
   if (error) {
@@ -12758,7 +12758,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskMinNumCores(simid, workflowName, name, callback);
+api.getTaskMinNumCores(simid, workflowName, taskName, callback);
 </code></pre>
                             </div>
 
@@ -12782,12 +12782,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var workflowName = workflowName_example;  // String | 
-            var name = name_example;  // String | ID of the task
+            var taskName = taskName_example;  // String | Name of the task
 
             try
             {
                 // Get a task's minimum number of cores.
-                TaskCores result = apiInstance.getTaskMinNumCores(simid, workflowName, name);
+                TaskCores result = apiInstance.getTaskMinNumCores(simid, workflowName, taskName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -12807,10 +12807,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $workflowName = workflowName_example; // String | 
-$name = name_example; // String | ID of the task
+$taskName = taskName_example; // String | Name of the task
 
 try {
-    $result = $api_instance->getTaskMinNumCores($simid, $workflowName, $name);
+    $result = $api_instance->getTaskMinNumCores($simid, $workflowName, $taskName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskMinNumCores: ', $e->getMessage(), PHP_EOL;
@@ -12826,10 +12826,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $workflowName = workflowName_example; # String | 
-my $name = name_example; # String | ID of the task
+my $taskName = taskName_example; # String | Name of the task
 
 eval { 
-    my $result = $api_instance->getTaskMinNumCores(simid => $simid, workflowName => $workflowName, name => $name);
+    my $result = $api_instance->getTaskMinNumCores(simid => $simid, workflowName => $workflowName, taskName => $taskName);
     print Dumper($result);
 };
 if ($@) {
@@ -12848,11 +12848,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 workflowName = workflowName_example # String | 
-name = name_example # String | ID of the task
+taskName = taskName_example # String | Name of the task
 
 try: 
     # Get a task's minimum number of cores.
-    api_response = api_instance.get_task_min_num_cores(simid, workflowName, name)
+    api_response = api_instance.get_task_min_num_cores(simid, workflowName, taskName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskMinNumCores: %s\n" % e)</code></pre>
@@ -12908,11 +12908,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">name*</td>
+                                  <tr><td style="width:150px;">task_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_name">
+                                      <div id="d2e199_getTaskMinNumCores_taskName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -12920,7 +12920,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          ID of the task
+                                                          Name of the task
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -13387,7 +13387,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetStartDate</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetStartDate</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -13409,7 +13409,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskStartDate-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{name}/taskGetStartDate"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetStartDate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskStartDate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -13427,9 +13427,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TimeResponse result = apiInstance.getTaskStartDate(simid, workflowName, name);
+            TimeResponse result = apiInstance.getTaskStartDate(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskStartDate");
@@ -13448,9 +13448,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String workflowName = workflowName_example; // String | 
-        String name = name_example; // String | ID of the task
+        String taskName = taskName_example; // String | Name of the task
         try {
-            TimeResponse result = apiInstance.getTaskStartDate(simid, workflowName, name);
+            TimeResponse result = apiInstance.getTaskStartDate(simid, workflowName, taskName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#getTaskStartDate");
@@ -13466,14 +13466,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskStartDate-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *workflowName = workflowName_example; // 
-String *name = name_example; // ID of the task
+String *taskName = taskName_example; // Name of the task
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get a task's start date.
 [apiInstance getTaskStartDateWith:simid
     workflowName:workflowName
-    name:name
+    taskName:taskName
               completionHandler: ^(TimeResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -13491,7 +13491,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var workflowName = workflowName_example; // {{String}} 
-var name = name_example; // {{String}} ID of the task
+var taskName = taskName_example; // {{String}} Name of the task
 
 var callback = function(error, data, response) {
   if (error) {
@@ -13500,7 +13500,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskStartDate(simid, workflowName, name, callback);
+api.getTaskStartDate(simid, workflowName, taskName, callback);
 </code></pre>
                             </div>
 
@@ -13524,12 +13524,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var workflowName = workflowName_example;  // String | 
-            var name = name_example;  // String | ID of the task
+            var taskName = taskName_example;  // String | Name of the task
 
             try
             {
                 // Get a task's start date.
-                TimeResponse result = apiInstance.getTaskStartDate(simid, workflowName, name);
+                TimeResponse result = apiInstance.getTaskStartDate(simid, workflowName, taskName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -13549,10 +13549,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $workflowName = workflowName_example; // String | 
-$name = name_example; // String | ID of the task
+$taskName = taskName_example; // String | Name of the task
 
 try {
-    $result = $api_instance->getTaskStartDate($simid, $workflowName, $name);
+    $result = $api_instance->getTaskStartDate($simid, $workflowName, $taskName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->getTaskStartDate: ', $e->getMessage(), PHP_EOL;
@@ -13568,10 +13568,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $workflowName = workflowName_example; # String | 
-my $name = name_example; # String | ID of the task
+my $taskName = taskName_example; # String | Name of the task
 
 eval { 
-    my $result = $api_instance->getTaskStartDate(simid => $simid, workflowName => $workflowName, name => $name);
+    my $result = $api_instance->getTaskStartDate(simid => $simid, workflowName => $workflowName, taskName => $taskName);
     print Dumper($result);
 };
 if ($@) {
@@ -13590,11 +13590,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 workflowName = workflowName_example # String | 
-name = name_example # String | ID of the task
+taskName = taskName_example # String | Name of the task
 
 try: 
     # Get a task's start date.
-    api_response = api_instance.get_task_start_date(simid, workflowName, name)
+    api_response = api_instance.get_task_start_date(simid, workflowName, taskName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->getTaskStartDate: %s\n" % e)</code></pre>
@@ -13650,11 +13650,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">name*</td>
+                                  <tr><td style="width:150px;">task_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskStartDate_name">
+                                      <div id="d2e199_getTaskStartDate_taskName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -13662,7 +13662,7 @@ except ApiException as e:
                                                   </span>
                                   
                                                       <div class="inner description">
-                                                          ID of the task
+                                                          Name of the task
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -14856,7 +14856,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{service_name}/vms/{vm_name}/isVMRunning</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/cloud_compute_services/{service_name}/vms/{vm_name}/isVMRunning</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -14878,7 +14878,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-isVMRunning-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{service_name}/vms/{vm_name}/isVMRunning"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/cloud_compute_services/{service_name}/vms/{vm_name}/isVMRunning"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-isVMRunning-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -15588,7 +15588,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/{storage_service_name}/lookupFile</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/storage_services/{service_name}/lookupFile</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -15611,7 +15611,7 @@ except ApiException as e:
                            <pre class="prettyprint"><code class="language-bsh">curl -X POST\
 -H "Accept: application/json"\
 -H "Content-Type: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{storage_service_name}/lookupFile"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/storage_services/{service_name}/lookupFile"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-lookupFileAtStorageService-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -15627,11 +15627,11 @@ public class WRENCHApiExample {
     public static void main(String[] args) {
         
         WRENCHApi apiInstance = new WRENCHApi();
-        Storage_service_name_lookupFile_body body = ; // Storage_service_name_lookupFile_body | Input to start a new service.
+        Service_name_lookupFile_body body = ; // Service_name_lookupFile_body | Input to start a new service.
         String simid = simid_example; // String | ID of the simulation
-        String storageServiceName = storageServiceName_example; // String | The storage service's head host
+        String serviceName = serviceName_example; // String | The storage service's head host
         try {
-            BooleanResponse result = apiInstance.lookupFileAtStorageService(body, simid, storageServiceName);
+            BooleanResponse result = apiInstance.lookupFileAtStorageService(body, simid, serviceName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#lookupFileAtStorageService");
@@ -15648,11 +15648,11 @@ public class WRENCHApiExample {
 
     public static void main(String[] args) {
         WRENCHApi apiInstance = new WRENCHApi();
-        Storage_service_name_lookupFile_body body = ; // Storage_service_name_lookupFile_body | Input to start a new service.
+        Service_name_lookupFile_body body = ; // Service_name_lookupFile_body | Input to start a new service.
         String simid = simid_example; // String | ID of the simulation
-        String storageServiceName = storageServiceName_example; // String | The storage service's head host
+        String serviceName = serviceName_example; // String | The storage service's head host
         try {
-            BooleanResponse result = apiInstance.lookupFileAtStorageService(body, simid, storageServiceName);
+            BooleanResponse result = apiInstance.lookupFileAtStorageService(body, simid, serviceName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#lookupFileAtStorageService");
@@ -15666,16 +15666,16 @@ public class WRENCHApiExample {
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
                             <div class="tab-pane" id="examples-WRENCH-lookupFileAtStorageService-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Storage_service_name_lookupFile_body *body = ; // Input to start a new service.
+                              <pre class="prettyprint"><code class="language-cpp">Service_name_lookupFile_body *body = ; // Input to start a new service.
 String *simid = simid_example; // ID of the simulation
-String *storageServiceName = storageServiceName_example; // The storage service's head host
+String *serviceName = serviceName_example; // The storage service's head host
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Check if a copy of a file is stored at a storage service.
 [apiInstance lookupFileAtStorageServiceWith:body
     simid:simid
-    storageServiceName:storageServiceName
+    serviceName:serviceName
               completionHandler: ^(BooleanResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -15691,9 +15691,9 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
-var body = ; // {{Storage_service_name_lookupFile_body}} Input to start a new service.
+var body = ; // {{Service_name_lookupFile_body}} Input to start a new service.
 var simid = simid_example; // {{String}} ID of the simulation
-var storageServiceName = storageServiceName_example; // {{String}} The storage service's head host
+var serviceName = serviceName_example; // {{String}} The storage service's head host
 
 var callback = function(error, data, response) {
   if (error) {
@@ -15702,7 +15702,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.lookupFileAtStorageService(bodysimidstorageServiceName, callback);
+api.lookupFileAtStorageService(bodysimidserviceName, callback);
 </code></pre>
                             </div>
 
@@ -15724,14 +15724,14 @@ namespace Example
         {
 
             var apiInstance = new WRENCHApi();
-            var body = new Storage_service_name_lookupFile_body(); // Storage_service_name_lookupFile_body | Input to start a new service.
+            var body = new Service_name_lookupFile_body(); // Service_name_lookupFile_body | Input to start a new service.
             var simid = simid_example;  // String | ID of the simulation
-            var storageServiceName = storageServiceName_example;  // String | The storage service's head host
+            var serviceName = serviceName_example;  // String | The storage service's head host
 
             try
             {
                 // Check if a copy of a file is stored at a storage service.
-                BooleanResponse result = apiInstance.lookupFileAtStorageService(body, simid, storageServiceName);
+                BooleanResponse result = apiInstance.lookupFileAtStorageService(body, simid, serviceName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -15749,12 +15749,12 @@ namespace Example
 require_once(__DIR__ . '/vendor/autoload.php');
 
 $api_instance = new Swagger\Client\ApiWRENCHApi();
-$body = ; // Storage_service_name_lookupFile_body | Input to start a new service.
+$body = ; // Service_name_lookupFile_body | Input to start a new service.
 $simid = simid_example; // String | ID of the simulation
-$storageServiceName = storageServiceName_example; // String | The storage service's head host
+$serviceName = serviceName_example; // String | The storage service's head host
 
 try {
-    $result = $api_instance->lookupFileAtStorageService($body, $simid, $storageServiceName);
+    $result = $api_instance->lookupFileAtStorageService($body, $simid, $serviceName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->lookupFileAtStorageService: ', $e->getMessage(), PHP_EOL;
@@ -15768,12 +15768,12 @@ use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
 
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $body = WWW::SwaggerClient::Object::Storage_service_name_lookupFile_body->new(); # Storage_service_name_lookupFile_body | Input to start a new service.
+my $body = WWW::SwaggerClient::Object::Service_name_lookupFile_body->new(); # Service_name_lookupFile_body | Input to start a new service.
 my $simid = simid_example; # String | ID of the simulation
-my $storageServiceName = storageServiceName_example; # String | The storage service's head host
+my $serviceName = serviceName_example; # String | The storage service's head host
 
 eval { 
-    my $result = $api_instance->lookupFileAtStorageService(body => $body, simid => $simid, storageServiceName => $storageServiceName);
+    my $result = $api_instance->lookupFileAtStorageService(body => $body, simid => $simid, serviceName => $serviceName);
     print Dumper($result);
 };
 if ($@) {
@@ -15790,13 +15790,13 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.WRENCHApi()
-body =  # Storage_service_name_lookupFile_body | Input to start a new service.
+body =  # Service_name_lookupFile_body | Input to start a new service.
 simid = simid_example # String | ID of the simulation
-storageServiceName = storageServiceName_example # String | The storage service's head host
+serviceName = serviceName_example # String | The storage service's head host
 
 try: 
     # Check if a copy of a file is stored at a storage service.
-    api_response = api_instance.lookup_file_at_storage_service(body, simid, storageServiceName)
+    api_response = api_instance.lookup_file_at_storage_service(body, simid, serviceName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->lookupFileAtStorageService: %s\n" % e)</code></pre>
@@ -15833,11 +15833,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">storage_service_name*</td>
+                                  <tr><td style="width:150px;">service_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_lookupFileAtStorageService_storageServiceName">
+                                      <div id="d2e199_lookupFileAtStorageService_serviceName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -15875,7 +15875,7 @@ except ApiException as e:
   "content" : {
     "application/json" : {
       "schema" : {
-        "$ref" : "#/components/schemas/storage_service_name_lookupFile_body"
+        "$ref" : "#/components/schemas/service_name_lookupFile_body"
       }
     }
   },
