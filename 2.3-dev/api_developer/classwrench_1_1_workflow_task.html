@@ -257,9 +257,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask12setClusterIDERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setClusterID()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask8setColorERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setColor()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask8setFlopsEd"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setFlops()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask14setMaxNumCoresEm"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setMaxNumCores()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask20setMemoryRequirementEd"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setMemoryRequirement()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask14setMinNumCoresEm"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setMinNumCores()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask16setParallelModelENSt10shared_ptrI13ParallelModelEE"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setParallelModel()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask11setPriorityEl"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::setPriority()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12WorkflowTask13stateToStringE5State"><code class="docutils literal notranslate"><span class="pre">WorkflowTask::stateToString()</span></code></a></li>
@@ -576,10 +573,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK6wrench12WorkflowTask20getMemoryRequirementEv">
 <span id="_CPPv3NK6wrench12WorkflowTask20getMemoryRequirementEv"></span><span id="_CPPv2NK6wrench12WorkflowTask20getMemoryRequirementEv"></span><span id="wrench::WorkflowTask::getMemoryRequirementC"></span><span class="target" id="classwrench_1_1_workflow_task_1aeafc6e6f0bce5853a3fd1e4818638908"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMemoryRequirement</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK6wrench12WorkflowTask20getMemoryRequirementEv" title="Link to this definition"></a><br /></dt>
-<dd><p>Get the memory requirement of the task. </p>
+<dd><p>Get the memory_manager_service requirement of the task. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>a memory requirement (in bytes) </p>
+<dd class="field-odd"><p>a memory_manager_service requirement (in bytes) </p>
 </dd>
 </dl>
 </dd></dl>
@@ -851,43 +848,10 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench12WorkflowTask8setFlopsEd">
 <span id="_CPPv3N6wrench12WorkflowTask8setFlopsEd"></span><span id="_CPPv2N6wrench12WorkflowTask8setFlopsEd"></span><span id="wrench::WorkflowTask::setFlops__double"></span><span class="target" id="classwrench_1_1_workflow_task_1ac4af40bcc14f860419c3cbee6177c68b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setFlops</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">f</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12WorkflowTask8setFlopsEd" title="Link to this definition"></a><br /></dt>
-<dd><p>Set the number of flops of the task (to be used only in very specific cases in which it is guaranteed that changing a task’s work after that task has been created is a valid thing to do) </p>
+<dd><p>Set the number of f of the task (to be used only in very specific cases in which it is guaranteed that changing a task’s work after that task has been created is a valid thing to do) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>f</strong> – the number of flops </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12WorkflowTask14setMaxNumCoresEm">
-<span id="_CPPv3N6wrench12WorkflowTask14setMaxNumCoresEm"></span><span id="_CPPv2N6wrench12WorkflowTask14setMaxNumCoresEm"></span><span id="wrench::WorkflowTask::setMaxNumCores__unsigned-l"></span><span class="target" id="classwrench_1_1_workflow_task_1a6e929dfb2550ebd72e8e85f8cbc6584c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMaxNumCores</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12WorkflowTask14setMaxNumCoresEm" title="Link to this definition"></a><br /></dt>
-<dd><p>Set the maximum number of cores that the task can use (to be used only in very specific cases in which it is guaranteed that changing a task’s maximum number of cores after that task has been created is a valid thing to do) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>num_cores</strong> – a number of cores </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12WorkflowTask20setMemoryRequirementEd">
-<span id="_CPPv3N6wrench12WorkflowTask20setMemoryRequirementEd"></span><span id="_CPPv2N6wrench12WorkflowTask20setMemoryRequirementEd"></span><span id="wrench::WorkflowTask::setMemoryRequirement__double"></span><span class="target" id="classwrench_1_1_workflow_task_1a54c8012c2294f37f5332b689773142ac"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMemoryRequirement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12WorkflowTask20setMemoryRequirementEd" title="Link to this definition"></a><br /></dt>
-<dd><p>Set the memory requirement of the task. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>a memory requirement (in bytes) </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12WorkflowTask14setMinNumCoresEm">
-<span id="_CPPv3N6wrench12WorkflowTask14setMinNumCoresEm"></span><span id="_CPPv2N6wrench12WorkflowTask14setMinNumCoresEm"></span><span id="wrench::WorkflowTask::setMinNumCores__unsigned-l"></span><span class="target" id="classwrench_1_1_workflow_task_1aa35bcae29b6930e26e94da75005a62ae"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setMinNumCores</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench12WorkflowTask14setMinNumCoresEm" title="Link to this definition"></a><br /></dt>
-<dd><p>Set the minimum number of cores required for running the task (to be used only in very specific cases in which it is guaranteed that changing a task’s minimum number of cores after that task has been created is a valid thing to do) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>num_cores</strong> – a number of cores </p>
+<dd class="field-odd"><p><strong>f</strong> – the number of f </p>
 </dd>
 </dl>
 </dd></dl>
