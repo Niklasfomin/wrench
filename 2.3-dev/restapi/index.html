@@ -696,6 +696,14 @@
       "type" : "string",
       "description" : "The new action's name."
     },
+    "uses_scratch" : {
+      "type" : "number",
+      "description" : "Whether the action uses scratch."
+    },
+    "num_bytes_to_read" : {
+      "type" : "string",
+      "description" : "The num of bytes the action's to read."
+    },
     "wrench_api_request_success" : {
       "type" : "boolean",
       "description" : "true if success, false if failure"
@@ -1025,18 +1033,6 @@
     "failure_cause" : {
       "type" : "string",
       "description" : "human-readable error message (if failure)"
-    }
-  }
-};
-            defs["simid_addAction_body"] = {
-  "properties" : {
-    "name" : {
-      "type" : "string",
-      "description" : "Name of the Action"
-    },
-    "prefix" : {
-      "type" : "string",
-      "description" : "Prefix to create new name for action if name is not provided"
     }
   }
 };
@@ -1690,9 +1686,6 @@
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
                   <li class="nav-header" data-group="WRENCH"><a href="#api-WRENCH">API Methods - WRENCH</a></li>
-                    <li data-group="WRENCH" data-name="addAction" class="">
-                      <a href="#api-WRENCH-addAction">addAction</a>
-                    </li>
                     <li data-group="WRENCH" data-name="addBareMetalComputeService" class="">
                       <a href="#api-WRENCH-addBareMetalComputeService">addBareMetalComputeService</a>
                     </li>
@@ -2005,364 +1998,6 @@
         <div id="sections">
                 <section id="api-WRENCH">
                   <h1>WRENCH</h1>
-                    <div id="api-WRENCH-addAction">
-                      <article id="api-WRENCH-addAction-0" data-group="User" data-name="addAction" data-version="0">
-                        <div class="pull-left">
-                          <h1>addAction</h1>
-                          <p>Create and start an Action.</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked"></p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/addAction</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-addAction-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-addAction-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-addAction-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-addAction-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-addAction-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-addAction-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-addAction-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-addAction-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-addAction-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-addAction-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-addAction-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-addAction-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
--H "Accept: application/json"\
--H "Content-Type: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/addAction"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-WRENCH-addAction-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.WRENCHApi;
-
-import java.io.File;
-import java.util.*;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        Simid_addAction_body body = ; // Simid_addAction_body | Input to start a new action.
-        try {
-            GenericResponse result = apiInstance.addAction(simid, body);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#addAction");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-WRENCH-addAction-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        Simid_addAction_body body = ; // Simid_addAction_body | Input to start a new action.
-        try {
-            GenericResponse result = apiInstance.addAction(simid, body);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#addAction");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-WRENCH-addAction-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-addAction-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
-Simid_addAction_body *body = ; // Input to start a new action. (optional)
-
-WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
-
-// Create and start an Action.
-[apiInstance addActionWith:simid
-    body:body
-              completionHandler: ^(GenericResponse output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-addAction-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
-
-var api = new WrenchRestApi.WRENCHApi()
-var simid = simid_example; // {{String}} ID of the simulation
-var opts = { 
-  'body':  // {{Simid_addAction_body}} Input to start a new action.
-};
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.addAction(simid, opts, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-WRENCH-addAction-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-addAction-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class addActionExample
-    {
-        public void main()
-        {
-
-            var apiInstance = new WRENCHApi();
-            var simid = simid_example;  // String | ID of the simulation
-            var body = new Simid_addAction_body(); // Simid_addAction_body | Input to start a new action. (optional) 
-
-            try
-            {
-                // Create and start an Action.
-                GenericResponse result = apiInstance.addAction(simid, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WRENCHApi.addAction: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-addAction-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\ApiWRENCHApi();
-$simid = simid_example; // String | ID of the simulation
-$body = ; // Simid_addAction_body | Input to start a new action.
-
-try {
-    $result = $api_instance->addAction($simid, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->addAction: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-addAction-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::WRENCHApi;
-
-my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $simid = simid_example; # String | ID of the simulation
-my $body = WWW::SwaggerClient::Object::Simid_addAction_body->new(); # Simid_addAction_body | Input to start a new action.
-
-eval { 
-    my $result = $api_instance->addAction(simid => $simid, body => $body);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling WRENCHApi->addAction: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-addAction-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.WRENCHApi()
-simid = simid_example # String | ID of the simulation
-body =  # Simid_addAction_body | Input to start a new action. (optional)
-
-try: 
-    # Create and start an Action.
-    api_response = api_instance.add_action(simid, body=body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling WRENCHApi->addAction: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-                            <div class="methodsubtabletitle">Path parameters</div>
-                            <table id="methodsubtable">
-                                <tr>
-                                  <th width="150px">Name</th>
-                                  <th>Description</th>
-                                </tr>
-                                  <tr><td style="width:150px;">simid*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_addAction_simid">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          ID of the simulation
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                            </table>
-
-
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body </td>
-                                <td>
-                                
-                                
-                                <script>
-                                $(document).ready(function() {
-                                  var schemaWrapper = {
-  "description" : "Input to start a new action.",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/simid_addAction_body"
-      }
-    }
-  }
-};
-                                  var schema = schemaWrapper.content["application/json"].schema;
-                                  if (schema.$ref != null) {
-                                    schema = defsParser.$refs.get(schema.$ref);
-                                  } else {
-                                    schemaWrapper.components = {};
-                                    schemaWrapper.components.schemas = Object.assign({}, defs);
-                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                      console.log(err);
-                                    });
-                                  }
-                                
-                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-                                  var result = $('#d2e199_addAction_body');
-                                  result.empty();
-                                  result.append(view.render());
-                                });
-                                </script>
-                                <div id="d2e199_addAction_body"></div>
-                                </td>
-                                </tr>
-                            </table>
-
-
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - OK </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                                <li class="active">
-                                  <a data-toggle="tab" href="#responses-addAction-200-schema">Schema</a>
-                                </li>
-
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-addAction-200-schema">
-                                  <div id='responses-addAction-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = {
-  "description" : "OK",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/GenericResponse"
-      }
-    }
-  }
-};
-                                        var schema = schemaWrapper.content["application/json"].schema;
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
-                                        } else {
-                                          schemaWrapper.components = {};
-                                          schemaWrapper.components.schemas = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
-                                        }
-
-                                        //console.log(JSON.stringify(schema));
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-addAction-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-addAction-200-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-addAction-200-schema-data' type='hidden' value=''></input>
-                                </div>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
                     <div id="api-WRENCH-addBareMetalComputeService">
                       <article id="api-WRENCH-addBareMetalComputeService-0" data-group="User" data-name="addBareMetalComputeService" data-version="0">
                         <div class="pull-left">
@@ -5395,7 +5030,7 @@ except ApiException as e:
                       <article id="api-WRENCH-addFileRegistryService-0" data-group="User" data-name="addFileRegistryService" data-version="0">
                         <div class="pull-left">
                           <h1>addFileRegistryService</h1>
-                          <p>Create and start a file registery service.</p>
+                          <p>Create and start a file registry service.</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -5484,7 +5119,7 @@ String *simid = simid_example; // ID of the simulation
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
-// Create and start a file registery service.
+// Create and start a file registry service.
 [apiInstance addFileRegistryServiceWith:body
     simid:simid
               completionHandler: ^(ServiceResponse output, NSError* error) {
@@ -5539,7 +5174,7 @@ namespace Example
 
             try
             {
-                // Create and start a file registery service.
+                // Create and start a file registry service.
                 ServiceResponse result = apiInstance.addFileRegistryService(body, simid);
                 Debug.WriteLine(result);
             }
@@ -5601,7 +5236,7 @@ body =  # Simid_addFileRegistryService_body | Input to start a new service.
 simid = simid_example # String | ID of the simulation
 
 try: 
-    # Create and start a file registery service.
+    # Create and start a file registry service.
     api_response = api_instance.add_file_registry_service(body, simid)
     pprint(api_response)
 except ApiException as e:
@@ -7049,9 +6684,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         Compound_job_name_addParentJob_body body = ; // Compound_job_name_addParentJob_body | Input to add a parent compound job.
         String simid = simid_example; // String | ID of the simulation
-        String compoundJob = compoundJob_example; // String | Name of the compound job
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            GenericResponse result = apiInstance.addParentJob(body, simid, compoundJob);
+            GenericResponse result = apiInstance.addParentJob(body, simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addParentJob");
@@ -7070,9 +6705,9 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         Compound_job_name_addParentJob_body body = ; // Compound_job_name_addParentJob_body | Input to add a parent compound job.
         String simid = simid_example; // String | ID of the simulation
-        String compoundJob = compoundJob_example; // String | Name of the compound job
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            GenericResponse result = apiInstance.addParentJob(body, simid, compoundJob);
+            GenericResponse result = apiInstance.addParentJob(body, simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling WRENCHApi#addParentJob");
@@ -7088,14 +6723,14 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-addParentJob-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Compound_job_name_addParentJob_body *body = ; // Input to add a parent compound job.
 String *simid = simid_example; // ID of the simulation
-String *compoundJob = compoundJob_example; // Name of the compound job
+String *compoundJobName = compoundJobName_example; // Name of the compound job
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Add parent compound job to compound job
 [apiInstance addParentJobWith:body
     simid:simid
-    compoundJob:compoundJob
+    compoundJobName:compoundJobName
               completionHandler: ^(GenericResponse output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -7113,7 +6748,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var body = ; // {{Compound_job_name_addParentJob_body}} Input to add a parent compound job.
 var simid = simid_example; // {{String}} ID of the simulation
-var compoundJob = compoundJob_example; // {{String}} Name of the compound job
+var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
 
 var callback = function(error, data, response) {
   if (error) {
@@ -7122,7 +6757,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.addParentJob(bodysimidcompoundJob, callback);
+api.addParentJob(bodysimidcompoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -7146,12 +6781,12 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var body = new Compound_job_name_addParentJob_body(); // Compound_job_name_addParentJob_body | Input to add a parent compound job.
             var simid = simid_example;  // String | ID of the simulation
-            var compoundJob = compoundJob_example;  // String | Name of the compound job
+            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
 
             try
             {
                 // Add parent compound job to compound job
-                GenericResponse result = apiInstance.addParentJob(body, simid, compoundJob);
+                GenericResponse result = apiInstance.addParentJob(body, simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -7171,10 +6806,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $body = ; // Compound_job_name_addParentJob_body | Input to add a parent compound job.
 $simid = simid_example; // String | ID of the simulation
-$compoundJob = compoundJob_example; // String | Name of the compound job
+$compoundJobName = compoundJobName_example; // String | Name of the compound job
 
 try {
-    $result = $api_instance->addParentJob($body, $simid, $compoundJob);
+    $result = $api_instance->addParentJob($body, $simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WRENCHApi->addParentJob: ', $e->getMessage(), PHP_EOL;
@@ -7190,10 +6825,10 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $body = WWW::SwaggerClient::Object::Compound_job_name_addParentJob_body->new(); # Compound_job_name_addParentJob_body | Input to add a parent compound job.
 my $simid = simid_example; # String | ID of the simulation
-my $compoundJob = compoundJob_example; # String | Name of the compound job
+my $compoundJobName = compoundJobName_example; # String | Name of the compound job
 
 eval { 
-    my $result = $api_instance->addParentJob(body => $body, simid => $simid, compoundJob => $compoundJob);
+    my $result = $api_instance->addParentJob(body => $body, simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
@@ -7212,11 +6847,11 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 body =  # Compound_job_name_addParentJob_body | Input to add a parent compound job.
 simid = simid_example # String | ID of the simulation
-compoundJob = compoundJob_example # String | Name of the compound job
+compoundJobName = compoundJobName_example # String | Name of the compound job
 
 try: 
     # Add parent compound job to compound job
-    api_response = api_instance.add_parent_job(body, simid, compoundJob)
+    api_response = api_instance.add_parent_job(body, simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling WRENCHApi->addParentJob: %s\n" % e)</code></pre>
@@ -7253,11 +6888,11 @@ except ApiException as e:
                                       </div>
                                   </td>
                                   </tr>
-                                  <tr><td style="width:150px;">compound_job*</td>
+                                  <tr><td style="width:150px;">compound_job_name*</td>
                                   <td>
                                   
                                   
-                                      <div id="d2e199_addParentJob_compoundJob">
+                                      <div id="d2e199_addParentJob_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
