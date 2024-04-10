@@ -1881,41 +1881,32 @@
                     <li data-group="WRENCH" data-name="getTaskFlops_29" class="">
                       <a href="#api-WRENCH-getTaskFlops_29">getTaskFlops_29</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskFlops_30" class="">
-                      <a href="#api-WRENCH-getTaskFlops_30">getTaskFlops_30</a>
-                    </li>
-                    <li data-group="WRENCH" data-name="getTaskFlops_31" class="">
-                      <a href="#api-WRENCH-getTaskFlops_31">getTaskFlops_31</a>
-                    </li>
-                    <li data-group="WRENCH" data-name="getTaskFlops_32" class="">
-                      <a href="#api-WRENCH-getTaskFlops_32">getTaskFlops_32</a>
-                    </li>
                     <li data-group="WRENCH" data-name="getTaskInputFiles" class="">
                       <a href="#api-WRENCH-getTaskInputFiles">getTaskInputFiles</a>
                     </li>
                     <li data-group="WRENCH" data-name="getTaskMaxNumCores" class="">
                       <a href="#api-WRENCH-getTaskMaxNumCores">getTaskMaxNumCores</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskMaxNumCores_33" class="">
-                      <a href="#api-WRENCH-getTaskMaxNumCores_33">getTaskMaxNumCores_33</a>
+                    <li data-group="WRENCH" data-name="getTaskMaxNumCores_30" class="">
+                      <a href="#api-WRENCH-getTaskMaxNumCores_30">getTaskMaxNumCores_30</a>
                     </li>
                     <li data-group="WRENCH" data-name="getTaskMemory" class="">
                       <a href="#api-WRENCH-getTaskMemory">getTaskMemory</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskMemory_34" class="">
-                      <a href="#api-WRENCH-getTaskMemory_34">getTaskMemory_34</a>
+                    <li data-group="WRENCH" data-name="getTaskMemory_31" class="">
+                      <a href="#api-WRENCH-getTaskMemory_31">getTaskMemory_31</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskMemory_35" class="">
-                      <a href="#api-WRENCH-getTaskMemory_35">getTaskMemory_35</a>
+                    <li data-group="WRENCH" data-name="getTaskMemory_32" class="">
+                      <a href="#api-WRENCH-getTaskMemory_32">getTaskMemory_32</a>
                     </li>
                     <li data-group="WRENCH" data-name="getTaskMinNumCores" class="">
                       <a href="#api-WRENCH-getTaskMinNumCores">getTaskMinNumCores</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskMinNumCores_36" class="">
-                      <a href="#api-WRENCH-getTaskMinNumCores_36">getTaskMinNumCores_36</a>
+                    <li data-group="WRENCH" data-name="getTaskMinNumCores_33" class="">
+                      <a href="#api-WRENCH-getTaskMinNumCores_33">getTaskMinNumCores_33</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskMinNumCores_37" class="">
-                      <a href="#api-WRENCH-getTaskMinNumCores_37">getTaskMinNumCores_37</a>
+                    <li data-group="WRENCH" data-name="getTaskMinNumCores_34" class="">
+                      <a href="#api-WRENCH-getTaskMinNumCores_34">getTaskMinNumCores_34</a>
                     </li>
                     <li data-group="WRENCH" data-name="getTaskOutputFiles" class="">
                       <a href="#api-WRENCH-getTaskOutputFiles">getTaskOutputFiles</a>
@@ -1923,8 +1914,8 @@
                     <li data-group="WRENCH" data-name="getTaskStartDate" class="">
                       <a href="#api-WRENCH-getTaskStartDate">getTaskStartDate</a>
                     </li>
-                    <li data-group="WRENCH" data-name="getTaskStartDate_38" class="">
-                      <a href="#api-WRENCH-getTaskStartDate_38">getTaskStartDate_38</a>
+                    <li data-group="WRENCH" data-name="getTaskStartDate_35" class="">
+                      <a href="#api-WRENCH-getTaskStartDate_35">getTaskStartDate_35</a>
                     </li>
                     <li data-group="WRENCH" data-name="getVMComputeService" class="">
                       <a href="#api-WRENCH-getVMComputeService">getVMComputeService</a>
@@ -21760,7 +21751,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getFile</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getUsedFileLocation</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -21782,7 +21773,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_19-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getFile"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getUsedFileLocation"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_19-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -22134,7 +22125,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getFileLocations</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFile</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -22156,7 +22147,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_20-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getFileLocations"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFile"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_20-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -22508,7 +22499,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getUsedFileLocation</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileLocation</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -22530,7 +22521,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_21-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getUsedFileLocation"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileLocation"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_21-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -22882,7 +22873,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getNumBytesToRead</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileRegistryService</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -22904,7 +22895,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_22-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileReadAction/getNumBytesToRead"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileRegistryService"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_22-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -23256,7 +23247,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFile</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getChildrenJobs</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -23278,7 +23269,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_23-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFile"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getChildrenJobs"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_23-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -23296,12 +23287,11 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        String name = name_example; // String | Name of the action
         try {
-            TaskFlops result = apiInstance.getTaskFlops_28(simid, compoundJobName, name);
+            TaskFlops result = apiInstance.getTaskFlops_3(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_28");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_3");
             e.printStackTrace();
         }
     }
@@ -23317,12 +23307,11 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        String name = name_example; // String | Name of the action
         try {
-            TaskFlops result = apiInstance.getTaskFlops_28(simid, compoundJobName, name);
+            TaskFlops result = apiInstance.getTaskFlops_3(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_28");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_3");
             e.printStackTrace();
         }
     }
@@ -23335,14 +23324,12 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskFlops_23-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
-String *name = name_example; // Name of the action
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's flops
 [apiInstance getTaskFlops_23With:simid
     compoundJobName:compoundJobName
-    name:name
               completionHandler: ^(TaskFlops output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -23360,7 +23347,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
-var name = name_example; // {{String}} Name of the action
 
 var callback = function(error, data, response) {
   if (error) {
@@ -23369,7 +23355,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_28(simid, compoundJobName, name, callback);
+api.getTaskFlops_3(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -23385,7 +23371,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_28Example
+    public class getTaskFlops_3Example
     {
         public void main()
         {
@@ -23393,17 +23379,16 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var compoundJobName = compoundJobName_example;  // String | Name of the compound job
-            var name = name_example;  // String | Name of the action
 
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_28(simid, compoundJobName, name);
+                TaskFlops result = apiInstance.getTaskFlops_3(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_28: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_3: " + e.Message );
             }
         }
     }
@@ -23418,13 +23403,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
-$name = name_example; // String | Name of the action
 
 try {
-    $result = $api_instance->getTaskFlops_28($simid, $compoundJobName, $name);
+    $result = $api_instance->getTaskFlops_3($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_28: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_3: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -23437,14 +23421,13 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
-my $name = name_example; # String | Name of the action
 
 eval { 
-    my $result = $api_instance->getTaskFlops_28(simid => $simid, compoundJobName => $compoundJobName, name => $name);
+    my $result = $api_instance->getTaskFlops_3(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_28: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_3: $@\n";
 }</code></pre>
                             </div>
 
@@ -23459,14 +23442,13 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 compoundJobName = compoundJobName_example # String | Name of the compound job
-name = name_example # String | Name of the action
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_28(simid, compoundJobName, name)
+    api_response = api_instance.get_task_flops_3(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_28: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_3: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -23513,28 +23495,6 @@ except ApiException as e:
                                   
                                                       <div class="inner description">
                                                           Name of the compound job
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                                  <tr><td style="width:150px;">name*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_23_name">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Name of the action
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -23630,7 +23590,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileLocation</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredMemory</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -23652,7 +23612,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_24-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileLocation"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredMemory"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_24-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -23670,12 +23630,11 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        String name = name_example; // String | Name of the action
         try {
-            TaskFlops result = apiInstance.getTaskFlops_29(simid, compoundJobName, name);
+            TaskFlops result = apiInstance.getTaskFlops_4(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_29");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_4");
             e.printStackTrace();
         }
     }
@@ -23691,12 +23650,11 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        String name = name_example; // String | Name of the action
         try {
-            TaskFlops result = apiInstance.getTaskFlops_29(simid, compoundJobName, name);
+            TaskFlops result = apiInstance.getTaskFlops_4(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_29");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_4");
             e.printStackTrace();
         }
     }
@@ -23709,14 +23667,12 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskFlops_24-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
-String *name = name_example; // Name of the action
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's flops
 [apiInstance getTaskFlops_24With:simid
     compoundJobName:compoundJobName
-    name:name
               completionHandler: ^(TaskFlops output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -23734,7 +23690,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
-var name = name_example; // {{String}} Name of the action
 
 var callback = function(error, data, response) {
   if (error) {
@@ -23743,7 +23698,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_29(simid, compoundJobName, name, callback);
+api.getTaskFlops_4(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -23759,7 +23714,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_29Example
+    public class getTaskFlops_4Example
     {
         public void main()
         {
@@ -23767,17 +23722,16 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var compoundJobName = compoundJobName_example;  // String | Name of the compound job
-            var name = name_example;  // String | Name of the action
 
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_29(simid, compoundJobName, name);
+                TaskFlops result = apiInstance.getTaskFlops_4(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_29: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_4: " + e.Message );
             }
         }
     }
@@ -23792,13 +23746,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
-$name = name_example; // String | Name of the action
 
 try {
-    $result = $api_instance->getTaskFlops_29($simid, $compoundJobName, $name);
+    $result = $api_instance->getTaskFlops_4($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_29: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_4: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -23811,14 +23764,13 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
-my $name = name_example; # String | Name of the action
 
 eval { 
-    my $result = $api_instance->getTaskFlops_29(simid => $simid, compoundJobName => $compoundJobName, name => $name);
+    my $result = $api_instance->getTaskFlops_4(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_29: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_4: $@\n";
 }</code></pre>
                             </div>
 
@@ -23833,14 +23785,13 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 compoundJobName = compoundJobName_example # String | Name of the compound job
-name = name_example # String | Name of the action
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_29(simid, compoundJobName, name)
+    api_response = api_instance.get_task_flops_4(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_29: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_4: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -23887,28 +23838,6 @@ except ApiException as e:
                                   
                                                       <div class="inner description">
                                                           Name of the compound job
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                                  <tr><td style="width:150px;">name*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_24_name">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Name of the action
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -24004,7 +23933,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getChildrenJobs</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredNumCores</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -24026,7 +23955,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_25-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getChildrenJobs"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredNumCores"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_25-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -24045,10 +23974,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_3(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_5(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_3");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_5");
             e.printStackTrace();
         }
     }
@@ -24065,10 +23994,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_3(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_5(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_3");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_5");
             e.printStackTrace();
         }
     }
@@ -24112,7 +24041,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_3(simid, compoundJobName, callback);
+api.getTaskFlops_5(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -24128,7 +24057,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_3Example
+    public class getTaskFlops_5Example
     {
         public void main()
         {
@@ -24140,12 +24069,12 @@ namespace Example
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_3(simid, compoundJobName);
+                TaskFlops result = apiInstance.getTaskFlops_5(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_3: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_5: " + e.Message );
             }
         }
     }
@@ -24162,10 +24091,10 @@ $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
 
 try {
-    $result = $api_instance->getTaskFlops_3($simid, $compoundJobName);
+    $result = $api_instance->getTaskFlops_5($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_3: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_5: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -24180,11 +24109,11 @@ my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
 
 eval { 
-    my $result = $api_instance->getTaskFlops_3(simid => $simid, compoundJobName => $compoundJobName);
+    my $result = $api_instance->getTaskFlops_5(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_3: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_5: $@\n";
 }</code></pre>
                             </div>
 
@@ -24202,10 +24131,10 @@ compoundJobName = compoundJobName_example # String | Name of the compound job
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_3(simid, compoundJobName)
+    api_response = api_instance.get_task_flops_5(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_3: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_5: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -24347,7 +24276,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileRegistryService</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getState</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -24369,7 +24298,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_26-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/fileRegistryAction/getFileRegistryService"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getState"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_26-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -24387,12 +24316,11 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        String name = name_example; // String | Name of the action
         try {
-            TaskFlops result = apiInstance.getTaskFlops_30(simid, compoundJobName, name);
+            TaskFlops result = apiInstance.getTaskFlops_6(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_30");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_6");
             e.printStackTrace();
         }
     }
@@ -24408,12 +24336,11 @@ public class WRENCHApiExample {
         WRENCHApi apiInstance = new WRENCHApi();
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        String name = name_example; // String | Name of the action
         try {
-            TaskFlops result = apiInstance.getTaskFlops_30(simid, compoundJobName, name);
+            TaskFlops result = apiInstance.getTaskFlops_6(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_30");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_6");
             e.printStackTrace();
         }
     }
@@ -24426,14 +24353,12 @@ public class WRENCHApiExample {
                             <div class="tab-pane" id="examples-WRENCH-getTaskFlops_26-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
-String *name = name_example; // Name of the action
 
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's flops
 [apiInstance getTaskFlops_26With:simid
     compoundJobName:compoundJobName
-    name:name
               completionHandler: ^(TaskFlops output, NSError* error) {
                             if (output) {
                                 NSLog(@"%@", output);
@@ -24451,7 +24376,6 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 var api = new WrenchRestApi.WRENCHApi()
 var simid = simid_example; // {{String}} ID of the simulation
 var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
-var name = name_example; // {{String}} Name of the action
 
 var callback = function(error, data, response) {
   if (error) {
@@ -24460,7 +24384,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_30(simid, compoundJobName, name, callback);
+api.getTaskFlops_6(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -24476,7 +24400,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_30Example
+    public class getTaskFlops_6Example
     {
         public void main()
         {
@@ -24484,17 +24408,16 @@ namespace Example
             var apiInstance = new WRENCHApi();
             var simid = simid_example;  // String | ID of the simulation
             var compoundJobName = compoundJobName_example;  // String | Name of the compound job
-            var name = name_example;  // String | Name of the action
 
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_30(simid, compoundJobName, name);
+                TaskFlops result = apiInstance.getTaskFlops_6(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_30: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_6: " + e.Message );
             }
         }
     }
@@ -24509,13 +24432,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $api_instance = new Swagger\Client\ApiWRENCHApi();
 $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
-$name = name_example; // String | Name of the action
 
 try {
-    $result = $api_instance->getTaskFlops_30($simid, $compoundJobName, $name);
+    $result = $api_instance->getTaskFlops_6($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_30: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_6: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -24528,14 +24450,13 @@ use WWW::SwaggerClient::WRENCHApi;
 my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
 my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
-my $name = name_example; # String | Name of the action
 
 eval { 
-    my $result = $api_instance->getTaskFlops_30(simid => $simid, compoundJobName => $compoundJobName, name => $name);
+    my $result = $api_instance->getTaskFlops_6(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_30: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_6: $@\n";
 }</code></pre>
                             </div>
 
@@ -24550,14 +24471,13 @@ from pprint import pprint
 api_instance = swagger_client.WRENCHApi()
 simid = simid_example # String | ID of the simulation
 compoundJobName = compoundJobName_example # String | Name of the compound job
-name = name_example # String | Name of the action
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_30(simid, compoundJobName, name)
+    api_response = api_instance.get_task_flops_6(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_30: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_6: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -24604,28 +24524,6 @@ except ApiException as e:
                                   
                                                       <div class="inner description">
                                                           Name of the compound job
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                                  <tr><td style="width:150px;">name*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_26_name">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Name of the action
                                                       </div>
                                               </div>
                                                   <div class="inner required">
@@ -24721,7 +24619,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredMemory</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/hasFailed</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -24743,7 +24641,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_27-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredMemory"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/hasFailed"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_27-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -24762,10 +24660,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_4(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_7(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_4");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_7");
             e.printStackTrace();
         }
     }
@@ -24782,10 +24680,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_4(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_7(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_4");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_7");
             e.printStackTrace();
         }
     }
@@ -24829,7 +24727,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_4(simid, compoundJobName, callback);
+api.getTaskFlops_7(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -24845,7 +24743,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_4Example
+    public class getTaskFlops_7Example
     {
         public void main()
         {
@@ -24857,12 +24755,12 @@ namespace Example
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_4(simid, compoundJobName);
+                TaskFlops result = apiInstance.getTaskFlops_7(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_4: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_7: " + e.Message );
             }
         }
     }
@@ -24879,10 +24777,10 @@ $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
 
 try {
-    $result = $api_instance->getTaskFlops_4($simid, $compoundJobName);
+    $result = $api_instance->getTaskFlops_7($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_4: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_7: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -24897,11 +24795,11 @@ my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
 
 eval { 
-    my $result = $api_instance->getTaskFlops_4(simid => $simid, compoundJobName => $compoundJobName);
+    my $result = $api_instance->getTaskFlops_7(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_4: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_7: $@\n";
 }</code></pre>
                             </div>
 
@@ -24919,10 +24817,10 @@ compoundJobName = compoundJobName_example # String | Name of the compound job
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_4(simid, compoundJobName)
+    api_response = api_instance.get_task_flops_7(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_4: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_7: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -25064,7 +24962,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredNumCores</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/hasSuccessfullyCompleted</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -25086,7 +24984,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_28-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getMinimumRequiredNumCores"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/hasSuccessfullyCompleted"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_28-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -25105,10 +25003,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_5(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_8(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_5");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_8");
             e.printStackTrace();
         }
     }
@@ -25125,10 +25023,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_5(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_8(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_5");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_8");
             e.printStackTrace();
         }
     }
@@ -25172,7 +25070,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_5(simid, compoundJobName, callback);
+api.getTaskFlops_8(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -25188,7 +25086,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_5Example
+    public class getTaskFlops_8Example
     {
         public void main()
         {
@@ -25200,12 +25098,12 @@ namespace Example
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_5(simid, compoundJobName);
+                TaskFlops result = apiInstance.getTaskFlops_8(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_5: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_8: " + e.Message );
             }
         }
     }
@@ -25222,10 +25120,10 @@ $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
 
 try {
-    $result = $api_instance->getTaskFlops_5($simid, $compoundJobName);
+    $result = $api_instance->getTaskFlops_8($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_5: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_8: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -25240,11 +25138,11 @@ my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
 
 eval { 
-    my $result = $api_instance->getTaskFlops_5(simid => $simid, compoundJobName => $compoundJobName);
+    my $result = $api_instance->getTaskFlops_8(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_5: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_8: $@\n";
 }</code></pre>
                             </div>
 
@@ -25262,10 +25160,10 @@ compoundJobName = compoundJobName_example # String | Name of the compound job
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_5(simid, compoundJobName)
+    api_response = api_instance.get_task_flops_8(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_5: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_8: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -25407,7 +25305,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/getState</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addActionDependency</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -25429,7 +25327,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_29-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/getState"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/addActionDependency"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops_29-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -25448,10 +25346,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_6(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_9(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_6");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_9");
             e.printStackTrace();
         }
     }
@@ -25468,10 +25366,10 @@ public class WRENCHApiExample {
         String simid = simid_example; // String | ID of the simulation
         String compoundJobName = compoundJobName_example; // String | Name of the compound job
         try {
-            TaskFlops result = apiInstance.getTaskFlops_6(simid, compoundJobName);
+            TaskFlops result = apiInstance.getTaskFlops_9(simid, compoundJobName);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_6");
+            System.err.println("Exception when calling WRENCHApi#getTaskFlops_9");
             e.printStackTrace();
         }
     }
@@ -25515,7 +25413,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.getTaskFlops_6(simid, compoundJobName, callback);
+api.getTaskFlops_9(simid, compoundJobName, callback);
 </code></pre>
                             </div>
 
@@ -25531,7 +25429,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getTaskFlops_6Example
+    public class getTaskFlops_9Example
     {
         public void main()
         {
@@ -25543,12 +25441,12 @@ namespace Example
             try
             {
                 // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_6(simid, compoundJobName);
+                TaskFlops result = apiInstance.getTaskFlops_9(simid, compoundJobName);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_6: " + e.Message );
+                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_9: " + e.Message );
             }
         }
     }
@@ -25565,10 +25463,10 @@ $simid = simid_example; // String | ID of the simulation
 $compoundJobName = compoundJobName_example; // String | Name of the compound job
 
 try {
-    $result = $api_instance->getTaskFlops_6($simid, $compoundJobName);
+    $result = $api_instance->getTaskFlops_9($simid, $compoundJobName);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_6: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling WRENCHApi->getTaskFlops_9: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
@@ -25583,11 +25481,11 @@ my $simid = simid_example; # String | ID of the simulation
 my $compoundJobName = compoundJobName_example; # String | Name of the compound job
 
 eval { 
-    my $result = $api_instance->getTaskFlops_6(simid => $simid, compoundJobName => $compoundJobName);
+    my $result = $api_instance->getTaskFlops_9(simid => $simid, compoundJobName => $compoundJobName);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_6: $@\n";
+    warn "Exception when calling WRENCHApi->getTaskFlops_9: $@\n";
 }</code></pre>
                             </div>
 
@@ -25605,10 +25503,10 @@ compoundJobName = compoundJobName_example # String | Name of the compound job
 
 try: 
     # Get an action's flops
-    api_response = api_instance.get_task_flops_6(simid, compoundJobName)
+    api_response = api_instance.get_task_flops_9(simid, compoundJobName)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_6: %s\n" % e)</code></pre>
+    print("Exception when calling WRENCHApi->getTaskFlops_9: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -25716,1035 +25614,6 @@ except ApiException as e:
                                     </script>
                                   </div>
                                   <input id='responses-getTaskFlops_29-200-schema-data' type='hidden' value=''></input>
-                                </div>
-                            </div>
-
-                            <h3> Status: 404 - Job not found </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-WRENCH-getTaskFlops_30">
-                      <article id="api-WRENCH-getTaskFlops_30-0" data-group="User" data-name="getTaskFlops_30" data-version="0">
-                        <div class="pull-left">
-                          <h1>getTaskFlops_30</h1>
-                          <p>Get an action&#x27;s flops</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked"></p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/hasFailed</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskFlops_30-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_30-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_30-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
--H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/hasFailed"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.WRENCHApi;
-
-import java.io.File;
-import java.util.*;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        try {
-            TaskFlops result = apiInstance.getTaskFlops_7(simid, compoundJobName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_7");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        try {
-            TaskFlops result = apiInstance.getTaskFlops_7(simid, compoundJobName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_7");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
-String *compoundJobName = compoundJobName_example; // Name of the compound job
-
-WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
-
-// Get an action's flops
-[apiInstance getTaskFlops_30With:simid
-    compoundJobName:compoundJobName
-              completionHandler: ^(TaskFlops output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
-
-var api = new WrenchRestApi.WRENCHApi()
-var simid = simid_example; // {{String}} ID of the simulation
-var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.getTaskFlops_7(simid, compoundJobName, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class getTaskFlops_7Example
-    {
-        public void main()
-        {
-
-            var apiInstance = new WRENCHApi();
-            var simid = simid_example;  // String | ID of the simulation
-            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
-
-            try
-            {
-                // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_7(simid, compoundJobName);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_7: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\ApiWRENCHApi();
-$simid = simid_example; // String | ID of the simulation
-$compoundJobName = compoundJobName_example; // String | Name of the compound job
-
-try {
-    $result = $api_instance->getTaskFlops_7($simid, $compoundJobName);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_7: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::WRENCHApi;
-
-my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $simid = simid_example; # String | ID of the simulation
-my $compoundJobName = compoundJobName_example; # String | Name of the compound job
-
-eval { 
-    my $result = $api_instance->getTaskFlops_7(simid => $simid, compoundJobName => $compoundJobName);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_7: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_30-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.WRENCHApi()
-simid = simid_example # String | ID of the simulation
-compoundJobName = compoundJobName_example # String | Name of the compound job
-
-try: 
-    # Get an action's flops
-    api_response = api_instance.get_task_flops_7(simid, compoundJobName)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_7: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-                            <div class="methodsubtabletitle">Path parameters</div>
-                            <table id="methodsubtable">
-                                <tr>
-                                  <th width="150px">Name</th>
-                                  <th>Description</th>
-                                </tr>
-                                  <tr><td style="width:150px;">simid*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_30_simid">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          ID of the simulation
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                                  <tr><td style="width:150px;">compound_job_name*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_30_compoundJobName">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Name of the compound job
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                            </table>
-
-
-
-
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - OK </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                                <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskFlops_30-200-schema">Schema</a>
-                                </li>
-
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskFlops_30-200-schema">
-                                  <div id='responses-getTaskFlops_30-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = {
-  "description" : "OK",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/TaskFlops"
-      }
-    }
-  }
-};
-                                        var schema = schemaWrapper.content["application/json"].schema;
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
-                                        } else {
-                                          schemaWrapper.components = {};
-                                          schemaWrapper.components.schemas = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
-                                        }
-
-                                        //console.log(JSON.stringify(schema));
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskFlops_30-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskFlops_30-200-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-getTaskFlops_30-200-schema-data' type='hidden' value=''></input>
-                                </div>
-                            </div>
-
-                            <h3> Status: 404 - Job not found </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-WRENCH-getTaskFlops_31">
-                      <article id="api-WRENCH-getTaskFlops_31-0" data-group="User" data-name="getTaskFlops_31" data-version="0">
-                        <div class="pull-left">
-                          <h1>getTaskFlops_31</h1>
-                          <p>Get an action&#x27;s flops</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked"></p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/hasSuccessfullyCompleted</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskFlops_31-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_31-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_31-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
--H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/hasSuccessfullyCompleted"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.WRENCHApi;
-
-import java.io.File;
-import java.util.*;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        try {
-            TaskFlops result = apiInstance.getTaskFlops_8(simid, compoundJobName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_8");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        try {
-            TaskFlops result = apiInstance.getTaskFlops_8(simid, compoundJobName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_8");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
-String *compoundJobName = compoundJobName_example; // Name of the compound job
-
-WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
-
-// Get an action's flops
-[apiInstance getTaskFlops_31With:simid
-    compoundJobName:compoundJobName
-              completionHandler: ^(TaskFlops output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
-
-var api = new WrenchRestApi.WRENCHApi()
-var simid = simid_example; // {{String}} ID of the simulation
-var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.getTaskFlops_8(simid, compoundJobName, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class getTaskFlops_8Example
-    {
-        public void main()
-        {
-
-            var apiInstance = new WRENCHApi();
-            var simid = simid_example;  // String | ID of the simulation
-            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
-
-            try
-            {
-                // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_8(simid, compoundJobName);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_8: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\ApiWRENCHApi();
-$simid = simid_example; // String | ID of the simulation
-$compoundJobName = compoundJobName_example; // String | Name of the compound job
-
-try {
-    $result = $api_instance->getTaskFlops_8($simid, $compoundJobName);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_8: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::WRENCHApi;
-
-my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $simid = simid_example; # String | ID of the simulation
-my $compoundJobName = compoundJobName_example; # String | Name of the compound job
-
-eval { 
-    my $result = $api_instance->getTaskFlops_8(simid => $simid, compoundJobName => $compoundJobName);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_8: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_31-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.WRENCHApi()
-simid = simid_example # String | ID of the simulation
-compoundJobName = compoundJobName_example # String | Name of the compound job
-
-try: 
-    # Get an action's flops
-    api_response = api_instance.get_task_flops_8(simid, compoundJobName)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_8: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-                            <div class="methodsubtabletitle">Path parameters</div>
-                            <table id="methodsubtable">
-                                <tr>
-                                  <th width="150px">Name</th>
-                                  <th>Description</th>
-                                </tr>
-                                  <tr><td style="width:150px;">simid*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_31_simid">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          ID of the simulation
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                                  <tr><td style="width:150px;">compound_job_name*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_31_compoundJobName">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Name of the compound job
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                            </table>
-
-
-
-
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - OK </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                                <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskFlops_31-200-schema">Schema</a>
-                                </li>
-
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskFlops_31-200-schema">
-                                  <div id='responses-getTaskFlops_31-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = {
-  "description" : "OK",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/TaskFlops"
-      }
-    }
-  }
-};
-                                        var schema = schemaWrapper.content["application/json"].schema;
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
-                                        } else {
-                                          schemaWrapper.components = {};
-                                          schemaWrapper.components.schemas = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
-                                        }
-
-                                        //console.log(JSON.stringify(schema));
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskFlops_31-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskFlops_31-200-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-getTaskFlops_31-200-schema-data' type='hidden' value=''></input>
-                                </div>
-                            </div>
-
-                            <h3> Status: 404 - Job not found </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-WRENCH-getTaskFlops_32">
-                      <article id="api-WRENCH-getTaskFlops_32-0" data-group="User" data-name="getTaskFlops_32" data-version="0">
-                        <div class="pull-left">
-                          <h1>getTaskFlops_32</h1>
-                          <p>Get an action&#x27;s flops</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked"></p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addActionDependency</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskFlops_32-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskFlops_32-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskFlops_32-0-curl">
-                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
--H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/addActionDependency"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.WRENCHApi;
-
-import java.io.File;
-import java.util.*;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        try {
-            TaskFlops result = apiInstance.getTaskFlops_9(simid, compoundJobName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_9");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
-
-public class WRENCHApiExample {
-
-    public static void main(String[] args) {
-        WRENCHApi apiInstance = new WRENCHApi();
-        String simid = simid_example; // String | ID of the simulation
-        String compoundJobName = compoundJobName_example; // String | Name of the compound job
-        try {
-            TaskFlops result = apiInstance.getTaskFlops_9(simid, compoundJobName);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling WRENCHApi#getTaskFlops_9");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
-String *compoundJobName = compoundJobName_example; // Name of the compound job
-
-WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
-
-// Get an action's flops
-[apiInstance getTaskFlops_32With:simid
-    compoundJobName:compoundJobName
-              completionHandler: ^(TaskFlops output, NSError* error) {
-                            if (output) {
-                                NSLog(@"%@", output);
-                            }
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
-
-var api = new WrenchRestApi.WRENCHApi()
-var simid = simid_example; // {{String}} ID of the simulation
-var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-api.getTaskFlops_9(simid, compoundJobName, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class getTaskFlops_9Example
-    {
-        public void main()
-        {
-
-            var apiInstance = new WRENCHApi();
-            var simid = simid_example;  // String | ID of the simulation
-            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
-
-            try
-            {
-                // Get an action's flops
-                TaskFlops result = apiInstance.getTaskFlops_9(simid, compoundJobName);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WRENCHApi.getTaskFlops_9: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$api_instance = new Swagger\Client\ApiWRENCHApi();
-$simid = simid_example; // String | ID of the simulation
-$compoundJobName = compoundJobName_example; // String | Name of the compound job
-
-try {
-    $result = $api_instance->getTaskFlops_9($simid, $compoundJobName);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling WRENCHApi->getTaskFlops_9: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::WRENCHApi;
-
-my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
-my $simid = simid_example; # String | ID of the simulation
-my $compoundJobName = compoundJobName_example; # String | Name of the compound job
-
-eval { 
-    my $result = $api_instance->getTaskFlops_9(simid => $simid, compoundJobName => $compoundJobName);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling WRENCHApi->getTaskFlops_9: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-WRENCH-getTaskFlops_32-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.WRENCHApi()
-simid = simid_example # String | ID of the simulation
-compoundJobName = compoundJobName_example # String | Name of the compound job
-
-try: 
-    # Get an action's flops
-    api_response = api_instance.get_task_flops_9(simid, compoundJobName)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling WRENCHApi->getTaskFlops_9: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-                            <div class="methodsubtabletitle">Path parameters</div>
-                            <table id="methodsubtable">
-                                <tr>
-                                  <th width="150px">Name</th>
-                                  <th>Description</th>
-                                </tr>
-                                  <tr><td style="width:150px;">simid*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_32_simid">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          ID of the simulation
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                                  <tr><td style="width:150px;">compound_job_name*</td>
-                                  <td>
-                                  
-                                  
-                                      <div id="d2e199_getTaskFlops_32_compoundJobName">
-                                          <div class="json-schema-view">
-                                              <div class="primitive">
-                                                  <span class="type">
-                                                      String
-                                                  </span>
-                                  
-                                                      <div class="inner description">
-                                                          Name of the compound job
-                                                      </div>
-                                              </div>
-                                                  <div class="inner required">
-                                                      Required
-                                                  </div>
-                                          </div>
-                                      </div>
-                                  </td>
-                                  </tr>
-                            </table>
-
-
-
-
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - OK </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                                <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskFlops_32-200-schema">Schema</a>
-                                </li>
-
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskFlops_32-200-schema">
-                                  <div id='responses-getTaskFlops_32-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
-                                    <script>
-                                      $(document).ready(function() {
-                                        var schemaWrapper = {
-  "description" : "OK",
-  "content" : {
-    "application/json" : {
-      "schema" : {
-        "$ref" : "#/components/schemas/TaskFlops"
-      }
-    }
-  }
-};
-                                        var schema = schemaWrapper.content["application/json"].schema;
-                                        if (schema.$ref != null) {
-                                          schema = defsParser.$refs.get(schema.$ref);
-                                        } else {
-                                          schemaWrapper.components = {};
-                                          schemaWrapper.components.schemas = Object.assign({}, defs);
-                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
-                                            console.log(err);
-                                          });
-                                        }
-
-                                        //console.log(JSON.stringify(schema));
-                                        var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskFlops_32-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskFlops_32-200-schema-200');
-                                        result.empty();
-                                        result.append(view.render());
-                                      });
-                                    </script>
-                                  </div>
-                                  <input id='responses-getTaskFlops_32-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -27509,10 +26378,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-WRENCH-getTaskMaxNumCores_33">
-                      <article id="api-WRENCH-getTaskMaxNumCores_33-0" data-group="User" data-name="getTaskMaxNumCores_33" data-version="0">
+                    <div id="api-WRENCH-getTaskMaxNumCores_30">
+                      <article id="api-WRENCH-getTaskMaxNumCores_30-0" data-group="User" data-name="getTaskMaxNumCores_30" data-version="0">
                         <div class="pull-left">
-                          <h1>getTaskMaxNumCores_33</h1>
+                          <h1>getTaskMaxNumCores_30</h1>
                           <p>Get an action&#x27;s maximum number of cores.</p>
                         </div>
                         <div class="pull-right"></div>
@@ -27526,26 +26395,26 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_33-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMaxNumCores_30-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskMaxNumCores_33-0-curl">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskMaxNumCores_30-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/actionGetMaxNumCores"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-java">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -27573,7 +26442,7 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-android">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
 
 public class WRENCHApiExample {
@@ -27594,10 +26463,10 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-groovy">
+  <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-objc">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 String *name = name_example; // Name of the action
@@ -27605,7 +26474,7 @@ String *name = name_example; // Name of the action
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's maximum number of cores.
-[apiInstance getTaskMaxNumCores_33With:simid
+[apiInstance getTaskMaxNumCores_30With:simid
     compoundJobName:compoundJobName
     name:name
               completionHandler: ^(TaskCores output, NSError* error) {
@@ -27619,7 +26488,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-javascript">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
@@ -27638,10 +26507,10 @@ api.getTaskMaxNumCores_0(simid, compoundJobName, name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-angular">
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-csharp">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -27676,7 +26545,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-php">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -27694,7 +26563,7 @@ try {
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-perl">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
@@ -27713,7 +26582,7 @@ if ($@) {
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_33-0-python">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores_30-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -27747,7 +26616,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMaxNumCores_33_simid">
+                                      <div id="d2e199_getTaskMaxNumCores_30_simid">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -27769,7 +26638,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMaxNumCores_33_compoundJobName">
+                                      <div id="d2e199_getTaskMaxNumCores_30_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -27791,7 +26660,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMaxNumCores_33_name">
+                                      <div id="d2e199_getTaskMaxNumCores_30_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -27820,14 +26689,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskMaxNumCores_33-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-getTaskMaxNumCores_30-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskMaxNumCores_33-200-schema">
-                                  <div id='responses-getTaskMaxNumCores_33-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-getTaskMaxNumCores_30-200-schema">
+                                  <div id='responses-getTaskMaxNumCores_30-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -27853,14 +26722,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskMaxNumCores_33-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskMaxNumCores_33-200-schema-200');
+                                        $('#responses-getTaskMaxNumCores_30-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskMaxNumCores_30-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-getTaskMaxNumCores_33-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-getTaskMaxNumCores_30-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -28254,10 +27123,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-WRENCH-getTaskMemory_34">
-                      <article id="api-WRENCH-getTaskMemory_34-0" data-group="User" data-name="getTaskMemory_34" data-version="0">
+                    <div id="api-WRENCH-getTaskMemory_31">
+                      <article id="api-WRENCH-getTaskMemory_31-0" data-group="User" data-name="getTaskMemory_31" data-version="0">
                         <div class="pull-left">
-                          <h1>getTaskMemory_34</h1>
+                          <h1>getTaskMemory_31</h1>
                           <p>Get an action&#x27;s memory requirement.</p>
                         </div>
                         <div class="pull-right"></div>
@@ -28271,26 +27140,26 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskMemory_34-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_34-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-WRENCH-getTaskMemory_31-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_31-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskMemory_34-0-curl">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskMemory_31-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/actionGetMemory"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-java">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -28318,7 +27187,7 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-android">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
 
 public class WRENCHApiExample {
@@ -28339,10 +27208,10 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-groovy">
+  <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-objc">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 String *name = name_example; // Name of the action
@@ -28350,7 +27219,7 @@ String *name = name_example; // Name of the action
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's memory requirement.
-[apiInstance getTaskMemory_34With:simid
+[apiInstance getTaskMemory_31With:simid
     compoundJobName:compoundJobName
     name:name
               completionHandler: ^(TaskMem output, NSError* error) {
@@ -28364,7 +27233,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-javascript">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
@@ -28383,10 +27252,10 @@ api.getTaskMemory_0(simid, compoundJobName, name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-angular">
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-csharp">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -28421,7 +27290,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-php">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -28439,7 +27308,7 @@ try {
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-perl">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
@@ -28458,7 +27327,7 @@ if ($@) {
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_34-0-python">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_31-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -28492,7 +27361,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_34_simid">
+                                      <div id="d2e199_getTaskMemory_31_simid">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -28514,7 +27383,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_34_compoundJobName">
+                                      <div id="d2e199_getTaskMemory_31_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -28536,7 +27405,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_34_name">
+                                      <div id="d2e199_getTaskMemory_31_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -28565,14 +27434,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskMemory_34-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-getTaskMemory_31-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskMemory_34-200-schema">
-                                  <div id='responses-getTaskMemory_34-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-getTaskMemory_31-200-schema">
+                                  <div id='responses-getTaskMemory_31-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -28598,14 +27467,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskMemory_34-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskMemory_34-200-schema-200');
+                                        $('#responses-getTaskMemory_31-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskMemory_31-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-getTaskMemory_34-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-getTaskMemory_31-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -28628,10 +27497,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-WRENCH-getTaskMemory_35">
-                      <article id="api-WRENCH-getTaskMemory_35-0" data-group="User" data-name="getTaskMemory_35" data-version="0">
+                    <div id="api-WRENCH-getTaskMemory_32">
+                      <article id="api-WRENCH-getTaskMemory_32-0" data-group="User" data-name="getTaskMemory_32" data-version="0">
                         <div class="pull-left">
-                          <h1>getTaskMemory_35</h1>
+                          <h1>getTaskMemory_32</h1>
                           <p>Get an action&#x27;s memory requirement.</p>
                         </div>
                         <div class="pull-right"></div>
@@ -28645,26 +27514,26 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskMemory_35-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMemory_35-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-WRENCH-getTaskMemory_32-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMemory_32-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskMemory_35-0-curl">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskMemory_32-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/actionUsesScratch"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-java">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -28692,7 +27561,7 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-android">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
 
 public class WRENCHApiExample {
@@ -28713,10 +27582,10 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-groovy">
+  <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-objc">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 String *name = name_example; // Name of the action
@@ -28724,7 +27593,7 @@ String *name = name_example; // Name of the action
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's memory requirement.
-[apiInstance getTaskMemory_35With:simid
+[apiInstance getTaskMemory_32With:simid
     compoundJobName:compoundJobName
     name:name
               completionHandler: ^(TaskMem output, NSError* error) {
@@ -28738,7 +27607,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-javascript">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
@@ -28757,10 +27626,10 @@ api.getTaskMemory_1(simid, compoundJobName, name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-angular">
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-csharp">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -28795,7 +27664,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-php">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -28813,7 +27682,7 @@ try {
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-perl">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
@@ -28832,7 +27701,7 @@ if ($@) {
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_35-0-python">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMemory_32-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -28866,7 +27735,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_35_simid">
+                                      <div id="d2e199_getTaskMemory_32_simid">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -28888,7 +27757,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_35_compoundJobName">
+                                      <div id="d2e199_getTaskMemory_32_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -28910,7 +27779,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMemory_35_name">
+                                      <div id="d2e199_getTaskMemory_32_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -28939,14 +27808,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskMemory_35-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-getTaskMemory_32-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskMemory_35-200-schema">
-                                  <div id='responses-getTaskMemory_35-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-getTaskMemory_32-200-schema">
+                                  <div id='responses-getTaskMemory_32-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -28972,14 +27841,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskMemory_35-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskMemory_35-200-schema-200');
+                                        $('#responses-getTaskMemory_32-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskMemory_32-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-getTaskMemory_35-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-getTaskMemory_32-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -29373,10 +28242,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-WRENCH-getTaskMinNumCores_36">
-                      <article id="api-WRENCH-getTaskMinNumCores_36-0" data-group="User" data-name="getTaskMinNumCores_36" data-version="0">
+                    <div id="api-WRENCH-getTaskMinNumCores_33">
+                      <article id="api-WRENCH-getTaskMinNumCores_33-0" data-group="User" data-name="getTaskMinNumCores_33" data-version="0">
                         <div class="pull-left">
-                          <h1>getTaskMinNumCores_36</h1>
+                          <h1>getTaskMinNumCores_33</h1>
                           <p>Get an action&#x27;s minimum number of cores.</p>
                         </div>
                         <div class="pull-right"></div>
@@ -29390,26 +28259,26 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskMinNumCores_36-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_36-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-WRENCH-getTaskMinNumCores_33-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_33-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskMinNumCores_36-0-curl">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskMinNumCores_33-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/actionGetMinNumCores"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-java">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -29437,7 +28306,7 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-android">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
 
 public class WRENCHApiExample {
@@ -29458,10 +28327,10 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-groovy">
+  <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-objc">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 String *name = name_example; // Name of the action
@@ -29469,7 +28338,7 @@ String *name = name_example; // Name of the action
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's minimum number of cores.
-[apiInstance getTaskMinNumCores_36With:simid
+[apiInstance getTaskMinNumCores_33With:simid
     compoundJobName:compoundJobName
     name:name
               completionHandler: ^(TaskCores output, NSError* error) {
@@ -29483,7 +28352,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-javascript">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
@@ -29502,10 +28371,10 @@ api.getTaskMinNumCores_0(simid, compoundJobName, name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-angular">
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-csharp">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -29540,7 +28409,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-php">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -29558,7 +28427,7 @@ try {
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-perl">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
@@ -29577,7 +28446,7 @@ if ($@) {
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_36-0-python">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_33-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -29611,7 +28480,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_36_simid">
+                                      <div id="d2e199_getTaskMinNumCores_33_simid">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -29633,7 +28502,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_36_compoundJobName">
+                                      <div id="d2e199_getTaskMinNumCores_33_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -29655,7 +28524,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_36_name">
+                                      <div id="d2e199_getTaskMinNumCores_33_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -29684,14 +28553,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskMinNumCores_36-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-getTaskMinNumCores_33-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskMinNumCores_36-200-schema">
-                                  <div id='responses-getTaskMinNumCores_36-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-getTaskMinNumCores_33-200-schema">
+                                  <div id='responses-getTaskMinNumCores_33-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -29717,14 +28586,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskMinNumCores_36-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskMinNumCores_36-200-schema-200');
+                                        $('#responses-getTaskMinNumCores_33-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskMinNumCores_33-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-getTaskMinNumCores_36-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-getTaskMinNumCores_33-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -29747,10 +28616,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-WRENCH-getTaskMinNumCores_37">
-                      <article id="api-WRENCH-getTaskMinNumCores_37-0" data-group="User" data-name="getTaskMinNumCores_37" data-version="0">
+                    <div id="api-WRENCH-getTaskMinNumCores_34">
+                      <article id="api-WRENCH-getTaskMinNumCores_34-0" data-group="User" data-name="getTaskMinNumCores_34" data-version="0">
                         <div class="pull-left">
-                          <h1>getTaskMinNumCores_37</h1>
+                          <h1>getTaskMinNumCores_34</h1>
                           <p>Get an action&#x27;s minimum number of cores.</p>
                         </div>
                         <div class="pull-right"></div>
@@ -29764,26 +28633,26 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskMinNumCores_37-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_37-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-WRENCH-getTaskMinNumCores_34-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskMinNumCores_34-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskMinNumCores_37-0-curl">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskMinNumCores_34-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/actionGetMinRAMFootprint"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-java">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -29811,7 +28680,7 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-android">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
 
 public class WRENCHApiExample {
@@ -29832,10 +28701,10 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-groovy">
+  <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-objc">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 String *name = name_example; // Name of the action
@@ -29843,7 +28712,7 @@ String *name = name_example; // Name of the action
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's minimum number of cores.
-[apiInstance getTaskMinNumCores_37With:simid
+[apiInstance getTaskMinNumCores_34With:simid
     compoundJobName:compoundJobName
     name:name
               completionHandler: ^(TaskCores output, NSError* error) {
@@ -29857,7 +28726,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-javascript">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
@@ -29876,10 +28745,10 @@ api.getTaskMinNumCores_1(simid, compoundJobName, name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-angular">
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-csharp">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -29914,7 +28783,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-php">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -29932,7 +28801,7 @@ try {
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-perl">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
@@ -29951,7 +28820,7 @@ if ($@) {
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_37-0-python">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores_34-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -29985,7 +28854,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_37_simid">
+                                      <div id="d2e199_getTaskMinNumCores_34_simid">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -30007,7 +28876,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_37_compoundJobName">
+                                      <div id="d2e199_getTaskMinNumCores_34_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -30029,7 +28898,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskMinNumCores_37_name">
+                                      <div id="d2e199_getTaskMinNumCores_34_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -30058,14 +28927,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskMinNumCores_37-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-getTaskMinNumCores_34-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskMinNumCores_37-200-schema">
-                                  <div id='responses-getTaskMinNumCores_37-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-getTaskMinNumCores_34-200-schema">
+                                  <div id='responses-getTaskMinNumCores_34-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -30091,14 +28960,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskMinNumCores_37-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskMinNumCores_37-200-schema-200');
+                                        $('#responses-getTaskMinNumCores_34-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskMinNumCores_34-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-getTaskMinNumCores_37-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-getTaskMinNumCores_34-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
@@ -30863,10 +29732,10 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                    <div id="api-WRENCH-getTaskStartDate_38">
-                      <article id="api-WRENCH-getTaskStartDate_38-0" data-group="User" data-name="getTaskStartDate_38" data-version="0">
+                    <div id="api-WRENCH-getTaskStartDate_35">
+                      <article id="api-WRENCH-getTaskStartDate_35-0" data-group="User" data-name="getTaskStartDate_35" data-version="0">
                         <div class="pull-left">
-                          <h1>getTaskStartDate_38</h1>
+                          <h1>getTaskStartDate_35</h1>
                           <p>Get an action&#x27;s start date.</p>
                         </div>
                         <div class="pull-right"></div>
@@ -30880,26 +29749,26 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-WRENCH-getTaskStartDate_38-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-java">Java</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_38-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-WRENCH-getTaskStartDate_35-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskStartDate_35-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-WRENCH-getTaskStartDate_38-0-curl">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskStartDate_35-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
 "https://wrench-project.org/v1/simulation/{simid}/{compound_job_name}/actions/{name}/actionGetStartDate"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-java">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -30927,7 +29796,7 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-android">
+                          <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
 
 public class WRENCHApiExample {
@@ -30948,10 +29817,10 @@ public class WRENCHApiExample {
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-groovy">
+  <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-objc">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
 String *compoundJobName = compoundJobName_example; // Name of the compound job
 String *name = name_example; // Name of the action
@@ -30959,7 +29828,7 @@ String *name = name_example; // Name of the action
 WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 
 // Get an action's start date.
-[apiInstance getTaskStartDate_38With:simid
+[apiInstance getTaskStartDate_35With:simid
     compoundJobName:compoundJobName
     name:name
               completionHandler: ^(TimeResponse output, NSError* error) {
@@ -30973,7 +29842,7 @@ WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-javascript">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
 
 var api = new WrenchRestApi.WRENCHApi()
@@ -30992,10 +29861,10 @@ api.getTaskStartDate_0(simid, compoundJobName, name, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-angular">
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-csharp">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -31030,7 +29899,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-php">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -31048,7 +29917,7 @@ try {
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-perl">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::WRENCHApi;
@@ -31067,7 +29936,7 @@ if ($@) {
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_38-0-python">
+                            <div class="tab-pane" id="examples-WRENCH-getTaskStartDate_35-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -31101,7 +29970,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskStartDate_38_simid">
+                                      <div id="d2e199_getTaskStartDate_35_simid">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -31123,7 +29992,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskStartDate_38_compoundJobName">
+                                      <div id="d2e199_getTaskStartDate_35_compoundJobName">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -31145,7 +30014,7 @@ except ApiException as e:
                                   <td>
                                   
                                   
-                                      <div id="d2e199_getTaskStartDate_38_name">
+                                      <div id="d2e199_getTaskStartDate_35_name">
                                           <div class="json-schema-view">
                                               <div class="primitive">
                                                   <span class="type">
@@ -31174,14 +30043,14 @@ except ApiException as e:
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                                 <li class="active">
-                                  <a data-toggle="tab" href="#responses-getTaskStartDate_38-200-schema">Schema</a>
+                                  <a data-toggle="tab" href="#responses-getTaskStartDate_35-200-schema">Schema</a>
                                 </li>
 
                             </ul>
 
                             <div class="tab-content" style='margin-bottom: 10px;'>
-                                <div class="tab-pane active" id="responses-getTaskStartDate_38-200-schema">
-                                  <div id='responses-getTaskStartDate_38-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                <div class="tab-pane active" id="responses-getTaskStartDate_35-200-schema">
+                                  <div id='responses-getTaskStartDate_35-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
                                     <script>
                                       $(document).ready(function() {
                                         var schemaWrapper = {
@@ -31207,14 +30076,14 @@ except ApiException as e:
 
                                         //console.log(JSON.stringify(schema));
                                         var view = new JSONSchemaView(schema, 3);
-                                        $('#responses-getTaskStartDate_38-200-schema-data').val(stringify(schema));
-                                        var result = $('#responses-getTaskStartDate_38-200-schema-200');
+                                        $('#responses-getTaskStartDate_35-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskStartDate_35-200-schema-200');
                                         result.empty();
                                         result.append(view.render());
                                       });
                                     </script>
                                   </div>
-                                  <input id='responses-getTaskStartDate_38-200-schema-data' type='hidden' value=''></input>
+                                  <input id='responses-getTaskStartDate_35-200-schema-data' type='hidden' value=''></input>
                                 </div>
                             </div>
 
