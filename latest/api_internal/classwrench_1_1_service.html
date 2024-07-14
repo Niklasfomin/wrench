@@ -63,9 +63,9 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">API Reference</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../api_user.html">WRENCH User API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api_developer.html">WRENCH Developer API</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api_internal.html">WRENCH Internal API</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../api_user.html">WRENCH User C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api_developer.html">WRENCH Developer C++ API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api_internal.html">WRENCH Internal C++ API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_action.html">wrench::Action</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_action_execution_service.html">wrench::ActionExecutionService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_action_execution_service_action_done_message.html">wrench::ActionExecutionServiceActionDoneMessage</a></li>
@@ -283,7 +283,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service11getHostnameEv"><code class="docutils literal notranslate"><span class="pre">Service::getHostname()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench7Service21getMessagePayloadListEv"><code class="docutils literal notranslate"><span class="pre">Service::getMessagePayloadList()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service22getMessagePayloadValueE26WRENCH_MESSAGEPAYLOAD_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getMessagePayloadValue()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service22getNetworkTimeoutValueEv"><code class="docutils literal notranslate"><span class="pre">Service::getNetworkTimeoutValue()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench7Service22getNetworkTimeoutValueEv"><code class="docutils literal notranslate"><span class="pre">Service::getNetworkTimeoutValue()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service19getPhysicalHostnameEv"><code class="docutils literal notranslate"><span class="pre">Service::getPhysicalHostname()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench7Service15getPropertyListEv"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyList()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench7Service42getPropertyValueAsBandwidthInBytePerSecondE20WRENCH_PROPERTY_TYPE"><code class="docutils literal notranslate"><span class="pre">Service::getPropertyValueAsBandwidthInBytePerSecond()</span></code></a></li>
@@ -413,6 +413,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rest_api.html">WRENCH REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_api.html">WRENCH Python API</a></li>
 </ul>
 
         </div>
@@ -429,7 +430,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal API</a></li>
+          <li class="breadcrumb-item"><a href="../api_internal.html">WRENCH Internal C++ API</a></li>
       <li class="breadcrumb-item active">wrench::Service</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/api_internal/classwrench_1_1_service.rst.txt" rel="nofollow"> View page source</a>
@@ -511,8 +512,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench7Service22getNetworkTimeoutValueEv">
-<span id="_CPPv3N6wrench7Service22getNetworkTimeoutValueEv"></span><span id="_CPPv2N6wrench7Service22getNetworkTimeoutValueEv"></span><span id="wrench::Service::getNetworkTimeoutValue"></span><span class="target" id="classwrench_1_1_service_1a113a90bcf686c79df677bb6dab61fc4e"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNetworkTimeoutValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4NK6wrench7Service22getNetworkTimeoutValueEv">
+<span id="_CPPv3NK6wrench7Service22getNetworkTimeoutValueEv"></span><span id="_CPPv2NK6wrench7Service22getNetworkTimeoutValueEv"></span><span id="wrench::Service::getNetworkTimeoutValueC"></span><span class="target" id="classwrench_1_1_service_1ae831f3ee962e9e75fde98cfbed2cdb16"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getNetworkTimeoutValue</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><br /></dt>
 <dd><p>Returns the service’s network timeout value. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
