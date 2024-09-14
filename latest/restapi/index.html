@@ -689,6 +689,23 @@
   <script>
     // Script section to load models into a JS Var
     var defs = {}
+            defs["ActionFailureCauseResponse"] = {
+  "type" : "object",
+  "properties" : {
+    "action_failure_cause" : {
+      "type" : "string",
+      "description" : "The action's failure cause (or the empty string if no failure)."
+    },
+    "wrench_api_request_success" : {
+      "type" : "boolean",
+      "description" : "true if success, false if failure"
+    },
+    "failure_cause" : {
+      "type" : "string",
+      "description" : "human-readable error message (if failure)"
+    }
+  }
+};
             defs["AddActionResponse"] = {
   "type" : "object",
   "properties" : {
@@ -728,6 +745,18 @@
     "failure_cause" : {
       "type" : "string",
       "description" : "human-readable error message (if failure)"
+    }
+  }
+};
+            defs["compound_job_name_addActionDependency_body"] = {
+  "properties" : {
+    "parent_action_name" : {
+      "type" : "string",
+      "description" : "Name of the parent action."
+    },
+    "child_action_name" : {
+      "type" : "File",
+      "description" : "Name of the child action."
     }
   }
 };
@@ -1415,6 +1444,23 @@
     }
   }
 };
+            defs["TaskBottomLevel"] = {
+  "type" : "object",
+  "properties" : {
+    "bottom_level" : {
+      "type" : "number",
+      "description" : "The task's bottom-level."
+    },
+    "wrench_api_request_success" : {
+      "type" : "boolean",
+      "description" : "true if success, false if failure"
+    },
+    "failure_cause" : {
+      "type" : "string",
+      "description" : "human-readable error message (if failure)"
+    }
+  }
+};
             defs["TaskCores"] = {
   "type" : "object",
   "properties" : {
@@ -1475,6 +1521,23 @@
     "memory" : {
       "type" : "number",
       "description" : "The task's memory requirement in bytes."
+    },
+    "wrench_api_request_success" : {
+      "type" : "boolean",
+      "description" : "true if success, false if failure"
+    },
+    "failure_cause" : {
+      "type" : "string",
+      "description" : "human-readable error message (if failure)"
+    }
+  }
+};
+            defs["TaskNumberOfChildren"] = {
+  "type" : "object",
+  "properties" : {
+    "number_of_children" : {
+      "type" : "number",
+      "description" : "The task's number of children."
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1601,6 +1664,9 @@
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
                   <li class="nav-header" data-group="WRENCH"><a href="#api-WRENCH">API Methods - WRENCH</a></li>
+                    <li data-group="WRENCH" data-name="addActionDependency" class="">
+                      <a href="#api-WRENCH-addActionDependency">addActionDependency</a>
+                    </li>
                     <li data-group="WRENCH" data-name="addBareMetalComputeService" class="">
                       <a href="#api-WRENCH-addBareMetalComputeService">addBareMetalComputeService</a>
                     </li>
@@ -1682,6 +1748,15 @@
                     <li data-group="WRENCH" data-name="fileRegistryServiceRemoveEntry" class="">
                       <a href="#api-WRENCH-fileRegistryServiceRemoveEntry">fileRegistryServiceRemoveEntry</a>
                     </li>
+                    <li data-group="WRENCH" data-name="getActionEndDate" class="">
+                      <a href="#api-WRENCH-getActionEndDate">getActionEndDate</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="getActionFailureCause" class="">
+                      <a href="#api-WRENCH-getActionFailureCause">getActionFailureCause</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="getActionStartDate" class="">
+                      <a href="#api-WRENCH-getActionStartDate">getActionStartDate</a>
+                    </li>
                     <li data-group="WRENCH" data-name="getAllHostnames" class="">
                       <a href="#api-WRENCH-getAllHostnames">getAllHostnames</a>
                     </li>
@@ -1712,6 +1787,9 @@
                     <li data-group="WRENCH" data-name="getStandardJobTasks" class="">
                       <a href="#api-WRENCH-getStandardJobTasks">getStandardJobTasks</a>
                     </li>
+                    <li data-group="WRENCH" data-name="getTaskBottomLevel" class="">
+                      <a href="#api-WRENCH-getTaskBottomLevel">getTaskBottomLevel</a>
+                    </li>
                     <li data-group="WRENCH" data-name="getTaskEndDate" class="">
                       <a href="#api-WRENCH-getTaskEndDate">getTaskEndDate</a>
                     </li>
@@ -1729,6 +1807,9 @@
                     </li>
                     <li data-group="WRENCH" data-name="getTaskMinNumCores" class="">
                       <a href="#api-WRENCH-getTaskMinNumCores">getTaskMinNumCores</a>
+                    </li>
+                    <li data-group="WRENCH" data-name="getTaskNumberOfChildren" class="">
+                      <a href="#api-WRENCH-getTaskNumberOfChildren">getTaskNumberOfChildren</a>
                     </li>
                     <li data-group="WRENCH" data-name="getTaskOutputFiles" class="">
                       <a href="#api-WRENCH-getTaskOutputFiles">getTaskOutputFiles</a>
@@ -1811,6 +1892,403 @@
         <div id="sections">
                 <section id="api-WRENCH">
                   <h1>WRENCH</h1>
+                    <div id="api-WRENCH-addActionDependency">
+                      <article id="api-WRENCH-addActionDependency-0" data-group="User" data-name="addActionDependency" data-version="0">
+                        <div class="pull-left">
+                          <h1>addActionDependency</h1>
+                          <p>Add a dependency between two actions in a compound job.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/addActionDependency</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-addActionDependency-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-addActionDependency-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-addActionDependency-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-addActionDependency-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-addActionDependency-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X POST\
+-H "Accept: application/json"\
+-H "Content-Type: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/addActionDependency"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        Compound_job_name_addActionDependency_body body = ; // Compound_job_name_addActionDependency_body | Input to create an action dependency.
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        try {
+            GenericResponse result = apiInstance.addActionDependency(body, simid, compoundJobName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#addActionDependency");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        Compound_job_name_addActionDependency_body body = ; // Compound_job_name_addActionDependency_body | Input to create an action dependency.
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        try {
+            GenericResponse result = apiInstance.addActionDependency(body, simid, compoundJobName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#addActionDependency");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Compound_job_name_addActionDependency_body *body = ; // Input to create an action dependency.
+String *simid = simid_example; // ID of the simulation
+String *compoundJobName = compoundJobName_example; // Name of the compound job
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Add a dependency between two actions in a compound job.
+[apiInstance addActionDependencyWith:body
+    simid:simid
+    compoundJobName:compoundJobName
+              completionHandler: ^(GenericResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var body = ; // {{Compound_job_name_addActionDependency_body}} Input to create an action dependency.
+var simid = simid_example; // {{String}} ID of the simulation
+var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.addActionDependency(bodysimidcompoundJobName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-addActionDependency-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class addActionDependencyExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var body = new Compound_job_name_addActionDependency_body(); // Compound_job_name_addActionDependency_body | Input to create an action dependency.
+            var simid = simid_example;  // String | ID of the simulation
+            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
+
+            try
+            {
+                // Add a dependency between two actions in a compound job.
+                GenericResponse result = apiInstance.addActionDependency(body, simid, compoundJobName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.addActionDependency: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$body = ; // Compound_job_name_addActionDependency_body | Input to create an action dependency.
+$simid = simid_example; // String | ID of the simulation
+$compoundJobName = compoundJobName_example; // String | Name of the compound job
+
+try {
+    $result = $api_instance->addActionDependency($body, $simid, $compoundJobName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->addActionDependency: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $body = WWW::SwaggerClient::Object::Compound_job_name_addActionDependency_body->new(); # Compound_job_name_addActionDependency_body | Input to create an action dependency.
+my $simid = simid_example; # String | ID of the simulation
+my $compoundJobName = compoundJobName_example; # String | Name of the compound job
+
+eval { 
+    my $result = $api_instance->addActionDependency(body => $body, simid => $simid, compoundJobName => $compoundJobName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->addActionDependency: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-addActionDependency-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+body =  # Compound_job_name_addActionDependency_body | Input to create an action dependency.
+simid = simid_example # String | ID of the simulation
+compoundJobName = compoundJobName_example # String | Name of the compound job
+
+try: 
+    # Add a dependency between two actions in a compound job.
+    api_response = api_instance.add_action_dependency(body, simid, compoundJobName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->addActionDependency: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_addActionDependency_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">compound_job_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_addActionDependency_compoundJobName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the compound job
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+                                <td>
+                                
+                                
+                                <script>
+                                $(document).ready(function() {
+                                  var schemaWrapper = {
+  "description" : "Input to create an action dependency.",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/compound_job_name_addActionDependency_body"
+      }
+    }
+  },
+  "required" : true
+};
+                                  var schema = schemaWrapper.content["application/json"].schema;
+                                  if (schema.$ref != null) {
+                                    schema = defsParser.$refs.get(schema.$ref);
+                                  } else {
+                                    schemaWrapper.components = {};
+                                    schemaWrapper.components.schemas = Object.assign({}, defs);
+                                    $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                      console.log(err);
+                                    });
+                                  }
+                                
+                                  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+                                  var result = $('#d2e199_addActionDependency_body');
+                                  result.empty();
+                                  result.append(view.render());
+                                });
+                                </script>
+                                <div id="d2e199_addActionDependency_body"></div>
+                                </td>
+                                </tr>
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-addActionDependency-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-addActionDependency-200-schema">
+                                  <div id='responses-addActionDependency-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/GenericResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-addActionDependency-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-addActionDependency-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-addActionDependency-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Job not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-WRENCH-addBareMetalComputeService">
                       <article id="api-WRENCH-addBareMetalComputeService-0" data-group="User" data-name="addBareMetalComputeService" data-version="0">
                         <div class="pull-left">
@@ -12067,6 +12545,1128 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
+                    <div id="api-WRENCH-getActionEndDate">
+                      <article id="api-WRENCH-getActionEndDate-0" data-group="User" data-name="getActionEndDate" data-version="0">
+                        <div class="pull-left">
+                          <h1>getActionEndDate</h1>
+                          <p>Get an action&#x27;s end date.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/actions/{action_name}/getEndDate</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getActionEndDate-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getActionEndDate-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getActionEndDate-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionEndDate-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getActionEndDate-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/actions/{action_name}/getEndDate"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        String actionName = actionName_example; // String | Name of the action
+        try {
+            TimeResponse result = apiInstance.getActionEndDate(simid, compoundJobName, actionName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getActionEndDate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        String actionName = actionName_example; // String | Name of the action
+        try {
+            TimeResponse result = apiInstance.getActionEndDate(simid, compoundJobName, actionName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getActionEndDate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *compoundJobName = compoundJobName_example; // Name of the compound job
+String *actionName = actionName_example; // Name of the action
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Get an action's end date.
+[apiInstance getActionEndDateWith:simid
+    compoundJobName:compoundJobName
+    actionName:actionName
+              completionHandler: ^(TimeResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
+var actionName = actionName_example; // {{String}} Name of the action
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getActionEndDate(simid, compoundJobName, actionName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getActionEndDateExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
+            var actionName = actionName_example;  // String | Name of the action
+
+            try
+            {
+                // Get an action's end date.
+                TimeResponse result = apiInstance.getActionEndDate(simid, compoundJobName, actionName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getActionEndDate: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$compoundJobName = compoundJobName_example; // String | Name of the compound job
+$actionName = actionName_example; // String | Name of the action
+
+try {
+    $result = $api_instance->getActionEndDate($simid, $compoundJobName, $actionName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getActionEndDate: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $compoundJobName = compoundJobName_example; # String | Name of the compound job
+my $actionName = actionName_example; # String | Name of the action
+
+eval { 
+    my $result = $api_instance->getActionEndDate(simid => $simid, compoundJobName => $compoundJobName, actionName => $actionName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getActionEndDate: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionEndDate-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+compoundJobName = compoundJobName_example # String | Name of the compound job
+actionName = actionName_example # String | Name of the action
+
+try: 
+    # Get an action's end date.
+    api_response = api_instance.get_action_end_date(simid, compoundJobName, actionName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getActionEndDate: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionEndDate_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">compound_job_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionEndDate_compoundJobName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the compound job
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">action_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionEndDate_actionName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the action
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getActionEndDate-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getActionEndDate-200-schema">
+                                  <div id='responses-getActionEndDate-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/TimeResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getActionEndDate-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getActionEndDate-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getActionEndDate-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Job not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-getActionFailureCause">
+                      <article id="api-WRENCH-getActionFailureCause-0" data-group="User" data-name="getActionFailureCause" data-version="0">
+                        <div class="pull-left">
+                          <h1>getActionFailureCause</h1>
+                          <p>Get an action&#x27;s failure cause as a string (or the empty string if no failure).</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/actions/{action_name}/getFailureCause</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getActionFailureCause-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getActionFailureCause-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getActionFailureCause-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionFailureCause-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getActionFailureCause-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/actions/{action_name}/getFailureCause"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        String actionName = actionName_example; // String | Name of the action
+        try {
+            ActionFailureCauseResponse result = apiInstance.getActionFailureCause(simid, compoundJobName, actionName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getActionFailureCause");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        String actionName = actionName_example; // String | Name of the action
+        try {
+            ActionFailureCauseResponse result = apiInstance.getActionFailureCause(simid, compoundJobName, actionName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getActionFailureCause");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *compoundJobName = compoundJobName_example; // Name of the compound job
+String *actionName = actionName_example; // Name of the action
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Get an action's failure cause as a string (or the empty string if no failure).
+[apiInstance getActionFailureCauseWith:simid
+    compoundJobName:compoundJobName
+    actionName:actionName
+              completionHandler: ^(ActionFailureCauseResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
+var actionName = actionName_example; // {{String}} Name of the action
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getActionFailureCause(simid, compoundJobName, actionName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getActionFailureCauseExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
+            var actionName = actionName_example;  // String | Name of the action
+
+            try
+            {
+                // Get an action's failure cause as a string (or the empty string if no failure).
+                ActionFailureCauseResponse result = apiInstance.getActionFailureCause(simid, compoundJobName, actionName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getActionFailureCause: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$compoundJobName = compoundJobName_example; // String | Name of the compound job
+$actionName = actionName_example; // String | Name of the action
+
+try {
+    $result = $api_instance->getActionFailureCause($simid, $compoundJobName, $actionName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getActionFailureCause: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $compoundJobName = compoundJobName_example; # String | Name of the compound job
+my $actionName = actionName_example; # String | Name of the action
+
+eval { 
+    my $result = $api_instance->getActionFailureCause(simid => $simid, compoundJobName => $compoundJobName, actionName => $actionName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getActionFailureCause: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionFailureCause-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+compoundJobName = compoundJobName_example # String | Name of the compound job
+actionName = actionName_example # String | Name of the action
+
+try: 
+    # Get an action's failure cause as a string (or the empty string if no failure).
+    api_response = api_instance.get_action_failure_cause(simid, compoundJobName, actionName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getActionFailureCause: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionFailureCause_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">compound_job_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionFailureCause_compoundJobName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the compound job
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">action_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionFailureCause_actionName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the action
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getActionFailureCause-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getActionFailureCause-200-schema">
+                                  <div id='responses-getActionFailureCause-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/ActionFailureCauseResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getActionFailureCause-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getActionFailureCause-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getActionFailureCause-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Job not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-getActionStartDate">
+                      <article id="api-WRENCH-getActionStartDate-0" data-group="User" data-name="getActionStartDate" data-version="0">
+                        <div class="pull-left">
+                          <h1>getActionStartDate</h1>
+                          <p>Get an action&#x27;s start date.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/compoundJobs/{compound_job_name}/actions/{action_name}/getStartDate</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getActionStartDate-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getActionStartDate-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getActionStartDate-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getActionStartDate-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getActionStartDate-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/compoundJobs/{compound_job_name}/actions/{action_name}/getStartDate"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        String actionName = actionName_example; // String | Name of the action
+        try {
+            TimeResponse result = apiInstance.getActionStartDate(simid, compoundJobName, actionName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getActionStartDate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String compoundJobName = compoundJobName_example; // String | Name of the compound job
+        String actionName = actionName_example; // String | Name of the action
+        try {
+            TimeResponse result = apiInstance.getActionStartDate(simid, compoundJobName, actionName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getActionStartDate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *compoundJobName = compoundJobName_example; // Name of the compound job
+String *actionName = actionName_example; // Name of the action
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Get an action's start date.
+[apiInstance getActionStartDateWith:simid
+    compoundJobName:compoundJobName
+    actionName:actionName
+              completionHandler: ^(TimeResponse output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var compoundJobName = compoundJobName_example; // {{String}} Name of the compound job
+var actionName = actionName_example; // {{String}} Name of the action
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getActionStartDate(simid, compoundJobName, actionName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getActionStartDateExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var compoundJobName = compoundJobName_example;  // String | Name of the compound job
+            var actionName = actionName_example;  // String | Name of the action
+
+            try
+            {
+                // Get an action's start date.
+                TimeResponse result = apiInstance.getActionStartDate(simid, compoundJobName, actionName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getActionStartDate: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$compoundJobName = compoundJobName_example; // String | Name of the compound job
+$actionName = actionName_example; // String | Name of the action
+
+try {
+    $result = $api_instance->getActionStartDate($simid, $compoundJobName, $actionName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getActionStartDate: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $compoundJobName = compoundJobName_example; # String | Name of the compound job
+my $actionName = actionName_example; # String | Name of the action
+
+eval { 
+    my $result = $api_instance->getActionStartDate(simid => $simid, compoundJobName => $compoundJobName, actionName => $actionName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getActionStartDate: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getActionStartDate-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+compoundJobName = compoundJobName_example # String | Name of the compound job
+actionName = actionName_example # String | Name of the action
+
+try: 
+    # Get an action's start date.
+    api_response = api_instance.get_action_start_date(simid, compoundJobName, actionName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getActionStartDate: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionStartDate_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">compound_job_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionStartDate_compoundJobName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the compound job
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">action_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getActionStartDate_actionName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the action
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getActionStartDate-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getActionStartDate-200-schema">
+                                  <div id='responses-getActionStartDate-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/TimeResponse"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getActionStartDate-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getActionStartDate-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getActionStartDate-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Job not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-WRENCH-getAllHostnames">
                       <article id="api-WRENCH-getAllHostnames-0" data-group="User" data-name="getAllHostnames" data-version="0">
                         <div class="pull-left">
@@ -15319,6 +16919,380 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
+                    <div id="api-WRENCH-getTaskBottomLevel">
+                      <article id="api-WRENCH-getTaskBottomLevel-0" data-group="User" data-name="getTaskBottomLevel" data-version="0">
+                        <div class="pull-left">
+                          <h1>getTaskBottomLevel</h1>
+                          <p>Get a task&#x27;s bottom level</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getBottomLevel</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getTaskBottomLevel-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskBottomLevel-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskBottomLevel-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getBottomLevel"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | Name of the workflow
+        String taskName = taskName_example; // String | Name of the task
+        try {
+            BottomLevel result = apiInstance.getTaskBottomLevel(simid, workflowName, taskName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getTaskBottomLevel");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | Name of the workflow
+        String taskName = taskName_example; // String | Name of the task
+        try {
+            BottomLevel result = apiInstance.getTaskBottomLevel(simid, workflowName, taskName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getTaskBottomLevel");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *workflowName = workflowName_example; // Name of the workflow
+String *taskName = taskName_example; // Name of the task
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Get a task's bottom level
+[apiInstance getTaskBottomLevelWith:simid
+    workflowName:workflowName
+    taskName:taskName
+              completionHandler: ^(BottomLevel output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var workflowName = workflowName_example; // {{String}} Name of the workflow
+var taskName = taskName_example; // {{String}} Name of the task
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getTaskBottomLevel(simid, workflowName, taskName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getTaskBottomLevelExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var workflowName = workflowName_example;  // String | Name of the workflow
+            var taskName = taskName_example;  // String | Name of the task
+
+            try
+            {
+                // Get a task's bottom level
+                BottomLevel result = apiInstance.getTaskBottomLevel(simid, workflowName, taskName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getTaskBottomLevel: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$workflowName = workflowName_example; // String | Name of the workflow
+$taskName = taskName_example; // String | Name of the task
+
+try {
+    $result = $api_instance->getTaskBottomLevel($simid, $workflowName, $taskName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getTaskBottomLevel: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $workflowName = workflowName_example; # String | Name of the workflow
+my $taskName = taskName_example; # String | Name of the task
+
+eval { 
+    my $result = $api_instance->getTaskBottomLevel(simid => $simid, workflowName => $workflowName, taskName => $taskName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getTaskBottomLevel: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskBottomLevel-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+workflowName = workflowName_example # String | Name of the workflow
+taskName = taskName_example # String | Name of the task
+
+try: 
+    # Get a task's bottom level
+    api_response = api_instance.get_task_bottom_level(simid, workflowName, taskName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getTaskBottomLevel: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskBottomLevel_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">workflow_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskBottomLevel_workflowName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the workflow
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">task_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskBottomLevel_taskName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the task
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getTaskBottomLevel-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getTaskBottomLevel-200-schema">
+                                  <div id='responses-getTaskBottomLevel-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/BottomLevel"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getTaskBottomLevel-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskBottomLevel-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getTaskBottomLevel-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Task not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
                     <div id="api-WRENCH-getTaskEndDate">
                       <article id="api-WRENCH-getTaskEndDate-0" data-group="User" data-name="getTaskEndDate" data-version="0">
                         <div class="pull-left">
@@ -15331,7 +17305,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetEndDate</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getEndDate</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -15353,7 +17327,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskEndDate-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetEndDate"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getEndDate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskEndDate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -15702,7 +17676,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetFlops</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getFlops</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -15724,7 +17698,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskFlops-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetFlops"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getFlops"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskFlops-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -16447,7 +18421,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMaxNumCores</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getMaxNumCores</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -16469,7 +18443,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskMaxNumCores-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMaxNumCores"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getMaxNumCores"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskMaxNumCores-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -16818,7 +18792,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMemory</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getMemory</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -16840,7 +18814,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskMemory-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMemory"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getMemory"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskMemory-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -17189,7 +19163,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMinNumCores</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getMinNumCores</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -17211,7 +19185,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskMinNumCores-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetMinNumCores"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getMinNumCores"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskMinNumCores-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
@@ -17530,6 +19504,380 @@ except ApiException as e:
                             </div>
 
                             <h3> Status: 404 - Job not found </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-WRENCH-getTaskNumberOfChildren">
+                      <article id="api-WRENCH-getTaskNumberOfChildren-0" data-group="User" data-name="getTaskNumberOfChildren" data-version="0">
+                        <div class="pull-left">
+                          <h1>getTaskNumberOfChildren</h1>
+                          <p>Get the number of children of a task.</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked"></p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getNumberOfChildren</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-WRENCH-getTaskNumberOfChildren-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-java">Java</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-WRENCH-getTaskNumberOfChildren-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-WRENCH-getTaskNumberOfChildren-0-curl">
+                           <pre class="prettyprint"><code class="language-bsh">curl -X GET\
+-H "Accept: application/json"\
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getNumberOfChildren"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.WRENCHApi;
+
+import java.io.File;
+import java.util.*;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | Name of the workflow
+        String taskName = taskName_example; // String | Name of the task
+        try {
+            NumberOfChildren result = apiInstance.getTaskNumberOfChildren(simid, workflowName, taskName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getTaskNumberOfChildren");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.WRENCHApi;
+
+public class WRENCHApiExample {
+
+    public static void main(String[] args) {
+        WRENCHApi apiInstance = new WRENCHApi();
+        String simid = simid_example; // String | ID of the simulation
+        String workflowName = workflowName_example; // String | Name of the workflow
+        String taskName = taskName_example; // String | Name of the task
+        try {
+            NumberOfChildren result = apiInstance.getTaskNumberOfChildren(simid, workflowName, taskName);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling WRENCHApi#getTaskNumberOfChildren");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">String *simid = simid_example; // ID of the simulation
+String *workflowName = workflowName_example; // Name of the workflow
+String *taskName = taskName_example; // Name of the task
+
+WRENCHApi *apiInstance = [[WRENCHApi alloc] init];
+
+// Get the number of children of a task.
+[apiInstance getTaskNumberOfChildrenWith:simid
+    workflowName:workflowName
+    taskName:taskName
+              completionHandler: ^(NumberOfChildren output, NSError* error) {
+                            if (output) {
+                                NSLog(@"%@", output);
+                            }
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var WrenchRestApi = require('wrench_rest_api');
+
+var api = new WrenchRestApi.WRENCHApi()
+var simid = simid_example; // {{String}} ID of the simulation
+var workflowName = workflowName_example; // {{String}} Name of the workflow
+var taskName = taskName_example; // {{String}} Name of the task
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully. Returned data: ' + data);
+  }
+};
+api.getTaskNumberOfChildren(simid, workflowName, taskName, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class getTaskNumberOfChildrenExample
+    {
+        public void main()
+        {
+
+            var apiInstance = new WRENCHApi();
+            var simid = simid_example;  // String | ID of the simulation
+            var workflowName = workflowName_example;  // String | Name of the workflow
+            var taskName = taskName_example;  // String | Name of the task
+
+            try
+            {
+                // Get the number of children of a task.
+                NumberOfChildren result = apiInstance.getTaskNumberOfChildren(simid, workflowName, taskName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WRENCHApi.getTaskNumberOfChildren: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$api_instance = new Swagger\Client\ApiWRENCHApi();
+$simid = simid_example; // String | ID of the simulation
+$workflowName = workflowName_example; // String | Name of the workflow
+$taskName = taskName_example; // String | Name of the task
+
+try {
+    $result = $api_instance->getTaskNumberOfChildren($simid, $workflowName, $taskName);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling WRENCHApi->getTaskNumberOfChildren: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::WRENCHApi;
+
+my $api_instance = WWW::SwaggerClient::WRENCHApi->new();
+my $simid = simid_example; # String | ID of the simulation
+my $workflowName = workflowName_example; # String | Name of the workflow
+my $taskName = taskName_example; # String | Name of the task
+
+eval { 
+    my $result = $api_instance->getTaskNumberOfChildren(simid => $simid, workflowName => $workflowName, taskName => $taskName);
+    print Dumper($result);
+};
+if ($@) {
+    warn "Exception when calling WRENCHApi->getTaskNumberOfChildren: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-WRENCH-getTaskNumberOfChildren-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = swagger_client.WRENCHApi()
+simid = simid_example # String | ID of the simulation
+workflowName = workflowName_example # String | Name of the workflow
+taskName = taskName_example # String | Name of the task
+
+try: 
+    # Get the number of children of a task.
+    api_response = api_instance.get_task_number_of_children(simid, workflowName, taskName)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WRENCHApi->getTaskNumberOfChildren: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+                            <div class="methodsubtabletitle">Path parameters</div>
+                            <table id="methodsubtable">
+                                <tr>
+                                  <th width="150px">Name</th>
+                                  <th>Description</th>
+                                </tr>
+                                  <tr><td style="width:150px;">simid*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskNumberOfChildren_simid">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          ID of the simulation
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">workflow_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskNumberOfChildren_workflowName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the workflow
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                                  <tr><td style="width:150px;">task_name*</td>
+                                  <td>
+                                  
+                                  
+                                      <div id="d2e199_getTaskNumberOfChildren_taskName">
+                                          <div class="json-schema-view">
+                                              <div class="primitive">
+                                                  <span class="type">
+                                                      String
+                                                  </span>
+                                  
+                                                      <div class="inner description">
+                                                          Name of the task
+                                                      </div>
+                                              </div>
+                                                  <div class="inner required">
+                                                      Required
+                                                  </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                                  </tr>
+                            </table>
+
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - OK </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                                <li class="active">
+                                  <a data-toggle="tab" href="#responses-getTaskNumberOfChildren-200-schema">Schema</a>
+                                </li>
+
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                                <div class="tab-pane active" id="responses-getTaskNumberOfChildren-200-schema">
+                                  <div id='responses-getTaskNumberOfChildren-200-schema-200' style="padding: 30px; border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;">
+                                    <script>
+                                      $(document).ready(function() {
+                                        var schemaWrapper = {
+  "description" : "OK",
+  "content" : {
+    "application/json" : {
+      "schema" : {
+        "$ref" : "#/components/schemas/NumberOfChildren"
+      }
+    }
+  }
+};
+                                        var schema = schemaWrapper.content["application/json"].schema;
+                                        if (schema.$ref != null) {
+                                          schema = defsParser.$refs.get(schema.$ref);
+                                        } else {
+                                          schemaWrapper.components = {};
+                                          schemaWrapper.components.schemas = Object.assign({}, defs);
+                                          $RefParser.dereference(schemaWrapper).catch(function(err) {
+                                            console.log(err);
+                                          });
+                                        }
+
+                                        //console.log(JSON.stringify(schema));
+                                        var view = new JSONSchemaView(schema, 3);
+                                        $('#responses-getTaskNumberOfChildren-200-schema-data').val(stringify(schema));
+                                        var result = $('#responses-getTaskNumberOfChildren-200-schema-200');
+                                        result.empty();
+                                        result.append(view.render());
+                                      });
+                                    </script>
+                                  </div>
+                                  <input id='responses-getTaskNumberOfChildren-200-schema-data' type='hidden' value=''></input>
+                                </div>
+                            </div>
+
+                            <h3> Status: 404 - Task not found </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                             </ul>
@@ -17931,7 +20279,7 @@ except ApiException as e:
                         <p class="marked"></p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetStartDate</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getStartDate</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
@@ -17953,7 +20301,7 @@ except ApiException as e:
                           <div class="tab-pane active" id="examples-WRENCH-getTaskStartDate-0-curl">
                            <pre class="prettyprint"><code class="language-bsh">curl -X GET\
 -H "Accept: application/json"\
-"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/taskGetStartDate"</code></pre>
+"https://wrench-project.org/v1/simulation/{simid}/workflows/{workflow_name}/tasks/{task_name}/getStartDate"</code></pre>
                           </div>
                           <div class="tab-pane" id="examples-WRENCH-getTaskStartDate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
