@@ -389,6 +389,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow16getReadyClustersEv"><code class="docutils literal notranslate"><span class="pre">Workflow::getReadyClusters()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow13getReadyTasksEv"><code class="docutils literal notranslate"><span class="pre">Workflow::getReadyTasks()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow12getSharedPtrEv"><code class="docutils literal notranslate"><span class="pre">Workflow::getSharedPtr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow12getStartDateEv"><code class="docutils literal notranslate"><span class="pre">Workflow::getStartDate()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow11getTaskByIDERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Workflow::getTaskByID()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow15getTaskChildrenERKNSt10shared_ptrI12WorkflowTaskEE"><code class="docutils literal notranslate"><span class="pre">Workflow::getTaskChildren()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench8Workflow10getTaskMapEv"><code class="docutils literal notranslate"><span class="pre">Workflow::getTaskMap()</span></code></a></li>
@@ -697,6 +698,17 @@
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>a shared pointer to the object </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench8Workflow12getStartDateEv">
+<span id="_CPPv3N6wrench8Workflow12getStartDateEv"></span><span id="_CPPv2N6wrench8Workflow12getStartDateEv"></span><span id="wrench::Workflow::getStartDate"></span><span class="target" id="classwrench_1_1_workflow_1a3a267fdb23c63b66cb203db581533526"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStartDate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Returns the workflow’s start date. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>a date in seconds (or a negative value if no workflow task has successfully completed) </p>
 </dd>
 </dl>
 </dd></dl>
