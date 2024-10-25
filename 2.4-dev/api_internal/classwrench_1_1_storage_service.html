@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::StorageService &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,9 +37,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -234,14 +229,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_standard_job_failed_message.html">wrench::JobManagerStandardJobFailedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_wakeup_message.html">wrench::JobManagerWakeupMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system.html">wrench::LogicalFileSystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_1_1_file_on_disk.html">wrench::LogicalFileSystem::FileOnDisk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__participant.html">wrench::MPI_Alltoall_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__participant.html">wrench::MPI_Barrier_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__participant.html">wrench::MPI_Bcast_participant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
@@ -350,7 +340,10 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService20getFileLastWriteDateERKNSt10shared_ptrI8DataFileEERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::getFileLastWriteDate()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService20getFileLastWriteDateERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::getFileLastWriteDate()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService28getFileLocationLastWriteDateERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::getFileLocationLastWriteDate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService13getFileSystemEv"><code class="docutils literal notranslate"><span class="pre">StorageService::getFileSystem()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService7getLoadEv"><code class="docutils literal notranslate"><span class="pre">StorageService::getLoad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService13getMountPointEv"><code class="docutils literal notranslate"><span class="pre">StorageService::getMountPoint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService14getMountPointsEv"><code class="docutils literal notranslate"><span class="pre">StorageService::getMountPoints()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService21getTotalFilesZeroTimeEv"><code class="docutils literal notranslate"><span class="pre">StorageService::getTotalFilesZeroTime()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService17getTotalFreeSpaceEv"><code class="docutils literal notranslate"><span class="pre">StorageService::getTotalFreeSpace()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService23getTotalFreeSpaceAtPathERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::getTotalFreeSpaceAtPath()</span></code></a></li>
@@ -359,7 +352,6 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService7hasFileERKNSt10shared_ptrI8DataFileEE"><code class="docutils literal notranslate"><span class="pre">StorageService::hasFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService7hasFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::hasFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService7hasFileERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::hasFile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService40incrementNumRunningOperationsForLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::incrementNumRunningOperationsForLocation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14StorageService12isBufferizedEv"><code class="docutils literal notranslate"><span class="pre">StorageService::isBufferized()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14StorageService9isScratchEv"><code class="docutils literal notranslate"><span class="pre">StorageService::isScratch()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService10lookupFileERKNSt10shared_ptrI8DataFileEE"><code class="docutils literal notranslate"><span class="pre">StorageService::lookupFile()</span></code></a></li>
@@ -368,11 +360,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService10lookupFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::lookupFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEE"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringEd"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEEd"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEEd"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb"><code class="docutils literal notranslate"><span class="pre">StorageService::readFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService15removeDirectoryERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::removeDirectory()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService10removeFileERKNSt10shared_ptrI8DataFileEE"><code class="docutils literal notranslate"><span class="pre">StorageService::removeFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService10removeFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::removeFile()</span></code></a></li>
@@ -383,7 +375,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService9writeFileERKNSt10shared_ptrI8DataFileEE"><code class="docutils literal notranslate"><span class="pre">StorageService::writeFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService9writeFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">StorageService::writeFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService9writeFileERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::writeFile()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb"><code class="docutils literal notranslate"><span class="pre">StorageService::writeFile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb"><code class="docutils literal notranslate"><span class="pre">StorageService::writeFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService8copyFileERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::copyFile()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService20createFileAtLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::createFileAtLocation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService20deleteFileAtLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::deleteFileAtLocation()</span></code></a></li>
@@ -391,7 +383,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService16initiateFileCopyEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::initiateFileCopy()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService20lookupFileAtLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::lookupFileAtLocation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::readFileAtLocation()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEEd"><code class="docutils literal notranslate"><span class="pre">StorageService::readFileAtLocation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">StorageService::readFileAtLocation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService9readFilesENSt3mapINSt10shared_ptrI8DataFileEENSt10shared_ptrI12FileLocationEEEE"><code class="docutils literal notranslate"><span class="pre">StorageService::readFiles()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService20removeFileAtLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::removeFileAtLocation()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14StorageService19writeFileAtLocationERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">StorageService::writeFileAtLocation()</span></code></a></li>
@@ -490,7 +482,7 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService10createFileERKNSt10shared_ptrI8DataFileEE">
-<span id="_CPPv3N6wrench14StorageService10createFileERKNSt10shared_ptrI8DataFileEE"></span><span id="_CPPv2N6wrench14StorageService10createFileERKNSt10shared_ptrI8DataFileEE"></span><span id="wrench::StorageService::createFile__std::shared_ptr:DataFile:CR"></span><span class="target" id="classwrench_1_1_storage_service_1a887e9edcb4139e440c5ade71b4c5fe05"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N6wrench14StorageService10createFileERKNSt10shared_ptrI8DataFileEE"></span><span id="_CPPv2N6wrench14StorageService10createFileERKNSt10shared_ptrI8DataFileEE"></span><span id="wrench::StorageService::createFile__std::shared_ptr:DataFile:CR"></span><span class="target" id="classwrench_1_1_storage_service_1ace5517451b75c54eaf182c2a7a872743"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">createFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Create a file at the storage service (in zero simulated time) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -599,7 +591,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK6wrench14StorageService13getBufferSizeEv">
-<span id="_CPPv3NK6wrench14StorageService13getBufferSizeEv"></span><span id="_CPPv2NK6wrench14StorageService13getBufferSizeEv"></span><span id="wrench::StorageService::getBufferSizeC"></span><span class="target" id="classwrench_1_1_storage_service_1afef0a26ad2a052b51fd1fae4d02799ee"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBufferSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
+<span id="_CPPv3NK6wrench14StorageService13getBufferSizeEv"></span><span id="_CPPv2NK6wrench14StorageService13getBufferSizeEv"></span><span id="wrench::StorageService::getBufferSizeC"></span><span class="target" id="classwrench_1_1_storage_service_1a6e72279951853fdf02117a0f89a24b55"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBufferSize</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
 <dd><p>Determine the storage service’s buffer size. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -669,6 +661,12 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService13getFileSystemEv">
+<span id="_CPPv3N6wrench14StorageService13getFileSystemEv"></span><span id="_CPPv2N6wrench14StorageService13getFileSystemEv"></span><span id="wrench::StorageService::getFileSystem"></span><span class="target" id="classwrench_1_1_storage_service_1a0f622278ca265a58ee9fae10040f70af"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">simgrid</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">fsmod</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">FileSystem</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getFileSystem</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return the storage service’s file system If none, throws an std::runtime_error exception. </p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService7getLoadEv">
 <span id="_CPPv3N6wrench14StorageService7getLoadEv"></span><span id="_CPPv2N6wrench14StorageService7getLoadEv"></span><span id="wrench::StorageService::getLoad"></span><span class="target" id="classwrench_1_1_storage_service_1a69b543ce6cf1baf38a3373bf52f8f085"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getLoad</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
 <dd><p>Get the storage service’s load. </p>
@@ -681,8 +679,20 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService13getMountPointEv">
+<span id="_CPPv3N6wrench14StorageService13getMountPointEv"></span><span id="_CPPv2N6wrench14StorageService13getMountPointEv"></span><span id="wrench::StorageService::getMountPoint"></span><span class="target" id="classwrench_1_1_storage_service_1a281123e0e327414c370888ee7cb1d520"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMountPoint</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return the storage service’s default mountpoint, if any. If none, throws an std::runtime_error exception. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService14getMountPointsEv">
+<span id="_CPPv3N6wrench14StorageService14getMountPointsEv"></span><span id="_CPPv2N6wrench14StorageService14getMountPointsEv"></span><span id="wrench::StorageService::getMountPoints"></span><span class="target" id="classwrench_1_1_storage_service_1adebbcf298a81bf8cc5318866fd97540b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getMountPoints</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Return the storage service’s mountpoints. If none, throws an std::runtime_error exception. </p>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService21getTotalFilesZeroTimeEv">
-<span id="_CPPv3N6wrench14StorageService21getTotalFilesZeroTimeEv"></span><span id="_CPPv2N6wrench14StorageService21getTotalFilesZeroTimeEv"></span><span id="wrench::StorageService::getTotalFilesZeroTime"></span><span class="target" id="classwrench_1_1_storage_service_1a9857a987a3d31ff6f0e9b9f1ed11faed"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFilesZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N6wrench14StorageService21getTotalFilesZeroTimeEv"></span><span id="_CPPv2N6wrench14StorageService21getTotalFilesZeroTimeEv"></span><span id="wrench::StorageService::getTotalFilesZeroTime"></span><span class="target" id="classwrench_1_1_storage_service_1a4282af0512c833250e038f51f2e435ff"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFilesZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the number of files registered to the filesystem(s) associated with this service (no simulated overhead) </p>
 <p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> number of allocated files tracing (doesn’t incur simulated overhead) </p>
 <dl class="field-list simple">
@@ -694,9 +704,9 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService17getTotalFreeSpaceEv">
-<span id="_CPPv3N6wrench14StorageService17getTotalFreeSpaceEv"></span><span id="_CPPv2N6wrench14StorageService17getTotalFreeSpaceEv"></span><span id="wrench::StorageService::getTotalFreeSpace"></span><span class="target" id="classwrench_1_1_storage_service_1aa8a96034a9d8e9c20599334acede2bea"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N6wrench14StorageService17getTotalFreeSpaceEv"></span><span id="_CPPv2N6wrench14StorageService17getTotalFreeSpaceEv"></span><span id="wrench::StorageService::getTotalFreeSpace"></span><span class="target" id="classwrench_1_1_storage_service_1a547a94e87162fcb6dfdd028eed674ebf"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the storage service’s total free space (incurs simulated overhead) </p>
-<p>Synchronously asks the storage service for its total free space capacity, that is, the total capacity at the “/” path. Note that this doesn’t mean that that free space could be used to store a single file, as the storage service may have file systems at multiple mount points, may me a front-end for a set of storage systems, etc.</p>
+<p>Synchronously asks the storage service for its total free space capacity.</p>
 <p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> free space method </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -710,27 +720,27 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService23getTotalFreeSpaceAtPathERKNSt6stringE">
-<span id="_CPPv3N6wrench14StorageService23getTotalFreeSpaceAtPathERKNSt6stringE"></span><span id="_CPPv2N6wrench14StorageService23getTotalFreeSpaceAtPathERKNSt6stringE"></span><span id="wrench::StorageService::getTotalFreeSpaceAtPath__ssCR"></span><span class="target" id="classwrench_1_1_storage_service_1ab0d25efd20ebcd1b451d8b6cc86c0773"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceAtPath</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N6wrench14StorageService23getTotalFreeSpaceAtPathERKNSt6stringE"></span><span id="_CPPv2N6wrench14StorageService23getTotalFreeSpaceAtPathERKNSt6stringE"></span><span id="wrench::StorageService::getTotalFreeSpaceAtPath__ssCR"></span><span class="target" id="classwrench_1_1_storage_service_1abbd45ba1f9a32cfdcc3772e3e850df89"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceAtPath</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the storage service’s free space at a path (incurs simulated overhead) </p>
-<p>Synchronously asks the storage service for its total free space capacity at a particular path. Note that this doesn’t mean that that free space could be used to store a single file, as the storage service may have file systems at multiple mount points, may be a front-end for a set of storage systems, etc.</p>
+<p>Synchronously asks the storage service for its total free space capacity at a particular path (i.e., at the partition that holds that path). If the path is the empty string, then it’s the sum total free space across all partitions. If the path is invalid, then this method returns 0.</p>
 <p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> free space method</p>
 <p>path a path </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>path</strong> – a path (if empty, “/” will be used)</p>
+<dd class="field-odd"><p><strong>path</strong> – a path</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>a capacity in bytes</p>
 </dd>
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A number of bytes </p>
+<dd class="field-odd"><p>A number of bytes (or 0 if the path is invalid) </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv">
-<span id="_CPPv3N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="_CPPv2N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="wrench::StorageService::getTotalFreeSpaceZeroTime"></span><span class="target" id="classwrench_1_1_storage_service_1a73f49610a5788f7dbe283127960b0261"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<span id="_CPPv3N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="_CPPv2N6wrench14StorageService25getTotalFreeSpaceZeroTimeEv"></span><span id="wrench::StorageService::getTotalFreeSpaceZeroTime"></span><span class="target" id="classwrench_1_1_storage_service_1a93f1e0ca7af72f5eead9014cbd72efb6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalFreeSpaceZeroTime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Get the storage service’s total free space (no simulated overhead) </p>
 <p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> free space tracing (doesn’t incur simulated overhead) </p>
 <dl class="field-list simple">
@@ -742,7 +752,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService13getTotalSpaceEv">
-<span id="_CPPv3N6wrench14StorageService13getTotalSpaceEv"></span><span id="_CPPv2N6wrench14StorageService13getTotalSpaceEv"></span><span id="wrench::StorageService::getTotalSpace"></span><span class="target" id="classwrench_1_1_storage_service_1af99c1714cc6a050de501e1c1c4e3048a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
+<span id="_CPPv3N6wrench14StorageService13getTotalSpaceEv"></span><span id="_CPPv2N6wrench14StorageService13getTotalSpaceEv"></span><span id="wrench::StorageService::getTotalSpace"></span><span class="target" id="classwrench_1_1_storage_service_1a3d8ed38b28f94920dd2305bc6c020401"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTotalSpace</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><br /></dt>
 <dd><p>Get the storage service’s total space (in zero simulated time) </p>
 <p><a class="reference internal" href="../api_user/classwrench_1_1_service.html#classwrench_1_1_service"><span class="std std-ref">Service</span></a> total space method </p>
 <dl class="field-list simple">
@@ -793,17 +803,6 @@
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>true if the file is present, false otherwise </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService40incrementNumRunningOperationsForLocationERKNSt10shared_ptrI12FileLocationEE">
-<span id="_CPPv3N6wrench14StorageService40incrementNumRunningOperationsForLocationERKNSt10shared_ptrI12FileLocationEE"></span><span id="_CPPv2N6wrench14StorageService40incrementNumRunningOperationsForLocationERKNSt10shared_ptrI12FileLocationEE"></span><span id="wrench::StorageService::incrementNumRunningOperationsForLocation__std::shared_ptr:FileLocation:CR"></span><span class="target" id="classwrench_1_1_storage_service_1a1eccee04204762f55b9f7b594db4320c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">incrementNumRunningOperationsForLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService40incrementNumRunningOperationsForLocationERKNSt10shared_ptrI12FileLocationEE" title="Link to this definition"></a><br /></dt>
-<dd><p>Increment the number of operations for a location. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>location</strong> – a location </p>
 </dd>
 </dl>
 </dd></dl>
@@ -918,8 +917,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringEd">
-<span id="_CPPv3N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringEd"></span><span id="_CPPv2N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringEd"></span><span id="wrench::StorageService::readFile__std::shared_ptr:DataFile:CR.ssCR.double"></span><span class="target" id="classwrench_1_1_storage_service_1a30fa54aa93eb0e2cb5bedfd100521761"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE9sg_size_t">
+<span id="_CPPv3N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE9sg_size_t"></span><span id="_CPPv2N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEERKNSt6stringE9sg_size_t"></span><span id="wrench::StorageService::readFile__std::shared_ptr:DataFile:CR.ssCR.sg_size_t"></span><span class="target" id="classwrench_1_1_storage_service_1aa0682a67bf05c6fcee4399e307c23f41"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Read a file at the storage service (incurs simulated overheads) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -933,8 +932,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEEd">
-<span id="_CPPv3N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEEd"></span><span id="_CPPv2N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEEd"></span><span id="wrench::StorageService::readFile__std::shared_ptr:DataFile:CR.double"></span><span class="target" id="classwrench_1_1_storage_service_1a17a111e64196eee2e239e5c8242e7d4c"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEE9sg_size_t">
+<span id="_CPPv3N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEE9sg_size_t"></span><span id="_CPPv2N6wrench14StorageService8readFileERKNSt10shared_ptrI8DataFileEE9sg_size_t"></span><span id="wrench::StorageService::readFile__std::shared_ptr:DataFile:CR.sg_size_t"></span><span class="target" id="classwrench_1_1_storage_service_1a92a42c989fcc03b2c269ad381f37d697"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_data_file.html#_CPPv4N6wrench8DataFileE" title="wrench::DataFile"><span class="n"><span class="pre">DataFile</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Read a file at the storage service (incurs simulated overheads) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -958,8 +957,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEEd">
-<span id="_CPPv3N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEEd"></span><span id="_CPPv2N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEEd"></span><span id="wrench::StorageService::readFile__std::shared_ptr:FileLocation:CR.double"></span><span class="target" id="classwrench_1_1_storage_service_1a9c4fc5d8cdc5d2fce63f70e227b6ba0b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEE9sg_size_t">
+<span id="_CPPv3N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEE9sg_size_t"></span><span id="_CPPv2N6wrench14StorageService8readFileERKNSt10shared_ptrI12FileLocationEE9sg_size_t"></span><span id="wrench::StorageService::readFile__std::shared_ptr:FileLocation:CR.sg_size_t"></span><span class="target" id="classwrench_1_1_storage_service_1a9eb117317b574caa3187781042539744"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Read a file at the storage service (incurs simulated overheads) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -972,8 +971,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb">
-<span id="_CPPv3N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb"></span><span id="_CPPv2N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb"></span><span id="wrench::StorageService::readFile__S4U_CommPortP.std::shared_ptr:FileLocation:CR.double.b"></span><span class="target" id="classwrench_1_1_storage_service_1afe6eb52e2cae4b4b19686a5670cc0275"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wait_for_answer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb">
+<span id="_CPPv3N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb"></span><span id="_CPPv2N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb"></span><span id="wrench::StorageService::readFile__S4U_CommPortP.std::shared_ptr:FileLocation:CR.sg_size_t.b"></span><span class="target" id="classwrench_1_1_storage_service_1abc011e7c78272e04451a6bbb463bb29d"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFile</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wait_for_answer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService8readFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb" title="Link to this definition"></a><br /></dt>
 <dd><p>Read a file from the storage service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1103,20 +1102,17 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb">
-<span id="_CPPv3N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb"></span><span id="_CPPv2N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb"></span><span id="wrench::StorageService::writeFile__S4U_CommPortP.std::shared_ptr:FileLocation:CR.double.b"></span><span class="target" id="classwrench_1_1_storage_service_1aa769dfdfac8415e62a73c5bbd1013e8a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeFile</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes_to_write</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wait_for_answer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEEdb" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb">
+<span id="_CPPv3N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb"></span><span id="_CPPv2N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb"></span><span id="wrench::StorageService::writeFile__S4U_CommPortP.std::shared_ptr:FileLocation:CR.sg_size_t.b"></span><span class="target" id="classwrench_1_1_storage_service_1ab0bce3e509740f65cf162155be4c40c4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">writeFile</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes_to_write</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">wait_for_answer</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench14StorageService9writeFileEP12S4U_CommPortRKNSt10shared_ptrI12FileLocationEE9sg_size_tb" title="Link to this definition"></a><br /></dt>
 <dd><p>Synchronously write a file to the storage service. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>answer_commport</strong> – the commport on which to expect the answer </p></li>
 <li><p><strong>location</strong> – the location </p></li>
-<li><p><strong>num_bytes_to_write</strong> – the number of bytes to write to the file </p></li>
-<li><p><strong>wait_for_answer</strong> – whether to wait for the answer</p></li>
+<li><p><strong>num_bytes_to_write</strong> – the number of bytes to write to the file. </p></li>
+<li><p><strong>wait_for_answer</strong> – whether to wait for the answer </p></li>
 </ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1135,13 +1131,7 @@
 <li><p><strong>src_location</strong> – a source location </p></li>
 <li><p><strong>dst_location</strong> – a destination location</p></li>
 <li><p><strong>src_location</strong> – the location where to read the file </p></li>
-<li><p><strong>dst_location</strong> – the location where to write the file</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
+<li><p><strong>dst_location</strong> – the location where to write the file </p></li>
 </ul>
 </dd>
 </dl>
@@ -1199,13 +1189,7 @@
 <li><p><strong>dst_location</strong> – a destination location</p></li>
 <li><p><strong>answer_commport</strong> – the commport to which a notification message will be sent </p></li>
 <li><p><strong>src_location</strong> – the source location </p></li>
-<li><p><strong>dst_location</strong> – the destination location</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
+<li><p><strong>dst_location</strong> – the destination location </p></li>
 </ul>
 </dd>
 </dl>
@@ -1239,8 +1223,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEEd">
-<span id="_CPPv3N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEEd"></span><span id="_CPPv2N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEEd"></span><span id="wrench::StorageService::readFileAtLocation__std::shared_ptr:FileLocation:CR.double"></span><span class="target" id="classwrench_1_1_storage_service_1ae6f7aa517c5f8aba108d6cdf3d0591e6"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFileAtLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEE9sg_size_t">
+<span id="_CPPv3N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEE9sg_size_t"></span><span id="_CPPv2N6wrench14StorageService18readFileAtLocationERKNSt10shared_ptrI12FileLocationEE9sg_size_t"></span><span id="wrench::StorageService::readFileAtLocation__std::shared_ptr:FileLocation:CR.sg_size_t"></span><span class="target" id="classwrench_1_1_storage_service_1a1045ac3069312e12cb65ed6d61044aeb"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readFileAtLocation</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_file_location.html#_CPPv4N6wrench12FileLocationE" title="wrench::FileLocation"><span class="n"><span class="pre">FileLocation</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">location</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_bytes</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Read a file at a location (incurs simulated overheads) </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1259,16 +1243,7 @@
 <p>Synchronously and sequentially read a set of files from storage services.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>locations</strong> – a map of files to locations</p></li>
-<li><p><strong>locations</strong> – a map of files to locations</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>locations</strong> – a map of files to locations </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1304,16 +1279,7 @@
 <p>Synchronously and sequentially upload a set of files from storage services.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>locations</strong> – a map of files to locations</p></li>
-<li><p><strong>locations</strong> – a map of files to locations</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><a class="reference internal" href="../api_developer/classwrench_1_1_execution_exception.html#_CPPv4N6wrench18ExecutionExceptionE" title="wrench::ExecutionException"><span class="n">ExecutionException</span></a></span></span> – </p></li>
-</ul>
+<dd class="field-odd"><p><strong>locations</strong> – a map of files to locations </p>
 </dd>
 </dl>
 </dd></dl>

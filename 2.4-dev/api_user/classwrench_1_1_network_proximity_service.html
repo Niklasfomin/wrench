@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,25 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::NetworkProximityService &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="wrench::NetworkProximityServiceMessagePayload" href="classwrench_1_1_network_proximity_service_message_payload.html" />
-    <link rel="prev" title="wrench::MPI_Bcast_partipant" href="classwrench_1_1_m_p_i___bcast__partipant.html" /> 
+    <link rel="prev" title="wrench::MPI_Bcast_participant" href="classwrench_1_1_m_p_i___bcast__participant.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -39,9 +37,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -92,12 +87,12 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html">wrench::HTCondorComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html">wrench::HTCondorComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_property.html">wrench::HTCondorComputeServiceProperty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__participant.html">wrench::MPI_Alltoall_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__participant.html">wrench::MPI_Barrier_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__participant.html">wrench::MPI_Bcast_participant</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::NetworkProximityService</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench23NetworkProximityServiceE"><code class="docutils literal notranslate"><span class="pre">NetworkProximityService</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23NetworkProximityService23NetworkProximityServiceENSt6stringENSt6vectorINSt6stringEEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">NetworkProximityService::NetworkProximityService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench23NetworkProximityService23NetworkProximityServiceERKNSt6stringENSt6vectorINSt6stringEEERK31WRENCH_PROPERTY_COLLECTION_TYPERK38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">NetworkProximityService::NetworkProximityService()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -203,8 +198,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench23NetworkProximityService23NetworkProximityServiceENSt6stringENSt6vectorINSt6stringEEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE">
-<span id="_CPPv3N6wrench23NetworkProximityService23NetworkProximityServiceENSt6stringENSt6vectorINSt6stringEEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="_CPPv2N6wrench23NetworkProximityService23NetworkProximityServiceENSt6stringENSt6vectorINSt6stringEEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span id="wrench::NetworkProximityService::NetworkProximityService__ss.std::vector:ss:.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_network_proximity_service_1a8a64fdcb285d41851d532ebba9b8f8de"></span><span class="sig-name descname"><span class="n"><span class="pre">NetworkProximityService</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">db_hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hosts_in_network</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench23NetworkProximityService23NetworkProximityServiceERKNSt6stringENSt6vectorINSt6stringEEERK31WRENCH_PROPERTY_COLLECTION_TYPERK38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE">
+<span id="_CPPv3N6wrench23NetworkProximityService23NetworkProximityServiceERKNSt6stringENSt6vectorINSt6stringEEERK31WRENCH_PROPERTY_COLLECTION_TYPERK38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"></span><span id="_CPPv2N6wrench23NetworkProximityService23NetworkProximityServiceERKNSt6stringENSt6vectorINSt6stringEEERK31WRENCH_PROPERTY_COLLECTION_TYPERK38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"></span><span id="wrench::NetworkProximityService::NetworkProximityService__ssCR.std::vector:ss:.WRENCH_PROPERTY_COLLECTION_TYPECR.WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPECR"></span><span class="target" id="classwrench_1_1_network_proximity_service_1a01db9bafb59a7870c8aabdf2f2a70509"></span><span class="sig-name descname"><span class="n"><span class="pre">NetworkProximityService</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">db_hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hosts_in_network</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">property_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">messagepayload_list</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -227,7 +222,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classwrench_1_1_m_p_i___bcast__partipant.html" class="btn btn-neutral float-left" title="wrench::MPI_Bcast_partipant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classwrench_1_1_m_p_i___bcast__participant.html" class="btn btn-neutral float-left" title="wrench::MPI_Bcast_participant" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="classwrench_1_1_network_proximity_service_message_payload.html" class="btn btn-neutral float-right" title="wrench::NetworkProximityServiceMessagePayload" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

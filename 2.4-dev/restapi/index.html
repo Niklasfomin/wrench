@@ -714,7 +714,7 @@
       "description" : "the new action's name."
     },
     "uses_scratch" : {
-      "type" : "number",
+      "type" : "boolean",
       "description" : "Whether the action uses scratch."
     },
     "num_bytes_to_read" : {
@@ -767,20 +767,24 @@
       "description" : "the name of compute action."
     },
     "flops" : {
-      "type" : "float",
-      "description" : "amount of flops"
+      "type" : "number",
+      "description" : "amount of flops",
+      "format" : "double"
     },
     "ram" : {
-      "type" : "float",
-      "description" : "amount of ram needed."
+      "type" : "integer",
+      "description" : "amount of ram needed.",
+      "format" : "int64"
     },
     "max_num_cores" : {
-      "type" : "long",
-      "description" : "maximum amount of cores."
+      "type" : "integer",
+      "description" : "maximum amount of cores.",
+      "format" : "int64"
     },
     "min_num_cores" : {
-      "type" : "long",
-      "description" : "minimum amount of cores."
+      "type" : "integer",
+      "description" : "minimum amount of cores.",
+      "format" : "int64"
     },
     "parallel_model" : {
       "type" : "tuple",
@@ -944,8 +948,9 @@
       "description" : "the name of the storage service the file is stored in"
     },
     "num_bytes_to_read" : {
-      "type" : "number",
-      "description" : "number of bytes to read from the file"
+      "type" : "integer",
+      "description" : "number of bytes to read from the file",
+      "format" : "int64"
     }
   }
 };
@@ -966,8 +971,9 @@
   "type" : "object",
   "properties" : {
     "size" : {
-      "type" : "number",
-      "description" : "the file's size in bytes."
+      "type" : "integer",
+      "description" : "the file's size in bytes.",
+      "format" : "int64"
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1033,7 +1039,8 @@
       "type" : "array",
       "description" : "the service's compute hosts' flop rates",
       "items" : {
-        "type" : "number"
+        "type" : "number",
+        "format" : "double"
       }
     }
   }
@@ -1051,7 +1058,8 @@
       "type" : "array",
       "description" : "the service's compute hosts' core counts",
       "items" : {
-        "type" : "integer"
+        "type" : "integer",
+        "format" : "int64"
       }
     }
   }
@@ -1113,17 +1121,19 @@
   "properties" : {
     "num_cores" : {
       "type" : "integer",
-      "description" : "the required number of cores"
+      "description" : "the required number of cores",
+      "format" : "int64"
     },
     "ram_memory" : {
-      "type" : "number",
-      "description" : "the required memory in bytes"
+      "type" : "integer",
+      "description" : "the required memory in bytes",
+      "format" : "int64"
     },
     "property_list" : {
       "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_property_list"
     },
     "message_payload_list" : {
-      "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_message_payload_list"
+      "$ref" : "#/components/schemas/simulationsimidaddBatchComputeService_message_payload_list"
     }
   }
 };
@@ -1175,7 +1185,7 @@
       "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_property_list"
     },
     "message_payload_list" : {
-      "$ref" : "#/components/schemas/simulationsimidaddBareMetalComputeService_message_payload_list"
+      "$ref" : "#/components/schemas/simulationsimidaddBatchComputeService_message_payload_list"
     }
   }
 };
@@ -1217,7 +1227,8 @@
     },
     "size" : {
       "type" : "integer",
-      "description" : "size of the file in bytes"
+      "description" : "size of the file in bytes",
+      "format" : "int64"
     }
   }
 };
@@ -1241,7 +1252,7 @@
     "increment" : {
       "type" : "number",
       "description" : "Increment in seconds.",
-      "format" : "float"
+      "format" : "double"
     }
   }
 };
@@ -1277,11 +1288,13 @@
     },
     "min_cores_per_task" : {
       "type" : "integer",
-      "description" : "min cores per task"
+      "description" : "min cores per task",
+      "format" : "int64"
     },
     "max_cores_per_task" : {
       "type" : "integer",
-      "description" : "max cores per task"
+      "description" : "max cores per task",
+      "format" : "int64"
     },
     "enforce_num_cores" : {
       "type" : "bool",
@@ -1316,7 +1329,8 @@
   "properties" : {
     "port_number" : {
       "type" : "integer",
-      "description" : "a port number to which all subsequent HTTP requests should be sent"
+      "description" : "a port number to which all subsequent HTTP requests should be sent",
+      "format" : "int32"
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1335,7 +1349,8 @@
       "type" : "string"
     },
     "value" : {
-      "type" : "number"
+      "type" : "number",
+      "format" : "int64"
     }
   },
   "description" : "a message payload list ({} means “use all defaults”)"
@@ -1351,6 +1366,19 @@
     }
   },
   "description" : "a property list ({} means “use all defaults”)"
+};
+            defs["simulationsimidaddBatchComputeService_message_payload_list"] = {
+  "type" : "object",
+  "properties" : {
+    "name" : {
+      "type" : "string"
+    },
+    "value" : {
+      "type" : "integer",
+      "format" : "int64"
+    }
+  },
+  "description" : "a message payload list ({} means “use all defaults”)"
 };
             defs["simulationsimidstandardJobsjob_namesubmit_service_specific_args"] = {
   "type" : "object",
@@ -1399,8 +1427,9 @@
       "description" : "true if success, false if failure"
     },
     "state" : {
-      "type" : "number",
-      "description" : "a state as an integer"
+      "type" : "integer",
+      "description" : "a state as an integer",
+      "format" : "int32"
     },
     "failure_cause" : {
       "type" : "string",
@@ -1442,22 +1471,22 @@
     "flops" : {
       "type" : "number",
       "description" : "the task's floating operations per second",
-      "format" : "number"
+      "format" : "double"
     },
     "min_num_cores" : {
-      "type" : "number",
+      "type" : "integer",
       "description" : "the task's minimum number of cores",
-      "format" : "unsigned long"
+      "format" : "int64"
     },
     "max_num_cores" : {
-      "type" : "number",
+      "type" : "integer",
       "description" : "the task's maximum number of cores",
-      "format" : "unsigned long"
+      "format" : "int64"
     },
     "memory" : {
-      "type" : "number",
+      "type" : "integer",
       "description" : "the task's memory requirement",
-      "format" : "number"
+      "format" : "int64"
     }
   }
 };
@@ -1465,8 +1494,9 @@
   "type" : "object",
   "properties" : {
     "bottom_level" : {
-      "type" : "number",
-      "description" : "the task's bottom-level."
+      "type" : "integer",
+      "description" : "the task's bottom-level.",
+      "format" : "int64"
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1500,7 +1530,8 @@
   "properties" : {
     "flops" : {
       "type" : "number",
-      "description" : "the task's flops."
+      "description" : "the task's flops.",
+      "format" : "double"
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1536,8 +1567,9 @@
   "type" : "object",
   "properties" : {
     "memory" : {
-      "type" : "number",
-      "description" : "the task's memory requirement in bytes."
+      "type" : "integer",
+      "description" : "the task's memory requirement in bytes.",
+      "format" : "int64"
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1553,8 +1585,9 @@
   "type" : "object",
   "properties" : {
     "number_of_children" : {
-      "type" : "number",
-      "description" : "the task's number of children."
+      "type" : "integer",
+      "description" : "the task's number of children.",
+      "format" : "int64"
     },
     "wrench_api_request_success" : {
       "type" : "boolean",
@@ -1591,7 +1624,8 @@
     },
     "time" : {
       "type" : "number",
-      "description" : "a simulated date"
+      "description" : "a simulated date",
+      "format" : "double"
     },
     "failure_cause" : {
       "type" : "string",

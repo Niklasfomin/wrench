@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CloudComputeServiceCreateVMRequestMessage &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,9 +37,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -102,7 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_create_v_m_answer_message.html">wrench::CloudComputeServiceCreateVMAnswerMessage</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CloudComputeServiceCreateVMRequestMessage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessageE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceCreateVMRequestMessage</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPEd"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceCreateVMRequestMessage::CloudComputeServiceCreateVMRequestMessage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortm9sg_size_tRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceCreateVMRequestMessage::CloudComputeServiceCreateVMRequestMessage()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage15answer_commportE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceCreateVMRequestMessage::answer_commport</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceCreateVMRequestMessage::messagepayload_list</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage9num_coresE"><code class="docutils literal notranslate"><span class="pre">CloudComputeServiceCreateVMRequestMessage::num_cores</span></code></a></li>
@@ -246,14 +241,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_standard_job_failed_message.html">wrench::JobManagerStandardJobFailedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_wakeup_message.html">wrench::JobManagerWakeupMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system.html">wrench::LogicalFileSystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_1_1_file_on_disk.html">wrench::LogicalFileSystem::FileOnDisk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__participant.html">wrench::MPI_Alltoall_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__participant.html">wrench::MPI_Barrier_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__participant.html">wrench::MPI_Bcast_participant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
@@ -435,23 +425,20 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPEd">
-<span id="_CPPv3N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPEd"></span><span id="_CPPv2N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPEd"></span><span id="wrench::CloudComputeServiceCreateVMRequestMessage::CloudComputeServiceCreateVMRequestMessage__S4U_CommPortP.unsigned-l.double.ssCR.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE.double"></span><span class="target" id="classwrench_1_1_cloud_compute_service_create_v_m_request_message_1a67897cb02c68c4f96efd7bafebd7cc77"></span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeServiceCreateVMRequestMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram_memory</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">physical_host</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortmdRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPEd" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortm9sg_size_tRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE9sg_size_t">
+<span id="_CPPv3N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortm9sg_size_tRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE9sg_size_t"></span><span id="_CPPv2N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortm9sg_size_tRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE9sg_size_t"></span><span id="wrench::CloudComputeServiceCreateVMRequestMessage::CloudComputeServiceCreateVMRequestMessage__S4U_CommPortP.unsigned-l.sg_size_t.ssCR.WRENCH_PROPERTY_COLLECTION_TYPE.WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE.sg_size_t"></span><span class="target" id="classwrench_1_1_cloud_compute_service_create_v_m_request_message_1aeda2cad0d1f558bc000cff51f7abdf95"></span><span class="sig-name descname"><span class="n"><span class="pre">CloudComputeServiceCreateVMRequestMessage</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="classwrench_1_1_s4_u___comm_port.html#_CPPv4N6wrench12S4U_CommPortE" title="wrench::S4U_CommPort"><span class="n"><span class="pre">S4U_CommPort</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">answer_commport</span></span>, <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_cores</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ram_memory</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">physical_host</span></span>, <span class="n"><span class="pre">WRENCH_PROPERTY_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">property_list</span></span>, <span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">messagepayload_list</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage41CloudComputeServiceCreateVMRequestMessageEP12S4U_CommPortm9sg_size_tRKNSt6stringE31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE9sg_size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>answer_commport</strong> – the commport to which to send the answer </p></li>
 <li><p><strong>num_cores</strong> – the number of cores the service can use (use <a class="reference internal" href="../api_user/classwrench_1_1_compute_service.html#classwrench_1_1_compute_service_1a1160f521623440ad4e0e0823e08a7d22"><span class="std std-ref">ComputeService::ALL_CORES</span></a> to use all cores available on the host) </p></li>
-<li><p><strong>ram_memory</strong> – the VM’s RAM memory_manager_service capacity (use <a class="reference internal" href="../api_user/classwrench_1_1_compute_service.html#classwrench_1_1_compute_service_1abc4fe0bad59f544b4b34d0e7d4012d44"><span class="std std-ref">ComputeService::ALL_RAM</span></a> to use all RAM available on the host, this can be lead to an out of memory_manager_service issue) </p></li>
+<li><p><strong>ram_memory</strong> – the VM’s RAM memory_manager_service capacity (use <a class="reference internal" href="../api_user/classwrench_1_1_compute_service.html#classwrench_1_1_compute_service_1a5bfb0330dd765da425d72c0ce3e9c95f"><span class="std std-ref">ComputeService::ALL_RAM</span></a> to use all RAM available on the host, this can be lead to an out of memory_manager_service issue) </p></li>
 <li><p><strong>physical_host</strong> – the physical execution host (”” means “pick a name for me”) </p></li>
 <li><p><strong>property_list</strong> – a property list for the <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> that will run on the VM ({} means “use all defaults”) </p></li>
 <li><p><strong>messagepayload_list</strong> – a message payload list for the <a class="reference internal" href="../api_user/classwrench_1_1_bare_metal_compute_service.html#classwrench_1_1_bare_metal_compute_service"><span class="std std-ref">BareMetalComputeService</span></a> that will run on the VM ({} means “use all defaults”) </p></li>
-<li><p><strong>payload</strong> – the message size in bytes</p></li>
+<li><p><strong>payload</strong> – the message size in bytes </p></li>
 </ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -467,7 +454,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE">
-<span id="_CPPv3N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE"></span><span id="_CPPv2N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE"></span><span id="wrench::CloudComputeServiceCreateVMRequestMessage::messagepayload_list__WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_cloud_compute_service_create_v_m_request_message_1a37cb0358d614cfb2f45850f47d01af97"></span><span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">messagepayload_list</span></span></span><a class="headerlink" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE"></span><span id="_CPPv2N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE"></span><span id="wrench::CloudComputeServiceCreateVMRequestMessage::messagepayload_list__WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"></span><span class="target" id="classwrench_1_1_cloud_compute_service_create_v_m_request_message_1a8b10797620ad9b3c6e85c296dfc766af"></span><span class="n"><span class="pre">WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">messagepayload_list</span></span></span><a class="headerlink" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage19messagepayload_listE" title="Link to this definition"></a><br /></dt>
 <dd><p>A message payload list for the bare_metal_standard_jobs that will run on the VM ({} means “use all defaults”) </p>
 </dd></dl>
 
@@ -491,7 +478,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE">
-<span id="_CPPv3N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE"></span><span id="_CPPv2N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE"></span><span id="wrench::CloudComputeServiceCreateVMRequestMessage::ram_memory__double"></span><span class="target" id="classwrench_1_1_cloud_compute_service_create_v_m_request_message_1a87ae6dbd5b8d4bedf23ffd8834c63bd3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ram_memory</span></span></span><a class="headerlink" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE" title="Link to this definition"></a><br /></dt>
+<span id="_CPPv3N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE"></span><span id="_CPPv2N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE"></span><span id="wrench::CloudComputeServiceCreateVMRequestMessage::ram_memory__sg_size_t"></span><span class="target" id="classwrench_1_1_cloud_compute_service_create_v_m_request_message_1a937bd792c27bf0369a17f47f926f224b"></span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ram_memory</span></span></span><a class="headerlink" href="#_CPPv4N6wrench41CloudComputeServiceCreateVMRequestMessage10ram_memoryE" title="Link to this definition"></a><br /></dt>
 <dd><p>The VM RAM memory_manager_service capacity (0 means “use all memory_manager_service available on the host”, this can be lead to out of memory_manager_service issue) </p>
 </dd></dl>
 

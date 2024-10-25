@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::Communicator &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,9 +37,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -82,11 +77,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator11getNumRanksEv"><code class="docutils literal notranslate"><span class="pre">Communicator::getNumRanks()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator4joinEv"><code class="docutils literal notranslate"><span class="pre">Communicator::join()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator4joinEm"><code class="docutils literal notranslate"><span class="pre">Communicator::join()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator12MPI_AlltoallEdNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Alltoall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator12MPI_AlltoallE9sg_size_tNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Alltoall()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator11MPI_BarrierENSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Barrier()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator9MPI_BcastEidNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Bcast()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi"><code class="docutils literal notranslate"><span class="pre">Communicator::sendAndReceive()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid"><code class="docutils literal notranslate"><span class="pre">Communicator::sendReceiveAndCompute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator9MPI_BcastEi9sg_size_tNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Bcast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapIm9sg_size_tEEi"><code class="docutils literal notranslate"><span class="pre">Communicator::sendAndReceive()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapIm9sg_size_tEEid"><code class="docutils literal notranslate"><span class="pre">Communicator::sendReceiveAndCompute()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator18createCommunicatorEm"><code class="docutils literal notranslate"><span class="pre">Communicator::createCommunicator()</span></code></a></li>
 </ul>
 </li>
@@ -108,9 +103,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service.html">wrench::HTCondorComputeService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_message_payload.html">wrench::HTCondorComputeServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_h_t_condor_compute_service_property.html">wrench::HTCondorComputeServiceProperty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__participant.html">wrench::MPI_Alltoall_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__participant.html">wrench::MPI_Barrier_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__participant.html">wrench::MPI_Bcast_participant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service.html">wrench::NetworkProximityService</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_message_payload.html">wrench::NetworkProximityServiceMessagePayload</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_network_proximity_service_property.html">wrench::NetworkProximityServiceProperty</a></li>
@@ -261,8 +256,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator12MPI_AlltoallEdNSt6stringE">
-<span id="_CPPv3N6wrench12Communicator12MPI_AlltoallEdNSt6stringE"></span><span id="_CPPv2N6wrench12Communicator12MPI_AlltoallEdNSt6stringE"></span><span id="wrench::Communicator::MPI_Alltoall__double.ss"></span><span class="target" id="classwrench_1_1_communicator_1ac55a9695471d824ebb0fc1739852aee0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Alltoall</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;ompi&quot;</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator12MPI_AlltoallE9sg_size_tNSt6stringE">
+<span id="_CPPv3N6wrench12Communicator12MPI_AlltoallE9sg_size_tNSt6stringE"></span><span id="_CPPv2N6wrench12Communicator12MPI_AlltoallE9sg_size_tNSt6stringE"></span><span id="wrench::Communicator::MPI_Alltoall__sg_size_t.ss"></span><span class="target" id="classwrench_1_1_communicator_1a62f5e1c8048494a5ce651baaecf71ae4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Alltoall</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;ompi&quot;</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Perform an MPI AllToAll collective, using SimGrid’s SMPI implementation. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -286,8 +281,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator9MPI_BcastEidNSt6stringE">
-<span id="_CPPv3N6wrench12Communicator9MPI_BcastEidNSt6stringE"></span><span id="_CPPv2N6wrench12Communicator9MPI_BcastEidNSt6stringE"></span><span id="wrench::Communicator::MPI_Bcast__i.double.ss"></span><span class="target" id="classwrench_1_1_communicator_1ac71ed923976e7f2fd2f4be641739e213"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Bcast</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">root_rank</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;ompi&quot;</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator9MPI_BcastEi9sg_size_tNSt6stringE">
+<span id="_CPPv3N6wrench12Communicator9MPI_BcastEi9sg_size_tNSt6stringE"></span><span id="_CPPv2N6wrench12Communicator9MPI_BcastEi9sg_size_tNSt6stringE"></span><span id="wrench::Communicator::MPI_Bcast__i.sg_size_t.ss"></span><span class="target" id="classwrench_1_1_communicator_1a930091daa499bb4534210ab0e6361ff3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MPI_Bcast</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">root_rank</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">config</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;ompi&quot;</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Perform an MPI cast collective, using SimGrid’s SMPI implementation. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -301,8 +296,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi">
-<span id="_CPPv3N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi"></span><span id="_CPPv2N6wrench12Communicator14sendAndReceiveERKNSt3mapImdEEi"></span><span id="wrench::Communicator::sendAndReceive__std::map:unsigned-l.double:CR.i"></span><span class="target" id="classwrench_1_1_communicator_1a768d2e40f0506d11886a153a587c690b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendAndReceive</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapIm9sg_size_tEEi">
+<span id="_CPPv3N6wrench12Communicator14sendAndReceiveERKNSt3mapIm9sg_size_tEEi"></span><span id="_CPPv2N6wrench12Communicator14sendAndReceiveERKNSt3mapIm9sg_size_tEEi"></span><span id="wrench::Communicator::sendAndReceive__std::map:unsigned-l.sg_size_t:CR.i"></span><span class="target" id="classwrench_1_1_communicator_1af094dfcea8d3cfa1ce1af1cb915ce01e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendAndReceive</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Perform asynchronous sends and receives operations, using standard WRENCH/SimGrid point to point communications. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -315,8 +310,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid">
-<span id="_CPPv3N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid"></span><span id="_CPPv2N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapImdEEid"></span><span id="wrench::Communicator::sendReceiveAndCompute__std::map:unsigned-l.double:CR.i.double"></span><span class="target" id="classwrench_1_1_communicator_1abc44052e5e2bc84efa01447d7a711c07"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendReceiveAndCompute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flops</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapIm9sg_size_tEEid">
+<span id="_CPPv3N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapIm9sg_size_tEEid"></span><span id="_CPPv2N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapIm9sg_size_tEEid"></span><span id="wrench::Communicator::sendReceiveAndCompute__std::map:unsigned-l.sg_size_t:CR.i.double"></span><span class="target" id="classwrench_1_1_communicator_1a0d493fb56965333ecc97db4be6843f1a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sendReceiveAndCompute</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">long</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">sg_size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sends</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">num_receives</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">flops</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Perform concurrent asynchronous sends, receives, and a computation, using standard WRENCH/SimGrid point to point communications. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>

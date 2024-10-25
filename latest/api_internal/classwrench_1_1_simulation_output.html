@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::SimulationOutput &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,9 +37,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -234,14 +229,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_standard_job_failed_message.html">wrench::JobManagerStandardJobFailedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_wakeup_message.html">wrench::JobManagerWakeupMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system.html">wrench::LogicalFileSystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_1_1_file_on_disk.html">wrench::LogicalFileSystem::FileOnDisk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__participant.html">wrench::MPI_Alltoall_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__participant.html">wrench::MPI_Barrier_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__participant.html">wrench::MPI_Bcast_participant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
@@ -298,12 +288,12 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::SimulationOutput</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutputE"><code class="docutils literal notranslate"><span class="pre">SimulationOutput</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4I0EN6wrench16SimulationOutput12addTimestampEvP1T"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestamp()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringEdi"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskReadCompletion()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringEdi"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskReadFailure()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringEdi"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskReadStart()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringEdi"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskWriteCompletion()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringEdi"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskWriteFailure()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringEdi"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskWriteStart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskReadCompletion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskReadFailure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskReadStart()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskWriteCompletion()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskWriteFailure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampDiskWriteStart()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput29addTimestampEnergyConsumptionEdRKNSt6stringEd"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampEnergyConsumption()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput30addTimestampFileCopyCompletionEdNSt10shared_ptrI8DataFileEENSt10shared_ptrI12FileLocationEENSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampFileCopyCompletion()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput27addTimestampFileCopyFailureEdRKNSt10shared_ptrI8DataFileEERKNSt10shared_ptrI12FileLocationEERKNSt10shared_ptrI12FileLocationEE"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::addTimestampFileCopyFailure()</span></code></a></li>
@@ -324,7 +314,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput29dumpHostEnergyConsumptionJSONERKNSt6stringEb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpHostEnergyConsumptionJSON()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput17dumpLinkUsageJSONERKNSt6stringEb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpLinkUsageJSON()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput21dumpPlatformGraphJSONERKNSt6stringEb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpPlatformGraphJSON()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEENSt6stringEbbbbbbb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpUnifiedJSON()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEERKNSt6stringEbbbbbbb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpUnifiedJSON()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput25dumpWorkflowExecutionJSONERKNSt10shared_ptrI8WorkflowEERKNSt6stringEbb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpWorkflowExecutionJSON()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput21dumpWorkflowGraphJSONERKNSt10shared_ptrI8WorkflowEERKNSt6stringEb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::dumpWorkflowGraphJSON()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench16SimulationOutput25enableBandwidthTimestampsEb"><code class="docutils literal notranslate"><span class="pre">SimulationOutput::enableBandwidthTimestamps()</span></code></a></li>
@@ -478,8 +468,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringEdi">
-<span id="_CPPv3N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringEdi"></span><span id="_CPPv2N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringEdi"></span><span id="wrench::SimulationOutput::addTimestampDiskReadCompletion__double.ssCR.ssCR.double.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a82662d63071fff79e48c03657a52fc3e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskReadCompletion</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringEdi" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti">
+<span id="_CPPv3N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="_CPPv2N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="wrench::SimulationOutput::addTimestampDiskReadCompletion__double.ssCR.ssCR.sg_size_t.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a8e04f1f8f20036ab895a268d3ba0f938"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskReadCompletion</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput30addTimestampDiskReadCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti" title="Link to this definition"></a><br /></dt>
 <dd><p>Add a file read completion timestamp. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -495,8 +485,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringEdi">
-<span id="_CPPv3N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringEdi"></span><span id="_CPPv2N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringEdi"></span><span id="wrench::SimulationOutput::addTimestampDiskReadFailure__double.ssCR.ssCR.double.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a1e8524e69d77934aa8388c9f52453608"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskReadFailure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringEdi" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti">
+<span id="_CPPv3N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="_CPPv2N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="wrench::SimulationOutput::addTimestampDiskReadFailure__double.ssCR.ssCR.sg_size_t.i"></span><span class="target" id="classwrench_1_1_simulation_output_1af8ce9f43a97f6967dee07f54c1fa9009"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskReadFailure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput27addTimestampDiskReadFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti" title="Link to this definition"></a><br /></dt>
 <dd><p>Add a file read failure timestamp. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -512,8 +502,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringEdi">
-<span id="_CPPv3N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringEdi"></span><span id="_CPPv2N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringEdi"></span><span id="wrench::SimulationOutput::addTimestampDiskReadStart__double.ss.ss.double.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a4a7204905ff28c111146b34743753aeb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskReadStart</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringEdi" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringE9sg_size_t">
+<span id="_CPPv3N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringE9sg_size_t"></span><span id="_CPPv2N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringE9sg_size_t"></span><span id="wrench::SimulationOutput::addTimestampDiskReadStart__double.ss.ss.sg_size_t"></span><span class="target" id="classwrench_1_1_simulation_output_1a5e1f9b90560a677cccdd02d4b6c67c36"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskReadStart</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput25addTimestampDiskReadStartEdNSt6stringENSt6stringE9sg_size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Add a file read start timestamp. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -522,15 +512,17 @@
 <li><p><strong>hostname</strong> – hostname being read from </p></li>
 <li><p><strong>path</strong> – the path </p></li>
 <li><p><strong>bytes</strong> – number of bytes read </p></li>
-<li><p><strong>unique_sequence_number</strong> – an integer id </p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a unique integer id </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringEdi">
-<span id="_CPPv3N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringEdi"></span><span id="_CPPv2N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringEdi"></span><span id="wrench::SimulationOutput::addTimestampDiskWriteCompletion__double.ssCR.ssCR.double.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a7a879f2864144e67fb585ba97a5bc3c9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskWriteCompletion</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringEdi" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti">
+<span id="_CPPv3N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="_CPPv2N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="wrench::SimulationOutput::addTimestampDiskWriteCompletion__double.ssCR.ssCR.sg_size_t.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a3a64b657215c9bcb3d9b934505f1bbfb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskWriteCompletion</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput31addTimestampDiskWriteCompletionEdRKNSt6stringERKNSt6stringE9sg_size_ti" title="Link to this definition"></a><br /></dt>
 <dd><p>Add a file write completion timestamp. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -546,8 +538,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringEdi">
-<span id="_CPPv3N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringEdi"></span><span id="_CPPv2N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringEdi"></span><span id="wrench::SimulationOutput::addTimestampDiskWriteFailure__double.ssCR.ssCR.double.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a8d878dff05964e6a1ba9c34871fb3b4f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskWriteFailure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringEdi" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti">
+<span id="_CPPv3N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="_CPPv2N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti"></span><span id="wrench::SimulationOutput::addTimestampDiskWriteFailure__double.ssCR.ssCR.sg_size_t.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a999cdcb23c4bb7a770787650606101fa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskWriteFailure</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput28addTimestampDiskWriteFailureEdRKNSt6stringERKNSt6stringE9sg_size_ti" title="Link to this definition"></a><br /></dt>
 <dd><p>Add a file write failure timestamp. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -563,8 +555,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringEdi">
-<span id="_CPPv3N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringEdi"></span><span id="_CPPv2N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringEdi"></span><span id="wrench::SimulationOutput::addTimestampDiskWriteStart__double.ss.ss.double.i"></span><span class="target" id="classwrench_1_1_simulation_output_1a22d10485026ec9ae8cfee9da7c5cbcae"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskWriteStart</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">unique_sequence_number</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringEdi" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringE9sg_size_t">
+<span id="_CPPv3N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringE9sg_size_t"></span><span id="_CPPv2N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringE9sg_size_t"></span><span id="wrench::SimulationOutput::addTimestampDiskWriteStart__double.ss.ss.sg_size_t"></span><span class="target" id="classwrench_1_1_simulation_output_1a9cb2cd9c6df6d9810914a463fd69e5ee"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addTimestampDiskWriteStart</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">date</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">hostname</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mount</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bytes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench16SimulationOutput26addTimestampDiskWriteStartEdNSt6stringENSt6stringE9sg_size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Add a file write start timestamp. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -573,8 +565,10 @@
 <li><p><strong>hostname</strong> – hostname being read from </p></li>
 <li><p><strong>path</strong> – the path </p></li>
 <li><p><strong>bytes</strong> – number of bytes read </p></li>
-<li><p><strong>unique_sequence_number</strong> – an integer id </p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>a unique integer id </p>
 </dd>
 </dl>
 </dd></dl>
@@ -752,7 +746,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>date</strong> – the date </p></li>
-<li><p><strong>linkname</strong> – a linkname </p></li>
+<li><p><strong>link_name</strong> – a link name </p></li>
 <li><p><strong>bytes_per_second</strong> – link usage in bytes_per_second </p></li>
 </ul>
 </dd>
@@ -840,11 +834,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_path</strong> – - path to save JSON at </p></li>
-<li><p><strong>writing_file</strong> – - boolean, default true, to write the JSON to the specified file path. Used for unified output.</p></li>
+<li><p><strong>writing_file</strong> – - boolean, default true, to write the JSON to the specified file path. Used for unified output. </p></li>
 </ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -861,12 +852,6 @@
 <li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON </p></li>
 </ul>
 </dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
-</ul>
-</dd>
 </dl>
 </dd></dl>
 
@@ -874,18 +859,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput17dumpLinkUsageJSONERKNSt6stringEb">
 <span id="_CPPv3N6wrench16SimulationOutput17dumpLinkUsageJSONERKNSt6stringEb"></span><span id="_CPPv2N6wrench16SimulationOutput17dumpLinkUsageJSONERKNSt6stringEb"></span><span id="wrench::SimulationOutput::dumpLinkUsageJSON__ssCR.b"></span><span class="target" id="classwrench_1_1_simulation_output_1adca8f2d21ae6c1129d8ce421760f39db"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dumpLinkUsageJSON</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file_path</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">writing_file</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Writes a JSON file containing link usage information as a JSON array.</p>
-<p>This information will not be generated without using the bandwidth meter service and providing it with linknames to monitor.</p>
+<p>This information will not be generated without using the bandwidth meter service and providing it with link names to monitor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_path</strong> – path where json file is written </p></li>
-<li><p><strong>writing_file</strong> – whether to write file to disk. Enabled by default.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p></li>
-<li><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">runtime_error</span></span></span> – </p></li>
+<li><p><strong>writing_file</strong> – whether to write file to disk. Enabled by default. </p></li>
 </ul>
 </dd>
 </dl>
@@ -900,18 +879,15 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>file_path</strong> – the path to write the file </p></li>
-<li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON</p></li>
+<li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON </p></li>
 </ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEENSt6stringEbbbbbbb">
-<span id="_CPPv3N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEENSt6stringEbbbbbbb"></span><span id="_CPPv2N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEENSt6stringEbbbbbbb"></span><span id="wrench::SimulationOutput::dumpUnifiedJSON__std::shared_ptr:Workflow:CR.ss.b.b.b.b.b.b.b"></span><span class="target" id="classwrench_1_1_simulation_output_1a6e7f8d267b3fd0ea6fd4f3fa622de9b2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dumpUnifiedJSON</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_workflow.html#_CPPv4N6wrench8WorkflowE" title="wrench::Workflow"><span class="n"><span class="pre">Workflow</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">workflow</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">file_path</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_platform</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_workflow_exec</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_workflow_graph</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_energy</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">generate_host_utilization_layout</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_disk</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_bandwidth</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEERKNSt6stringEbbbbbbb">
+<span id="_CPPv3N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEERKNSt6stringEbbbbbbb"></span><span id="_CPPv2N6wrench16SimulationOutput15dumpUnifiedJSONERKNSt10shared_ptrI8WorkflowEERKNSt6stringEbbbbbbb"></span><span id="wrench::SimulationOutput::dumpUnifiedJSON__std::shared_ptr:Workflow:CR.ssCR.b.b.b.b.b.b.b"></span><span class="target" id="classwrench_1_1_simulation_output_1a3e28ba90beb8a35546ad534ce23e4981"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dumpUnifiedJSON</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_workflow.html#_CPPv4N6wrench8WorkflowE" title="wrench::Workflow"><span class="n"><span class="pre">Workflow</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">workflow</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">file_path</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_platform</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_workflow_exec</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_workflow_graph</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_energy</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">generate_host_utilization_layout</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_disk</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">include_bandwidth</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><br /></dt>
 <dd><p>Function that generates a unified JSON file containing the information specified by boolean arguments. </p>
 <p>Any pieces not specified in the arguments are left out. For full structure see documentation of specific sections.</p>
 <dl class="field-list simple">
@@ -944,11 +920,8 @@
 <li><p><strong>workflow</strong> – a pointer to the <a class="reference internal" href="../api_user/classwrench_1_1_workflow.html#classwrench_1_1_workflow"><span class="std std-ref">Workflow</span></a></p></li>
 <li><p><strong>file_path</strong> – the path to write the file </p></li>
 <li><p><strong>generate_host_utilization_layout</strong> – boolean specifying whether or not you would like a possible host utilization layout to be generated </p></li>
-<li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON</p></li>
+<li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON </p></li>
 </ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>
@@ -963,11 +936,8 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>workflow</strong> – a pointer to the workflow </p></li>
 <li><p><strong>file_path</strong> – the path to write the file </p></li>
-<li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON</p></li>
+<li><p><strong>writing_file</strong> – whether or not the file is written, true by default but will be false when utilized as part of dumpUnifiedJSON </p></li>
 </ul>
-</dd>
-<dt class="field-even">Throws<span class="colon">:</span></dt>
-<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">invalid_argument</span></span></span> – </p>
 </dd>
 </dl>
 </dd></dl>

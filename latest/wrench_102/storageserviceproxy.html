@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StorageServiceProxy &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -37,9 +35,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -100,7 +95,7 @@ if happens to hold that file.  For making the simulation of such a scenario stra
 WRENCH provides a <a class="reference internal" href="../api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxyE" title="wrench::StorageServiceProxy"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageServiceProxy</span></code></a> abstraction.</p>
 <section id="creating-a-proxy">
 <h2>Creating a Proxy<a class="headerlink" href="#creating-a-proxy" title="Link to this heading"></a></h2>
-<p>To create a <a class="reference internal" href="../api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxyE" title="wrench::StorageServiceProxy"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageServiceProxy</span></code></a> use the <a class="reference internal" href="../api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy19createRedirectProxyERKNSt6stringERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI14StorageServiceEE31WRENCH_PROPERTY_COLLECTION_TYPE37WRENCH_MESSAGE_PAYLOADCOLLECTION_TYPE" title="wrench::StorageServiceProxy::createRedirectProxy"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageServiceProxy::createRedirectProxy()</span></code></a> method,
+<p>To create a <a class="reference internal" href="../api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxyE" title="wrench::StorageServiceProxy"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageServiceProxy</span></code></a> use the <a class="reference internal" href="../api_internal/classwrench_1_1_storage_service_proxy.html#_CPPv4N6wrench19StorageServiceProxy19createRedirectProxyERKNSt6stringERKNSt10shared_ptrI14StorageServiceEERKNSt10shared_ptrI14StorageServiceEE31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE" title="wrench::StorageServiceProxy::createRedirectProxy"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageServiceProxy::createRedirectProxy()</span></code></a> method,
 which takes the name of a host on which the proxy should be running,
 a <a class="reference internal" href="../api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService</span></code></a> to use as <strong>local cache</strong> (this should be on the same host, otherwise simulation may not be accurate),
 and an <strong>optional default remote</strong> <a class="reference internal" href="../api_developer/classwrench_1_1_storage_service.html#_CPPv4N6wrench14StorageServiceE" title="wrench::StorageService"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::StorageService</span></code></a>, as well as the usual property and message payloads lists.</p>
@@ -199,7 +194,7 @@ For this proxy location <cite>ss</cite> should be the proxy to access.</p>
 <span class="w">                </span><span class="n">proxy</span><span class="p">,</span><span class="w"> </span><span class="c1">//on the proxy</span>
 <span class="w">                </span><span class="n">someOtherDataFile</span>
 <span class="w">        </span><span class="p">)</span>
-<span class="p">);</span><span class="c1">//read the file from the cace, or remote, not default</span>
+<span class="p">);</span><span class="c1">//read the file from the cache, or remote, not default</span>
 
 <span class="n">proxy</span><span class="p">.</span><span class="n">writeFile</span><span class="p">(</span><span class="n">remote</span><span class="p">,</span><span class="n">someDataFile</span><span class="p">);</span><span class="c1">//Write a file to the remote</span>
 </pre></div>

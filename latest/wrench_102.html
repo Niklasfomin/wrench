@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WRENCH 102 &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -39,9 +37,6 @@
             
               <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -411,21 +406,21 @@ can override the callback member function for each possible event (the
 default member function does nothing but print some log message). These
 overridable callback member functions are:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController33processEventCompoundJobCompletionENSt10shared_ptrI25CompoundJobCompletedEventEE" title="wrench::ExecutionController::processEventCompoundJobCompletion"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventCompoundJobCompletion()</span></code></a>:
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController33processEventCompoundJobCompletionERKNSt10shared_ptrI25CompoundJobCompletedEventEE" title="wrench::ExecutionController::processEventCompoundJobCompletion"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventCompoundJobCompletion()</span></code></a>:
 react to a compound job completion</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventCompoundJobFailureENSt10shared_ptrI22CompoundJobFailedEventEE" title="wrench::ExecutionController::processEventCompoundJobFailure"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventCompoundJobFailure()</span></code></a>:
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventCompoundJobFailureERKNSt10shared_ptrI22CompoundJobFailedEventEE" title="wrench::ExecutionController::processEventCompoundJobFailure"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventCompoundJobFailure()</span></code></a>:
 react to a compound job failure</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController33processEventStandardJobCompletionENSt10shared_ptrI25StandardJobCompletedEventEE" title="wrench::ExecutionController::processEventStandardJobCompletion"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventStandardJobCompletion()</span></code></a>:
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController33processEventStandardJobCompletionERKNSt10shared_ptrI25StandardJobCompletedEventEE" title="wrench::ExecutionController::processEventStandardJobCompletion"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventStandardJobCompletion()</span></code></a>:
 react to a standard job completion</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventStandardJobFailureENSt10shared_ptrI22StandardJobFailedEventEE" title="wrench::ExecutionController::processEventStandardJobFailure"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventStandardJobFailure()</span></code></a>:
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventStandardJobFailureERKNSt10shared_ptrI22StandardJobFailedEventEE" title="wrench::ExecutionController::processEventStandardJobFailure"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventStandardJobFailure()</span></code></a>:
 react to a standard job failure</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController25processEventPilotJobStartENSt10shared_ptrI20PilotJobStartedEventEE" title="wrench::ExecutionController::processEventPilotJobStart"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventPilotJobStart()</span></code></a>: react
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController25processEventPilotJobStartERKNSt10shared_ptrI20PilotJobStartedEventEE" title="wrench::ExecutionController::processEventPilotJobStart"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventPilotJobStart()</span></code></a>: react
 to a pilot job beginning execution</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventPilotJobExpirationENSt10shared_ptrI20PilotJobExpiredEventEE" title="wrench::ExecutionController::processEventPilotJobExpiration"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventPilotJobExpiration()</span></code></a>:
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventPilotJobExpirationERKNSt10shared_ptrI20PilotJobExpiredEventEE" title="wrench::ExecutionController::processEventPilotJobExpiration"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventPilotJobExpiration()</span></code></a>:
 react to a pilot job expiration</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventFileCopyCompletionENSt10shared_ptrI22FileCopyCompletedEventEE" title="wrench::ExecutionController::processEventFileCopyCompletion"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventFileCopyCompletion()</span></code></a>:
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController30processEventFileCopyCompletionERKNSt10shared_ptrI22FileCopyCompletedEventEE" title="wrench::ExecutionController::processEventFileCopyCompletion"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventFileCopyCompletion()</span></code></a>:
 react to a file copy completion</p></li>
-<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController27processEventFileCopyFailureENSt10shared_ptrI19FileCopyFailedEventEE" title="wrench::ExecutionController::processEventFileCopyFailure"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventFileCopyFailure()</span></code></a>: react
+<li><p><a class="reference internal" href="api_developer/classwrench_1_1_execution_controller.html#_CPPv4N6wrench19ExecutionController27processEventFileCopyFailureERKNSt10shared_ptrI19FileCopyFailedEventEE" title="wrench::ExecutionController::processEventFileCopyFailure"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">wrench::ExecutionController::processEventFileCopyFailure()</span></code></a>: react
 to a file copy failure</p></li>
 </ul>
 <p>Each member function above takes in an event object as parameter. In the

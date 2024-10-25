@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Installing WRENCH &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="_static/jquery.js?v=5d32c60e"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="_static/doctools.js?v=9a2dae69"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -39,9 +37,6 @@
             
               <img src="_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -128,8 +123,9 @@ recommend users to satisfy the following requirements:</p>
 <section id="required-dependencies">
 <span id="install-prerequisites-dependencies"></span><h3>Required Dependencies<a class="headerlink" href="#required-dependencies" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://simgrid.org/">SimGrid</a> – version 3.36</p></li>
-<li><p><a class="reference external" href="https://github.com/nlohmann/json">JSON for Modern C++</a> – version
+<li><p><a class="reference external" href="https://simgrid.org/">SimGrid</a> ??? version 3.36</p></li>
+<li><p><a class="reference external" href="https://github.com/simgrid/file-system-module">SimGrid File System Module</a> ??? version 0.1 or higher</p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json">JSON for Modern C++</a> ??? version
 3.9.0 or higher</p></li>
 </ul>
 <p>(See the <a class="reference internal" href="#install-troubleshooting"><span class="std std-ref">Installation Troubleshooting</span></a> section below if encountering difficulties
@@ -138,15 +134,15 @@ installing dependencies)</p>
 <section id="optional-dependencies">
 <span id="install-prerequisites-opt-dependencies"></span><h3>Optional Dependencies<a class="headerlink" href="#optional-dependencies" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/google/googletest">Google Test</a> – version 1.8
+<li><p><a class="reference external" href="https://github.com/google/googletest">Google Test</a> ??? version 1.8
 or higher (only required for running tests)</p></li>
-<li><p><a class="reference external" href="http://www.doxygen.org">Doxygen</a> – version 1.8 or higher (only
+<li><p><a class="reference external" href="http://www.doxygen.org">Doxygen</a> ??? version 1.8 or higher (only
 required for generating documentation)</p></li>
 <li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/installation.html">Sphinx</a> -
 version 4.5 or higher along with the following Python packages:
 <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">sphinx-rtd-theme</span> <span class="pre">breathe</span> <span class="pre">recommonmark</span></code>  (only required
 for generating documentation)</p></li>
-<li><p><a class="reference external" href="https://gitlab.inria.fr/batsim/batsched">Batsched</a> – version 1.4
+<li><p><a class="reference external" href="https://gitlab.inria.fr/batsim/batsched">Batsched</a> ??? version 1.4
 - useful for expanded batch-scheduled resource simulation
 capabilities</p></li>
 <li><p><a class="reference external" href="https://github.com/chriskohlhoff/asio/">Asio</a> - tag 1.28.0 or later (only required for building <cite>wrench-daemon</cite>, WRENCH’s REST API daemon)</p></li>
@@ -233,7 +229,7 @@ configuring it: <code class="docutils literal notranslate"><span class="pre">cma
 <span id="install-docker"></span><h2>Docker Containers<a class="headerlink" href="#docker-containers" title="Link to this heading"></a></h2>
 <p>WRENCH is also distributed in Docker containers. Please, visit the
 <a class="reference external" href="https://hub.docker.com/r/wrenchproject/wrench/">WRENCH Repository on Docker
-Hub</a> to pull WRENCH’s
+Hub</a> to pull WRENCH???s
 Docker images.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">latest</span></code> tag provides a container with the latest <a class="reference external" href="https://github.com/wrench-project/wrench/releases">WRENCH
 release</a>:</p>
@@ -243,7 +239,7 @@ docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">unstable</span></code> tag provides a container with the (almost) current code
-in the GitHub’s <code class="docutils literal notranslate"><span class="pre">master</span></code> branch:</p>
+in the GitHub???s <code class="docutils literal notranslate"><span class="pre">master</span></code> branch:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>pull<span class="w"> </span>wrenchproject/wrench:unstable
 <span class="c1"># or</span>
 docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>wrenchproject/wrench:unstable<span class="w"> </span>/bin/bash

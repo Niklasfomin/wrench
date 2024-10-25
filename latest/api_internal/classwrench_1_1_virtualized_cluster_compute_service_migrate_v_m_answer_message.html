@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
@@ -6,20 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::VirtualizedClusterComputeServiceMigrateVMAnswerMessage &mdash; WRENCH 2.4-dev documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.png"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=d18f32d3"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d18f32d3"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -39,9 +37,6 @@
             
               <img src="../_static/wrench-dark-theme-logo.png" class="logo" alt="Logo"/>
           </a>
-              <div class="version">
-                2.4-dev
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -234,14 +229,9 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_standard_job_failed_message.html">wrench::JobManagerStandardJobFailedMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_manager_wakeup_message.html">wrench::JobManagerWakeupMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_job_timeout.html">wrench::JobTimeout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system.html">wrench::LogicalFileSystem</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_1_1_file_on_disk.html">wrench::LogicalFileSystem::FileOnDisk</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_l_r_u_caching.html">wrench::LogicalFileSystemLRUCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching.html">wrench::LogicalFileSystemNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_logical_file_system_no_caching_1_1_file_on_disk_no_caching.html">wrench::LogicalFileSystemNoCaching::FileOnDiskNoCaching</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__partipant.html">wrench::MPI_Alltoall_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__partipant.html">wrench::MPI_Barrier_partipant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__partipant.html">wrench::MPI_Bcast_partipant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___alltoall__participant.html">wrench::MPI_Alltoall_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___barrier__participant.html">wrench::MPI_Barrier_participant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i___bcast__participant.html">wrench::MPI_Bcast_participant</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action.html">wrench::MPIAction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_private_execution_controller.html">wrench::MPIAction::MPIPrivateExecutionController</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_m_p_i_action_1_1_m_p_i_process.html">wrench::MPIAction::MPIProcess</a></li>
@@ -365,7 +355,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_virtualized_cluster_compute_service_message_payload.html">wrench::VirtualizedClusterComputeServiceMessagePayload</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::VirtualizedClusterComputeServiceMigrateVMAnswerMessage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessageE"><code class="docutils literal notranslate"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEEd"><code class="docutils literal notranslate"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage::VirtualizedClusterComputeServiceMigrateVMAnswerMessage()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEE9sg_size_t"><code class="docutils literal notranslate"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage::VirtualizedClusterComputeServiceMigrateVMAnswerMessage()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage13failure_causeE"><code class="docutils literal notranslate"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage::failure_cause</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage7successE"><code class="docutils literal notranslate"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage::success</span></code></a></li>
 </ul>
@@ -431,8 +421,8 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEEd">
-<span id="_CPPv3N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEEd"></span><span id="_CPPv2N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEEd"></span><span id="wrench::VirtualizedClusterComputeServiceMigrateVMAnswerMessage::VirtualizedClusterComputeServiceMigrateVMAnswerMessage__b.std::shared_ptr:FailureCause:.double"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service_migrate_v_m_answer_message_1a7eabf58f6601737740ee565fc58c3c1e"></span><span class="sig-name descname"><span class="n"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">success</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">failure_cause</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEEd" title="Link to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEE9sg_size_t">
+<span id="_CPPv3N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEE9sg_size_t"></span><span id="_CPPv2N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEE9sg_size_t"></span><span id="wrench::VirtualizedClusterComputeServiceMigrateVMAnswerMessage::VirtualizedClusterComputeServiceMigrateVMAnswerMessage__b.std::shared_ptr:FailureCause:.sg_size_t"></span><span class="target" id="classwrench_1_1_virtualized_cluster_compute_service_migrate_v_m_answer_message_1a1c472fd5e75749bf382cc8484238fad0"></span><span class="sig-name descname"><span class="n"><span class="pre">VirtualizedClusterComputeServiceMigrateVMAnswerMessage</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">success</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="../api_developer/classwrench_1_1_failure_cause.html#_CPPv4N6wrench12FailureCauseE" title="wrench::FailureCause"><span class="n"><span class="pre">FailureCause</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">failure_cause</span></span>, <span class="n"><span class="pre">sg_size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">payload</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N6wrench54VirtualizedClusterComputeServiceMigrateVMAnswerMessage54VirtualizedClusterComputeServiceMigrateVMAnswerMessageEbNSt10shared_ptrI12FailureCauseEE9sg_size_t" title="Link to this definition"></a><br /></dt>
 <dd><p>Constructor. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
