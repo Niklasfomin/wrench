@@ -237,6 +237,8 @@
 <p><ul class="simple">
 <li><p>If ENABLE_BATSCHED is set to off / not set:<ul>
 <li><p>”fcfs”: First Come First Serve, which allocates resources at the core level (i.e., two jobs may run on the same node if that node has enough cores to support both jobs) (default)</p></li>
+<li><p>”easy_bf_depth0”: a home-grown implementation of EASY (FCFS with backfilling), which only allocates resources at the node level (i.e., two jobs can never run on the same node even if that node has enough cores to support both jobs), and which may postpone the first (oldest) job in the queue via backfilling actions</p></li>
+<li><p>”easy_bf_depth1”: a home-grown implementation of EASY (FCFS with backfilling), which only allocates resources at the node level (i.e., two jobs can never run on the same node even if that node has enough cores to support both jobs), and which will never postpone the first (oldest) job in the queue via backfilling actions. This is typically considered the standard EASY algorithm.</p></li>
 <li><p>”conservative_bf”: a home-grown implementation of FCFS with conservative backfilling, which only allocates resources at the node level (i.e., two jobs can never run on the same node even if that node has enough cores to support both jobs)</p></li>
 <li><p>”conservative_bf_core_level”: a home-grown implementation of FCFS with conservative backfilling, which allocates resources at the core level (i.e., two jobs may run on the same node if that node has enough cores to support both jobs)</p></li>
 </ul>
@@ -310,7 +312,7 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench27BatchComputeServiceProperty18OUTPUT_CSV_JOB_LOGE">
 <span id="_CPPv3N6wrench27BatchComputeServiceProperty18OUTPUT_CSV_JOB_LOGE"></span><span id="_CPPv2N6wrench27BatchComputeServiceProperty18OUTPUT_CSV_JOB_LOGE"></span><span id="wrench::BatchComputeServiceProperty::OUTPUT_CSV_JOB_LOG__ssC"></span><span class="target" id="classwrench_1_1_batch_compute_service_property_1ad5790df8b9bda39d5bf0100bc31d1f23"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OUTPUT_CSV_JOB_LOG</span></span></span><br /></dt>
-<dd><p>Path to a to-be-generated Batsim-style CSV trace file (e.g. for b3atch schedule visualization purposes). </p>
+<dd><p>Path to a to-be-generated Batsim-style CSV trace file (e.g. for batch schedule visualization purposes). </p>
 <p><ul class="simple">
 <li><p>If ENABLE_BATSCHED is set to off or not set: ignored</p></li>
 <li><p>If ENABLE_BATSCHED is set to on: The trace file is generated in CSV format as follows: allocated_processors,consumed_energy,execution_time,finish_time,job_id,metadata, requested_number_of_processors,requested_time,starting_time,stretch,submission_time,success, turnaround_time,waiting_time,workload_name </p></li>
