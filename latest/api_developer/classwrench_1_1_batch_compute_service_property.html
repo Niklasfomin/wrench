@@ -71,6 +71,7 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_batch_compute_service_message_payload.html">wrench::BatchComputeServiceMessagePayload</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::BatchComputeServiceProperty</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench27BatchComputeServicePropertyE"><code class="docutils literal notranslate"><span class="pre">BatchComputeServiceProperty</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench27BatchComputeServiceProperty17BACKFILLING_DEPTHE"><code class="docutils literal notranslate"><span class="pre">BatchComputeServiceProperty::BACKFILLING_DEPTH</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench27BatchComputeServiceProperty30BATCH_QUEUE_ORDERING_ALGORITHME"><code class="docutils literal notranslate"><span class="pre">BatchComputeServiceProperty::BATCH_QUEUE_ORDERING_ALGORITHM</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench27BatchComputeServiceProperty24BATCH_RJMS_PADDING_DELAYE"><code class="docutils literal notranslate"><span class="pre">BatchComputeServiceProperty::BATCH_RJMS_PADDING_DELAY</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench27BatchComputeServiceProperty26BATCH_SCHEDULING_ALGORITHME"><code class="docutils literal notranslate"><span class="pre">BatchComputeServiceProperty::BATCH_SCHEDULING_ALGORITHM</span></code></a></li>
@@ -267,6 +268,20 @@
 <dd><p>Configurable properties for a <a class="reference internal" href="../api_user/classwrench_1_1_batch_compute_service.html#classwrench_1_1_batch_compute_service"><span class="std std-ref">BatchComputeService</span></a>. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N6wrench27BatchComputeServiceProperty17BACKFILLING_DEPTHE">
+<span id="_CPPv3N6wrench27BatchComputeServiceProperty17BACKFILLING_DEPTHE"></span><span id="_CPPv2N6wrench27BatchComputeServiceProperty17BACKFILLING_DEPTHE"></span><span id="wrench::BatchComputeServiceProperty::BACKFILLING_DEPTH__ssC"></span><span class="target" id="classwrench_1_1_batch_compute_service_property_1ab49a1c699449d1c7c8fb1cdcf7fd69d8"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BACKFILLING_DEPTH</span></span></span><a class="headerlink" href="#_CPPv4N6wrench27BatchComputeServiceProperty17BACKFILLING_DEPTHE" title="Link to this definition"></a><br /></dt>
+<dd><p>The backfilling depth used by backfilling algorithms, i.e., how far they go down the batch queue to consider a waiting job for backfilling (e.g., “0” (no backfilling done), “10”, “infinity”). Default: “infinity”. </p>
+<p><ul class="simple">
+<li><p>If ENABLE_BATSCHED is set to off / not set:<ul>
+<li><p>if the BATCH_SCHEDULING_ALGORITHM is “fcfs”: ignored</p></li>
+</ul>
+</p></li>
+<li><p>If ENABLE_BATSCHED is set to on: ignored </p></li>
+</ul>
+</p>
+</dd></dl>
+
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N6wrench27BatchComputeServiceProperty30BATCH_QUEUE_ORDERING_ALGORITHME">
 <span id="_CPPv3N6wrench27BatchComputeServiceProperty30BATCH_QUEUE_ORDERING_ALGORITHME"></span><span id="_CPPv2N6wrench27BatchComputeServiceProperty30BATCH_QUEUE_ORDERING_ALGORITHME"></span><span id="wrench::BatchComputeServiceProperty::BATCH_QUEUE_ORDERING_ALGORITHM__ssC"></span><span class="target" id="classwrench_1_1_batch_compute_service_property_1a58c3a7a25ee192ff4761f6ed3cea4533"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BATCH_QUEUE_ORDERING_ALGORITHM</span></span></span><a class="headerlink" href="#_CPPv4N6wrench27BatchComputeServiceProperty30BATCH_QUEUE_ORDERING_ALGORITHME" title="Link to this definition"></a><br /></dt>
