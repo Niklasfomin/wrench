@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::CloudComputeService &mdash; WRENCH 2.6-dev documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
@@ -94,27 +94,27 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_block.html">wrench::Block</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_central_manager_wake_up_message.html">wrench::CentralManagerWakeUpMessage</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::CloudComputeService</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeServiceE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringERK31WRENCH_PROPERTY_COLLECTION_TYPERK38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::CloudComputeService()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeServiceD0Ev"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::~CloudComputeService()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8createVMEm9sg_size_t31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::createVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService9destroyVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::destroyVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService19getVMComputeServiceERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::getVMComputeService()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService21getVMPhysicalHostnameERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::getVMPhysicalHostname()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8isVMDownERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::isVMDown()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService11isVMRunningERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::isVMRunning()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService13isVMSuspendedERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::isVMSuspended()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8resumeVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::resumeVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::shutdownVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringEbN14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::shutdownVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService7startVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::startVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::submitCompoundJob()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20supportsCompoundJobsEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::supportsCompoundJobs()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService17supportsPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::supportsPilotJobs()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20supportsStandardJobsEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::supportsStandardJobs()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService9suspendVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::suspendVM()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::terminateCompoundJob()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService18validatePropertiesEv"><code class="docutils literal notranslate"><span class="pre">CloudComputeService::validateProperties()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeServiceE"><code class="docutils literal notranslate"><span class="pre">wrench::CloudComputeService</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService19CloudComputeServiceERKNSt6stringERKNSt6vectorINSt6stringEEERKNSt6stringERK31WRENCH_PROPERTY_COLLECTION_TYPERK38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">CloudComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeServiceD0Ev"><code class="docutils literal notranslate"><span class="pre">~CloudComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8createVMEm9sg_size_t31WRENCH_PROPERTY_COLLECTION_TYPE38WRENCH_MESSAGE_PAYLOAD_COLLECTION_TYPE"><code class="docutils literal notranslate"><span class="pre">createVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService9destroyVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">destroyVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService19getVMComputeServiceERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">getVMComputeService()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService21getVMPhysicalHostnameERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">getVMPhysicalHostname()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8isVMDownERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">isVMDown()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService11isVMRunningERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">isVMRunning()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService13isVMSuspendedERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">isVMSuspended()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService8resumeVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">resumeVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">shutdownVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService10shutdownVMERKNSt6stringEbN14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">shutdownVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService7startVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">startVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService17submitCompoundJobENSt10shared_ptrI11CompoundJobEERKNSt3mapINSt6stringENSt6stringEEE"><code class="docutils literal notranslate"><span class="pre">submitCompoundJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20supportsCompoundJobsEv"><code class="docutils literal notranslate"><span class="pre">supportsCompoundJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService17supportsPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">supportsPilotJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20supportsStandardJobsEv"><code class="docutils literal notranslate"><span class="pre">supportsStandardJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService9suspendVMERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">suspendVM()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService20terminateCompoundJobENSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">terminateCompoundJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench19CloudComputeService18validatePropertiesEv"><code class="docutils literal notranslate"><span class="pre">validateProperties()</span></code></a></li>
 </ul>
 </li>
 </ul>

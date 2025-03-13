@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::ComputeService &mdash; WRENCH 2.6-dev documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
@@ -83,29 +83,29 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_computation_has_died.html">wrench::ComputationHasDied</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_compute_action.html">wrench::ComputeAction</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::ComputeService</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench14ComputeServiceE"><code class="docutils literal notranslate"><span class="pre">ComputeService</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">ComputeService::TerminationCause</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService15getCoreFlopRateEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getCoreFlopRate()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14ComputeService23getFreeScratchSpaceSizeEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::getFreeScratchSpaceSize()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService8getHostsEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getHosts()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService17getMemoryCapacityEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getMemoryCapacity()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService11getNumHostsEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getNumHosts()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService33getPerHostAvailableMemoryCapacityEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getPerHostAvailableMemoryCapacity()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService18getPerHostNumCoresEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getPerHostNumCores()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService22getPerHostNumIdleCoresEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getPerHostNumIdleCores()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService16getTotalNumCoresEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getTotalNumCores()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService20getTotalNumIdleCoresEb"><code class="docutils literal notranslate"><span class="pre">ComputeService::getTotalNumIdleCores()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14ComputeService24getTotalScratchSpaceSizeEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::getTotalScratchSpaceSize()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14ComputeService10hasScratchEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::hasScratch()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService38isThereAtLeastOneHostWithIdleResourcesEm9sg_size_t"><code class="docutils literal notranslate"><span class="pre">ComputeService::isThereAtLeastOneHostWithIdleResources()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService4stopEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::stop()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService4stopEbN14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">ComputeService::stop()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService20supportsCompoundJobsEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::supportsCompoundJobs()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService17supportsPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::supportsPilotJobs()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService20supportsStandardJobsEv"><code class="docutils literal notranslate"><span class="pre">ComputeService::supportsStandardJobs()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService12terminateJobERKNSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">ComputeService::terminateJob()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService9ALL_CORESE"><code class="docutils literal notranslate"><span class="pre">ComputeService::ALL_CORES</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService7ALL_RAME"><code class="docutils literal notranslate"><span class="pre">ComputeService::ALL_RAM</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench14ComputeServiceE"><code class="docutils literal notranslate"><span class="pre">wrench::ComputeService</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">TerminationCause</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService15getCoreFlopRateEb"><code class="docutils literal notranslate"><span class="pre">getCoreFlopRate()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14ComputeService23getFreeScratchSpaceSizeEv"><code class="docutils literal notranslate"><span class="pre">getFreeScratchSpaceSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService8getHostsEb"><code class="docutils literal notranslate"><span class="pre">getHosts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService17getMemoryCapacityEb"><code class="docutils literal notranslate"><span class="pre">getMemoryCapacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService11getNumHostsEb"><code class="docutils literal notranslate"><span class="pre">getNumHosts()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService33getPerHostAvailableMemoryCapacityEb"><code class="docutils literal notranslate"><span class="pre">getPerHostAvailableMemoryCapacity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService18getPerHostNumCoresEb"><code class="docutils literal notranslate"><span class="pre">getPerHostNumCores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService22getPerHostNumIdleCoresEb"><code class="docutils literal notranslate"><span class="pre">getPerHostNumIdleCores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService16getTotalNumCoresEb"><code class="docutils literal notranslate"><span class="pre">getTotalNumCores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService20getTotalNumIdleCoresEb"><code class="docutils literal notranslate"><span class="pre">getTotalNumIdleCores()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14ComputeService24getTotalScratchSpaceSizeEv"><code class="docutils literal notranslate"><span class="pre">getTotalScratchSpaceSize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench14ComputeService10hasScratchEv"><code class="docutils literal notranslate"><span class="pre">hasScratch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService38isThereAtLeastOneHostWithIdleResourcesEm9sg_size_t"><code class="docutils literal notranslate"><span class="pre">isThereAtLeastOneHostWithIdleResources()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService4stopEv"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService4stopEbN14ComputeService16TerminationCauseE"><code class="docutils literal notranslate"><span class="pre">stop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService20supportsCompoundJobsEv"><code class="docutils literal notranslate"><span class="pre">supportsCompoundJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService17supportsPilotJobsEv"><code class="docutils literal notranslate"><span class="pre">supportsPilotJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService20supportsStandardJobsEv"><code class="docutils literal notranslate"><span class="pre">supportsStandardJobs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService12terminateJobERKNSt10shared_ptrI11CompoundJobEE"><code class="docutils literal notranslate"><span class="pre">terminateJob()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService9ALL_CORESE"><code class="docutils literal notranslate"><span class="pre">ALL_CORES</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench14ComputeService7ALL_RAME"><code class="docutils literal notranslate"><span class="pre">ALL_RAM</span></code></a></li>
 </ul>
 </li>
 </ul>

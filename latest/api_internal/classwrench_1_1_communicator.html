@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>wrench::Communicator &mdash; WRENCH 2.6-dev documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=8b628ae0" />
 
@@ -112,18 +112,18 @@
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_suspend_v_m_answer_message.html">wrench::CloudComputeServiceSuspendVMAnswerMessage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="classwrench_1_1_cloud_compute_service_suspend_v_m_request_message.html">wrench::CloudComputeServiceSuspendVMRequestMessage</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">wrench::Communicator</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench12CommunicatorE"><code class="docutils literal notranslate"><span class="pre">Communicator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12CommunicatorD0Ev"><code class="docutils literal notranslate"><span class="pre">Communicator::~Communicator()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator7barrierEv"><code class="docutils literal notranslate"><span class="pre">Communicator::barrier()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench12Communicator11getNumRanksEv"><code class="docutils literal notranslate"><span class="pre">Communicator::getNumRanks()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator4joinEv"><code class="docutils literal notranslate"><span class="pre">Communicator::join()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator4joinEm"><code class="docutils literal notranslate"><span class="pre">Communicator::join()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator12MPI_AlltoallE9sg_size_tNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Alltoall()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator11MPI_BarrierENSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Barrier()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator9MPI_BcastEi9sg_size_tNSt6stringE"><code class="docutils literal notranslate"><span class="pre">Communicator::MPI_Bcast()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapIm9sg_size_tEEi"><code class="docutils literal notranslate"><span class="pre">Communicator::sendAndReceive()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapIm9sg_size_tEEid"><code class="docutils literal notranslate"><span class="pre">Communicator::sendReceiveAndCompute()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator18createCommunicatorEm"><code class="docutils literal notranslate"><span class="pre">Communicator::createCommunicator()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N6wrench12CommunicatorE"><code class="docutils literal notranslate"><span class="pre">wrench::Communicator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12CommunicatorD0Ev"><code class="docutils literal notranslate"><span class="pre">~Communicator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator7barrierEv"><code class="docutils literal notranslate"><span class="pre">barrier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK6wrench12Communicator11getNumRanksEv"><code class="docutils literal notranslate"><span class="pre">getNumRanks()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator4joinEv"><code class="docutils literal notranslate"><span class="pre">join()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator4joinEm"><code class="docutils literal notranslate"><span class="pre">join()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator12MPI_AlltoallE9sg_size_tNSt6stringE"><code class="docutils literal notranslate"><span class="pre">MPI_Alltoall()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator11MPI_BarrierENSt6stringE"><code class="docutils literal notranslate"><span class="pre">MPI_Barrier()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator9MPI_BcastEi9sg_size_tNSt6stringE"><code class="docutils literal notranslate"><span class="pre">MPI_Bcast()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator14sendAndReceiveERKNSt3mapIm9sg_size_tEEi"><code class="docutils literal notranslate"><span class="pre">sendAndReceive()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator21sendReceiveAndComputeERKNSt3mapIm9sg_size_tEEid"><code class="docutils literal notranslate"><span class="pre">sendReceiveAndCompute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N6wrench12Communicator18createCommunicatorEm"><code class="docutils literal notranslate"><span class="pre">createCommunicator()</span></code></a></li>
 </ul>
 </li>
 </ul>
