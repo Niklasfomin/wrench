@@ -1680,14 +1680,14 @@
     },
     "tasks" : {
       "type" : "array",
-      "description" : "the names of the workflow's tasks",
+      "description" : "task specifications",
       "items" : {
         "$ref" : "#/components/schemas/WorkflowResponseWithTaskAndFileSpecs_tasks"
       }
     },
     "files" : {
       "type" : "array",
-      "description" : "the names of the workflow's files",
+      "description" : "file specifications",
       "items" : {
         "$ref" : "#/components/schemas/WorkflowResponseWithTaskAndFileSpecs_files"
       }
@@ -1736,6 +1736,18 @@
       "type" : "integer",
       "description" : "task memory requirement in bytes.",
       "format" : "int64"
+    },
+    "input_file_names" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
+    },
+    "output_file_names" : {
+      "type" : "array",
+      "items" : {
+        "type" : "string"
+      }
     }
   }
 };
