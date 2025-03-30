@@ -188,4 +188,17 @@ namespace wrench {
 }// namespace wrench
 
 
+#include <boost/intrusive_ptr.hpp>
+#include <simgrid/s4u/Io.hpp>
+#include <functional>
+
+namespace std {
+  template<>
+  struct hash<boost::intrusive_ptr<simgrid::s4u::Io>> {
+    size_t operator()(const boost::intrusive_ptr<simgrid::s4u::Io>& ptr) const noexcept {
+      return std::hash<void*>()(ptr.get());
+    }
+  };
+}
+
 #endif//WRENCH_SIM4U_DAEMON_H
